@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-cli/src/index.js",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 15, "end": 15},
+    "title": "eval() with caller-supplied expression in applyFilter()",
+    "detail": "src/aurora/aurora-cli/src/index.js:L15 passes the caller-supplied parameter 'expression' directly to eval() inside applyFilter(); no sanitisation or allow-list is visible in this file, so an attacker who controls 'expression' can execute arbitrary JavaScript in the Node.js process.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-95",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  }
+]

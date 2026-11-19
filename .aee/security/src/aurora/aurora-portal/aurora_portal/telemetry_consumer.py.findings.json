@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-portal/aurora_portal/telemetry_consumer.py",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 17, "end": 17},
+    "title": "yaml.load() without SafeLoader on external bus message body in handle()",
+    "detail": "src/aurora/aurora-portal/aurora_portal/telemetry_consumer.py:L17 calls yaml.load(message.body) without a Loader; message.body arrives from an external message bus and is attacker-controlled; PyYAML's default Loader allows arbitrary Python object construction, enabling remote code execution.",
+    "owaspCategory": "A08 Software and Data Integrity Failures",
+    "cweId": "CWE-502",
+    "severity": "critical",
+    "confidence": "confirmed"
+  }
+]

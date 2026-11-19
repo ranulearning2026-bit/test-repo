@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/UserRepository.java",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 27, "end": 27},
+    "title": "SQL injection via string concatenation in findByName()",
+    "detail": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/UserRepository.java:L27 builds the query as \"SELECT id, name, project FROM users WHERE name = '\" + name + \"'\" and executes it via java.sql.Statement.executeQuery; the 'name' parameter is concatenated without escaping, allowing SQL injection.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-89",
+    "severity": "high",
+    "confidence": "probable"
+  },
+  {
+    "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/UserRepository.java",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 34, "end": 34},
+    "title": "SQL injection via string concatenation in countByProject()",
+    "detail": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/UserRepository.java:L34 builds the query as \"SELECT COUNT(*) FROM users WHERE project = '\" + project + \"'\" via java.sql.Statement; the 'project' parameter is concatenated without escaping, allowing SQL injection.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-89",
+    "severity": "high",
+    "confidence": "probable"
+  }
+]

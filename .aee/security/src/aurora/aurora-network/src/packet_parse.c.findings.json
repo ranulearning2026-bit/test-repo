@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-network/src/packet_parse.c",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 20, "end": 20},
+    "title": "Unbounded strcpy from network packet field into fixed-size stack buffer",
+    "detail": "src/aurora/aurora-network/src/packet_parse.c:L20 calls strcpy(tag, header) inside parse_tenant_tag(); 'header' is a char* from network packet data and 'tag' is a fixed-size stack buffer declared at L19; no length check is present, allowing a crafted packet to overflow the stack buffer.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-120",
+    "severity": "high",
+    "confidence": "probable"
+  }
+]

@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-compute/api/server.go",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 17, "end": 17},
+    "title": "TLS certificate verification disabled in newClient()",
+    "detail": "src/aurora/aurora-compute/api/server.go:L17 sets InsecureSkipVerify: true in the tls.Config of the HTTP transport returned by newClient(), disabling TLS certificate validation for all outbound requests and allowing man-in-the-middle attacks.",
+    "owaspCategory": "A02 Cryptographic Failures",
+    "cweId": "CWE-295",
+    "severity": "high",
+    "confidence": "confirmed"
+  },
+  {
+    "file": "src/aurora/aurora-compute/api/server.go",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 24, "end": 24},
+    "title": "Shell injection via exec.Command(\"sh\",\"-c\",...) in Console()",
+    "detail": "src/aurora/aurora-compute/api/server.go:L24 constructs a shell command with exec.Command(\"sh\", \"-c\", fmt.Sprintf(\"virsh console %s\", instance)); the 'instance' parameter is not validated or escaped, so shell metacharacters in the caller's input could inject arbitrary commands.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-78",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  }
+]

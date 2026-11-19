@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-storage/src/chunk.cpp",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 27, "end": 27},
+    "title": "memcpy with caller-supplied length may overflow fixed-size destination buffer",
+    "detail": "src/aurora/aurora-storage/src/chunk.cpp:L27 calls std::memcpy(c.id, id.c_str(), id.size()) where id.size() is the caller-supplied string length and c.id is a fixed-size array; no bounds check is performed before the copy, so a string longer than the array overflows the destination.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-120",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  },
+  {
+    "file": "src/aurora/aurora-storage/src/chunk.cpp",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 36, "end": 36},
+    "title": "std::rand() used for placement group selection in placement_group()",
+    "detail": "src/aurora/aurora-storage/src/chunk.cpp:L36 uses std::rand()%groups to select a placement group; std::rand() is not cryptographically secure and its output is predictable, which may allow an attacker to influence placement outcomes if the seed is recoverable.",
+    "owaspCategory": "A02 Cryptographic Failures",
+    "cweId": "CWE-338",
+    "severity": "low",
+    "confidence": "confirmed"
+  }
+]

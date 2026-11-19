@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-network/src/profile_label.c",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 29, "end": 29},
+    "title": "Unbounded strcpy from caller parameter into fixed-size struct field",
+    "detail": "src/aurora/aurora-network/src/profile_label.c:L29 calls strcpy(slot->label, label) inside aurora_profile_label(); 'label' is an unchecked char* parameter and slot->label is a fixed-size field of struct profile_slot defined at L17-20; a string longer than the field overwrites adjacent struct memory.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-120",
+    "severity": "medium",
+    "confidence": "needs_cross_file"
+  }
+]

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-storage/src/object_store.cpp",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 50, "end": 50},
+    "title": "Path traversal via string concatenation in path_for()",
+    "detail": "src/aurora/aurora-storage/src/object_store.cpp:L50 builds the file path as root_ + \"/\" + key where 'key' is derived from the caller's input; without normalisation, a key containing \"../\" sequences can escape the intended root directory and access arbitrary files.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-22",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  }
+]

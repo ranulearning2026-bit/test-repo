@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-portal/aurora_portal/api.py",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 17, "end": 17},
+    "title": "yaml.load() without SafeLoader on file contents in load_quota_profile()",
+    "detail": "src/aurora/aurora-portal/aurora_portal/api.py:L17 calls yaml.load(handle.read()) without a Loader argument; the default Loader in PyYAML allows arbitrary Python object construction, enabling remote code execution if an attacker can control the YAML file contents.",
+    "owaspCategory": "A08 Software and Data Integrity Failures",
+    "cweId": "CWE-502",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  },
+  {
+    "file": "src/aurora/aurora-portal/aurora_portal/api.py",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 24, "end": 24},
+    "title": "TLS verification disabled (verify=False) in fetch_project()",
+    "detail": "src/aurora/aurora-portal/aurora_portal/api.py:L24 calls requests.get with verify=False, disabling TLS certificate validation for the outbound HTTP request; this allows a man-in-the-middle attacker to intercept or modify the response.",
+    "owaspCategory": "A02 Cryptographic Failures",
+    "cweId": "CWE-295",
+    "severity": "medium",
+    "confidence": "confirmed"
+  },
+  {
+    "file": "src/aurora/aurora-portal/aurora_portal/api.py",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 31, "end": 31},
+    "title": "OS command injection via os.system() with caller-supplied command in export_report()",
+    "detail": "src/aurora/aurora-portal/aurora_portal/api.py:L31 passes the 'command' parameter directly to os.system(); if 'command' is derived from user-controlled input, shell metacharacters can inject arbitrary OS commands.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-78",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  }
+]

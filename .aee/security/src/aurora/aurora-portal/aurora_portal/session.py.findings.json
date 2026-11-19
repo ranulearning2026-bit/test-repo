@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-portal/aurora_portal/session.py",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 11, "end": 11},
+    "title": "Cryptographically insecure random.choice() used to generate session IDs",
+    "detail": "src/aurora/aurora-portal/aurora_portal/session.py:L11 builds session identifiers using random.choice(); Python's random module is not cryptographically secure and its output is predictable, making session IDs guessable by an attacker who can observe prior values.",
+    "owaspCategory": "A07 Identification and Authentication Failures",
+    "cweId": "CWE-330",
+    "severity": "high",
+    "confidence": "confirmed"
+  },
+  {
+    "file": "src/aurora/aurora-portal/aurora_portal/session.py",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 15, "end": 15},
+    "title": "SHA-1 used for password hashing in password_hash()",
+    "detail": "src/aurora/aurora-portal/aurora_portal/session.py:L15 returns hashlib.sha1 as the password digest; SHA-1 is a fast, cryptographically weak hash not designed for password storage and is vulnerable to brute-force and rainbow-table attacks.",
+    "owaspCategory": "A02 Cryptographic Failures",
+    "cweId": "CWE-327",
+    "severity": "high",
+    "confidence": "confirmed"
+  }
+]

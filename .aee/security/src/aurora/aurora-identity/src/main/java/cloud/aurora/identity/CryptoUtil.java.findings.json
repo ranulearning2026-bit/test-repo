@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/CryptoUtil.java",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 19, "end": 25},
+    "title": "AES/ECB mode used in seal() and open(); no authenticated encryption",
+    "detail": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/CryptoUtil.java:L19 (seal) and L25 (open) both call Cipher.getInstance(\"AES/ECB/PKCS5Padding\"); ECB mode produces identical ciphertext for identical plaintext blocks, enabling block-pattern analysis and replay; no integrity protection is provided.",
+    "owaspCategory": "A02 Cryptographic Failures",
+    "cweId": "CWE-327",
+    "severity": "medium",
+    "confidence": "confirmed"
+  }
+]

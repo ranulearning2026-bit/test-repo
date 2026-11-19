@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/TokenService.java",
+    "tool": "gitleaks",
+    "ruleId": "generic-api-key",
+    "lineRange": {"start": 18, "end": 18},
+    "title": "Hardcoded signing key in SIGNING_KEY constant",
+    "detail": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/TokenService.java:L18 declares SIGNING_KEY as a static final String literal; any party with read access to the source code can forge tokens by reproducing the MD5-based signature computed in issue().",
+    "owaspCategory": "A07 Identification and Authentication Failures",
+    "cweId": "CWE-798",
+    "severity": "high",
+    "confidence": "confirmed"
+  },
+  {
+    "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/TokenService.java",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 22, "end": 22},
+    "title": "MD5 used as token signing hash in issue()",
+    "detail": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/TokenService.java:L22 calls MessageDigest.getInstance(\"MD5\") to produce the token signature digest; MD5 is cryptographically broken and allows collision and pre-image attacks, undermining token integrity.",
+    "owaspCategory": "A02 Cryptographic Failures",
+    "cweId": "CWE-328",
+    "severity": "medium",
+    "confidence": "confirmed"
+  }
+]

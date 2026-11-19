@@ -1,0 +1,34 @@
+{
+  "addressedVerdictRound": 0,
+  "candidates": [
+    {"id": "C001", "action": "keep", "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/TokenService.java", "line": 18, "cweId": "CWE-798"}
+  ],
+  "gaps": [
+    {"id": "G001", "action": "manual", "file": "src/aurora/aurora-cli/src/index.js", "line": 15},
+    {"id": "G002", "action": "manual", "file": "src/aurora/aurora-compute/api/server.go", "line": 17},
+    {"id": "G003", "action": "manual", "file": "src/aurora/aurora-compute/api/server.go", "line": 24},
+    {"id": "G004", "action": "manual", "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/CryptoUtil.java", "line": 19},
+    {"id": "G005", "action": "manual", "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/CryptoUtil.java", "line": 25},
+    {"id": "G006", "action": "benign", "reason": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/RegionAssignmentDao.java:L29 concatenates only the TABLE constant (a compile-time literal) into the INSERT template; all three VALUES placeholders are ? parameters bound via PreparedStatement, so no attacker-controlled data reaches the query string"},
+    {"id": "G007", "action": "manual", "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/TokenService.java", "line": 22},
+    {"id": "G008", "action": "manual", "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/UserRepository.java", "line": 27},
+    {"id": "G009", "action": "manual", "file": "src/aurora/aurora-identity/src/main/java/cloud/aurora/identity/UserRepository.java", "line": 34},
+    {"id": "G010", "action": "benign", "reason": "sampled src/aurora/aurora-network/src/account_ops.c:L18, src/aurora/aurora-network/src/alarm_ops.c:L18, and src/aurora/aurora-network/src/cluster_ops.c:L18; in all three cases the char name[64] buffer is populated only via strncpy with the struct field size as the bound, not via unbounded copy from an unvalidated source, so the fixed-size declaration alone does not constitute a vulnerability across the 54 occurrences of this pattern"},
+    {"id": "G011", "action": "benign", "reason": "src/aurora/aurora-network/src/flow_table.c:L48 passes sizeof(*key) as the memcpy length; sizeof is a compile-time constant equal to the size of the destination struct field, so the copy is bounded by definition and no attacker-controlled length is involved"},
+    {"id": "G012", "action": "manual", "file": "src/aurora/aurora-network/src/packet_parse.c", "line": 20},
+    {"id": "G013", "action": "manual", "file": "src/aurora/aurora-network/src/profile_label.c", "line": 29},
+    {"id": "G014", "action": "manual", "file": "src/aurora/aurora-network/src/tunnel.c", "line": 19},
+    {"id": "G015", "action": "manual", "file": "src/aurora/aurora-network/src/tunnel.c", "line": 20},
+    {"id": "G016", "action": "manual", "file": "src/aurora/aurora-network/src/tunnel.c", "line": 27},
+    {"id": "G017", "action": "manual", "file": "src/aurora/aurora-network/src/tunnel.c", "line": 37},
+    {"id": "G018", "action": "manual", "file": "src/aurora/aurora-portal/aurora_portal/api.py", "line": 17},
+    {"id": "G019", "action": "manual", "file": "src/aurora/aurora-portal/aurora_portal/api.py", "line": 24},
+    {"id": "G020", "action": "manual", "file": "src/aurora/aurora-portal/aurora_portal/api.py", "line": 31},
+    {"id": "G021", "action": "manual", "file": "src/aurora/aurora-portal/aurora_portal/session.py", "line": 11},
+    {"id": "G022", "action": "manual", "file": "src/aurora/aurora-portal/aurora_portal/session.py", "line": 15},
+    {"id": "G023", "action": "manual", "file": "src/aurora/aurora-portal/aurora_portal/telemetry_consumer.py", "line": 17},
+    {"id": "G024", "action": "manual", "file": "src/aurora/aurora-storage/src/chunk.cpp", "line": 27},
+    {"id": "G025", "action": "manual", "file": "src/aurora/aurora-storage/src/chunk.cpp", "line": 36},
+    {"id": "G026", "action": "manual", "file": "src/aurora/aurora-storage/src/object_store.cpp", "line": 50}
+  ]
+}

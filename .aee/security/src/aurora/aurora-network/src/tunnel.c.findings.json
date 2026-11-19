@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "file": "src/aurora/aurora-network/src/tunnel.c",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 19, "end": 20},
+    "title": "Command injection via sprintf + system() with unsanitised parameters in tunnel_up()",
+    "detail": "src/aurora/aurora-network/src/tunnel.c:L19 constructs a shell command with sprintf using the caller-supplied 'name' and 'remote' parameters, then L20 executes it via system(); no validation or escaping is performed, allowing shell metacharacters in either parameter to inject arbitrary commands.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-78",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  },
+  {
+    "file": "src/aurora/aurora-network/src/tunnel.c",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 26, "end": 27},
+    "title": "Command injection via snprintf + system() with unsanitised parameter in tunnel_down()",
+    "detail": "src/aurora/aurora-network/src/tunnel.c:L26 uses snprintf to build a command incorporating the caller-supplied 'name' parameter, and L27 passes the result to system(); the 'name' string is not sanitised, allowing shell metacharacters to inject arbitrary commands.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-78",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  },
+  {
+    "file": "src/aurora/aurora-network/src/tunnel.c",
+    "tool": "manual",
+    "ruleId": null,
+    "lineRange": {"start": 36, "end": 37},
+    "title": "Command injection via snprintf + system() with unsanitised parameter in tunnel_mtu()",
+    "detail": "src/aurora/aurora-network/src/tunnel.c:L36 builds a shell command with snprintf including the caller-supplied 'name' parameter, and L37 executes it via system(); 'name' is not sanitised, so shell metacharacters in the caller's input can inject arbitrary commands.",
+    "owaspCategory": "A03 Injection",
+    "cweId": "CWE-78",
+    "severity": "high",
+    "confidence": "needs_cross_file"
+  }
+]
