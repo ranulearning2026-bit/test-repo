@@ -1,0 +1,105 @@
+{
+  "file": "src/nova/scheduler/filters/utils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:W0143",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0143"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Comparing against a callable, did you omit the parenthesis?",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        }
+      ],
+      "id": "T2"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "aggregate_values_from_key",
+      "startLine": 24,
+      "endLine": 30,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "aggregate_metadata_get_by_host",
+      "startLine": 33,
+      "endLine": 43,
+      "ccn": 6,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "validate_num_values",
+      "startLine": 46,
+      "endLine": 68,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "instance_uuids_overlap",
+      "startLine": 71,
+      "endLine": 82,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

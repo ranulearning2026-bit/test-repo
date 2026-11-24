@@ -1,0 +1,491 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_access_ips.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 21,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 21
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 23,
+      "endLine": 23,
+      "message": "Constant name \"v4_key\" doesn't conform to UPPER_CASE naming style",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 24,
+          "endLine": 24
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 27,
+      "endLine": 27,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 27,
+          "endLine": 27
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Unused argument 'context'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 36,
+          "endLine": 36
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 91,
+      "endLine": 91,
+      "message": "Access to a protected member _rebuild of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 91,
+          "endLine": 91
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 93,
+      "endLine": 93,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 93,
+          "endLine": 93
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 107,
+          "endLine": 107
+        },
+        {
+          "line": 111,
+          "endLine": 111
+        },
+        {
+          "line": 115,
+          "endLine": 115
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 139,
+          "endLine": 139
+        },
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 148,
+          "endLine": 148
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 30,
+      "endLine": 46,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "setUp.fake_save",
+      "startLine": 33,
+      "endLine": 34,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp.fake_rebuild",
+      "startLine": 36,
+      "endLine": 37,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_set_up_controller",
+      "startLine": 48,
+      "endLine": 49,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_verify_update_access_ip",
+      "startLine": 51,
+      "endLine": 54,
+      "ccn": 3,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_test_create",
+      "startLine": 56,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_update",
+      "startLine": 72,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_rebuild",
+      "startLine": 83,
+      "endLine": 91,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_with_access_ipv4",
+      "startLine": 93,
+      "endLine": 95,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_with_access_ip_pass_disabled",
+      "startLine": 97,
+      "endLine": 105,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_with_invalid_access_ipv4",
+      "startLine": 107,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_with_access_ipv6",
+      "startLine": 111,
+      "endLine": 113,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_with_invalid_access_ipv6",
+      "startLine": 115,
+      "endLine": 117,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_server_with_access_ipv4",
+      "startLine": 119,
+      "endLine": 121,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_server_with_invalid_access_ipv4",
+      "startLine": 123,
+      "endLine": 125,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_server_with_access_ipv6",
+      "startLine": 127,
+      "endLine": 129,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_server_with_invalid_access_ipv6",
+      "startLine": 131,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rebuild_server_with_access_ipv4",
+      "startLine": 135,
+      "endLine": 137,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rebuild_server_with_invalid_access_ipv4",
+      "startLine": 139,
+      "endLine": 142,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rebuild_server_with_access_ipv6",
+      "startLine": 144,
+      "endLine": 146,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rebuild_server_with_invalid_access_ipv6",
+      "startLine": 148,
+      "endLine": 151,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

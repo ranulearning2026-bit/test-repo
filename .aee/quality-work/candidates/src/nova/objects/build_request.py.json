@@ -1,0 +1,881 @@
+{
+  "file": "src/nova/objects/build_request.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 27
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 264,
+          "endLine": 264
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 45,
+      "endLine": 57,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 57
+        },
+        {
+          "line": 268,
+          "endLine": 270
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 59,
+      "endLine": 59,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 59,
+          "endLine": 59
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 203,
+          "endLine": 203
+        },
+        {
+          "line": 225,
+          "endLine": 225
+        },
+        {
+          "line": 240,
+          "endLine": 240
+        },
+        {
+          "line": 245,
+          "endLine": 245
+        },
+        {
+          "line": 285,
+          "endLine": 285
+        },
+        {
+          "line": 381,
+          "endLine": 381
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 72,
+      "endLine": 72,
+      "message": "Attribute 'instance' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 72,
+          "endLine": 72
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 130,
+          "endLine": 130
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        },
+        {
+          "line": 146,
+          "endLine": 146
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Consider explicitly re-raising using 'except TypeError as exc' and 'raise exception.BuildRequestNotFound(uuid=self.instance_uuid) from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 86,
+      "endLine": 88,
+      "message": "Consider using '{\"instance_uuid\": self.instance_uuid, \"version\": jsonutils.loads(db_instance)['nova_object.version'], ... }' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 88
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 86,
+      "endLine": 88,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 88
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "pylint:R1724",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1724"
+      ],
+      "line": 157,
+      "endLine": 165,
+      "message": "Unnecessary \"elif\" after \"continue\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 157,
+          "endLine": 165
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R68"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 161,
+      "endLine": 161,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 161,
+          "endLine": 161
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 161,
+      "endLine": 161,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 161,
+          "endLine": 161
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 167,
+      "endLine": 167,
+      "message": "Access to a protected member _load_instance of a client class",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 167,
+          "endLine": 167
+        },
+        {
+          "line": 169,
+          "endLine": 169
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 290,
+      "endLine": 290,
+      "message": "Too many branches (28/12)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 290,
+          "endLine": 290
+        },
+        {
+          "line": 381,
+          "endLine": 381
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "too-many-returns",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0911"
+      ],
+      "line": 290,
+      "endLine": 290,
+      "message": "Too many return statements (10/6)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 290,
+          "endLine": 290
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R75"
+    },
+    {
+      "canonical": "too-many-nested-blocks",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1702"
+      ],
+      "line": 291,
+      "endLine": 339,
+      "message": "Too many nested blocks (6/5)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 291,
+          "endLine": 339
+        }
+      ],
+      "id": "T19"
+    },
+    {
+      "canonical": "pylint:R1719",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1719"
+      ],
+      "line": 374,
+      "endLine": 374,
+      "message": "The if expression can be replaced with 'not test'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 374,
+          "endLine": 374
+        }
+      ],
+      "id": "T20",
+      "ruleGroup": "R86"
+    },
+    {
+      "canonical": "ruff:SIM211",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM211"
+      ],
+      "line": 374,
+      "endLine": 374,
+      "message": "Use `not ...` instead of `False if ... else True`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 374,
+          "endLine": 374
+        }
+      ],
+      "id": "T21"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 381,
+      "endLine": 381,
+      "message": "Too many local variables (22/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 381,
+          "endLine": 381
+        }
+      ],
+      "id": "T22",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 381,
+      "endLine": 381,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 381,
+          "endLine": 381
+        }
+      ],
+      "id": "T23",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:R1730",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1730"
+      ],
+      "line": 470,
+      "endLine": 471,
+      "message": "Consider using 'limit_index = min(limit_index, len_build_reqs)' instead of unnecessary if block",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 470,
+          "endLine": 471
+        }
+      ],
+      "id": "T24"
+    },
+    {
+      "canonical": "ruff:PLR1730",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PLR1730"
+      ],
+      "line": 470,
+      "endLine": 471,
+      "message": "Replace `if` statement with `limit_index = min(limit_index, len_build_reqs)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 470,
+          "endLine": 471
+        }
+      ],
+      "id": "T25"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "ccn",
+      "value": 32,
+      "threshold": 15,
+      "function": "_pass_exact_filters",
+      "line": 290,
+      "endLine": 341,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 21,
+      "threshold": 4,
+      "function": "_pass_exact_filters",
+      "line": 290,
+      "endLine": 341,
+      "id": "M2"
+    },
+    {
+      "metric": "ccn",
+      "value": 19,
+      "threshold": 15,
+      "function": "get_by_filters",
+      "line": 381,
+      "endLine": 474,
+      "id": "M3"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "get_by_filters",
+      "line": 381,
+      "endLine": 474,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 10,
+      "threshold": 4,
+      "function": "get_by_filters",
+      "line": 381,
+      "endLine": 474,
+      "id": "M5"
+    }
+  ],
+  "functions": [
+    {
+      "function": "obj_make_compatible",
+      "startLine": 59,
+      "endLine": 66,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_load_instance",
+      "startLine": 68,
+      "endLine": 116,
+      "ccn": 4,
+      "nloc": 31,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_load_block_device_mappings",
+      "startLine": 118,
+      "endLine": 132,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_load_tags",
+      "startLine": 134,
+      "endLine": 148,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_from_db_object",
+      "startLine": 151,
+      "endLine": 170,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_by_instance_uuid_from_db",
+      "startLine": 174,
+      "endLine": 179,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_by_instance_uuid",
+      "startLine": 183,
+      "endLine": 185,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_in_db",
+      "startLine": 189,
+      "endLine": 193,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_update_primitives",
+      "startLine": 195,
+      "endLine": 200,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "create",
+      "startLine": 203,
+      "endLine": 214,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_destroy_in_db",
+      "startLine": 218,
+      "endLine": 222,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "destroy",
+      "startLine": 225,
+      "endLine": 226,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_save_in_db",
+      "startLine": 229,
+      "endLine": 237,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "save",
+      "startLine": 240,
+      "endLine": 243,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_new_instance",
+      "startLine": 245,
+      "endLine": 260,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_all_from_db",
+      "startLine": 274,
+      "endLine": 281,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_all",
+      "startLine": 285,
+      "endLine": 287,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_pass_exact_filters",
+      "startLine": 290,
+      "endLine": 341,
+      "ccn": 32,
+      "nloc": 49,
+      "params": 2,
+      "maxNesting": 21
+    },
+    {
+      "function": "_pass_regex_filters",
+      "startLine": 344,
+      "endLine": 358,
+      "ccn": 6,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "_sort_build_requests",
+      "startLine": 361,
+      "endLine": 377,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_sort_build_requests.sort_attr",
+      "startLine": 366,
+      "endLine": 371,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_by_filters",
+      "startLine": 381,
+      "endLine": 474,
+      "ccn": 19,
+      "nloc": 55,
+      "params": 7,
+      "maxNesting": 10
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

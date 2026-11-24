@@ -1,0 +1,115 @@
+{
+  "file": "src/nova/wsgi/metadata.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0321",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0321"
+      ],
+      "line": 15,
+      "endLine": 15,
+      "message": "More than one statement on a single line",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 15
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R78"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 18,
+      "endLine": 18,
+      "message": "standard import \"threading\" should be placed before first party import \"nova.monkey_patch\"",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 18
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0413",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0413"
+      ],
+      "line": 18,
+      "endLine": 18,
+      "message": "Import \"import threading\" should be placed at the top of the module",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 18
+        },
+        {
+          "line": 20,
+          "endLine": 20
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R82"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [],
+  "dropped": {}
+}

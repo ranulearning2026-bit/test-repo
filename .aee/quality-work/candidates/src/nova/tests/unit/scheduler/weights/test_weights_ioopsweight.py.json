@@ -1,0 +1,275 @@
+{
+  "file": "src/nova/tests/unit/scheduler/weights/test_weights_ioopsweight.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 20,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 20
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 23,
+      "endLine": 23,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 23
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        },
+        {
+          "line": 62,
+          "endLine": 62
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        },
+        {
+          "line": 73,
+          "endLine": 73
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 122,
+      "endLine": 122,
+      "message": "Redefining name 'weights' from outer scope (line 17)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 122,
+          "endLine": 122
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R19"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 25,
+      "endLine": 29,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_weighed_host",
+      "startLine": 31,
+      "endLine": 36,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_all_hosts",
+      "startLine": 38,
+      "endLine": 46,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_do_test",
+      "startLine": 48,
+      "endLine": 55,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_io_ops_weight_multiplier_by_default",
+      "startLine": 57,
+      "endLine": 60,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_io_ops_weight_multiplier_zero_value",
+      "startLine": 62,
+      "endLine": 66,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_io_ops_weight_multiplier_positive_value",
+      "startLine": 68,
+      "endLine": 71,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_io_ops_weight_multiplier",
+      "startLine": 73,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_with_agg",
+      "startLine": 108,
+      "endLine": 126,
+      "ccn": 2,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

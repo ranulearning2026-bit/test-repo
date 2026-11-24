@@ -1,0 +1,258 @@
+{
+  "file": "src/nova/tests/unit/virt/libvirt/volume/test_fs.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 21,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 21
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0223",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0223"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Method 'extend_volume' is abstract in class 'LibvirtBaseVolumeDriver' but is not overridden in child class 'FakeFileSystemVolumeDriver'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R59"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 53,
+      "endLine": 53,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 53
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 54,
+      "endLine": 54,
+      "message": "Access to a protected member _get_device_path of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 54
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_get_mount_point_base",
+      "startLine": 32,
+      "endLine": 33,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_normalize_export",
+      "startLine": 35,
+      "endLine": 36,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 42,
+      "endLine": 51,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_device_path",
+      "startLine": 53,
+      "endLine": 58,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

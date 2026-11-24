@@ -1,0 +1,223 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_2154495.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Too few public methods (0/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 66,
+      "endLine": 66,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 83,
+          "endLine": 83
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 72,
+      "endLine": 72,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 72,
+          "endLine": 72
+        },
+        {
+          "line": 96,
+          "endLine": 96
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_start_compute_for_vtpm_test",
+      "startLine": 39,
+      "endLine": 40,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_restart_compute_for_vtpm_test",
+      "startLine": 42,
+      "endLine": 43,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_compute_restart_vtpm_validation",
+      "startLine": 45,
+      "endLine": 63,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_incapable_driver_skips_vtpm_config_inspection",
+      "startLine": 72,
+      "endLine": 74,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_start_compute_for_vtpm_test",
+      "startLine": 76,
+      "endLine": 77,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_restart_compute_for_vtpm_test",
+      "startLine": 79,
+      "endLine": 80,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 87,
+      "endLine": 94,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_vtpm_enabled_skips_vtpm_config_inspection",
+      "startLine": 96,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_vtpm_disabled_inspects_vtpm_config",
+      "startLine": 101,
+      "endLine": 104,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_start_compute_for_vtpm_test",
+      "startLine": 106,
+      "endLine": 111,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_restart_compute_for_vtpm_test",
+      "startLine": 113,
+      "endLine": 114,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

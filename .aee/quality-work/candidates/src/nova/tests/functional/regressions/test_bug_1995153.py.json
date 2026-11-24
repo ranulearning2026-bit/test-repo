@@ -1,0 +1,272 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_1995153.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 26,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 26
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 18,
+      "endLine": 18,
+      "message": "standard import \"unittest.mock\" should be placed before third party import \"fixtures\"",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 18
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 29,
+      "endLine": 29,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 29,
+          "endLine": 29
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 37,
+          "endLine": 42
+        },
+        {
+          "line": 45,
+          "endLine": 53
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 93,
+      "endLine": 93,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 93,
+          "endLine": 93
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 93,
+      "endLine": 93,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 93,
+          "endLine": 93
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 55,
+      "endLine": 68,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_socket_policy_bug_1995153",
+      "startLine": 70,
+      "endLine": 107,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

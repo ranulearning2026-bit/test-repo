@@ -1,0 +1,108 @@
+{
+  "file": "src/nova/tests/functional/test_ip_allocation.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 16,
+      "endLine": 16,
+      "message": "Access to a protected member _IntegratedTestBase of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 16
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 25,
+      "endLine": 48,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_boot_with_none_policy",
+      "startLine": 50,
+      "endLine": 53,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

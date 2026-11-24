@@ -1,0 +1,167 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_2143972.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 20,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 20
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 19,
+      "endLine": 19,
+      "message": "third party import \"oslo_messaging\" should be placed before first party imports \"nova\", \"nova.test\", \"nova.tests.fixtures\", \"nova.tests.functional.fixtures\", \"nova.tests.functional.integrated_helpers\"",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 19
+        },
+        {
+          "line": 20,
+          "endLine": 20
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 58,
+      "endLine": 58,
+      "message": "Attribute 'count_call' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 58,
+          "endLine": 58
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R28"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 28,
+      "endLine": 45,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_post_live_migration_keystone_fails",
+      "startLine": 47,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_post_live_migration_keystone_fails.fake_setup_networks_on_host",
+      "startLine": 63,
+      "endLine": 70,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

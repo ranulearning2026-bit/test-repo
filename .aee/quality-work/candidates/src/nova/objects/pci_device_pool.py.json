@@ -1,0 +1,302 @@
+{
+  "file": "src/nova/objects/pci_device_pool.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 23
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 77,
+          "endLine": 77
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 38,
+      "endLine": 44,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 44
+        },
+        {
+          "line": 82,
+          "endLine": 84
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 46,
+      "endLine": 46,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 46,
+          "endLine": 46
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 58,
+      "endLine": 58,
+      "message": "Attribute 'vendor_id' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 58,
+          "endLine": 58
+        },
+        {
+          "line": 59,
+          "endLine": 59
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 62,
+          "endLine": 62
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Too few public methods (0/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 100,
+      "endLine": 108,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 100,
+          "endLine": 108
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R21"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "from_pci_stats",
+      "line": 87,
+      "endLine": 109,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "obj_make_compatible",
+      "startLine": 46,
+      "endLine": 49,
+      "ccn": 3,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "from_dict",
+      "startLine": 55,
+      "endLine": 63,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "to_dict",
+      "startLine": 68,
+      "endLine": 73,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "from_pci_stats",
+      "startLine": 87,
+      "endLine": 109,
+      "ccn": 7,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 5
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

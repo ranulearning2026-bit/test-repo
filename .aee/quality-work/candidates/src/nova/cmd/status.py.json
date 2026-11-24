@@ -1,0 +1,572 @@
+{
+  "file": "src/nova/cmd/status.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0321",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0321"
+      ],
+      "line": 19,
+      "endLine": 19,
+      "message": "More than one statement on a single line",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 19
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R78"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 22,
+      "endLine": 22,
+      "message": "standard import \"atexit\" should be placed before first party import \"nova.monkey_patch\"",
+      "toolSeverity": "info",
+      "count": 11,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 22
+        },
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 24,
+          "endLine": 24
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        },
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 33,
+          "endLine": 33
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0413",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0413"
+      ],
+      "line": 22,
+      "endLine": 22,
+      "message": "Import \"import atexit\" should be placed at the top of the module",
+      "toolSeverity": "info",
+      "count": 26,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 22
+        },
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 24,
+          "endLine": 24
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        },
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 35,
+          "endLine": 35
+        },
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        },
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R82"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 22,
+      "endLine": 51,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 51
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0412",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0412"
+      ],
+      "line": 35,
+      "endLine": 35,
+      "message": "Imports from package nova are not grouped",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 35,
+          "endLine": 35
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R85"
+    },
+    {
+      "canonical": "unused-import",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0611"
+      ],
+      "line": 46,
+      "endLine": 46,
+      "message": "Unused image_meta imported from nova.objects as image_meta_obj",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 46,
+          "endLine": 46
+        },
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T7"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Too few public methods (0/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "too-many-returns",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0911"
+      ],
+      "line": 172,
+      "endLine": 172,
+      "message": "Too many return statements (7/6)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 172,
+          "endLine": 172
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R75"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 246,
+      "endLine": 246,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 246,
+          "endLine": 246
+        },
+        {
+          "line": 347,
+          "endLine": 347
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:C0325",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0325"
+      ],
+      "line": 268,
+      "endLine": 268,
+      "message": "Unnecessary parens after '=' keyword",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 268,
+          "endLine": 268
+        },
+        {
+          "line": 280,
+          "endLine": 280
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R41"
+    },
+    {
+      "canonical": "ruff:RUF100",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF100"
+      ],
+      "line": 283,
+      "endLine": 283,
+      "message": "Unused blanket `noqa` directive",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 283,
+          "endLine": 283
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R45"
+    },
+    {
+      "canonical": "pylint:C0415",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0415"
+      ],
+      "line": 360,
+      "endLine": 360,
+      "message": "Import outside toplevel (logging)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 360,
+          "endLine": 360
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R58"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 361,
+      "endLine": 361,
+      "message": "Access to a protected member _handlerList of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 361,
+          "endLine": 361
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_check_cellsv2",
+      "line": 103,
+      "endLine": 159,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_count_compute_nodes",
+      "startLine": 76,
+      "endLine": 101,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_cellsv2",
+      "startLine": 103,
+      "endLine": 159,
+      "ccn": 6,
+      "nloc": 34,
+      "params": 1,
+      "maxNesting": 5
+    },
+    {
+      "function": "_placement_get",
+      "startLine": 162,
+      "endLine": 170,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_placement",
+      "startLine": 172,
+      "endLine": 206,
+      "ccn": 7,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_cell_mappings",
+      "startLine": 209,
+      "endLine": 225,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_cinder",
+      "startLine": 227,
+      "endLine": 253,
+      "ccn": 4,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_check_old_computes",
+      "startLine": 255,
+      "endLine": 263,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_check_machine_type_set",
+      "startLine": 265,
+      "endLine": 276,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_check_service_user_token",
+      "startLine": 278,
+      "endLine": 285,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "main",
+      "startLine": 330,
+      "endLine": 350,
+      "ccn": 4,
+      "nloc": 16,
+      "params": 0,
+      "maxNesting": 3
+    },
+    {
+      "function": "_at_exit",
+      "startLine": 358,
+      "endLine": 361,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

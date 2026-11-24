@@ -1,0 +1,747 @@
+{
+  "file": "src/nova/tests/unit/objects/test_migration.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 26,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 26
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 26,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 70,
+          "endLine": 70
+        },
+        {
+          "line": 79,
+          "endLine": 79
+        },
+        {
+          "line": 91,
+          "endLine": 91
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 174,
+          "endLine": 174
+        },
+        {
+          "line": 198,
+          "endLine": 198
+        },
+        {
+          "line": 217,
+          "endLine": 217
+        },
+        {
+          "line": 226,
+          "endLine": 226
+        },
+        {
+          "line": 239,
+          "endLine": 239
+        },
+        {
+          "line": 255,
+          "endLine": 255
+        },
+        {
+          "line": 266,
+          "endLine": 266
+        },
+        {
+          "line": 280,
+          "endLine": 280
+        },
+        {
+          "line": 294,
+          "endLine": 294
+        },
+        {
+          "line": 308,
+          "endLine": 308
+        },
+        {
+          "line": 316,
+          "endLine": 316
+        },
+        {
+          "line": 326,
+          "endLine": 326
+        },
+        {
+          "line": 332,
+          "endLine": 332
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Class '_TestMigrationObject' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Too many public methods (25/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Class `_TestMigrationObject` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 75,
+      "endLine": 75,
+      "message": "Instance of '_TestMigrationObject' has no 'compare_obj' member",
+      "toolSeverity": "error",
+      "count": 63,
+      "occurrences": [
+        {
+          "line": 75,
+          "endLine": 75
+        },
+        {
+          "line": 85,
+          "endLine": 85
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 102,
+          "endLine": 102
+        },
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 120,
+          "endLine": 120
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        },
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        },
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 166,
+          "endLine": 166
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 186,
+          "endLine": 186
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        },
+        {
+          "line": 195,
+          "endLine": 195
+        },
+        {
+          "line": 209,
+          "endLine": 209
+        }
+      ],
+      "id": "T8"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 170,
+      "endLine": 170,
+      "message": "Access to a protected member _context of a client class",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 170,
+          "endLine": 170
+        },
+        {
+          "line": 244,
+          "endLine": 244
+        },
+        {
+          "line": 247,
+          "endLine": 247
+        },
+        {
+          "line": 262,
+          "endLine": 262
+        },
+        {
+          "line": 409,
+          "endLine": 409
+        },
+        {
+          "line": 414,
+          "endLine": 414
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 256,
+      "endLine": 256,
+      "message": "Redefining name 'migration' from outer scope (line 24)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 256,
+          "endLine": 256
+        },
+        {
+          "line": 353,
+          "endLine": 353
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:W0104",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0104"
+      ],
+      "line": 260,
+      "endLine": 260,
+      "message": "Statement seems to have no effect",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 260,
+          "endLine": 260
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R71"
+    },
+    {
+      "canonical": "ruff:B018",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "B018"
+      ],
+      "line": 260,
+      "endLine": 260,
+      "message": "Found useless expression. Either assign it to a variable or remove it.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 260,
+          "endLine": 260
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R65"
+    },
+    {
+      "canonical": "pylint:C3001",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C3001"
+      ],
+      "line": 384,
+      "endLine": 384,
+      "message": "Lambda expression assigned to a variable. Define a function using the \"def\" keyword instead.",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 384,
+          "endLine": 384
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R55"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 409,
+      "endLine": 409,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 409,
+          "endLine": 409
+        },
+        {
+          "line": 414,
+          "endLine": 414
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R05"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "fake_db_migration",
+      "startLine": 32,
+      "endLine": 65,
+      "ccn": 2,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_by_id",
+      "startLine": 70,
+      "endLine": 76,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_instance_and_status",
+      "startLine": 79,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_in_progress_by_instance",
+      "startLine": 91,
+      "endLine": 102,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_create",
+      "startLine": 105,
+      "endLine": 126,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_with_user_id_and_project_id_set_in_ctxt",
+      "startLine": 129,
+      "endLine": 151,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_without_node_id",
+      "startLine": 154,
+      "endLine": 171,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_dest_compute_id",
+      "startLine": 174,
+      "endLine": 195,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_recreate_fails",
+      "startLine": 198,
+      "endLine": 215,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_fails_migration_type",
+      "startLine": 217,
+      "endLine": 223,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_save",
+      "startLine": 226,
+      "endLine": 236,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance",
+      "startLine": 239,
+      "endLine": 253,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_setter",
+      "startLine": 255,
+      "endLine": 263,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_unconfirmed_by_dest_compute",
+      "startLine": 266,
+      "endLine": 277,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_in_progress_by_host_and_node",
+      "startLine": 280,
+      "endLine": 291,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_by_filters",
+      "startLine": 294,
+      "endLine": 306,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_migrate_old_resize_record",
+      "startLine": 308,
+      "endLine": 314,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_migrate_old_migration_record",
+      "startLine": 316,
+      "endLine": 324,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_migrate_unset_type_resize",
+      "startLine": 326,
+      "endLine": 330,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_migrate_unset_type_migration",
+      "startLine": 332,
+      "endLine": 336,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_obj_load_attr_hidden",
+      "startLine": 338,
+      "endLine": 341,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_obj_load_attr_cross_cell_move",
+      "startLine": 343,
+      "endLine": 346,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_id_and_instance",
+      "startLine": 349,
+      "endLine": 354,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_uuid_on_load",
+      "startLine": 356,
+      "endLine": 373,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_obj_make_compatible",
+      "startLine": 375,
+      "endLine": 400,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_uuid",
+      "startLine": 403,
+      "endLine": 406,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

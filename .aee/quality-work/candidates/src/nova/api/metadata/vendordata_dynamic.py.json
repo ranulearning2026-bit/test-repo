@@ -1,0 +1,193 @@
+{
+  "file": "src/nova/api/metadata/vendordata_dynamic.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 26,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 26
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Unused argument 'conf'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 52,
+      "endLine": 52,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 52,
+          "endLine": 52
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 52,
+      "endLine": 52,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 52,
+          "endLine": 52
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:W0231",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0231"
+      ],
+      "line": 53,
+      "endLine": 53,
+      "message": "__init__ method from base class 'VendorDataDriver' is not called",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 53
+        }
+      ],
+      "id": "T6"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_load_ks_session",
+      "startLine": 32,
+      "endLine": 49,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 53,
+      "endLine": 56,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_do_request",
+      "startLine": 58,
+      "endLine": 105,
+      "ccn": 8,
+      "nloc": 38,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "get",
+      "startLine": 107,
+      "endLine": 133,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

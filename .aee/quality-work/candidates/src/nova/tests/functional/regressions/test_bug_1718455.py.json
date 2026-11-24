@@ -1,0 +1,280 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_1718455.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Parameter 'expected_statuses' has been renamed to 'expected_status' in overriding 'TestLiveMigrateOneOfConcurrentlyCreatedInstances._wait_for_migration_status' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 85,
+      "endLine": 85,
+      "message": "Unused variable 'attempt'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 85,
+          "endLine": 85
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 93,
+      "endLine": 94,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 93,
+          "endLine": 94
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 93,
+      "endLine": 95,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 93,
+          "endLine": 95
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 97,
+      "endLine": 97,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 97,
+          "endLine": 97
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 42,
+      "endLine": 62,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_boot_servers",
+      "startLine": 64,
+      "endLine": 78,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_wait_for_migration_status",
+      "startLine": 80,
+      "endLine": 95,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "test_live_migrate_one_multi_created_instance",
+      "startLine": 97,
+      "endLine": 126,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

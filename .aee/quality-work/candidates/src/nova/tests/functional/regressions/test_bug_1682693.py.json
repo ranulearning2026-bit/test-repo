@@ -1,0 +1,204 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_1682693.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 54,
+      "endLine": 54,
+      "message": "Unused variable 'x'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 54
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 73,
+      "endLine": 73,
+      "message": "Consider using '{\"tags\": 'foo,bar'}' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 73,
+          "endLine": 73
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 73,
+      "endLine": 73,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 73,
+          "endLine": 73
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R22"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 30,
+      "endLine": 67,
+      "ccn": 2,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_list_servers_filter_by_tags",
+      "startLine": 69,
+      "endLine": 83,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

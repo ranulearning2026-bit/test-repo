@@ -1,0 +1,707 @@
+{
+  "file": "src/nova/virt/libvirt/utils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 21,
+      "endLine": 52,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 52
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 113,
+      "endLine": 113,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 602,
+          "endLine": 602
+        },
+        {
+          "line": 628,
+          "endLine": 628
+        },
+        {
+          "line": 657,
+          "endLine": 657
+        },
+        {
+          "line": 716,
+          "endLine": 716
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 114,
+      "endLine": 114,
+      "message": "Consider using '{}' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 114,
+          "endLine": 114
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 114,
+      "endLine": 114,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 114,
+          "endLine": 114
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 131,
+      "endLine": 131,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 131,
+          "endLine": 131
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 136,
+      "endLine": 136,
+      "message": "Too many local variables (19/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 136,
+          "endLine": 136
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 136,
+      "endLine": 136,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 136,
+          "endLine": 136
+        },
+        {
+          "line": 319,
+          "endLine": 319
+        },
+        {
+          "line": 728,
+          "endLine": 728
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 292,
+      "endLine": 292,
+      "message": "Redefining built-in 'format'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 292,
+          "endLine": 292
+        },
+        {
+          "line": 305,
+          "endLine": 305
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 349,
+      "endLine": 349,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 349,
+          "endLine": 349
+        },
+        {
+          "line": 351,
+          "endLine": 351
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 349,
+      "endLine": 349,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 349,
+          "endLine": 349
+        },
+        {
+          "line": 351,
+          "endLine": 351
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 401,
+      "endLine": 401,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 401,
+          "endLine": 401
+        },
+        {
+          "line": 416,
+          "endLine": 416
+        },
+        {
+          "line": 597,
+          "endLine": 597
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R50"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 458,
+      "endLine": 464,
+      "message": "Unnecessary \"elif\" after \"return\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 458,
+          "endLine": 464
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "ruff:FURB129",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "FURB129"
+      ],
+      "line": 598,
+      "endLine": 598,
+      "message": "Instead of calling `readlines()`, iterate over file object directly",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 598,
+          "endLine": 598
+        }
+      ],
+      "id": "T15"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "function_lines",
+      "value": 131,
+      "threshold": 100,
+      "function": "create_image",
+      "line": 136,
+      "endLine": 266,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "create_image",
+      "line": 136,
+      "endLine": 266,
+      "id": "M2"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "copy_image",
+      "line": 319,
+      "endLine": 356,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "find_disk",
+      "line": 419,
+      "endLine": 453,
+      "id": "M4"
+    }
+  ],
+  "functions": [
+    {
+      "function": "make_reverse_cpu_traits_mapping",
+      "startLine": 113,
+      "endLine": 121,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 0,
+      "maxNesting": 3
+    },
+    {
+      "function": "create_image",
+      "startLine": 136,
+      "endLine": 266,
+      "ccn": 13,
+      "nloc": 72,
+      "params": 6,
+      "maxNesting": 9
+    },
+    {
+      "function": "create_ploop_image",
+      "startLine": 269,
+      "endLine": 289,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_disk_size",
+      "startLine": 292,
+      "endLine": 301,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_disk_backing_file",
+      "startLine": 304,
+      "endLine": 316,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "copy_image",
+      "startLine": 319,
+      "endLine": 356,
+      "ccn": 3,
+      "nloc": 20,
+      "params": 7,
+      "maxNesting": 1
+    },
+    {
+      "function": "chown_for_id_maps",
+      "startLine": 359,
+      "endLine": 372,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "extract_snapshot",
+      "startLine": 375,
+      "endLine": 392,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "load_file",
+      "startLine": 396,
+      "endLine": 402,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "file_open",
+      "startLine": 407,
+      "endLine": 416,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "find_disk",
+      "startLine": 419,
+      "endLine": 453,
+      "ccn": 15,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 9
+    },
+    {
+      "function": "get_disk_type_from_path",
+      "startLine": 456,
+      "endLine": 467,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_fs_info",
+      "startLine": 470,
+      "endLine": 484,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "fetch_image",
+      "startLine": 487,
+      "endLine": 500,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "fetch_raw_image",
+      "startLine": 503,
+      "endLine": 519,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_instance_path",
+      "startLine": 522,
+      "endLine": 536,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_instance_path_at_destination",
+      "startLine": 539,
+      "endLine": 566,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_arch",
+      "startLine": 569,
+      "endLine": 586,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "is_mounted",
+      "startLine": 589,
+      "endLine": 599,
+      "ccn": 6,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "is_valid_hostname",
+      "startLine": 602,
+      "endLine": 603,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "version_to_string",
+      "startLine": 606,
+      "endLine": 608,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "cpu_features_to_traits",
+      "startLine": 611,
+      "endLine": 625,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_cpu_model_from_arch",
+      "startLine": 628,
+      "endLine": 641,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_machine_type",
+      "startLine": 644,
+      "endLine": 654,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_default_machine_type",
+      "startLine": 657,
+      "endLine": 685,
+      "ccn": 5,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "mdev_name2uuid",
+      "startLine": 688,
+      "endLine": 699,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "mdev_uuid2name",
+      "startLine": 702,
+      "endLine": 713,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_flags_by_flavor_specs",
+      "startLine": 716,
+      "endLine": 725,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "save_and_migrate_vtpm_dir",
+      "startLine": 728,
+      "endLine": 773,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 6,
+      "maxNesting": 1
+    },
+    {
+      "function": "restore_vtpm_dir",
+      "startLine": 776,
+      "endLine": 799,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

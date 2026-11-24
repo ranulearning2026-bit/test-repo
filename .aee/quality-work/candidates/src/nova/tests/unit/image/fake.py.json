@@ -1,0 +1,57 @@
+{
+  "file": "src/nova/tests/unit/image/fake.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "fake_image_obj",
+      "startLine": 28,
+      "endLine": 50,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

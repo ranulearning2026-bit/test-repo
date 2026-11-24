@@ -1,0 +1,686 @@
+{
+  "file": "src/nova/virt/libvirt/blockinfo.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 72,
+      "endLine": 88,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 72,
+          "endLine": 88
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "too-many-returns",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0911"
+      ],
+      "line": 126,
+      "endLine": 126,
+      "message": "Too many return statements (8/6)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 126,
+          "endLine": 126
+        },
+        {
+          "line": 219,
+          "endLine": 219
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R75"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 140,
+      "endLine": 157,
+      "message": "Unnecessary \"elif\" after \"return\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 140,
+          "endLine": 157
+        },
+        {
+          "line": 170,
+          "endLine": 175
+        },
+        {
+          "line": 264,
+          "endLine": 269
+        },
+        {
+          "line": 277,
+          "endLine": 280
+        },
+        {
+          "line": 298,
+          "endLine": 311
+        },
+        {
+          "line": 421,
+          "endLine": 424
+        },
+        {
+          "line": 479,
+          "endLine": 485
+        },
+        {
+          "line": 777,
+          "endLine": 781
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "ruff:SIM114",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM114"
+      ],
+      "line": 144,
+      "endLine": 147,
+      "message": "Combine `if` branches using logical `or` operator",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 144,
+          "endLine": 147
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R84"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 205,
+      "endLine": 206,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 205,
+          "endLine": 206
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 213,
+      "endLine": 213,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 213,
+          "endLine": 213
+        },
+        {
+          "line": 340,
+          "endLine": 340
+        },
+        {
+          "line": 364,
+          "endLine": 364
+        },
+        {
+          "line": 427,
+          "endLine": 427
+        },
+        {
+          "line": 463,
+          "endLine": 463
+        },
+        {
+          "line": 477,
+          "endLine": 477
+        },
+        {
+          "line": 488,
+          "endLine": 488
+        },
+        {
+          "line": 733,
+          "endLine": 733
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 219,
+      "endLine": 219,
+      "message": "Unused argument 'instance'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 219,
+          "endLine": 219
+        },
+        {
+          "line": 288,
+          "endLine": 288
+        },
+        {
+          "line": 463,
+          "endLine": 463
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 219,
+      "endLine": 219,
+      "message": "Too many branches (16/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 219,
+          "endLine": 219
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 364,
+      "endLine": 364,
+      "message": "Too many local variables (17/15)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 364,
+          "endLine": 364
+        },
+        {
+          "line": 567,
+          "endLine": 567
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 364,
+      "endLine": 364,
+      "message": "Too many arguments (9/5)",
+      "toolSeverity": "warning",
+      "count": 12,
+      "occurrences": [
+        {
+          "line": 364,
+          "endLine": 364
+        },
+        {
+          "line": 427,
+          "endLine": 427
+        },
+        {
+          "line": 500,
+          "endLine": 500
+        },
+        {
+          "line": 567,
+          "endLine": 567
+        },
+        {
+          "line": 673,
+          "endLine": 673
+        },
+        {
+          "line": 702,
+          "endLine": 702
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R17"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "find_disk_dev_for_disk_bus",
+      "line": 178,
+      "endLine": 210,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "get_disk_bus_for_device_type",
+      "line": 219,
+      "endLine": 285,
+      "id": "M2"
+    },
+    {
+      "metric": "ccn",
+      "value": 16,
+      "threshold": 15,
+      "function": "get_info_from_bdm",
+      "line": 364,
+      "endLine": 416,
+      "id": "M3"
+    },
+    {
+      "metric": "params",
+      "value": 9,
+      "threshold": 6,
+      "function": "get_info_from_bdm",
+      "line": 364,
+      "endLine": 416,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "get_info_from_bdm",
+      "line": 364,
+      "endLine": 416,
+      "id": "M5"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "get_root_info",
+      "line": 427,
+      "endLine": 460,
+      "id": "M6"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "get_disk_mapping",
+      "line": 500,
+      "endLine": 527,
+      "id": "M7"
+    },
+    {
+      "metric": "ccn",
+      "value": 16,
+      "threshold": 15,
+      "function": "_get_disk_mapping",
+      "line": 567,
+      "endLine": 670,
+      "id": "M8"
+    },
+    {
+      "metric": "function_lines",
+      "value": 104,
+      "threshold": 100,
+      "function": "_get_disk_mapping",
+      "line": 567,
+      "endLine": 670,
+      "id": "M9"
+    },
+    {
+      "metric": "nesting",
+      "value": 11,
+      "threshold": 4,
+      "function": "_get_disk_mapping",
+      "line": 567,
+      "endLine": 670,
+      "id": "M10"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "_get_stable_device_rescue_mapping",
+      "line": 673,
+      "endLine": 699,
+      "id": "M11"
+    }
+  ],
+  "functions": [
+    {
+      "function": "has_disk_dev",
+      "startLine": 109,
+      "endLine": 123,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_dev_prefix_for_disk_bus",
+      "startLine": 126,
+      "endLine": 157,
+      "ccn": 9,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_dev_count_for_disk_bus",
+      "startLine": 160,
+      "endLine": 175,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "find_disk_dev_for_disk_bus",
+      "startLine": 178,
+      "endLine": 210,
+      "ccn": 8,
+      "nloc": 18,
+      "params": 3,
+      "maxNesting": 6
+    },
+    {
+      "function": "is_disk_bus_valid_for_virt",
+      "startLine": 213,
+      "endLine": 216,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_disk_bus_for_device_type",
+      "startLine": 219,
+      "endLine": 285,
+      "ccn": 15,
+      "nloc": 45,
+      "params": 4,
+      "maxNesting": 6
+    },
+    {
+      "function": "get_disk_bus_for_disk_dev",
+      "startLine": 288,
+      "endLine": 311,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_next_disk_info",
+      "startLine": 314,
+      "endLine": 337,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_eph_disk",
+      "startLine": 340,
+      "endLine": 341,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_config_drive_type",
+      "startLine": 344,
+      "endLine": 361,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_info_from_bdm",
+      "startLine": 364,
+      "endLine": 416,
+      "ccn": 16,
+      "nloc": 42,
+      "params": 9,
+      "maxNesting": 5
+    },
+    {
+      "function": "get_device_name",
+      "startLine": 419,
+      "endLine": 424,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_root_info",
+      "startLine": 427,
+      "endLine": 460,
+      "ccn": 8,
+      "nloc": 25,
+      "params": 7,
+      "maxNesting": 2
+    },
+    {
+      "function": "default_device_names",
+      "startLine": 463,
+      "endLine": 474,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_default_ephemeral_info",
+      "startLine": 477,
+      "endLine": 485,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "update_bdm",
+      "startLine": 488,
+      "endLine": 497,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_disk_mapping",
+      "startLine": 500,
+      "endLine": 527,
+      "ccn": 5,
+      "nloc": 13,
+      "params": 8,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_rescue_disk_mapping",
+      "startLine": 530,
+      "endLine": 564,
+      "ccn": 2,
+      "nloc": 20,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_disk_mapping",
+      "startLine": 567,
+      "endLine": 670,
+      "ccn": 16,
+      "nloc": 75,
+      "params": 6,
+      "maxNesting": 11
+    },
+    {
+      "function": "_get_stable_device_rescue_mapping",
+      "startLine": 673,
+      "endLine": 699,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 7,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_disk_info",
+      "startLine": 702,
+      "endLine": 730,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_boot_order",
+      "startLine": 733,
+      "endLine": 744,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_boot_order.uniq",
+      "startLine": 740,
+      "endLine": 742,
+      "ccn": 4,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_rescue_device",
+      "startLine": 747,
+      "endLine": 760,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_rescue_bus",
+      "startLine": 763,
+      "endLine": 783,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

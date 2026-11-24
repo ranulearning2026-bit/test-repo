@@ -1,0 +1,350 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_1848343.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 29,
+      "endLine": 29,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 29,
+          "endLine": 29
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 29,
+      "endLine": 29,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 29,
+          "endLine": 29
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Number of parameters was 9 in 'InstanceHelperMixin._create_server' and is now 1 in overriding 'DeletedServerAllocationRevertTest._create_server' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 57,
+      "endLine": 58,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 58
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 87,
+      "endLine": 87,
+      "message": "Unpacked variable `source_host` is never used",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 110,
+          "endLine": 110
+        },
+        {
+          "line": 130,
+          "endLine": 130
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 87,
+      "endLine": 87,
+      "message": "Unused variable 'source_host'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 110,
+          "endLine": 110
+        },
+        {
+          "line": 130,
+          "endLine": 130
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 133,
+      "endLine": 133,
+      "message": "Access to a protected member _prep_resize of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 133,
+          "endLine": 133
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 28,
+      "endLine": 32,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_server",
+      "startLine": 34,
+      "endLine": 41,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_assert_no_allocations",
+      "startLine": 43,
+      "endLine": 58,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_disable_target_host",
+      "startLine": 60,
+      "endLine": 65,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_stub_delete_server_during_scheduling",
+      "startLine": 67,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_stub_delete_server_during_scheduling.wrap_select_dests",
+      "startLine": 73,
+      "endLine": 76,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_migration_task_rollback",
+      "startLine": 81,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_live_migration_task_rollback",
+      "startLine": 105,
+      "endLine": 123,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_migrate_on_compute_fail",
+      "startLine": 125,
+      "endLine": 149,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_migrate_on_compute_fail.wrap_prep_resize",
+      "startLine": 135,
+      "endLine": 137,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

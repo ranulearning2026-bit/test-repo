@@ -1,0 +1,245 @@
+{
+  "file": "src/nova/tests/unit/policies/test_volumes.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Access to a protected member _translate_volume_summary_view of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Unused argument 'mock_get'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 137,
+      "endLine": 158,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 137,
+          "endLine": 158
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R13"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 33,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_volumes_policy",
+      "startLine": 67,
+      "endLine": 71,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_detail_volumes_policy",
+      "startLine": 74,
+      "endLine": 78,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_show_volume_policy",
+      "startLine": 81,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_volumes_policy",
+      "startLine": 100,
+      "endLine": 120,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_volume_policy",
+      "startLine": 123,
+      "endLine": 127,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 160,
+      "endLine": 178,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

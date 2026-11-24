@@ -1,0 +1,489 @@
+{
+  "file": "src/nova/tests/unit/privsep/test_libvirt.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 26,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 26
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "standard import \"os\" should be placed before third party import \"ddt\"",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        },
+        {
+          "line": 26,
+          "endLine": 26
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 171,
+          "endLine": 171
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 171,
+          "endLine": 171
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 16,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 46,
+          "endLine": 46
+        },
+        {
+          "line": 53,
+          "endLine": 53
+        },
+        {
+          "line": 62,
+          "endLine": 62
+        },
+        {
+          "line": 72,
+          "endLine": 72
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        },
+        {
+          "line": 88,
+          "endLine": 88
+        },
+        {
+          "line": 94,
+          "endLine": 94
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 126,
+          "endLine": 126
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 157,
+          "endLine": 157
+        },
+        {
+          "line": 176,
+          "endLine": 176
+        },
+        {
+          "line": 200,
+          "endLine": 200
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 139,
+      "endLine": 139,
+      "message": "Unpacked variable `mock_import` is never used",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 139,
+          "endLine": 139
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 139,
+      "endLine": 139,
+      "message": "Unused variable 'mock_import'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 139,
+          "endLine": 139
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 163,
+      "endLine": 163,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 163,
+          "endLine": 163
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R05"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 32,
+      "endLine": 34,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_dmcrypt_create_volume",
+      "startLine": 37,
+      "endLine": 43,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_dmcrypt_delete_volume",
+      "startLine": 46,
+      "endLine": 48,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ploop_init",
+      "startLine": 53,
+      "endLine": 59,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ploop_resize",
+      "startLine": 62,
+      "endLine": 69,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ploop_restore_descriptor",
+      "startLine": 72,
+      "endLine": 77,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_plug_infiniband_vif",
+      "startLine": 80,
+      "endLine": 85,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unplug_infiniband_vif",
+      "startLine": 88,
+      "endLine": 91,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_plug_midonet_vif",
+      "startLine": 94,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unplug_midonet_vif",
+      "startLine": 100,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_plug_plumgrid_vif",
+      "startLine": 106,
+      "endLine": 115,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unplug_plumgrid_vif",
+      "startLine": 118,
+      "endLine": 124,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_readpty",
+      "startLine": 126,
+      "endLine": 149,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_readpty.fake_import",
+      "startLine": 131,
+      "endLine": 134,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_umount",
+      "startLine": 152,
+      "endLine": 154,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unprivileged_umount",
+      "startLine": 157,
+      "endLine": 159,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 170,
+      "endLine": 172,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_systemd_run_qb_mount",
+      "startLine": 176,
+      "endLine": 196,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_unprivileged_qb_mount",
+      "startLine": 200,
+      "endLine": 217,
+      "ccn": 2,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

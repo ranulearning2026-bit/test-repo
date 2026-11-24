@@ -1,0 +1,418 @@
+{
+  "file": "src/nova/tests/functional/libvirt/test_machine_type.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 22,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 22
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Access to a protected member _get_guest_config of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 181,
+      "endLine": 181,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 181,
+          "endLine": 181
+        },
+        {
+          "line": 184,
+          "endLine": 184
+        },
+        {
+          "line": 187,
+          "endLine": 187
+        },
+        {
+          "line": 204,
+          "endLine": 204
+        },
+        {
+          "line": 220,
+          "endLine": 220
+        },
+        {
+          "line": 234,
+          "endLine": 234
+        },
+        {
+          "line": 249,
+          "endLine": 249
+        },
+        {
+          "line": 264,
+          "endLine": 264
+        },
+        {
+          "line": 279,
+          "endLine": 279
+        },
+        {
+          "line": 297,
+          "endLine": 297
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 300,
+      "endLine": 300,
+      "message": "Unpacked variable `server_with` is never used",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 300,
+          "endLine": 300
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 300,
+      "endLine": 300,
+      "message": "Unused variable 'server_with'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 300,
+          "endLine": 300
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R26"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 29,
+      "endLine": 55,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp._get_guest_config",
+      "startLine": 47,
+      "endLine": 51,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_servers",
+      "startLine": 57,
+      "endLine": 66,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_machine_type",
+      "startLine": 68,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_unset_machine_type",
+      "startLine": 83,
+      "endLine": 89,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_init_host_register_machine_type",
+      "startLine": 91,
+      "endLine": 120,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_after_config_change",
+      "startLine": 122,
+      "endLine": 136,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_after_server_rebuild",
+      "startLine": 138,
+      "endLine": 160,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_machine_type_after_server_reboot",
+      "startLine": 162,
+      "endLine": 179,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_after_server_soft_reboot",
+      "startLine": 181,
+      "endLine": 182,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_after_server_hard_reboot",
+      "startLine": 184,
+      "endLine": 185,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_get",
+      "startLine": 187,
+      "endLine": 202,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_update_stopped",
+      "startLine": 204,
+      "endLine": 218,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_update_blocked_active",
+      "startLine": 220,
+      "endLine": 232,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_update_blocked_between_alias_and_versioned",
+      "startLine": 234,
+      "endLine": 247,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_update_blocked_between_versioned_and_alias",
+      "startLine": 249,
+      "endLine": 262,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_update_blocked_between_types",
+      "startLine": 264,
+      "endLine": 277,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_update_force",
+      "startLine": 279,
+      "endLine": 295,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_machine_type_list_unset_machine_type",
+      "startLine": 297,
+      "endLine": 307,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_hw_machine_type_config_update_workflow",
+      "startLine": 309,
+      "endLine": 393,
+      "ccn": 2,
+      "nloc": 47,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

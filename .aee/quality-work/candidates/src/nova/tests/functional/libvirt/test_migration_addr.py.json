@@ -1,0 +1,254 @@
+{
+  "file": "src/nova/tests/functional/libvirt/test_migration_addr.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 24,
+      "endLine": 24,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 24,
+          "endLine": 24
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0246",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0246"
+      ],
+      "line": 27,
+      "endLine": 27,
+      "message": "Useless parent or super() delegation in method 'setUp'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 27,
+          "endLine": 27
+        }
+      ],
+      "id": "T4"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 75,
+      "endLine": 75,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 75,
+          "endLine": 75
+        },
+        {
+          "line": 78,
+          "endLine": 78
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 84,
+          "endLine": 84
+        },
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 27,
+      "endLine": 28,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_move_op",
+      "startLine": 30,
+      "endLine": 49,
+      "ccn": 3,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_cold_migrate",
+      "startLine": 51,
+      "endLine": 57,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_resize",
+      "startLine": 59,
+      "endLine": 67,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_evacuate",
+      "startLine": 69,
+      "endLine": 73,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migrate_with_ip",
+      "startLine": 75,
+      "endLine": 76,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migrate_with_hostname",
+      "startLine": 78,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resize_with_ip",
+      "startLine": 81,
+      "endLine": 82,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resize_with_hostname",
+      "startLine": 84,
+      "endLine": 85,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_evacuate_with_ip",
+      "startLine": 87,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_evacuate_with_hostname",
+      "startLine": 90,
+      "endLine": 91,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

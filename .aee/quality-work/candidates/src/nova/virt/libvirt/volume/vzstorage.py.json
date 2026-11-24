@@ -1,0 +1,282 @@
+{
+  "file": "src/nova/virt/libvirt/volume/vzstorage.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0223",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0223"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Method 'extend_volume' is abstract in class 'LibvirtBaseVolumeDriver' but is not overridden in child class 'LibvirtVZStorageVolumeDriver'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R59"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 41,
+      "endLine": 41,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 74,
+          "endLine": 75
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 41,
+      "endLine": 41,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 74,
+          "endLine": 75
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 54,
+      "endLine": 54,
+      "message": "Unnecessary tuple literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 54
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 123,
+      "endLine": 123,
+      "message": "Unused argument 'instance'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R11"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 40,
+      "endLine": 67,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_mount_point_base",
+      "startLine": 69,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_config",
+      "startLine": 72,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_parse_vz_share",
+      "startLine": 83,
+      "endLine": 97,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_mount_opts",
+      "startLine": 99,
+      "endLine": 115,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "connect_volume",
+      "startLine": 117,
+      "endLine": 131,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "connect_volume._connect_volume",
+      "startLine": 123,
+      "endLine": 129,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "disconnect_volume",
+      "startLine": 133,
+      "endLine": 139,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

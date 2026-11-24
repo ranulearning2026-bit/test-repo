@@ -1,0 +1,464 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_api.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 28,
+      "endLine": 28,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        },
+        {
+          "line": 149,
+          "endLine": 149
+        },
+        {
+          "line": 156,
+          "endLine": 156
+        },
+        {
+          "line": 163,
+          "endLine": 163
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 46,
+          "endLine": 46
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 84,
+          "endLine": 84
+        },
+        {
+          "line": 96,
+          "endLine": 96
+        },
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 148,
+          "endLine": 148
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 86,
+      "endLine": 86,
+      "message": "Unused argument 'req'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 86
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0719",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0719"
+      ],
+      "line": 99,
+      "endLine": 99,
+      "message": "Raising too general exception: Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 99,
+          "endLine": 99
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R46"
+    },
+    {
+      "canonical": "ruff:TRY002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "TRY002"
+      ],
+      "line": 99,
+      "endLine": 99,
+      "message": "Create your own exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 99,
+          "endLine": 99
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R48"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "wsgi_app",
+      "startLine": 31,
+      "endLine": 32,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_wsgi_app",
+      "startLine": 34,
+      "endLine": 35,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_malformed_json",
+      "startLine": 37,
+      "endLine": 44,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_malformed_xml",
+      "startLine": 46,
+      "endLine": 53,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_vendor_content_type_json",
+      "startLine": 55,
+      "endLine": 72,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_exceptions_are_converted_to_faults_webob_exc",
+      "startLine": 74,
+      "endLine": 82,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_exceptions_are_converted_to_faults_webob_exc.raise_webob_exc",
+      "startLine": 76,
+      "endLine": 77,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_exceptions_are_converted_to_faults_api_fault",
+      "startLine": 84,
+      "endLine": 94,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_exceptions_are_converted_to_faults_api_fault.raise_api_fault",
+      "startLine": 86,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_exceptions_are_converted_to_faults_exception",
+      "startLine": 96,
+      "endLine": 105,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_exceptions_are_converted_to_faults_exception.fail",
+      "startLine": 98,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_do_test_exception_safety_reflected_in_faults",
+      "startLine": 107,
+      "endLine": 122,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_do_test_exception_safety_reflected_in_faults.fail",
+      "startLine": 112,
+      "endLine": 113,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_safe_exceptions_are_described_in_faults",
+      "startLine": 124,
+      "endLine": 125,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unsafe_exceptions_are_not_described_in_faults",
+      "startLine": 127,
+      "endLine": 128,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_do_test_exception_mapping",
+      "startLine": 130,
+      "endLine": 143,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_do_test_exception_mapping.fail",
+      "startLine": 132,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_quota_error_mapping",
+      "startLine": 145,
+      "endLine": 146,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_non_nova_notfound_exception_mapping",
+      "startLine": 148,
+      "endLine": 153,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_non_nova_exception_mapping",
+      "startLine": 155,
+      "endLine": 160,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_exception_with_none_code_throws_500",
+      "startLine": 162,
+      "endLine": 172,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_exception_with_none_code_throws_500.fail",
+      "startLine": 167,
+      "endLine": 168,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

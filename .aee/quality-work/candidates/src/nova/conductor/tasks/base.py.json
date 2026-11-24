@@ -1,0 +1,266 @@
+{
+  "file": "src/nova/conductor/tasks/base.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 19,
+      "endLine": 19,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 19
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 24,
+      "endLine": 24,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 24,
+          "endLine": 24
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0107",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0107"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Unnecessary pass statement",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 54,
+          "endLine": 54
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R51"
+    },
+    {
+      "canonical": "ruff:PIE790",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE790"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Unnecessary `pass` statement",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 54,
+          "endLine": 54
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R53"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "rollback_wrapper",
+      "startLine": 19,
+      "endLine": 27,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "rollback_wrapper.wrap",
+      "startLine": 21,
+      "endLine": 26,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 32,
+      "endLine": 34,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "execute",
+      "startLine": 37,
+      "endLine": 40,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_execute",
+      "startLine": 43,
+      "endLine": 47,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "rollback",
+      "startLine": 49,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

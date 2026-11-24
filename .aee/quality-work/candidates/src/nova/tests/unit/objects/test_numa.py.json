@@ -1,0 +1,740 @@
+{
+  "file": "src/nova/tests/unit/objects/test_numa.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 18,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 18
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 23,
+      "endLine": 23,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 101,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 49,
+          "endLine": 49
+        },
+        {
+          "line": 53,
+          "endLine": 53
+        },
+        {
+          "line": 54,
+          "endLine": 54
+        },
+        {
+          "line": 59,
+          "endLine": 59
+        },
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 67,
+          "endLine": 67
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 78,
+          "endLine": 78
+        },
+        {
+          "line": 79,
+          "endLine": 79
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 88,
+          "endLine": 88
+        },
+        {
+          "line": 91,
+          "endLine": 91
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Class '_TestNUMACell' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 382,
+          "endLine": 382
+        },
+        {
+          "line": 430,
+          "endLine": 430
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Class `_TestNUMACell` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 382,
+          "endLine": 382
+        },
+        {
+          "line": 430,
+          "endLine": 430
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 20,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 70,
+          "endLine": 70
+        },
+        {
+          "line": 104,
+          "endLine": 104
+        },
+        {
+          "line": 133,
+          "endLine": 133
+        },
+        {
+          "line": 157,
+          "endLine": 157
+        },
+        {
+          "line": 216,
+          "endLine": 216
+        },
+        {
+          "line": 220,
+          "endLine": 220
+        },
+        {
+          "line": 239,
+          "endLine": 239
+        },
+        {
+          "line": 258,
+          "endLine": 258
+        },
+        {
+          "line": 276,
+          "endLine": 276
+        },
+        {
+          "line": 294,
+          "endLine": 294
+        },
+        {
+          "line": 317,
+          "endLine": 317
+        },
+        {
+          "line": 340,
+          "endLine": 340
+        },
+        {
+          "line": 384,
+          "endLine": 384
+        },
+        {
+          "line": 394,
+          "endLine": 394
+        },
+        {
+          "line": 399,
+          "endLine": 399
+        },
+        {
+          "line": 404,
+          "endLine": 404
+        },
+        {
+          "line": 409,
+          "endLine": 409
+        },
+        {
+          "line": 414,
+          "endLine": 414
+        },
+        {
+          "line": 432,
+          "endLine": 432
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Instance of '_TestNUMACell' has no 'assertEqual' member",
+      "toolSeverity": "error",
+      "count": 55,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        },
+        {
+          "line": 102,
+          "endLine": 102
+        },
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 120,
+          "endLine": 120
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 126,
+          "endLine": 126
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 146,
+          "endLine": 146
+        },
+        {
+          "line": 148,
+          "endLine": 148
+        },
+        {
+          "line": 149,
+          "endLine": 149
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 175,
+          "endLine": 175
+        },
+        {
+          "line": 176,
+          "endLine": 176
+        }
+      ],
+      "id": "T8"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 374,
+      "endLine": 374,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 374,
+          "endLine": 374
+        },
+        {
+          "line": 378,
+          "endLine": 378
+        },
+        {
+          "line": 422,
+          "endLine": 422
+        },
+        {
+          "line": 426,
+          "endLine": 426
+        },
+        {
+          "line": 450,
+          "endLine": 450
+        },
+        {
+          "line": 454,
+          "endLine": 454
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 374,
+      "endLine": 374,
+      "message": "Access to a protected member _LocalTest of a client class",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 374,
+          "endLine": 374
+        },
+        {
+          "line": 378,
+          "endLine": 378
+        },
+        {
+          "line": 422,
+          "endLine": 422
+        },
+        {
+          "line": 426,
+          "endLine": 426
+        },
+        {
+          "line": 450,
+          "endLine": 450
+        },
+        {
+          "line": 454,
+          "endLine": 454
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 430,
+      "endLine": 430,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 430,
+          "endLine": 430
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R16"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "test_free_cpus",
+      "startLine": 45,
+      "endLine": 68,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pinning_logic",
+      "startLine": 70,
+      "endLine": 102,
+      "ccn": 1,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pinning_with_siblings",
+      "startLine": 104,
+      "endLine": 131,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pinning_with_siblings_no_host_siblings",
+      "startLine": 133,
+      "endLine": 155,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_can_fit_pagesize",
+      "startLine": 157,
+      "endLine": 186,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_can_fit_pagesize_oversubscription",
+      "startLine": 188,
+      "endLine": 214,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_default_behavior",
+      "startLine": 216,
+      "endLine": 218,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_equivalent",
+      "startLine": 220,
+      "endLine": 237,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_not_equivalent",
+      "startLine": 239,
+      "endLine": 256,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_not_equivalent_missing_a",
+      "startLine": 258,
+      "endLine": 274,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_not_equivalent_missing_b",
+      "startLine": 276,
+      "endLine": 292,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_equivalent_with_pages",
+      "startLine": 294,
+      "endLine": 315,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_not_equivalent_with_pages",
+      "startLine": 317,
+      "endLine": 338,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_obj_make_compatible",
+      "startLine": 340,
+      "endLine": 371,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_wipe",
+      "startLine": 384,
+      "endLine": 392,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_equivalent",
+      "startLine": 394,
+      "endLine": 397,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_not_equivalent",
+      "startLine": 399,
+      "endLine": 402,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_not_equivalent_missing_a",
+      "startLine": 404,
+      "endLine": 407,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_not_equivalent_missing_b",
+      "startLine": 409,
+      "endLine": 412,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reserved_property_not_set",
+      "startLine": 414,
+      "endLine": 419,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_obj_make_compatible",
+      "startLine": 432,
+      "endLine": 447,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

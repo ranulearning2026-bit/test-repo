@@ -1,0 +1,328 @@
+{
+  "file": "src/nova/api/openstack/compute/migrations.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 27
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 41,
+      "endLine": 41,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 110,
+          "endLine": 110
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 102,
+      "endLine": 102,
+      "message": "Access to a protected member _get_links of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 102,
+          "endLine": 102
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 110,
+      "endLine": 110,
+      "message": "Too many local variables (22/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 110,
+          "endLine": 110
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 110,
+      "endLine": 110,
+      "message": "Too many branches (13/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 110,
+          "endLine": 110
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "ruff:RUF100",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF100"
+      ],
+      "line": 188,
+      "endLine": 188,
+      "message": "Unused `noqa` directive (non-enabled: `E501`)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 188,
+          "endLine": 188
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R45"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "_output",
+      "line": 41,
+      "endLine": 108,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 11,
+      "threshold": 4,
+      "function": "_output",
+      "line": 41,
+      "endLine": 108,
+      "id": "M2"
+    },
+    {
+      "metric": "params",
+      "value": 11,
+      "threshold": 6,
+      "function": "_index",
+      "line": 110,
+      "endLine": 179,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "_index",
+      "line": 110,
+      "endLine": 179,
+      "id": "M4"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 37,
+      "endLine": 39,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_output",
+      "startLine": 41,
+      "endLine": 108,
+      "ccn": 15,
+      "nloc": 41,
+      "params": 7,
+      "maxNesting": 11
+    },
+    {
+      "function": "_index",
+      "startLine": 110,
+      "endLine": 179,
+      "ccn": 13,
+      "nloc": 50,
+      "params": 11,
+      "maxNesting": 7
+    },
+    {
+      "function": "index",
+      "startLine": 191,
+      "endLine": 221,
+      "ccn": 4,
+      "nloc": 26,
+      "params": 2,
+      "maxNesting": 3
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "file": "src/nova/tests/unit/test_safeutils.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 18,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 18
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        },
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 52,
+          "endLine": 52
+        },
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 24,
+      "endLine": 24,
+      "message": "Unused argument 'self'",
+      "toolSeverity": "warning",
+      "count": 16,
+      "occurrences": [
+        {
+          "line": 24,
+          "endLine": 24
+        },
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 70,
+          "endLine": 70
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "get_closure",
+      "startLine": 21,
+      "endLine": 27,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_closure.wrapper",
+      "startLine": 24,
+      "endLine": 25,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_wrapper",
+      "startLine": 33,
+      "endLine": 37,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_wrapper.decorated_function",
+      "startLine": 35,
+      "endLine": 36,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_wrapped",
+      "startLine": 39,
+      "endLine": 50,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_single_wrapped.wrapped",
+      "startLine": 41,
+      "endLine": 42,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_double_wrapped",
+      "startLine": 52,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_double_wrapped.wrapped",
+      "startLine": 55,
+      "endLine": 56,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_triple_wrapped",
+      "startLine": 66,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_triple_wrapped.wrapped",
+      "startLine": 70,
+      "endLine": 71,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_closure",
+      "startLine": 81,
+      "endLine": 89,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

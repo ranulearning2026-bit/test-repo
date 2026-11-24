@@ -1,0 +1,591 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_server_group_quotas.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 30,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 30
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 78,
+          "endLine": 78
+        },
+        {
+          "line": 206,
+          "endLine": 206
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 41,
+      "endLine": 41,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 98,
+          "endLine": 98
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        },
+        {
+          "line": 156,
+          "endLine": 156
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 241,
+          "endLine": 241
+        },
+        {
+          "line": 253,
+          "endLine": 253
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 81,
+      "endLine": 81,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 209,
+          "endLine": 209
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 81,
+      "endLine": 81,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 209,
+          "endLine": 209
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 115,
+      "endLine": 115,
+      "message": "Unused variable 'i'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 115,
+          "endLine": 115
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 169,
+      "endLine": 169,
+      "message": "Redefining name 'context' from outer scope (line 24)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 169,
+          "endLine": 169
+        },
+        {
+          "line": 187,
+          "endLine": 187
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 187,
+      "endLine": 187,
+      "message": "Unused argument 'context'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 187,
+          "endLine": 187
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 218,
+      "endLine": 218,
+      "message": "Parameter 'mock_check' has been renamed to 'mock_enforce' in overriding 'ServerGroupQuotasUnifiedLimitsTestV21.test_create_server_group_during_recheck' method",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 218,
+          "endLine": 218
+        },
+        {
+          "line": 233,
+          "endLine": 233
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 250,
+      "endLine": 250,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 250,
+          "endLine": 250
+        },
+        {
+          "line": 271,
+          "endLine": 271
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "pylint:C0325",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0325"
+      ],
+      "line": 250,
+      "endLine": 250,
+      "message": "Unnecessary parens after '=' keyword",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 250,
+          "endLine": 250
+        },
+        {
+          "line": 271,
+          "endLine": 271
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R41"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 250,
+      "endLine": 250,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 250,
+          "endLine": 250
+        },
+        {
+          "line": 271,
+          "endLine": 271
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__getattr__",
+      "startLine": 37,
+      "endLine": 38,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "server_group_template",
+      "startLine": 41,
+      "endLine": 44,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "server_group_db",
+      "startLine": 47,
+      "endLine": 75,
+      "ccn": 7,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "setUp",
+      "startLine": 80,
+      "endLine": 83,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_setup_controller",
+      "startLine": 85,
+      "endLine": 86,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_setup_quotas",
+      "startLine": 88,
+      "endLine": 89,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_server_groups_in_use",
+      "startLine": 91,
+      "endLine": 96,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_group_normal",
+      "startLine": 98,
+      "endLine": 107,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_group_quota_limit",
+      "startLine": 109,
+      "endLine": 121,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_test_create_server_group_during_recheck",
+      "startLine": 123,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_group_during_recheck",
+      "startLine": 135,
+      "endLine": 145,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_create_server_group_recheck_disabled",
+      "startLine": 147,
+      "endLine": 153,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_group_recheck_disabled",
+      "startLine": 156,
+      "endLine": 160,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_server_group_by_admin",
+      "startLine": 162,
+      "endLine": 180,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_server_group_by_id",
+      "startLine": 183,
+      "endLine": 203,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_delete_server_group_by_id.return_server_group",
+      "startLine": 187,
+      "endLine": 189,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 208,
+      "endLine": 215,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_group_during_recheck",
+      "startLine": 218,
+      "endLine": 230,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_group_recheck_disabled",
+      "startLine": 233,
+      "endLine": 239,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_group_fails_with_zero_quota",
+      "startLine": 241,
+      "endLine": 251,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_only_one_group_when_limit_is_one",
+      "startLine": 253,
+      "endLine": 283,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

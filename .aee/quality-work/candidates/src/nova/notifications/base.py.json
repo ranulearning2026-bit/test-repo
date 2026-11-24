@@ -1,0 +1,407 @@
+{
+  "file": "src/nova/notifications/base.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 21,
+      "endLine": 36,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 36
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0718"
+      ],
+      "line": 90,
+      "endLine": 90,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 133,
+          "endLine": 133
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 95,
+      "endLine": 95,
+      "message": "Too many arguments (9/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 95,
+          "endLine": 95
+        },
+        {
+          "line": 166,
+          "endLine": 166
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 196,
+      "endLine": 196,
+      "message": "Instance of 'LegacyValidatingNotifier' has no 'info' member",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 196,
+          "endLine": 196
+        }
+      ],
+      "id": "T5"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 206,
+      "endLine": 209,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 206,
+          "endLine": 209
+        },
+        {
+          "line": 276,
+          "endLine": 279
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 263,
+      "endLine": 263,
+      "message": "Redefining name 'image_meta' from outer scope (line 259)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 263,
+          "endLine": 263
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 271,
+      "endLine": 271,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 271,
+          "endLine": 271
+        },
+        {
+          "line": 275,
+          "endLine": 275
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 320,
+      "endLine": 380,
+      "message": "Consider using '{\"tenant_id\": instance.project_id, \"user_id\": instance.user_id, \"instance_id\": instance.uuid, ... }' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 320,
+          "endLine": 380
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 320,
+      "endLine": 380,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 320,
+          "endLine": 380
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R22"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 9,
+      "threshold": 6,
+      "function": "send_update_with_states",
+      "line": 95,
+      "endLine": 135,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "send_update_with_states",
+      "line": 95,
+      "endLine": 135,
+      "id": "M2"
+    },
+    {
+      "metric": "params",
+      "value": 9,
+      "threshold": 6,
+      "function": "send_instance_update_notification",
+      "line": 166,
+      "endLine": 199,
+      "id": "M3"
+    },
+    {
+      "metric": "function_lines",
+      "value": 118,
+      "threshold": 100,
+      "function": "info_from_instance",
+      "line": 282,
+      "endLine": 399,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "info_from_instance",
+      "line": 282,
+      "endLine": 399,
+      "id": "M5"
+    }
+  ],
+  "functions": [
+    {
+      "function": "send_update",
+      "startLine": 44,
+      "endLine": 92,
+      "ccn": 9,
+      "nloc": 32,
+      "params": 5,
+      "maxNesting": 4
+    },
+    {
+      "function": "send_update_with_states",
+      "startLine": 95,
+      "endLine": 135,
+      "ccn": 9,
+      "nloc": 26,
+      "params": 9,
+      "maxNesting": 5
+    },
+    {
+      "function": "_compute_states_payload",
+      "startLine": 138,
+      "endLine": 163,
+      "ccn": 5,
+      "nloc": 17,
+      "params": 5,
+      "maxNesting": 4
+    },
+    {
+      "function": "send_instance_update_notification",
+      "startLine": 166,
+      "endLine": 199,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 9,
+      "maxNesting": 1
+    },
+    {
+      "function": "_send_versioned_instance_update",
+      "startLine": 203,
+      "endLine": 237,
+      "ccn": 2,
+      "nloc": 26,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_send_versioned_instance_update._map_legacy_service_to_source",
+      "startLine": 205,
+      "endLine": 209,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "audit_period_bounds",
+      "startLine": 240,
+      "endLine": 256,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "image_meta",
+      "startLine": 259,
+      "endLine": 268,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "null_safe_str",
+      "startLine": 271,
+      "endLine": 272,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "null_safe_isotime",
+      "startLine": 275,
+      "endLine": 279,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "info_from_instance",
+      "startLine": 282,
+      "endLine": 399,
+      "ccn": 8,
+      "nloc": 62,
+      "params": 5,
+      "maxNesting": 6
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

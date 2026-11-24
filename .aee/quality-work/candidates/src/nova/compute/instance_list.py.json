@@ -1,0 +1,434 @@
+{
+  "file": "src/nova/compute/instance_list.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 21,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 21
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 27,
+      "endLine": 27,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 27,
+          "endLine": 27
+        },
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 44,
+      "endLine": 44,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 44,
+          "endLine": 44
+        },
+        {
+          "line": 49,
+          "endLine": 49
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 44,
+      "endLine": 44,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 44,
+          "endLine": 44
+        },
+        {
+          "line": 49,
+          "endLine": 49
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Parameter 'marker_id' has been renamed to 'marker' in overriding 'InstanceLister.get_marker_record' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 61,
+      "endLine": 61,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.MarkerNotFound(marker=marker) from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 73,
+          "endLine": 73
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 92,
+      "endLine": 92,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 92,
+          "endLine": 92
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 92,
+      "endLine": 92,
+      "message": "Too many arguments (10/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:E0606",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E0606"
+      ],
+      "line": 132,
+      "endLine": 132,
+      "message": "Possibly using variable 'batch_size' before assignment",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 132,
+          "endLine": 132
+        }
+      ],
+      "id": "T11"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 135,
+      "endLine": 135,
+      "message": "Too many local variables (16/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 135,
+          "endLine": 135
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 162,
+      "endLine": 162,
+      "message": "Access to a protected member _expected_cols of a client class",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 174,
+          "endLine": 174
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "get_instances_sorted",
+      "line": 92,
+      "endLine": 101,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "get_instance_objects_sorted",
+      "line": 135,
+      "endLine": 178,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 28,
+      "endLine": 44,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 48,
+      "endLine": 51,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "marker_identifier",
+      "startLine": 54,
+      "endLine": 55,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_marker_record",
+      "startLine": 57,
+      "endLine": 74,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_marker_by_values",
+      "startLine": 76,
+      "endLine": 80,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_by_filters",
+      "startLine": 82,
+      "endLine": 87,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_instances_sorted",
+      "startLine": 92,
+      "endLine": 101,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 10,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_instance_list_cells_batch_size",
+      "startLine": 104,
+      "endLine": 132,
+      "ccn": 5,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_instance_objects_sorted",
+      "startLine": 135,
+      "endLine": 178,
+      "ccn": 4,
+      "nloc": 23,
+      "params": 8,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

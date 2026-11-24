@@ -1,0 +1,199 @@
+{
+  "file": "src/nova/virt/libvirt/machine_type_utils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 20,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 20
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 20,
+      "endLine": 20,
+      "message": "third party import \"oslo_utils.versionutils\" should be placed before first party imports \"nova.compute.vm_states\", \"nova.context\", \"nova.exception\", \"nova.objects\"",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 20
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 195,
+      "endLine": 196,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 195,
+          "endLine": 196
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R38"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "get_machine_type",
+      "startLine": 48,
+      "endLine": 67,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_machine_type_support",
+      "startLine": 70,
+      "endLine": 83,
+      "ccn": 4,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_check_update_to_existing_type",
+      "startLine": 86,
+      "endLine": 117,
+      "ccn": 6,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "_check_vm_state",
+      "startLine": 120,
+      "endLine": 131,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "update_machine_type",
+      "startLine": 134,
+      "endLine": 180,
+      "ccn": 5,
+      "nloc": 24,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_instances_without_mtype",
+      "startLine": 183,
+      "endLine": 198,
+      "ccn": 5,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_instances_without_type",
+      "startLine": 201,
+      "endLine": 225,
+      "ccn": 3,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

@@ -1,0 +1,722 @@
+{
+  "file": "src/nova/compute/pci_placement_translator.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 31,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 31
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 155,
+      "endLine": 155,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 159,
+          "endLine": 159
+        },
+        {
+          "line": 163,
+          "endLine": 163
+        },
+        {
+          "line": 166,
+          "endLine": 166
+        },
+        {
+          "line": 203,
+          "endLine": 203
+        },
+        {
+          "line": 224,
+          "endLine": 224
+        },
+        {
+          "line": 229,
+          "endLine": 229
+        },
+        {
+          "line": 330,
+          "endLine": 330
+        },
+        {
+          "line": 370,
+          "endLine": 370
+        },
+        {
+          "line": 542,
+          "endLine": 542
+        },
+        {
+          "line": 652,
+          "endLine": 652
+        },
+        {
+          "line": 684,
+          "endLine": 684
+        },
+        {
+          "line": 696,
+          "endLine": 696
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 196,
+      "endLine": 197,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 196,
+          "endLine": 197
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 196,
+      "endLine": 197,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 196,
+          "endLine": 197
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 289,
+      "endLine": 289,
+      "message": "Redefining name 'provider_tree' from outer scope (line 24)",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 289,
+          "endLine": 289
+        },
+        {
+          "line": 332,
+          "endLine": 332
+        },
+        {
+          "line": 373,
+          "endLine": 373
+        },
+        {
+          "line": 637,
+          "endLine": 637
+        },
+        {
+          "line": 654,
+          "endLine": 654
+        },
+        {
+          "line": 667,
+          "endLine": 667
+        },
+        {
+          "line": 697,
+          "endLine": 697
+        },
+        {
+          "line": 717,
+          "endLine": 717
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 305,
+      "endLine": 313,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 305,
+          "endLine": 313
+        },
+        {
+          "line": 449,
+          "endLine": 455
+        },
+        {
+          "line": 531,
+          "endLine": 540
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "ruff:RUF015",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF015"
+      ],
+      "line": 312,
+      "endLine": 312,
+      "message": "Prefer `next(iter(rc_usage.keys()))` over single element slice",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 312,
+          "endLine": 312
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R54"
+    },
+    {
+      "canonical": "ruff:PERF102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PERF102"
+      ],
+      "line": 660,
+      "endLine": 660,
+      "message": "When using only the values of a dict use the `values()` method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 660,
+          "endLine": 660
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R73"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 660,
+      "endLine": 660,
+      "message": "Unused variable 'rp_name'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 660,
+          "endLine": 660
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R26"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "add_child",
+      "line": 166,
+      "endLine": 201,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "update_allocations",
+      "line": 370,
+      "endLine": 446,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_is_placement_tracking_enabled",
+      "startLine": 47,
+      "endLine": 48,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "_normalize_traits",
+      "startLine": 51,
+      "endLine": 66,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_traits",
+      "startLine": 69,
+      "endLine": 76,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_traits_for_dev",
+      "startLine": 79,
+      "endLine": 92,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_normalize_resource_class",
+      "startLine": 95,
+      "endLine": 105,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_resource_class",
+      "startLine": 108,
+      "endLine": 118,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_rc_for_dev",
+      "startLine": 121,
+      "endLine": 134,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 140,
+      "endLine": 152,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "devs",
+      "startLine": 155,
+      "endLine": 156,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "total",
+      "startLine": 159,
+      "endLine": 160,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "to_be_deleted",
+      "startLine": 163,
+      "endLine": 164,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "add_child",
+      "startLine": 166,
+      "endLine": 201,
+      "ccn": 10,
+      "nloc": 31,
+      "params": 3,
+      "maxNesting": 7
+    },
+    {
+      "function": "add_parent",
+      "startLine": 203,
+      "endLine": 222,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "remove_child",
+      "startLine": 224,
+      "endLine": 227,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_parent",
+      "startLine": 229,
+      "endLine": 231,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_allocations",
+      "startLine": 233,
+      "endLine": 252,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_inventories",
+      "startLine": 254,
+      "endLine": 269,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_handle_one_time_use",
+      "startLine": 271,
+      "endLine": 285,
+      "ccn": 4,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_handle_one_time_use.is_allocated",
+      "startLine": 274,
+      "endLine": 275,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_adjust_for_removals_and_held_devices",
+      "startLine": 287,
+      "endLine": 328,
+      "ccn": 4,
+      "nloc": 23,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "update_provider_tree",
+      "startLine": 330,
+      "endLine": 368,
+      "ccn": 4,
+      "nloc": 25,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "update_allocations",
+      "startLine": 370,
+      "endLine": 446,
+      "ccn": 7,
+      "nloc": 30,
+      "params": 4,
+      "maxNesting": 6
+    },
+    {
+      "function": "__str__",
+      "startLine": 448,
+      "endLine": 455,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 461,
+      "endLine": 468,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_rp_name_for_address",
+      "startLine": 470,
+      "endLine": 471,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_ensure_rp",
+      "startLine": 473,
+      "endLine": 474,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_rp_name_for_child",
+      "startLine": 476,
+      "endLine": 487,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_add_dev",
+      "startLine": 489,
+      "endLine": 512,
+      "ccn": 4,
+      "nloc": 19,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_remove_dev",
+      "startLine": 514,
+      "endLine": 522,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_ensure_rp_for_dev",
+      "startLine": 524,
+      "endLine": 540,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "process_dev",
+      "startLine": 542,
+      "endLine": 611,
+      "ccn": 4,
+      "nloc": 34,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "__str__",
+      "startLine": 613,
+      "endLine": 617,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_usage_per_rc_and_rp",
+      "startLine": 620,
+      "endLine": 634,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_remove_managed_rps_from_tree_not_in_view",
+      "startLine": 636,
+      "endLine": 650,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "update_provider_tree",
+      "startLine": 652,
+      "endLine": 662,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "update_allocations",
+      "startLine": 664,
+      "endLine": 681,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "ensure_no_dev_spec_with_devname",
+      "startLine": 684,
+      "endLine": 693,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "ensure_tracking_was_not_enabled_before",
+      "startLine": 696,
+      "endLine": 713,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "update_provider_tree_for_pci",
+      "startLine": 716,
+      "endLine": 793,
+      "ccn": 4,
+      "nloc": 32,
+      "params": 5,
+      "maxNesting": 3
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

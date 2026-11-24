@@ -1,0 +1,155 @@
+{
+  "file": "src/nova/scheduler/filters/aggregate_instance_extra_specs.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 22,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 22
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Parameter 'filter_properties' has been renamed to 'spec_obj' in overriding 'AggregateInstanceExtraSpecsFilter.host_passes' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "pylint:R1724",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1724"
+      ],
+      "line": 56,
+      "endLine": 59,
+      "message": "Unnecessary \"else\" after \"continue\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 59
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R68"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "host_passes",
+      "line": 38,
+      "endLine": 80,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "host_passes",
+      "startLine": 38,
+      "endLine": 80,
+      "ccn": 9,
+      "nloc": 33,
+      "params": 3,
+      "maxNesting": 5
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

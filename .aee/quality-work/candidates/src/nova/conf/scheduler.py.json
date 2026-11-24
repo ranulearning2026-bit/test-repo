@@ -1,0 +1,189 @@
+{
+  "file": "src/nova/conf/scheduler.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "pylint:C0302",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0302"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Too many lines in module (1067/1000)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R25"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 18,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 18
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "ruff:UP018",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP018"
+      ],
+      "line": 1025,
+      "endLine": 1025,
+      "message": "Unnecessary `float` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1025,
+          "endLine": 1025
+        }
+      ],
+      "id": "T5"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 1051,
+      "endLine": 1051,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 1051,
+          "endLine": 1051
+        },
+        {
+          "line": 1062,
+          "endLine": 1062
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "file_lines",
+      "value": 1032,
+      "threshold": 1000,
+      "function": null,
+      "line": 1,
+      "endLine": 1032,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "register_opts",
+      "startLine": 1051,
+      "endLine": 1059,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "list_opts",
+      "startLine": 1062,
+      "endLine": 1067,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 0,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

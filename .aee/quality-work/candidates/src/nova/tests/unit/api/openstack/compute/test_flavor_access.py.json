@@ -1,0 +1,944 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_flavor_access.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 28,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 28
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 26,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 172,
+          "endLine": 172
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 191,
+          "endLine": 191
+        },
+        {
+          "line": 199,
+          "endLine": 199
+        },
+        {
+          "line": 207,
+          "endLine": 207
+        },
+        {
+          "line": 215,
+          "endLine": 215
+        },
+        {
+          "line": 224,
+          "endLine": 224
+        },
+        {
+          "line": 233,
+          "endLine": 233
+        },
+        {
+          "line": 240,
+          "endLine": 240
+        },
+        {
+          "line": 248,
+          "endLine": 248
+        },
+        {
+          "line": 256,
+          "endLine": 256
+        },
+        {
+          "line": 264,
+          "endLine": 264
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W1406",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1406"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "The u prefix for strings is no longer necessary in Python >=3.0",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R43"
+    },
+    {
+      "canonical": "ruff:UP025",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP025"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Remove unicode literals from strings",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R44"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 66,
+      "endLine": 66,
+      "message": "Unused argument 'context'",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 88,
+          "endLine": 88
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 265,
+          "endLine": 265
+        },
+        {
+          "line": 283,
+          "endLine": 283
+        },
+        {
+          "line": 344,
+          "endLine": 344
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 66,
+      "endLine": 66,
+      "message": "Redefining name 'context' from outer scope (line 25)",
+      "toolSeverity": "warning",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 265,
+          "endLine": 265
+        },
+        {
+          "line": 304,
+          "endLine": 304
+        },
+        {
+          "line": 319,
+          "endLine": 319
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 86,
+      "endLine": 86,
+      "message": "Too many arguments (7/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 86
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 104,
+      "endLine": 104,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 104,
+          "endLine": 104
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 104,
+      "endLine": 104,
+      "message": "Class 'FakeRequest' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 104,
+          "endLine": 104
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 104,
+      "endLine": 104,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 104,
+          "endLine": 104
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 104,
+      "endLine": 104,
+      "message": "Class `FakeRequest` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 104,
+          "endLine": 104
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 105,
+      "endLine": 105,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 113,
+          "endLine": 117
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 127,
+      "endLine": 127,
+      "message": "Too many public methods (23/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 127,
+          "endLine": 127
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 135,
+      "endLine": 135,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 135,
+          "endLine": 135
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 135,
+      "endLine": 135,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 135,
+          "endLine": 135
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 277,
+      "endLine": 277,
+      "message": "Access to a protected member _add_tenant_access of a client class",
+      "toolSeverity": "warning",
+      "count": 12,
+      "occurrences": [
+        {
+          "line": 277,
+          "endLine": 277
+        },
+        {
+          "line": 288,
+          "endLine": 288
+        },
+        {
+          "line": 296,
+          "endLine": 296
+        },
+        {
+          "line": 300,
+          "endLine": 300
+        },
+        {
+          "line": 315,
+          "endLine": 315
+        },
+        {
+          "line": 330,
+          "endLine": 330
+        },
+        {
+          "line": 339,
+          "endLine": 339
+        },
+        {
+          "line": 349,
+          "endLine": 349
+        },
+        {
+          "line": 353,
+          "endLine": 353
+        },
+        {
+          "line": 365,
+          "endLine": 365
+        },
+        {
+          "line": 384,
+          "endLine": 384
+        },
+        {
+          "line": 404,
+          "endLine": 404
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "fake_get_all_flavors_sorted_list",
+      "line": 86,
+      "endLine": 101,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "generate_flavor",
+      "startLine": 31,
+      "endLine": 49,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "fake_get_flavor_access_by_flavor_id",
+      "startLine": 66,
+      "endLine": 71,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "fake_get_flavor_by_flavor_id",
+      "startLine": 74,
+      "endLine": 75,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_has_flavor_access",
+      "startLine": 78,
+      "endLine": 83,
+      "ccn": 4,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "fake_get_all_flavors_sorted_list",
+      "startLine": 86,
+      "endLine": 101,
+      "ccn": 7,
+      "nloc": 14,
+      "params": 7,
+      "maxNesting": 2
+    },
+    {
+      "function": "is_legacy_v2",
+      "startLine": 108,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "attach",
+      "startLine": 119,
+      "endLine": 120,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "fake_get_flavor_projects_from_db",
+      "startLine": 123,
+      "endLine": 124,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 134,
+      "endLine": 151,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_verify_flavor_list",
+      "startLine": 153,
+      "endLine": 158,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_list_flavor_access_public",
+      "startLine": 162,
+      "endLine": 170,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_access_private",
+      "startLine": 172,
+      "endLine": 181,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_admin_default_proj1",
+      "startLine": 183,
+      "endLine": 189,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_admin_default_proj2",
+      "startLine": 191,
+      "endLine": 197,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_admin_ispublic_true",
+      "startLine": 199,
+      "endLine": 205,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_admin_ispublic_false",
+      "startLine": 207,
+      "endLine": 213,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_admin_ispublic_false_proj2",
+      "startLine": 215,
+      "endLine": 222,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_admin_ispublic_none",
+      "startLine": 224,
+      "endLine": 231,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_no_admin_default",
+      "startLine": 233,
+      "endLine": 238,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_no_admin_ispublic_true",
+      "startLine": 240,
+      "endLine": 246,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_no_admin_ispublic_false",
+      "startLine": 248,
+      "endLine": 254,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_list_flavor_with_no_admin_ispublic_none",
+      "startLine": 256,
+      "endLine": 262,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_add_tenant_access",
+      "startLine": 264,
+      "endLine": 279,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_add_tenant_access.stub_add_flavor_access",
+      "startLine": 265,
+      "endLine": 267,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_add_tenant_access_with_flavor_not_found",
+      "startLine": 283,
+      "endLine": 289,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_add_tenant_access_with_no_tenant",
+      "startLine": 291,
+      "endLine": 301,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_add_tenant_access_with_already_added_access",
+      "startLine": 303,
+      "endLine": 316,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_add_tenant_access_with_already_added_access.stub_add_flavor_access",
+      "startLine": 304,
+      "endLine": 306,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_remove_tenant_access_with_bad_access",
+      "startLine": 318,
+      "endLine": 331,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_remove_tenant_access_with_bad_access.stub_remove_flavor_access",
+      "startLine": 319,
+      "endLine": 321,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_add_tenant_access_is_public",
+      "startLine": 333,
+      "endLine": 340,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_tenant_access_with_no_tenant",
+      "startLine": 344,
+      "endLine": 354,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_add_tenant_access_with_invalid_tenant",
+      "startLine": 359,
+      "endLine": 368,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_remove_tenant_access_with_invalid_tenant",
+      "startLine": 372,
+      "endLine": 388,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_remove_tenant_access_missing_keystone_endpoint",
+      "startLine": 394,
+      "endLine": 407,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "file": "src/nova/limit/utils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:W0603",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0603"
+      ],
+      "line": 53,
+      "endLine": 53,
+      "message": "Using the global statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 53
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R52"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 175,
+      "endLine": 175,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 175,
+          "endLine": 175
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 175,
+      "endLine": 175,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 175,
+          "endLine": 175
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "_identity_client",
+      "line": 52,
+      "endLine": 88,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "should_enforce",
+      "line": 91,
+      "endLine": 182,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "use_unified_limits",
+      "startLine": 33,
+      "endLine": 34,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 42,
+      "endLine": 45,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "registered_limits",
+      "startLine": 47,
+      "endLine": 49,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_identity_client",
+      "startLine": 52,
+      "endLine": 88,
+      "ccn": 9,
+      "nloc": 31,
+      "params": 0,
+      "maxNesting": 6
+    },
+    {
+      "function": "should_enforce",
+      "startLine": 91,
+      "endLine": 182,
+      "ccn": 12,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 7
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

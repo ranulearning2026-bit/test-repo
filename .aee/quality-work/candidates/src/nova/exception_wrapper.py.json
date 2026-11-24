@@ -1,0 +1,243 @@
+{
+  "file": "src/nova/exception_wrapper.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 23
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 50,
+      "endLine": 50,
+      "message": "Instance of 'LegacyValidatingNotifier' has no 'error' member",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 50
+        }
+      ],
+      "id": "T4"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 59,
+      "endLine": 59,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 59,
+          "endLine": 59
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 64,
+      "endLine": 64,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 64,
+          "endLine": 64
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:W4902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W4902"
+      ],
+      "line": 80,
+      "endLine": 81,
+      "message": "Using deprecated method getcallargs()",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 81
+        }
+      ],
+      "id": "T7"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_emit_versioned_exception_notification",
+      "startLine": 29,
+      "endLine": 42,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_emit_legacy_exception_notification",
+      "startLine": 45,
+      "endLine": 50,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "wrap_exception",
+      "startLine": 53,
+      "endLine": 74,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "wrap_exception.inner",
+      "startLine": 58,
+      "endLine": 73,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "wrap_exception.wrap_exception.inner.wrapped",
+      "startLine": 59,
+      "endLine": 72,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_call_dict",
+      "startLine": 77,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "_cleanse_dict",
+      "startLine": 91,
+      "endLine": 93,
+      "ccn": 3,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

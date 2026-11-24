@@ -1,0 +1,481 @@
+{
+  "file": "src/nova/virt/disk/mount/api.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 26,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 26
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 35,
+      "endLine": 35,
+      "message": "Class 'Mount' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 35,
+          "endLine": 35
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0902"
+      ],
+      "line": 35,
+      "endLine": 35,
+      "message": "Too many instance attributes (10/7)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 35,
+          "endLine": 35
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R30"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 35,
+      "endLine": 35,
+      "message": "Class `Mount` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 35,
+          "endLine": 35
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 58,
+      "endLine": 67,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 58,
+          "endLine": 67
+        },
+        {
+          "line": 100,
+          "endLine": 114
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 148,
+      "endLine": 149,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 148,
+          "endLine": 149
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 189,
+      "endLine": 189,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 189,
+          "endLine": 189
+        },
+        {
+          "line": 195,
+          "endLine": 195
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 189,
+      "endLine": 190,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 189,
+          "endLine": 190
+        },
+        {
+          "line": 195,
+          "endLine": 196
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "ruff:UP024",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP024"
+      ],
+      "line": 210,
+      "endLine": 210,
+      "message": "Replace aliased errors with `OSError`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 210,
+          "endLine": 210
+        },
+        {
+          "line": 218,
+          "endLine": 218
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R74"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 250,
+      "endLine": 250,
+      "message": "Unpacked variable `out` is never used",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 250,
+          "endLine": 250
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 250,
+      "endLine": 250,
+      "message": "Unused variable 'out'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 250,
+          "endLine": 250
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 269,
+      "endLine": 269,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 269,
+          "endLine": 269
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "instance_for_format",
+      "startLine": 45,
+      "endLine": 82,
+      "ccn": 4,
+      "nloc": 24,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "instance_for_device",
+      "startLine": 85,
+      "endLine": 114,
+      "ccn": 3,
+      "nloc": 21,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 116,
+      "endLine": 138,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "reset_dev",
+      "startLine": 140,
+      "endLine": 153,
+      "ccn": 6,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_dev",
+      "startLine": 155,
+      "endLine": 159,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_dev_retry_helper",
+      "startLine": 161,
+      "endLine": 176,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_inner_get_dev",
+      "startLine": 178,
+      "endLine": 179,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "unget_dev",
+      "startLine": 181,
+      "endLine": 183,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "map_dev",
+      "startLine": 185,
+      "endLine": 234,
+      "ccn": 8,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "map_dev.recheck_path",
+      "startLine": 208,
+      "endLine": 210,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "unmap_dev",
+      "startLine": 236,
+      "endLine": 244,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "mnt_dev",
+      "startLine": 246,
+      "endLine": 258,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "unmnt_dev",
+      "startLine": 260,
+      "endLine": 267,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "flush_dev",
+      "startLine": 269,
+      "endLine": 270,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "do_mount",
+      "startLine": 272,
+      "endLine": 281,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "do_umount",
+      "startLine": 283,
+      "endLine": 286,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "do_teardown",
+      "startLine": 288,
+      "endLine": 295,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 3
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

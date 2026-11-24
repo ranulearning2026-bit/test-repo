@@ -1,0 +1,279 @@
+{
+  "file": "src/nova/objects/network_request.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 35,
+      "endLine": 35,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 35,
+          "endLine": 35
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 41,
+      "endLine": 52,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 52
+        },
+        {
+          "line": 91,
+          "endLine": 93
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 54,
+      "endLine": 54,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 54
+        },
+        {
+          "line": 63,
+          "endLine": 63
+        },
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 72,
+          "endLine": 72
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 85,
+          "endLine": 85
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 122,
+          "endLine": 122
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "obj_make_compatible",
+      "startLine": 54,
+      "endLine": 61,
+      "ccn": 7,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "obj_load_attr",
+      "startLine": 63,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "to_tuple",
+      "startLine": 66,
+      "endLine": 69,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "from_tuple",
+      "startLine": 72,
+      "endLine": 78,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "auto_allocate",
+      "startLine": 81,
+      "endLine": 82,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "no_allocate",
+      "startLine": 85,
+      "endLine": 86,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "as_tuples",
+      "startLine": 97,
+      "endLine": 98,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "from_tuples",
+      "startLine": 101,
+      "endLine": 110,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "is_single_unspecified",
+      "startLine": 113,
+      "endLine": 115,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "auto_allocate",
+      "startLine": 118,
+      "endLine": 119,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "no_allocate",
+      "startLine": 122,
+      "endLine": 123,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

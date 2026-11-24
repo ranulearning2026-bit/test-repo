@@ -1,0 +1,794 @@
+{
+  "file": "src/nova/tests/functional/test_graceful_shutdown.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0302",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0302"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Too many lines in module (1016/1000)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R25"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 32,
+      "endLine": 42,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 42
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 966,
+          "endLine": 966
+        },
+        {
+          "line": 987,
+          "endLine": 987
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 94,
+      "endLine": 94,
+      "message": "Unused argument 'timeout'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 94,
+          "endLine": 94
+        },
+        {
+          "line": 175,
+          "endLine": 175
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 116,
+      "endLine": 116,
+      "message": "Access to a protected member _shutdown_in_progress of a client class",
+      "toolSeverity": "warning",
+      "count": 16,
+      "occurrences": [
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        },
+        {
+          "line": 328,
+          "endLine": 328
+        },
+        {
+          "line": 345,
+          "endLine": 345
+        },
+        {
+          "line": 487,
+          "endLine": 487
+        },
+        {
+          "line": 503,
+          "endLine": 503
+        },
+        {
+          "line": 783,
+          "endLine": 783
+        },
+        {
+          "line": 809,
+          "endLine": 809
+        },
+        {
+          "line": 877,
+          "endLine": 877
+        },
+        {
+          "line": 943,
+          "endLine": 943
+        },
+        {
+          "line": 957,
+          "endLine": 957
+        },
+        {
+          "line": 974,
+          "endLine": 974
+        },
+        {
+          "line": 980,
+          "endLine": 980
+        },
+        {
+          "line": 996,
+          "endLine": 996
+        },
+        {
+          "line": 1002,
+          "endLine": 1002
+        },
+        {
+          "line": 1010,
+          "endLine": 1010
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 124,
+      "endLine": 124,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 778,
+          "endLine": 778
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 124,
+      "endLine": 124,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 778,
+          "endLine": 778
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 174,
+      "endLine": 174,
+      "message": "Too many arguments (7/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 174,
+          "endLine": 174
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 305,
+      "endLine": 305,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 11,
+      "occurrences": [
+        {
+          "line": 305,
+          "endLine": 305
+        },
+        {
+          "line": 466,
+          "endLine": 466
+        },
+        {
+          "line": 631,
+          "endLine": 631
+        },
+        {
+          "line": 684,
+          "endLine": 684
+        },
+        {
+          "line": 737,
+          "endLine": 737
+        },
+        {
+          "line": 827,
+          "endLine": 827
+        },
+        {
+          "line": 926,
+          "endLine": 926
+        },
+        {
+          "line": 954,
+          "endLine": 954
+        },
+        {
+          "line": 972,
+          "endLine": 972
+        },
+        {
+          "line": 994,
+          "endLine": 994
+        },
+        {
+          "line": 1008,
+          "endLine": 1008
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 737,
+      "endLine": 737,
+      "message": "Too many local variables (17/15)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 737,
+          "endLine": 737
+        },
+        {
+          "line": 827,
+          "endLine": 827
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "ruff:RUF015",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF015"
+      ],
+      "line": 809,
+      "endLine": 809,
+      "message": "Prefer `next(iter(compute.manager._in_progress_tasks.values()))` over single element slice",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 809,
+          "endLine": 809
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R54"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "_complete_live_migration",
+      "line": 174,
+      "endLine": 177,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "test_multiple_build_instance_tracked_and_shutdown_wait_for_all",
+      "line": 737,
+      "endLine": 825,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 59,
+      "endLine": 86,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_setup_graceful_shutdown_mock",
+      "startLine": 88,
+      "endLine": 110,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_setup_graceful_shutdown_mock.coordinated_graceful_shutdown",
+      "startLine": 94,
+      "endLine": 105,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_stop_compute_gracefully",
+      "startLine": 112,
+      "endLine": 118,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_join_stop_thread",
+      "startLine": 120,
+      "endLine": 124,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_set_forced_down",
+      "startLine": 126,
+      "endLine": 129,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "wait_for_service_stop",
+      "startLine": 131,
+      "endLine": 143,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_in_progress_task_count",
+      "startLine": 145,
+      "endLine": 150,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_wait_for_no_task_tracked",
+      "startLine": 152,
+      "endLine": 156,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_wait_for_no_task_tracked.no_task_tracked",
+      "startLine": 153,
+      "endLine": 154,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "_restart_compute",
+      "startLine": 158,
+      "endLine": 172,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_complete_live_migration",
+      "startLine": 174,
+      "endLine": 177,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 8,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_live_migration_source_compute_graceful_shutdown",
+      "startLine": 183,
+      "endLine": 242,
+      "ccn": 1,
+      "nloc": 36,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_live_migration_dest_compute_graceful_shutdown",
+      "startLine": 244,
+      "endLine": 303,
+      "ccn": 1,
+      "nloc": 36,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_live_migration_dest_shutdown_before_post_live_migration",
+      "startLine": 305,
+      "endLine": 350,
+      "ccn": 1,
+      "nloc": 32,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migration_source_compute_graceful_shutdown",
+      "startLine": 352,
+      "endLine": 408,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migration_dest_compute_graceful_shutdown",
+      "startLine": 410,
+      "endLine": 464,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migration_dest_shutdown_before_resize_instance_completes",
+      "startLine": 466,
+      "endLine": 510,
+      "ccn": 1,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_build_graceful_shutdown",
+      "startLine": 512,
+      "endLine": 564,
+      "ccn": 1,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_revert_resize_dest_compute_graceful_shutdown",
+      "startLine": 566,
+      "endLine": 629,
+      "ccn": 1,
+      "nloc": 36,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_build_instance_track_wait_during_shutdown",
+      "startLine": 631,
+      "endLine": 682,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_build_instance_track_wait_during_shutdown.build_instance_tracked",
+      "startLine": 655,
+      "endLine": 656,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_snapshot_instance_track_and_wait_during_shutdown",
+      "startLine": 684,
+      "endLine": 735,
+      "ccn": 1,
+      "nloc": 36,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_snapshot_instance_track_and_wait_during_shutdown.snapshot_instance_tracked",
+      "startLine": 710,
+      "endLine": 712,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multiple_build_instance_tracked_and_shutdown_wait_for_all",
+      "startLine": 737,
+      "endLine": 825,
+      "ccn": 4,
+      "nloc": 57,
+      "params": 1,
+      "maxNesting": 5
+    },
+    {
+      "function": "test_multiple_build_instance_tracked_and_shutdown_wait_for_all._blocking_spawn",
+      "startLine": 753,
+      "endLine": 759,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multiple_build_instance_tracked_and_shutdown_wait_for_all.both_build_instances_tracked",
+      "startLine": 781,
+      "endLine": 787,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_multiple_build_instance_tracked_and_shutdown_wait_for_all.one_task_tracked",
+      "startLine": 805,
+      "endLine": 806,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_different_concurrent_operations_and_shutdown_wait_for_all",
+      "startLine": 827,
+      "endLine": 924,
+      "ccn": 1,
+      "nloc": 71,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "test_different_concurrent_operations_and_shutdown_wait_for_all.all_three_tasks_tracked",
+      "startLine": 875,
+      "endLine": 880,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_different_concurrent_operations_and_shutdown_wait_for_all.two_tasks_tracked",
+      "startLine": 895,
+      "endLine": 896,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_different_concurrent_operations_and_shutdown_wait_for_all.only_live_migration_tracked",
+      "startLine": 905,
+      "endLine": 906,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rpc_call_are_tracked",
+      "startLine": 926,
+      "endLine": 952,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_rpc_call_are_tracked.pause_instance_tracked",
+      "startLine": 941,
+      "endLine": 944,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_periodic_tasks_skipped_once_shutdown_starts",
+      "startLine": 954,
+      "endLine": 963,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 967,
+      "endLine": 970,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_graceful_shutdown_completes_instantly_when_no_tasks",
+      "startLine": 972,
+      "endLine": 984,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 989,
+      "endLine": 992,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_graceful_shutdown_completes_instantly_when_no_tasks",
+      "startLine": 994,
+      "endLine": 1006,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_periodic_tasks_skipped_once_shutdown_starts",
+      "startLine": 1008,
+      "endLine": 1016,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

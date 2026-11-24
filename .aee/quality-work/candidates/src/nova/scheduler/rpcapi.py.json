@@ -1,0 +1,285 @@
+{
+  "file": "src/nova/scheduler/rpcapi.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 19,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Class 'SchedulerAPI' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Class `SchedulerAPI` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 110,
+      "endLine": 121,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 110,
+          "endLine": 121
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 124,
+      "endLine": 124,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 124,
+          "endLine": 124
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 124,
+      "endLine": 124,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 124,
+          "endLine": 124
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 132,
+      "endLine": 132,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 132,
+          "endLine": 132
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 167,
+          "endLine": 167
+        },
+        {
+          "line": 172,
+          "endLine": 172
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        },
+        {
+          "line": 182,
+          "endLine": 182
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 123,
+      "endLine": 130,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "select_destinations",
+      "startLine": 132,
+      "endLine": 160,
+      "ccn": 6,
+      "nloc": 27,
+      "params": 6,
+      "maxNesting": 4
+    },
+    {
+      "function": "update_aggregates",
+      "startLine": 162,
+      "endLine": 165,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "delete_aggregate",
+      "startLine": 167,
+      "endLine": 170,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "update_instance_info",
+      "startLine": 172,
+      "endLine": 175,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "delete_instance_info",
+      "startLine": 177,
+      "endLine": 180,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "sync_instance_info",
+      "startLine": 182,
+      "endLine": 185,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

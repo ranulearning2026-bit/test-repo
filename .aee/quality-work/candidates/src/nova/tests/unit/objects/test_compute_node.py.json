@@ -1,0 +1,992 @@
+{
+  "file": "src/nova/tests/unit/objects/test_compute_node.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 35,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 35
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Constant name \"fake_host_ip\" doesn't conform to UPPER_CASE naming style",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 681,
+          "endLine": 681
+        },
+        {
+          "line": 709,
+          "endLine": 709
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 54,
+          "endLine": 54
+        },
+        {
+          "line": 57,
+          "endLine": 57
+        },
+        {
+          "line": 64,
+          "endLine": 64
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 65,
+      "endLine": 65,
+      "message": "Access to a protected member _to_json of a client class",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 65,
+          "endLine": 65
+        },
+        {
+          "line": 436,
+          "endLine": 436
+        },
+        {
+          "line": 477,
+          "endLine": 477
+        },
+        {
+          "line": 639,
+          "endLine": 639
+        },
+        {
+          "line": 666,
+          "endLine": 666
+        },
+        {
+          "line": 694,
+          "endLine": 694
+        },
+        {
+          "line": 722,
+          "endLine": 722
+        },
+        {
+          "line": 739,
+          "endLine": 739
+        },
+        {
+          "line": 748,
+          "endLine": 748
+        },
+        {
+          "line": 753,
+          "endLine": 753
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 151,
+      "endLine": 151,
+      "message": "Class '_TestComputeNodeObject' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 151,
+          "endLine": 151
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 151,
+      "endLine": 151,
+      "message": "Too many public methods (47/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 151,
+          "endLine": 151
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 151,
+      "endLine": 151,
+      "message": "Class `_TestComputeNodeObject` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 151,
+          "endLine": 151
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 152,
+      "endLine": 152,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 42,
+      "occurrences": [
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 156,
+          "endLine": 156
+        },
+        {
+          "line": 163,
+          "endLine": 163
+        },
+        {
+          "line": 170,
+          "endLine": 170
+        },
+        {
+          "line": 175,
+          "endLine": 175
+        },
+        {
+          "line": 185,
+          "endLine": 185
+        },
+        {
+          "line": 197,
+          "endLine": 197
+        },
+        {
+          "line": 206,
+          "endLine": 206
+        },
+        {
+          "line": 219,
+          "endLine": 219
+        },
+        {
+          "line": 237,
+          "endLine": 237
+        },
+        {
+          "line": 246,
+          "endLine": 246
+        },
+        {
+          "line": 256,
+          "endLine": 256
+        },
+        {
+          "line": 266,
+          "endLine": 266
+        },
+        {
+          "line": 281,
+          "endLine": 281
+        },
+        {
+          "line": 294,
+          "endLine": 294
+        },
+        {
+          "line": 322,
+          "endLine": 322
+        },
+        {
+          "line": 334,
+          "endLine": 334
+        },
+        {
+          "line": 346,
+          "endLine": 346
+        },
+        {
+          "line": 356,
+          "endLine": 356
+        },
+        {
+          "line": 380,
+          "endLine": 380
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 154,
+      "endLine": 154,
+      "message": "Instance of '_TestComputeNodeObject' has no 'assertJsonEqual' member",
+      "toolSeverity": "error",
+      "count": 122,
+      "occurrences": [
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 159,
+          "endLine": 159
+        },
+        {
+          "line": 161,
+          "endLine": 161
+        },
+        {
+          "line": 164,
+          "endLine": 164
+        },
+        {
+          "line": 165,
+          "endLine": 165
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        },
+        {
+          "line": 178,
+          "endLine": 178
+        },
+        {
+          "line": 181,
+          "endLine": 181
+        },
+        {
+          "line": 182,
+          "endLine": 182
+        },
+        {
+          "line": 191,
+          "endLine": 191
+        },
+        {
+          "line": 192,
+          "endLine": 192
+        },
+        {
+          "line": 194,
+          "endLine": 194
+        },
+        {
+          "line": 199,
+          "endLine": 199
+        },
+        {
+          "line": 201,
+          "endLine": 201
+        },
+        {
+          "line": 203,
+          "endLine": 203
+        },
+        {
+          "line": 210,
+          "endLine": 210
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        },
+        {
+          "line": 214,
+          "endLine": 214
+        },
+        {
+          "line": 215,
+          "endLine": 215
+        },
+        {
+          "line": 231,
+          "endLine": 231
+        }
+      ],
+      "id": "T11"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 294,
+      "endLine": 294,
+      "message": "Unused argument 'mock_get'",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 294,
+          "endLine": 294
+        },
+        {
+          "line": 322,
+          "endLine": 322
+        },
+        {
+          "line": 334,
+          "endLine": 334
+        },
+        {
+          "line": 356,
+          "endLine": 356
+        },
+        {
+          "line": 419,
+          "endLine": 419
+        },
+        {
+          "line": 466,
+          "endLine": 466
+        },
+        {
+          "line": 518,
+          "endLine": 518
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 381,
+      "endLine": 381,
+      "message": "Redefining name 'fake_pci' from outer scope (line 74)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 381,
+          "endLine": 381
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 748,
+      "endLine": 748,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 748,
+          "endLine": 748
+        },
+        {
+          "line": 753,
+          "endLine": 753
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R05"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "supported_hv_specs_comparator",
+      "startLine": 152,
+      "endLine": 154,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "pci_device_pools_comparator",
+      "startLine": 156,
+      "endLine": 161,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "comparators",
+      "startLine": 163,
+      "endLine": 168,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "subs",
+      "startLine": 170,
+      "endLine": 172,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_id",
+      "startLine": 175,
+      "endLine": 182,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_uuid",
+      "startLine": 185,
+      "endLine": 194,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_uuid_not_found",
+      "startLine": 197,
+      "endLine": 203,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_without_mapped",
+      "startLine": 206,
+      "endLine": 215,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_id_with_host_field_not_in_db",
+      "startLine": 219,
+      "endLine": 234,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_service_id",
+      "startLine": 237,
+      "endLine": 243,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_host_and_nodename",
+      "startLine": 246,
+      "endLine": 253,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_nodename",
+      "startLine": 256,
+      "endLine": 263,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_first_node_by_host_for_old_compat",
+      "startLine": 266,
+      "endLine": 278,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_first_node_by_host_for_old_compat_not_found",
+      "startLine": 281,
+      "endLine": 289,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create",
+      "startLine": 294,
+      "endLine": 316,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_allocates_uuid",
+      "startLine": 322,
+      "endLine": 329,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_recreate_fails",
+      "startLine": 334,
+      "endLine": 343,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_duplicate",
+      "startLine": 346,
+      "endLine": 351,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_save",
+      "startLine": 356,
+      "endLine": 377,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_save_pci_device_pools_empty",
+      "startLine": 380,
+      "endLine": 396,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_save_pci_device_pools_null",
+      "startLine": 399,
+      "endLine": 413,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_set_id_failure",
+      "startLine": 419,
+      "endLine": 424,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_destroy",
+      "startLine": 427,
+      "endLine": 431,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_destroy_host_constraint",
+      "startLine": 433,
+      "endLine": 441,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_all",
+      "startLine": 444,
+      "endLine": 451,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_hypervisor",
+      "startLine": 454,
+      "endLine": 462,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_pagination",
+      "startLine": 466,
+      "endLine": 472,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test__get_by_service",
+      "startLine": 475,
+      "endLine": 482,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_all_by_host",
+      "startLine": 485,
+      "endLine": 492,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_numa_topology",
+      "startLine": 494,
+      "endLine": 503,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_supported_hv_specs",
+      "startLine": 505,
+      "endLine": 515,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_host",
+      "startLine": 518,
+      "endLine": 524,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_pci_device_pools",
+      "startLine": 526,
+      "endLine": 536,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_service_id",
+      "startLine": 539,
+      "endLine": 543,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_service_id_compute_host_not_found",
+      "startLine": 546,
+      "endLine": 550,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_from_virt_driver",
+      "startLine": 552,
+      "endLine": 561,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_from_virt_driver_uuid_already_set",
+      "startLine": 563,
+      "endLine": 573,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_from_virt_driver_missing_field",
+      "startLine": 575,
+      "endLine": 585,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_from_virt_driver_extra_field",
+      "startLine": 587,
+      "endLine": 594,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_from_virt_driver_bad_value",
+      "startLine": 596,
+      "endLine": 602,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_allocation_ratios",
+      "startLine": 604,
+      "endLine": 613,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_disk_allocation_ratio",
+      "startLine": 615,
+      "endLine": 622,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_allocation_ratios_old_compute",
+      "startLine": 625,
+      "endLine": 648,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_allocation_ratios_zero_conf",
+      "startLine": 651,
+      "endLine": 678,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_allocation_ratios_None_conf_zero_values",
+      "startLine": 681,
+      "endLine": 706,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_compat_allocation_ratios_None_conf_None_values",
+      "startLine": 709,
+      "endLine": 734,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_all_by_not_mapped",
+      "startLine": 736,
+      "endLine": 745,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

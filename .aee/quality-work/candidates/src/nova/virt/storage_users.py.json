@@ -1,0 +1,162 @@
+{
+  "file": "src/nova/virt/storage_users.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Variable name \"LOCK_PATH\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 69,
+          "endLine": 69
+        },
+        {
+          "line": 88,
+          "endLine": 88
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R50"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "register_storage_use",
+      "startLine": 45,
+      "endLine": 72,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "register_storage_use.do_register_storage_use",
+      "startLine": 52,
+      "endLine": 70,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_storage_users",
+      "startLine": 75,
+      "endLine": 102,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_storage_users.do_get_storage_users",
+      "startLine": 84,
+      "endLine": 100,
+      "ccn": 5,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 3
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

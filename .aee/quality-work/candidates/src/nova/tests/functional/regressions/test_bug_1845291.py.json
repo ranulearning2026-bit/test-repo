@@ -1,0 +1,193 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_1845291.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 19,
+      "endLine": 19,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 19
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:R1720",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1720"
+      ],
+      "line": 53,
+      "endLine": 61,
+      "message": "Unnecessary \"else\" after \"raise\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 61
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R42"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "test_boot_with_az_and_host_then_migrate_re_schedules.fake_orig_claim",
+      "line": 49,
+      "endLine": 61,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 24,
+      "endLine": 31,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_boot_with_az_and_host_then_migrate_re_schedules",
+      "startLine": 33,
+      "endLine": 77,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_boot_with_az_and_host_then_migrate_re_schedules.fake_orig_claim",
+      "startLine": 49,
+      "endLine": 61,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 7,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

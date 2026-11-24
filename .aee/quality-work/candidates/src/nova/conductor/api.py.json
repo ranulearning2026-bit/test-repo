@@ -1,0 +1,426 @@
+{
+  "file": "src/nova/conductor/api.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 23
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Class 'API' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Class `API` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 91,
+          "endLine": 91
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 115,
+          "endLine": 115
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 139,
+          "endLine": 139
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        },
+        {
+          "line": 182,
+          "endLine": 182
+        },
+        {
+          "line": 187,
+          "endLine": 187
+        },
+        {
+          "line": 192,
+          "endLine": 192
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 91,
+      "endLine": 91,
+      "message": "Too many arguments (9/5)",
+      "toolSeverity": "warning",
+      "count": 12,
+      "occurrences": [
+        {
+          "line": 91,
+          "endLine": 91
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 115,
+          "endLine": 115
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        },
+        {
+          "line": 192,
+          "endLine": 192
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 143,
+      "endLine": 143,
+      "message": "Too many local variables (16/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 143,
+          "endLine": 143
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R23"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "resize_instance",
+      "line": 91,
+      "endLine": 99,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "live_migrate_instance",
+      "line": 101,
+      "endLine": 113,
+      "id": "M2"
+    },
+    {
+      "metric": "params",
+      "value": 13,
+      "threshold": 6,
+      "function": "build_instances",
+      "line": 115,
+      "endLine": 127,
+      "id": "M3"
+    },
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "schedule_and_build_instances",
+      "line": 129,
+      "endLine": 137,
+      "id": "M4"
+    },
+    {
+      "metric": "params",
+      "value": 16,
+      "threshold": 6,
+      "function": "rebuild_instance",
+      "line": 143,
+      "endLine": 163,
+      "id": "M5"
+    },
+    {
+      "metric": "params",
+      "value": 11,
+      "threshold": 6,
+      "function": "attach_volume",
+      "line": 192,
+      "endLine": 198,
+      "id": "M6"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 33,
+      "endLine": 35,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "object_backport_versions",
+      "startLine": 37,
+      "endLine": 39,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "wait_until_ready",
+      "startLine": 41,
+      "endLine": 79,
+      "ccn": 5,
+      "nloc": 22,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "__init__",
+      "startLine": 85,
+      "endLine": 87,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "resize_instance",
+      "startLine": 91,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 10,
+      "maxNesting": 0
+    },
+    {
+      "function": "live_migrate_instance",
+      "startLine": 101,
+      "endLine": 113,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 8,
+      "maxNesting": 1
+    },
+    {
+      "function": "build_instances",
+      "startLine": 115,
+      "endLine": 127,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 13,
+      "maxNesting": 0
+    },
+    {
+      "function": "schedule_and_build_instances",
+      "startLine": 129,
+      "endLine": 137,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 10,
+      "maxNesting": 0
+    },
+    {
+      "function": "unshelve_instance",
+      "startLine": 139,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "rebuild_instance",
+      "startLine": 143,
+      "endLine": 163,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 16,
+      "maxNesting": 0
+    },
+    {
+      "function": "cache_images",
+      "startLine": 165,
+      "endLine": 180,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "confirm_snapshot_based_resize",
+      "startLine": 182,
+      "endLine": 185,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "revert_snapshot_based_resize",
+      "startLine": 187,
+      "endLine": 190,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "attach_volume",
+      "startLine": 192,
+      "endLine": 198,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 11,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

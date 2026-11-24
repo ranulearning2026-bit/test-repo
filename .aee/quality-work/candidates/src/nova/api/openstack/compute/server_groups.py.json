@@ -1,0 +1,219 @@
+{
+  "file": "src/nova/api/openstack/compute/server_groups.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 37,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 37
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 140,
+      "endLine": 140,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 154,
+          "endLine": 154
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "ruff:RUF100",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF100"
+      ],
+      "line": 172,
+      "endLine": 172,
+      "message": "Unused `noqa` directive (non-enabled: `E501`)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 172,
+          "endLine": 172
+        },
+        {
+          "line": 173,
+          "endLine": 173
+        },
+        {
+          "line": 213,
+          "endLine": 213
+        },
+        {
+          "line": 214,
+          "endLine": 214
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R45"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 231,
+      "endLine": 231,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exc.HTTPForbidden(explanation=msg) from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 231,
+          "endLine": 231
+        },
+        {
+          "line": 281,
+          "endLine": 281
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R31"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_get_not_deleted",
+      "startLine": 44,
+      "endLine": 75,
+      "ccn": 6,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "_should_enable_custom_max_server_rules",
+      "startLine": 78,
+      "endLine": 84,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_format_server_group",
+      "startLine": 91,
+      "endLine": 131,
+      "ccn": 6,
+      "nloc": 22,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "show",
+      "startLine": 140,
+      "endLine": 149,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "delete",
+      "startLine": 154,
+      "endLine": 166,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "index",
+      "startLine": 175,
+      "endLine": 206,
+      "ccn": 6,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "create",
+      "startLine": 216,
+      "endLine": 283,
+      "ccn": 11,
+      "nloc": 54,
+      "params": 3,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

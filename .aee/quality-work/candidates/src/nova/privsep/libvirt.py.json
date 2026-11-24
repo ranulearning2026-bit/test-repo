@@ -1,0 +1,414 @@
+{
+  "file": "src/nova/privsep/libvirt.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 28,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 28
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 95,
+      "endLine": 95,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 95,
+          "endLine": 95
+        },
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 95,
+      "endLine": 95,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 95,
+          "endLine": 95
+        },
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 115,
+      "endLine": 115,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 115,
+          "endLine": 115
+        },
+        {
+          "line": 121,
+          "endLine": 121
+        },
+        {
+          "line": 126,
+          "endLine": 126
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 136,
+          "endLine": 136
+        },
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 150,
+          "endLine": 150
+        },
+        {
+          "line": 227,
+          "endLine": 227
+        },
+        {
+          "line": 234,
+          "endLine": 234
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0415",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0415"
+      ],
+      "line": 158,
+      "endLine": 158,
+      "message": "Import outside toplevel (fcntl)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 158,
+          "endLine": 158
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R58"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 161,
+      "endLine": 161,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 161,
+          "endLine": 161
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R50"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 168,
+      "endLine": 168,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 168,
+          "endLine": 168
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R32"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "dmcrypt_create_volume",
+      "startLine": 35,
+      "endLine": 52,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "dmcrypt_delete_volume",
+      "startLine": 56,
+      "endLine": 61,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "ploop_init",
+      "startLine": 65,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "ploop_resize",
+      "startLine": 88,
+      "endLine": 98,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "ploop_restore_descriptor",
+      "startLine": 102,
+      "endLine": 111,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "plug_infiniband_vif",
+      "startLine": 115,
+      "endLine": 117,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "unplug_infiniband_vif",
+      "startLine": 121,
+      "endLine": 122,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "plug_midonet_vif",
+      "startLine": 126,
+      "endLine": 127,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "unplug_midonet_vif",
+      "startLine": 131,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "plug_plumgrid_vif",
+      "startLine": 136,
+      "endLine": 140,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "unplug_plumgrid_vif",
+      "startLine": 144,
+      "endLine": 146,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "readpty",
+      "startLine": 150,
+      "endLine": 190,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "systemd_run_qb_mount",
+      "startLine": 194,
+      "endLine": 201,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "unprivileged_qb_mount",
+      "startLine": 205,
+      "endLine": 210,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "umount",
+      "startLine": 214,
+      "endLine": 216,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "unprivileged_umount",
+      "startLine": 220,
+      "endLine": 223,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_pmem_namespaces",
+      "startLine": 227,
+      "endLine": 230,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "cleanup_vpmem",
+      "startLine": 234,
+      "endLine": 236,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

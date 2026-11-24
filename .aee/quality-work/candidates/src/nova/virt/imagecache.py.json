@@ -1,0 +1,273 @@
+{
+  "file": "src/nova/virt/imagecache.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 20,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 20
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Class 'ImageCacheManager' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Class `ImageCacheManager` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Too many local variables (22/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 96,
+      "endLine": 96,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 96,
+          "endLine": 96
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 96,
+      "endLine": 97,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 96,
+          "endLine": 97
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_list_running_instances",
+      "line": 43,
+      "endLine": 103,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 31,
+      "endLine": 37,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_base",
+      "startLine": 39,
+      "endLine": 41,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_list_running_instances",
+      "startLine": 43,
+      "endLine": 103,
+      "ccn": 11,
+      "nloc": 46,
+      "params": 3,
+      "maxNesting": 8
+    },
+    {
+      "function": "_scan_base_images",
+      "startLine": 105,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_age_and_verify_cached_images",
+      "startLine": 111,
+      "endLine": 114,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "update",
+      "startLine": 116,
+      "endLine": 123,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_disk_usage",
+      "startLine": 125,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

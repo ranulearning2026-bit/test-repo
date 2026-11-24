@@ -1,0 +1,174 @@
+{
+  "file": "src/nova/api/openstack/requestlog.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 24,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 24
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "ruff:SIM103",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM103"
+      ],
+      "line": 59,
+      "endLine": 61,
+      "message": "Return the condition `req.environ.get('eventlet.input', None) is None` directly",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 59,
+          "endLine": 61
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R66"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 89,
+      "endLine": 89,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 89,
+          "endLine": 89
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 96,
+      "endLine": 96,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 96,
+          "endLine": 96
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R32"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_get_uri",
+      "startLine": 44,
+      "endLine": 49,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_should_emit",
+      "startLine": 52,
+      "endLine": 61,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_log_req",
+      "startLine": 63,
+      "endLine": 86,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "__call__",
+      "startLine": 89,
+      "endLine": 98,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

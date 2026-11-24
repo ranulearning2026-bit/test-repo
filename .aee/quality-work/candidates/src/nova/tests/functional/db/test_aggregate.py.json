@@ -1,0 +1,1207 @@
+{
+  "file": "src/nova/tests/functional/db/test_aggregate.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 27
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "mutable-default",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0102"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Dangerous default value dict() as argument",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        }
+      ],
+      "id": "T4"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Redefining name 'context' from outer scope (line 20)",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 96,
+          "endLine": 96
+        },
+        {
+          "line": 102,
+          "endLine": 102
+        },
+        {
+          "line": 453,
+          "endLine": 453
+        },
+        {
+          "line": 461,
+          "endLine": 461
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "ruff:B008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "B008"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Do not perform function call `_get_fake_aggregate` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        },
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 83,
+          "endLine": 83
+        },
+        {
+          "line": 84,
+          "endLine": 84
+        }
+      ],
+      "id": "T6"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 111,
+      "endLine": 111,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 111,
+          "endLine": 111
+        },
+        {
+          "line": 471,
+          "endLine": 471
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 111,
+      "endLine": 111,
+      "message": "Too many public methods (35/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 111,
+          "endLine": 111
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 114,
+      "endLine": 114,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 114,
+          "endLine": 114
+        },
+        {
+          "line": 473,
+          "endLine": 473
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 114,
+      "endLine": 114,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 114,
+          "endLine": 114
+        },
+        {
+          "line": 473,
+          "endLine": 473
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 117,
+      "endLine": 117,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 45,
+      "occurrences": [
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 132,
+          "endLine": 132
+        },
+        {
+          "line": 138,
+          "endLine": 138
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 160,
+          "endLine": 160
+        },
+        {
+          "line": 174,
+          "endLine": 174
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        },
+        {
+          "line": 198,
+          "endLine": 198
+        },
+        {
+          "line": 213,
+          "endLine": 213
+        },
+        {
+          "line": 225,
+          "endLine": 225
+        },
+        {
+          "line": 232,
+          "endLine": 232
+        },
+        {
+          "line": 239,
+          "endLine": 239
+        },
+        {
+          "line": 247,
+          "endLine": 247
+        },
+        {
+          "line": 259,
+          "endLine": 259
+        },
+        {
+          "line": 275,
+          "endLine": 275
+        },
+        {
+          "line": 286,
+          "endLine": 286
+        },
+        {
+          "line": 296,
+          "endLine": 296
+        },
+        {
+          "line": 304,
+          "endLine": 304
+        },
+        {
+          "line": 315,
+          "endLine": 315
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 119,
+      "endLine": 119,
+      "message": "Access to a protected member _aggregate_get_from_db of a client class",
+      "toolSeverity": "warning",
+      "count": 50,
+      "occurrences": [
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 126,
+          "endLine": 126
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 168,
+          "endLine": 168
+        },
+        {
+          "line": 184,
+          "endLine": 184
+        },
+        {
+          "line": 192,
+          "endLine": 192
+        },
+        {
+          "line": 194,
+          "endLine": 194
+        },
+        {
+          "line": 202,
+          "endLine": 202
+        },
+        {
+          "line": 205,
+          "endLine": 205
+        },
+        {
+          "line": 207,
+          "endLine": 207
+        },
+        {
+          "line": 217,
+          "endLine": 217
+        },
+        {
+          "line": 220,
+          "endLine": 220
+        },
+        {
+          "line": 227,
+          "endLine": 227
+        },
+        {
+          "line": 229,
+          "endLine": 229
+        },
+        {
+          "line": 236,
+          "endLine": 236
+        },
+        {
+          "line": 242,
+          "endLine": 242
+        },
+        {
+          "line": 244,
+          "endLine": 244
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 141,
+      "endLine": 141,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 141,
+          "endLine": 141
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 141,
+      "endLine": 141,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 141,
+          "endLine": 141
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "ruff:RUF015",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF015"
+      ],
+      "line": 393,
+      "endLine": 393,
+      "message": "Prefer `next(iter(metadata.keys()))` over single element slice",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 393,
+          "endLine": 393
+        },
+        {
+          "line": 418,
+          "endLine": 418
+        },
+        {
+          "line": 432,
+          "endLine": 432
+        },
+        {
+          "line": 434,
+          "endLine": 434
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R54"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 464,
+      "endLine": 464,
+      "message": "Unused argument 'result'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 464,
+          "endLine": 464
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:R1718",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1718"
+      ],
+      "line": 559,
+      "endLine": 559,
+      "message": "Consider using a set comprehension",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 559,
+          "endLine": 559
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R56"
+    },
+    {
+      "canonical": "ruff:C403",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C403"
+      ],
+      "line": 559,
+      "endLine": 559,
+      "message": "Unnecessary list comprehension (rewrite as a set comprehension)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 559,
+          "endLine": 559
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R57"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 559,
+      "endLine": 559,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 559,
+          "endLine": 559
+        }
+      ],
+      "id": "T19",
+      "ruleGroup": "R29"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_get_fake_aggregate",
+      "startLine": 36,
+      "endLine": 50,
+      "ccn": 3,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_fake_hosts",
+      "startLine": 53,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_fake_metadata",
+      "startLine": 57,
+      "endLine": 59,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_aggregate",
+      "startLine": 63,
+      "endLine": 77,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_create_aggregate_with_hosts",
+      "startLine": 81,
+      "endLine": 92,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_aggregate_host_get_all",
+      "startLine": 96,
+      "endLine": 98,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_aggregate_metadata_get_all",
+      "startLine": 102,
+      "endLine": 108,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp",
+      "startLine": 113,
+      "endLine": 115,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_get_from_db",
+      "startLine": 117,
+      "endLine": 122,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_get_from_db_by_uuid",
+      "startLine": 124,
+      "endLine": 130,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_get_from_db_raise_not_found",
+      "startLine": 132,
+      "endLine": 136,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_get_all_from_db",
+      "startLine": 138,
+      "endLine": 143,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_aggregate_get_by_host_from_db",
+      "startLine": 145,
+      "endLine": 158,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_get_by_host_with_key_from_db",
+      "startLine": 160,
+      "endLine": 172,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_get_by_metadata_key_from_db",
+      "startLine": 174,
+      "endLine": 186,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_create_in_db",
+      "startLine": 188,
+      "endLine": 196,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_create_in_db_with_metadata",
+      "startLine": 198,
+      "endLine": 211,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_create_raise_exist_exc",
+      "startLine": 213,
+      "endLine": 223,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_delete",
+      "startLine": 225,
+      "endLine": 230,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_delete_raise_not_found",
+      "startLine": 232,
+      "endLine": 237,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_delete_with_metadata",
+      "startLine": 239,
+      "endLine": 245,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_update",
+      "startLine": 247,
+      "endLine": 257,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_update_with_metadata",
+      "startLine": 259,
+      "endLine": 273,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_update_with_existing_metadata",
+      "startLine": 275,
+      "endLine": 284,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_update_zone_with_existing_metadata",
+      "startLine": 286,
+      "endLine": 294,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_update_raise_not_found",
+      "startLine": 296,
+      "endLine": 302,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_update_raise_name_exist",
+      "startLine": 304,
+      "endLine": 313,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_host_add_to_db",
+      "startLine": 315,
+      "endLine": 321,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_host_re_add_to_db",
+      "startLine": 323,
+      "endLine": 330,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_host_add_to_db_duplicate_works",
+      "startLine": 332,
+      "endLine": 343,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_host_add_to_db_duplicate_raise_exist_exc",
+      "startLine": 345,
+      "endLine": 351,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_host_add_to_db_raise_not_found",
+      "startLine": 353,
+      "endLine": 359,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_host_delete_from_db",
+      "startLine": 361,
+      "endLine": 367,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_host_delete_from_db_raise_not_found",
+      "startLine": 369,
+      "endLine": 374,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_metadata_add",
+      "startLine": 376,
+      "endLine": 381,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_metadata_add_empty_metadata",
+      "startLine": 383,
+      "endLine": 388,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_metadata_add_and_update",
+      "startLine": 390,
+      "endLine": 400,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_metadata_add_retry",
+      "startLine": 402,
+      "endLine": 413,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_metadata_update",
+      "startLine": 415,
+      "endLine": 425,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_metadata_delete",
+      "startLine": 427,
+      "endLine": 435,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_remove_availability_zone",
+      "startLine": 437,
+      "endLine": 444,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_metadata_delete_raise_not_found",
+      "startLine": 446,
+      "endLine": 450,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_aggregate",
+      "startLine": 453,
+      "endLine": 458,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "compare_obj",
+      "startLine": 461,
+      "endLine": 468,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "compare_obj.updated_at_comparator",
+      "startLine": 464,
+      "endLine": 465,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 472,
+      "endLine": 475,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_seed_data",
+      "startLine": 477,
+      "endLine": 479,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_create",
+      "startLine": 481,
+      "endLine": 486,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_by_id",
+      "startLine": 488,
+      "endLine": 491,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_save",
+      "startLine": 493,
+      "endLine": 502,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_update_metadata",
+      "startLine": 504,
+      "endLine": 513,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_destroy",
+      "startLine": 515,
+      "endLine": 520,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_add_host",
+      "startLine": 522,
+      "endLine": 531,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_delete_host",
+      "startLine": 533,
+      "endLine": 541,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_by_metadata",
+      "startLine": 543,
+      "endLine": 559,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_by_metadata_from_db_assertion",
+      "startLine": 561,
+      "endLine": 564,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_non_matching_by_metadata_keys",
+      "startLine": 566,
+      "endLine": 591,
+      "ccn": 2,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_matching_aggregates_multiple_keys",
+      "startLine": 593,
+      "endLine": 614,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_non_matching_aggregates_multiple_keys",
+      "startLine": 616,
+      "endLine": 645,
+      "ccn": 2,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_non_matching_by_metadata_keys_empty_keys",
+      "startLine": 647,
+      "endLine": 673,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_non_matching_by_metadata_keys_empty_key_prefix",
+      "startLine": 675,
+      "endLine": 682,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

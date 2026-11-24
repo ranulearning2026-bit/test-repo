@@ -1,0 +1,246 @@
+{
+  "file": "src/nova/compute/provider_config.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 24,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 24
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 15,
+      "endLine": 15,
+      "message": "standard import \"logging\" should be placed before third party import \"jsonschema\"",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 15
+        },
+        {
+          "line": 17,
+          "endLine": 17
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 224,
+      "endLine": 224,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 224,
+          "endLine": 224
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R50"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 238,
+      "endLine": 238,
+      "message": "Consider explicitly re-raising using 'except OSError as exc' and 'raise nova_exc.ProviderConfigException(error=message) from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 238,
+          "endLine": 238
+        },
+        {
+          "line": 329,
+          "endLine": 329
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 299,
+      "endLine": 305,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 299,
+          "endLine": 305
+        },
+        {
+          "line": 342,
+          "endLine": 345
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_load_yaml_file",
+      "startLine": 215,
+      "endLine": 238,
+      "ccn": 4,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_validate_provider_config",
+      "startLine": 241,
+      "endLine": 310,
+      "ccn": 5,
+      "nloc": 21,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "_validate_provider_config._validate_traits",
+      "startLine": 251,
+      "endLine": 263,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_validate_provider_config._validate_rc",
+      "startLine": 265,
+      "endLine": 281,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "_parse_provider_yaml",
+      "startLine": 313,
+      "endLine": 356,
+      "ccn": 5,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_provider_configs",
+      "startLine": 359,
+      "endLine": 421,
+      "ccn": 6,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

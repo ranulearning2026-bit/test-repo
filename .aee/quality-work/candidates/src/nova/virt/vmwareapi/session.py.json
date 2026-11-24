@@ -1,0 +1,360 @@
+{
+  "file": "src/nova/virt/vmwareapi/session.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 28,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 28
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 64,
+      "endLine": 64,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP032",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP032"
+      ],
+      "line": 64,
+      "endLine": 64,
+      "message": "Use f-string instead of `format` call",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R69"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 85,
+      "endLine": 85,
+      "message": "Too few public methods (0/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 85,
+          "endLine": 85
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 90,
+      "endLine": 90,
+      "message": "Too many arguments (9/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 90,
+          "endLine": 90
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 99,
+      "endLine": 99,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 99,
+          "endLine": 99
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 99,
+      "endLine": 99,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 99,
+          "endLine": 99
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R07"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "__init__",
+      "line": 90,
+      "endLine": 110,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "_call_method",
+      "line": 117,
+      "endLine": 151,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 44,
+      "endLine": 45,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__class__",
+      "startLine": 48,
+      "endLine": 52,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "fetch_moref",
+      "startLine": 55,
+      "endLine": 58,
+      "ccn": 1,
+      "nloc": 1,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__getattr__",
+      "startLine": 60,
+      "endLine": 61,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__repr__",
+      "startLine": 63,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 73,
+      "endLine": 76,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "fetch_moref",
+      "startLine": 78,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__repr__",
+      "startLine": 81,
+      "endLine": 82,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 90,
+      "endLine": 110,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 10,
+      "maxNesting": 0
+    },
+    {
+      "function": "_is_vim_object",
+      "startLine": 113,
+      "endLine": 115,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_call_method",
+      "startLine": 117,
+      "endLine": 151,
+      "ccn": 9,
+      "nloc": 25,
+      "params": 5,
+      "maxNesting": 7
+    },
+    {
+      "function": "_wait_for_task",
+      "startLine": 153,
+      "endLine": 157,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 6
+  }
+}

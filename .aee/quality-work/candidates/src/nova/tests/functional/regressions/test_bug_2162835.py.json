@@ -1,0 +1,247 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_2162835.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 248,
+      "endLine": 248,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 248,
+          "endLine": 248
+        },
+        {
+          "line": 282,
+          "endLine": 282
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 253,
+      "endLine": 253,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 253,
+          "endLine": 253
+        },
+        {
+          "line": 290,
+          "endLine": 290
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 253,
+      "endLine": 253,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 253,
+          "endLine": 253
+        },
+        {
+          "line": 290,
+          "endLine": 290
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 49,
+      "endLine": 57,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_instance_host_cpus",
+      "startLine": 59,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_host_pinned_cpus",
+      "startLine": 66,
+      "endLine": 72,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_evacuate_pinned_cpus_race_with_periodic",
+      "startLine": 74,
+      "endLine": 166,
+      "ccn": 1,
+      "nloc": 47,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_evacuate_pinned_cpus_race_with_periodic.blocking_finish",
+      "startLine": 113,
+      "endLine": 116,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 187,
+      "endLine": 190,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_evac_and_stop_before_finish",
+      "startLine": 192,
+      "endLine": 246,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_create_evac_and_stop_before_finish.pause_finish",
+      "startLine": 205,
+      "endLine": 209,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_create_evac_and_stop_before_finish.track_rebuild",
+      "startLine": 211,
+      "endLine": 215,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_reboot_during_evacuation",
+      "startLine": 248,
+      "endLine": 280,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reboot_during_evacuation_to_active",
+      "startLine": 282,
+      "endLine": 317,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

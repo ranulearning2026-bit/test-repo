@@ -1,0 +1,182 @@
+{
+  "file": "src/nova/api/openstack/compute/views/server_diagnostics.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:C0206",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0206"
+      ],
+      "line": 45,
+      "endLine": 53,
+      "message": "Consider iterating with .items()",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 53
+        },
+        {
+          "line": 55,
+          "endLine": 60
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R64"
+    },
+    {
+      "canonical": "ruff:PLC0206",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PLC0206"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Extracting value from dictionary without calling `.items()`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R87"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_get_obj_field",
+      "startLine": 34,
+      "endLine": 37,
+      "ccn": 3,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "instance_diagnostics",
+      "startLine": 39,
+      "endLine": 62,
+      "ccn": 7,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {}
+}

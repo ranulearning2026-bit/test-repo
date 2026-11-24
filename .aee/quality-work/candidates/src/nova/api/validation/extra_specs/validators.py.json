@@ -1,0 +1,195 @@
+{
+  "file": "src/nova/api/validation/extra_specs/validators.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 23
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 66,
+      "endLine": 66,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 66
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Unused argument 'mgr'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W1406",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1406"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "The u prefix for strings is no longer necessary in Python >=3.0",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R43"
+    },
+    {
+      "canonical": "ruff:UP025",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP025"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Remove unicode literals from strings",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R44"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "validate",
+      "line": 31,
+      "endLine": 63,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "validate",
+      "startLine": 31,
+      "endLine": 63,
+      "ccn": 7,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "load_validators",
+      "startLine": 66,
+      "endLine": 80,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 0,
+      "maxNesting": 4
+    },
+    {
+      "function": "load_validators._report_load_failure",
+      "startLine": 67,
+      "endLine": 68,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "file": "src/nova/tests/unit/scheduler/weights/test_weights_compute.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 21,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 21
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 24,
+      "endLine": 24,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 24,
+          "endLine": 24
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 53,
+          "endLine": 53
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R1729",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1729"
+      ],
+      "line": 50,
+      "endLine": 51,
+      "message": "Use a generator instead 'all(wh.weight == 0.0 for wh in weighed_hosts)'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 51
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R80"
+    },
+    {
+      "canonical": "ruff:C419",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C419"
+      ],
+      "line": 50,
+      "endLine": 51,
+      "message": "Unnecessary list comprehension",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 51
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R81"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 113,
+      "endLine": 113,
+      "message": "Redefining name 'weights' from outer scope (line 18)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 113,
+          "endLine": 113
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R19"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 25,
+      "endLine": 29,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_weighed_host",
+      "startLine": 31,
+      "endLine": 33,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_all_hosts",
+      "startLine": 35,
+      "endLine": 43,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_build_failure_weigher_disabled",
+      "startLine": 45,
+      "endLine": 51,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_build_failure_weigher_scaled",
+      "startLine": 53,
+      "endLine": 59,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_build_failure_weight_multiplier",
+      "startLine": 61,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 31,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_with_agg",
+      "startLine": 99,
+      "endLine": 116,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

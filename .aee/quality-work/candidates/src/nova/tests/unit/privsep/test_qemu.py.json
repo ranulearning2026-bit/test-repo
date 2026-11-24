@@ -1,0 +1,322 @@
+{
+  "file": "src/nova/tests/unit/privsep/test_qemu.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 55,
+      "endLine": 55,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 58,
+          "endLine": 58
+        },
+        {
+          "line": 69,
+          "endLine": 69
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 210,
+          "endLine": 210
+        },
+        {
+          "line": 213,
+          "endLine": 213
+        },
+        {
+          "line": 216,
+          "endLine": 216
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:E1120",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1120"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "No value for argument 'mock_supports_direct_io' in method call",
+      "toolSeverity": "error",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        },
+        {
+          "line": 59,
+          "endLine": 59
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        },
+        {
+          "line": 214,
+          "endLine": 214
+        },
+        {
+          "line": 223,
+          "endLine": 224
+        }
+      ],
+      "id": "T6"
+    },
+    {
+      "canonical": "ruff:ISC004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "ISC004"
+      ],
+      "line": 174,
+      "endLine": 175,
+      "message": "Unparenthesized implicit string concatenation in collection",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 174,
+          "endLine": 175
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R61"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 31,
+      "endLine": 33,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_convert_image",
+      "startLine": 37,
+      "endLine": 53,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_convert_image",
+      "startLine": 55,
+      "endLine": 56,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_convert_image_unprivileged",
+      "startLine": 58,
+      "endLine": 59,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_convert_image_encrypted_source_to_unencrypted_dest",
+      "startLine": 69,
+      "endLine": 90,
+      "ccn": 2,
+      "nloc": 18,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_convert_image_unencrypted_source_to_encrypted_dest",
+      "startLine": 100,
+      "endLine": 135,
+      "ccn": 3,
+      "nloc": 30,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_convert_image_encrypted_source_and_dest",
+      "startLine": 145,
+      "endLine": 189,
+      "ccn": 4,
+      "nloc": 40,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_test_qemu_img_info",
+      "startLine": 193,
+      "endLine": 208,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_privileged_qemu_img_info",
+      "startLine": 210,
+      "endLine": 211,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unprivileged_qemu_img_info",
+      "startLine": 213,
+      "endLine": 214,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_qemu_img_info_limits_config",
+      "startLine": 216,
+      "endLine": 228,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

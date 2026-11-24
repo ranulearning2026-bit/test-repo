@@ -1,0 +1,642 @@
+{
+  "file": "src/nova/objects/host_mapping.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 23
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Redefining name 'context' from outer scope (line 16)",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 79,
+          "endLine": 79
+        },
+        {
+          "line": 98,
+          "endLine": 98
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 132,
+          "endLine": 132
+        },
+        {
+          "line": 150,
+          "endLine": 150
+        },
+        {
+          "line": 173,
+          "endLine": 173
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:W0104",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0104"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Statement seems to have no effect",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R71"
+    },
+    {
+      "canonical": "ruff:B018",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "B018"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Found useless expression. Either assign it to a variable or remove it.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R65"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 50,
+      "endLine": 50,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 50
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 54,
+      "endLine": 58,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 58
+        },
+        {
+          "line": 167,
+          "endLine": 169
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Access to a protected member _from_db_object of a client class",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        },
+        {
+          "line": 88,
+          "endLine": 88
+        },
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 93,
+          "endLine": 93
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 71,
+      "endLine": 71,
+      "message": "Attribute 'cell_mapping' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 71,
+          "endLine": 71
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 74,
+      "endLine": 74,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 157,
+          "endLine": 157
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        },
+        {
+          "line": 257,
+          "endLine": 257
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 198,
+      "endLine": 198,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.HostMappingExists(name=host_mapping.host) from exc'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 198,
+          "endLine": 198
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:C0415",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0415"
+      ],
+      "line": 240,
+      "endLine": 240,
+      "message": "Import outside toplevel (nova.objects)",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 240,
+          "endLine": 240
+        },
+        {
+          "line": 263,
+          "endLine": 263
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R58"
+    },
+    {
+      "canonical": "pylint:C3001",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C3001"
+      ],
+      "line": 266,
+      "endLine": 266,
+      "message": "Lambda expression assigned to a variable. Define a function using the \"def\" keyword instead.",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 266,
+          "endLine": 266
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R55"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_cell_id_in_updates",
+      "startLine": 32,
+      "endLine": 35,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_apply_updates",
+      "startLine": 38,
+      "endLine": 46,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_cell_mapping",
+      "startLine": 60,
+      "endLine": 68,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_load_cell_mapping",
+      "startLine": 70,
+      "endLine": 71,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "obj_load_attr",
+      "startLine": 74,
+      "endLine": 76,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_from_db_object",
+      "startLine": 79,
+      "endLine": 94,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_by_host_from_db",
+      "startLine": 98,
+      "endLine": 108,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_by_host",
+      "startLine": 112,
+      "endLine": 114,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_in_db",
+      "startLine": 118,
+      "endLine": 120,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "create",
+      "startLine": 123,
+      "endLine": 128,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_save_in_db",
+      "startLine": 132,
+      "endLine": 137,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "save",
+      "startLine": 140,
+      "endLine": 146,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_destroy_in_db",
+      "startLine": 150,
+      "endLine": 154,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "destroy",
+      "startLine": 157,
+      "endLine": 158,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_from_db",
+      "startLine": 173,
+      "endLine": 179,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_by_cell_id",
+      "startLine": 183,
+      "endLine": 185,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_all",
+      "startLine": 189,
+      "endLine": 191,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_host_mapping",
+      "startLine": 194,
+      "endLine": 198,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_check_and_create_node_host_mappings",
+      "startLine": 201,
+      "endLine": 220,
+      "ccn": 3,
+      "nloc": 20,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_check_and_create_service_host_mappings",
+      "startLine": 223,
+      "endLine": 236,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_check_and_create_host_mappings",
+      "startLine": 239,
+      "endLine": 254,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "discover_hosts",
+      "startLine": 257,
+      "endLine": 295,
+      "ccn": 7,
+      "nloc": 29,
+      "params": 4,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

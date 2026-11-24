@@ -1,0 +1,239 @@
+{
+  "file": "src/nova/virt/ironic/patcher.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 21,
+      "endLine": 24,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 24
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Class 'GenericDriverFields' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Class `GenericDriverFields` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "ruff:PIE810",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE810"
+      ],
+      "line": 117,
+      "endLine": 117,
+      "message": "Call `startswith` once with a `tuple`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 117,
+          "endLine": 117
+        }
+      ],
+      "id": "T8"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "get_deploy_patch",
+      "line": 43,
+      "endLine": 138,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "create",
+      "startLine": 29,
+      "endLine": 35,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 40,
+      "endLine": 41,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_deploy_patch",
+      "startLine": 43,
+      "endLine": 138,
+      "ccn": 12,
+      "nloc": 64,
+      "params": 7,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

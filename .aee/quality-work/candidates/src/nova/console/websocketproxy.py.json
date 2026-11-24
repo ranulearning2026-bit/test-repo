@@ -1,0 +1,642 @@
+{
+  "file": "src/nova/console/websocketproxy.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 21,
+      "endLine": 44,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 44
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "third party import \"oslo_utils.timeutils\" should be placed before first party imports \"nova.compute.rpcapi\", \"nova.conf\", \"nova.context\" (...) \"nova.i18n._\", \"nova.objects\", \"nova.utils\"",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 44,
+          "endLine": 44
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0412",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0412"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Imports from package oslo_utils are not grouped",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R85"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 51,
+      "endLine": 51,
+      "message": "Class 'TenantSock' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 51,
+          "endLine": 51
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 51,
+      "endLine": 51,
+      "message": "Class `TenantSock` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 51,
+          "endLine": 51
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 84,
+          "endLine": 84
+        },
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        },
+        {
+          "line": 107,
+          "endLine": 107
+        },
+        {
+          "line": 287,
+          "endLine": 287
+        },
+        {
+          "line": 290,
+          "endLine": 290
+        },
+        {
+          "line": 331,
+          "endLine": 331
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 92,
+      "endLine": 92,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 307,
+          "endLine": 307
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 125,
+      "endLine": 125,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 125,
+          "endLine": 125
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 167,
+      "endLine": 167,
+      "message": "Too many local variables (25/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 167,
+          "endLine": 167
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 167,
+      "endLine": 167,
+      "message": "Too many branches (21/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 167,
+          "endLine": 167
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 167,
+      "endLine": 167,
+      "message": "Too many statements (78/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 167,
+          "endLine": 167
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 247,
+      "endLine": 247,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 247,
+          "endLine": 247
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 247,
+      "endLine": 247,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 247,
+          "endLine": 247
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 296,
+      "endLine": 299,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 296,
+          "endLine": 299
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 304,
+      "endLine": 304,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 304,
+          "endLine": 304
+        },
+        {
+          "line": 328,
+          "endLine": 328
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 304,
+      "endLine": 304,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 304,
+          "endLine": 304
+        },
+        {
+          "line": 328,
+          "endLine": 328
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 307,
+      "endLine": 307,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 307,
+          "endLine": 307
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R16"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "ccn",
+      "value": 22,
+      "threshold": 15,
+      "function": "new_websocket_client",
+      "line": 167,
+      "endLine": 285,
+      "id": "M1"
+    },
+    {
+      "metric": "function_lines",
+      "value": 119,
+      "threshold": 100,
+      "function": "new_websocket_client",
+      "line": 167,
+      "endLine": 285,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 18,
+      "threshold": 4,
+      "function": "new_websocket_client",
+      "line": 167,
+      "endLine": 285,
+      "id": "M3"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 59,
+      "endLine": 61,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "recv",
+      "startLine": 63,
+      "endLine": 79,
+      "ccn": 5,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "sendall",
+      "startLine": 81,
+      "endLine": 82,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "finish_up",
+      "startLine": 84,
+      "endLine": 85,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "close",
+      "startLine": 87,
+      "endLine": 89,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 94,
+      "endLine": 96,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "compute_rpcapi",
+      "startLine": 99,
+      "endLine": 105,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "verify_origin_proto",
+      "startLine": 107,
+      "endLine": 123,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_check_console_port",
+      "startLine": 125,
+      "endLine": 135,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_connect_info",
+      "startLine": 137,
+      "endLine": 151,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_close_connection",
+      "startLine": 153,
+      "endLine": 165,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "new_websocket_client",
+      "startLine": 167,
+      "endLine": 285,
+      "ccn": 22,
+      "nloc": 87,
+      "params": 1,
+      "maxNesting": 18
+    },
+    {
+      "function": "socket",
+      "startLine": 287,
+      "endLine": 288,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "send_head",
+      "startLine": 290,
+      "endLine": 304,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 308,
+      "endLine": 328,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_logger",
+      "startLine": 331,
+      "endLine": 332,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 6
+  }
+}

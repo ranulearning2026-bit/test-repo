@@ -1,0 +1,338 @@
+{
+  "file": "src/nova/virt/disk/vfs/api.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Class 'VFS' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Class `VFS` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:W0107",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0107"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Unnecessary pass statement",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 121,
+          "endLine": 121
+        },
+        {
+          "line": 133,
+          "endLine": 133
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R51"
+    },
+    {
+      "canonical": "ruff:PIE790",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE790"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Unnecessary `pass` statement",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 121,
+          "endLine": 121
+        },
+        {
+          "line": 133,
+          "endLine": 133
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R53"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "instance_for_image",
+      "startLine": 39,
+      "endLine": 59,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 61,
+      "endLine": 69,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "setup",
+      "startLine": 71,
+      "endLine": 77,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "teardown",
+      "startLine": 79,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "make_path",
+      "startLine": 83,
+      "endLine": 89,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "append_file",
+      "startLine": 91,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "replace_file",
+      "startLine": 99,
+      "endLine": 105,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "read_file",
+      "startLine": 107,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_file",
+      "startLine": 111,
+      "endLine": 113,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_permissions",
+      "startLine": 115,
+      "endLine": 121,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_ownership",
+      "startLine": 123,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_image_fs",
+      "startLine": 135,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "file": "src/nova/weights.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 24,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 24
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 59,
+      "endLine": 59,
+      "message": "Class 'WeighedObject' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 59,
+          "endLine": 59
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 59,
+      "endLine": 59,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 59,
+          "endLine": 59
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 59,
+      "endLine": 59,
+      "message": "Class `WeighedObject` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 59,
+          "endLine": 59
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 67,
+      "endLine": 67,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 67,
+          "endLine": 67
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 82,
+      "endLine": 82,
+      "message": "Unused argument 'host_state'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 82,
+          "endLine": 82
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 123,
+      "endLine": 123,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1721",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1721"
+      ],
+      "line": 169,
+      "endLine": 169,
+      "message": "Unnecessary use of a comprehension, use dict(log_data) instead.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 169,
+          "endLine": 169
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R79"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "normalize",
+      "line": 30,
+      "endLine": 56,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "normalize",
+      "startLine": 30,
+      "endLine": 56,
+      "ccn": 6,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 5
+    },
+    {
+      "function": "__init__",
+      "startLine": 62,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__repr__",
+      "startLine": 66,
+      "endLine": 67,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "weight_multiplier",
+      "startLine": 82,
+      "endLine": 94,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_weigh_object",
+      "startLine": 97,
+      "endLine": 98,
+      "ccn": 1,
+      "nloc": 1,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "weigh_objects",
+      "startLine": 100,
+      "endLine": 120,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_weighed_objects",
+      "startLine": 126,
+      "endLine": 172,
+      "ccn": 8,
+      "nloc": 35,
+      "params": 4,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "file": "src/nova/tests/functional/wsgi/test_servers.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 19,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 19
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 40,
+      "endLine": 40,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 321,
+          "endLine": 321
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 40,
+      "endLine": 40,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 321,
+          "endLine": 321
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 54,
+      "endLine": 54,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 54
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 187,
+          "endLine": 187
+        },
+        {
+          "line": 244,
+          "endLine": 244
+        },
+        {
+          "line": 390,
+          "endLine": 390
+        },
+        {
+          "line": 438,
+          "endLine": 438
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 66,
+      "endLine": 66,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        },
+        {
+          "line": 128,
+          "endLine": 128
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 146,
+          "endLine": 146
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 66,
+      "endLine": 67,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 67
+        },
+        {
+          "line": 68,
+          "endLine": 69
+        },
+        {
+          "line": 97,
+          "endLine": 98
+        },
+        {
+          "line": 99,
+          "endLine": 100
+        },
+        {
+          "line": 128,
+          "endLine": 128
+        },
+        {
+          "line": 129,
+          "endLine": 130
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 146,
+          "endLine": 147
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 39,
+      "endLine": 52,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_from_buildrequest",
+      "startLine": 54,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_from_buildrequest_old_service",
+      "startLine": 86,
+      "endLine": 114,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_instance_from_buildrequest",
+      "startLine": 116,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_instance_from_buildrequest_old_service",
+      "startLine": 134,
+      "endLine": 149,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_instance_list_from_buildrequests",
+      "startLine": 151,
+      "endLine": 181,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_list_from_buildrequests",
+      "startLine": 183,
+      "endLine": 185,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_list_from_buildrequests_old_service",
+      "startLine": 187,
+      "endLine": 188,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_list_from_buildrequests_with_tags",
+      "startLine": 190,
+      "endLine": 242,
+      "ccn": 1,
+      "nloc": 40,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_bfv_delete_build_request_pre_scheduling",
+      "startLine": 244,
+      "endLine": 281,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_list_build_request_marker_ip_filter",
+      "startLine": 283,
+      "endLine": 310,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 320,
+      "endLine": 340,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_image_backed_server_with_zero_disk_fails",
+      "startLine": 342,
+      "endLine": 357,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_volume_backed_server_with_zero_disk_allowed",
+      "startLine": 359,
+      "endLine": 381,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resize_source_compute_validation",
+      "startLine": 390,
+      "endLine": 436,
+      "ccn": 2,
+      "nloc": 33,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_cold_migrate_source_compute_validation",
+      "startLine": 438,
+      "endLine": 439,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

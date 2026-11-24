@@ -1,0 +1,367 @@
+{
+  "file": "src/nova/tests/unit/keymgr/test_conf_key_mgr.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 29,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 29
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 48,
+          "endLine": 48
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 48,
+          "endLine": 48
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 12,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 70,
+          "endLine": 70
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 93,
+          "endLine": 93
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 58,
+      "endLine": 58,
+      "message": "Access to a protected member _hex_key of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 58,
+          "endLine": 58
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 37,
+      "endLine": 40,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_key_manager",
+      "startLine": 42,
+      "endLine": 45,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 47,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_init",
+      "startLine": 56,
+      "endLine": 58,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_init_value_error",
+      "startLine": 60,
+      "endLine": 62,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_key",
+      "startLine": 64,
+      "endLine": 68,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_null_context",
+      "startLine": 70,
+      "endLine": 72,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_store_key",
+      "startLine": 74,
+      "endLine": 80,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_store_null_context",
+      "startLine": 82,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_null_context",
+      "startLine": 86,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_unknown_key",
+      "startLine": 90,
+      "endLine": 91,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get",
+      "startLine": 93,
+      "endLine": 95,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_key",
+      "startLine": 97,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_null_context",
+      "startLine": 105,
+      "endLine": 107,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_unknown_key",
+      "startLine": 109,
+      "endLine": 111,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

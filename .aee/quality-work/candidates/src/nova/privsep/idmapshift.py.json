@@ -1,0 +1,324 @@
+{
+  "file": "src/nova/privsep/idmapshift.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 49,
+      "endLine": 49,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 49,
+          "endLine": 49
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 65,
+          "endLine": 65
+        },
+        {
+          "line": 75,
+          "endLine": 75
+        },
+        {
+          "line": 93,
+          "endLine": 93
+        },
+        {
+          "line": 115,
+          "endLine": 115
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 138,
+          "endLine": 138
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 65,
+      "endLine": 65,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 65,
+          "endLine": 65
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 76,
+      "endLine": 76,
+      "message": "Consider using '{}' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 76
+        },
+        {
+          "line": 77,
+          "endLine": 77
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 76,
+      "endLine": 76,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 76
+        },
+        {
+          "line": 77,
+          "endLine": 77
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "pylint:R1719",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1719"
+      ],
+      "line": 98,
+      "endLine": 98,
+      "message": "The if expression can be replaced with 'test'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 98,
+          "endLine": 98
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R86"
+    },
+    {
+      "canonical": "ruff:SIM210",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM210"
+      ],
+      "line": 98,
+      "endLine": 98,
+      "message": "Remove unnecessary `True if ... else False`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 98,
+          "endLine": 98
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        }
+      ],
+      "id": "T7"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "confirm_path",
+      "line": 93,
+      "endLine": 112,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "confirm_dir",
+      "line": 119,
+      "endLine": 134,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "find_target_id",
+      "startLine": 49,
+      "endLine": 58,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "print_chown",
+      "startLine": 61,
+      "endLine": 62,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "shift_path",
+      "startLine": 65,
+      "endLine": 72,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "shift_dir",
+      "startLine": 75,
+      "endLine": 90,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "shift_dir.shift_path_short",
+      "startLine": 79,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "confirm_path",
+      "startLine": 93,
+      "endLine": 112,
+      "ccn": 10,
+      "nloc": 16,
+      "params": 4,
+      "maxNesting": 5
+    },
+    {
+      "function": "get_ranges",
+      "startLine": 115,
+      "endLine": 116,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "confirm_dir",
+      "startLine": 119,
+      "endLine": 134,
+      "ccn": 7,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 6
+    },
+    {
+      "function": "shift",
+      "startLine": 138,
+      "endLine": 141,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

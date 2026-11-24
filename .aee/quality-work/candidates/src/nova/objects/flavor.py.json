@@ -1,0 +1,1073 @@
+{
+  "file": "src/nova/objects/flavor.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 31,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 31
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 79,
+      "endLine": 80,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.FlavorAccessExists(flavor_id=flavor_id, project_id=project_id) from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 79,
+          "endLine": 80
+        },
+        {
+          "line": 127,
+          "endLine": 128
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 95,
+      "endLine": 95,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 95,
+          "endLine": 95
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001"
+      ],
+      "line": 172,
+      "endLine": 172,
+      "message": "Do not catch blind exception: `Exception`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 172,
+          "endLine": 172
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 202,
+      "endLine": 202,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 202,
+          "endLine": 202
+        },
+        {
+          "line": 657,
+          "endLine": 657
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 211,
+      "endLine": 227,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 211,
+          "endLine": 227
+        },
+        {
+          "line": 660,
+          "endLine": 662
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 230,
+      "endLine": 230,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 230,
+          "endLine": 230
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        },
+        {
+          "line": 348,
+          "endLine": 348
+        },
+        {
+          "line": 360,
+          "endLine": 360
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 230,
+      "endLine": 230,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 230,
+          "endLine": 230
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        },
+        {
+          "line": 348,
+          "endLine": 348
+        },
+        {
+          "line": 360,
+          "endLine": 360
+        },
+        {
+          "line": 370,
+          "endLine": 370
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 234,
+      "endLine": 234,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 234,
+          "endLine": 234
+        },
+        {
+          "line": 339,
+          "endLine": 339
+        },
+        {
+          "line": 347,
+          "endLine": 347
+        },
+        {
+          "line": 359,
+          "endLine": 359
+        },
+        {
+          "line": 387,
+          "endLine": 387
+        },
+        {
+          "line": 394,
+          "endLine": 394
+        },
+        {
+          "line": 401,
+          "endLine": 401
+        },
+        {
+          "line": 419,
+          "endLine": 419
+        },
+        {
+          "line": 431,
+          "endLine": 431
+        },
+        {
+          "line": 444,
+          "endLine": 444
+        },
+        {
+          "line": 515,
+          "endLine": 515
+        },
+        {
+          "line": 559,
+          "endLine": 559
+        },
+        {
+          "line": 666,
+          "endLine": 666
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 244,
+      "endLine": 244,
+      "message": "Access to a protected member _context of a client class",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 244,
+          "endLine": 244
+        },
+        {
+          "line": 271,
+          "endLine": 271
+        },
+        {
+          "line": 375,
+          "endLine": 375
+        },
+        {
+          "line": 380,
+          "endLine": 380
+        },
+        {
+          "line": 606,
+          "endLine": 606
+        },
+        {
+          "line": 642,
+          "endLine": 642
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 294,
+      "endLine": 294,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 294,
+          "endLine": 294
+        },
+        {
+          "line": 387,
+          "endLine": 387
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 334,
+      "endLine": 334,
+      "message": "Attribute 'projects' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 334,
+          "endLine": 334
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 343,
+      "endLine": 343,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 343,
+          "endLine": 343
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 343,
+      "endLine": 343,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 343,
+          "endLine": 343
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 347,
+      "endLine": 347,
+      "message": "Redefining name 'fields' from outer scope (line 31)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 347,
+          "endLine": 347
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 401,
+      "endLine": 401,
+      "message": "Unused argument 'read_deleted'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 401,
+          "endLine": 401
+        },
+        {
+          "line": 600,
+          "endLine": 600
+        }
+      ],
+      "id": "T19",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 579,
+      "endLine": 584,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 579,
+          "endLine": 584
+        }
+      ],
+      "id": "T20",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 600,
+      "endLine": 600,
+      "message": "Too many arguments (7/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 600,
+          "endLine": 600
+        },
+        {
+          "line": 666,
+          "endLine": 666
+        }
+      ],
+      "id": "T21",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 657,
+      "endLine": 657,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 657,
+          "endLine": 657
+        }
+      ],
+      "id": "T22",
+      "ruleGroup": "R16"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "_flavor_create",
+      "line": 143,
+      "endLine": 175,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 11,
+      "threshold": 4,
+      "function": "_from_db_object",
+      "line": 241,
+      "endLine": 274,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "save",
+      "line": 515,
+      "endLine": 552,
+      "id": "M3"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "_flavor_get_all_from_db",
+      "line": 600,
+      "endLine": 653,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "_flavor_get_all_from_db",
+      "line": 600,
+      "endLine": 653,
+      "id": "M5"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "get_all",
+      "line": 666,
+      "endLine": 677,
+      "id": "M6"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_dict_with_extra_specs",
+      "startLine": 49,
+      "endLine": 52,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_projects_from_db",
+      "startLine": 60,
+      "endLine": 68,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_flavor_add_project",
+      "startLine": 72,
+      "endLine": 80,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_flavor_del_project",
+      "startLine": 84,
+      "endLine": 91,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_flavor_extra_specs_add",
+      "startLine": 95,
+      "endLine": 128,
+      "ccn": 7,
+      "nloc": 29,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "_flavor_extra_specs_del",
+      "startLine": 132,
+      "endLine": 139,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_flavor_create",
+      "startLine": 143,
+      "endLine": 175,
+      "ccn": 8,
+      "nloc": 29,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "_flavor_destroy",
+      "startLine": 179,
+      "endLine": 196,
+      "ccn": 4,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 229,
+      "endLine": 232,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "obj_make_compatible",
+      "startLine": 234,
+      "endLine": 238,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_from_db_object",
+      "startLine": 241,
+      "endLine": 274,
+      "ccn": 14,
+      "nloc": 26,
+      "params": 4,
+      "maxNesting": 11
+    },
+    {
+      "function": "_flavor_get_query_from_db",
+      "startLine": 277,
+      "endLine": 289,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_flavor_get_from_db",
+      "startLine": 294,
+      "endLine": 301,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_flavor_get_by_name_from_db",
+      "startLine": 306,
+      "endLine": 313,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_flavor_get_by_flavor_id_from_db",
+      "startLine": 318,
+      "endLine": 326,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_projects_from_db",
+      "startLine": 329,
+      "endLine": 330,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_load_projects",
+      "startLine": 333,
+      "endLine": 336,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "obj_load_attr",
+      "startLine": 339,
+      "endLine": 345,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "obj_reset_changes",
+      "startLine": 347,
+      "endLine": 357,
+      "ccn": 7,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "obj_what_changed",
+      "startLine": 359,
+      "endLine": 366,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_obj_from_primitive",
+      "startLine": 369,
+      "endLine": 383,
+      "ccn": 5,
+      "nloc": 13,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_by_id",
+      "startLine": 387,
+      "endLine": 390,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_by_name",
+      "startLine": 394,
+      "endLine": 397,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_by_flavor_id",
+      "startLine": 401,
+      "endLine": 405,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_flavor_add_project",
+      "startLine": 408,
+      "endLine": 409,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_flavor_del_project",
+      "startLine": 412,
+      "endLine": 413,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_add_access",
+      "startLine": 415,
+      "endLine": 416,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "add_access",
+      "startLine": 419,
+      "endLine": 425,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_remove_access",
+      "startLine": 427,
+      "endLine": 428,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_access",
+      "startLine": 431,
+      "endLine": 437,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_flavor_create",
+      "startLine": 440,
+      "endLine": 441,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "create",
+      "startLine": 444,
+      "endLine": 457,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "save_projects",
+      "startLine": 460,
+      "endLine": 474,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_flavor_extra_specs_add",
+      "startLine": 477,
+      "endLine": 478,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_flavor_extra_specs_del",
+      "startLine": 481,
+      "endLine": 482,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "save_extra_specs",
+      "startLine": 485,
+      "endLine": 499,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_save",
+      "startLine": 504,
+      "endLine": 513,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "save",
+      "startLine": 515,
+      "endLine": 552,
+      "ccn": 14,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 5
+    },
+    {
+      "function": "_flavor_destroy",
+      "startLine": 555,
+      "endLine": 556,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "destroy",
+      "startLine": 559,
+      "endLine": 573,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_send_notification",
+      "startLine": 575,
+      "endLine": 596,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_flavor_get_all_from_db",
+      "startLine": 600,
+      "endLine": 653,
+      "ccn": 14,
+      "nloc": 43,
+      "params": 7,
+      "maxNesting": 9
+    },
+    {
+      "function": "get_all",
+      "startLine": 666,
+      "endLine": 677,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 8,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

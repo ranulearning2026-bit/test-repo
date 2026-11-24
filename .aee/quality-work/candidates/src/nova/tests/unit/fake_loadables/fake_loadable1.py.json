@@ -1,0 +1,238 @@
+{
+  "file": "src/nova/tests/unit/fake_loadables/fake_loadable1.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Too few public methods (0/2)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:W0107",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0107"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Unnecessary pass statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R51"
+    },
+    {
+      "canonical": "ruff:PIE790",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE790"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Unnecessary `pass` statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R53"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Class 'FakeLoadableSubClass4' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Class `FakeLoadableSubClass4` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "return_valid_classes",
+      "startLine": 38,
+      "endLine": 39,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "return_invalid_classes",
+      "startLine": 42,
+      "endLine": 44,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 0,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

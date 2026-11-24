@@ -1,0 +1,1103 @@
+{
+  "file": "src/nova/network/model.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 23
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 217,
+      "endLine": 217,
+      "message": "Redefining built-in 'type'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 217,
+          "endLine": 217
+        },
+        {
+          "line": 362,
+          "endLine": 362
+        },
+        {
+          "line": 417,
+          "endLine": 417
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 218,
+      "endLine": 218,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 14,
+      "occurrences": [
+        {
+          "line": 218,
+          "endLine": 218
+        },
+        {
+          "line": 259,
+          "endLine": 259
+        },
+        {
+          "line": 291,
+          "endLine": 291
+        },
+        {
+          "line": 312,
+          "endLine": 312
+        },
+        {
+          "line": 364,
+          "endLine": 364
+        },
+        {
+          "line": 397,
+          "endLine": 397
+        },
+        {
+          "line": 409,
+          "endLine": 409
+        },
+        {
+          "line": 423,
+          "endLine": 423
+        },
+        {
+          "line": 584,
+          "endLine": 584
+        },
+        {
+          "line": 600,
+          "endLine": 600
+        },
+        {
+          "line": 604,
+          "endLine": 604
+        },
+        {
+          "line": 608,
+          "endLine": 608
+        },
+        {
+          "line": 612,
+          "endLine": 612
+        },
+        {
+          "line": 616,
+          "endLine": 616
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 218,
+      "endLine": 218,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 14,
+      "occurrences": [
+        {
+          "line": 218,
+          "endLine": 218
+        },
+        {
+          "line": 259,
+          "endLine": 259
+        },
+        {
+          "line": 291,
+          "endLine": 291
+        },
+        {
+          "line": 312,
+          "endLine": 312
+        },
+        {
+          "line": 364,
+          "endLine": 364
+        },
+        {
+          "line": 397,
+          "endLine": 397
+        },
+        {
+          "line": 409,
+          "endLine": 409
+        },
+        {
+          "line": 423,
+          "endLine": 423
+        },
+        {
+          "line": 584,
+          "endLine": 584
+        },
+        {
+          "line": 600,
+          "endLine": 600
+        },
+        {
+          "line": 604,
+          "endLine": 604
+        },
+        {
+          "line": 608,
+          "endLine": 608
+        },
+        {
+          "line": 612,
+          "endLine": 612
+        },
+        {
+          "line": 616,
+          "endLine": 616
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 232,
+      "endLine": 232,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.InvalidIpAddressError(msg) from exc'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 232,
+          "endLine": 232
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 241,
+      "endLine": 241,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 21,
+      "occurrences": [
+        {
+          "line": 241,
+          "endLine": 241
+        },
+        {
+          "line": 249,
+          "endLine": 249
+        },
+        {
+          "line": 265,
+          "endLine": 265
+        },
+        {
+          "line": 269,
+          "endLine": 269
+        },
+        {
+          "line": 301,
+          "endLine": 301
+        },
+        {
+          "line": 333,
+          "endLine": 333
+        },
+        {
+          "line": 337,
+          "endLine": 337
+        },
+        {
+          "line": 341,
+          "endLine": 341
+        },
+        {
+          "line": 350,
+          "endLine": 350
+        },
+        {
+          "line": 373,
+          "endLine": 373
+        },
+        {
+          "line": 378,
+          "endLine": 378
+        },
+        {
+          "line": 453,
+          "endLine": 453
+        },
+        {
+          "line": 460,
+          "endLine": 460
+        },
+        {
+          "line": 498,
+          "endLine": 498
+        },
+        {
+          "line": 501,
+          "endLine": 501
+        },
+        {
+          "line": 504,
+          "endLine": 504
+        },
+        {
+          "line": 511,
+          "endLine": 511
+        },
+        {
+          "line": 516,
+          "endLine": 516
+        },
+        {
+          "line": 541,
+          "endLine": 541
+        },
+        {
+          "line": 555,
+          "endLine": 555
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 242,
+      "endLine": 246,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 242,
+          "endLine": 246
+        },
+        {
+          "line": 454,
+          "endLine": 458
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 273,
+      "endLine": 273,
+      "message": "Parameter 'ip' has been renamed to 'fixed_ip' in overriding 'FixedIP.hydrate' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 273,
+          "endLine": 273
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 417,
+      "endLine": 417,
+      "message": "Too many local variables (16/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 417,
+          "endLine": 417
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 417,
+      "endLine": 417,
+      "message": "Too many arguments (14/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 417,
+          "endLine": 417
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 524,
+      "endLine": 524,
+      "message": "Access to a protected member _prefixlen of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 524,
+          "endLine": 524
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:W0107",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0107"
+      ],
+      "line": 553,
+      "endLine": 553,
+      "message": "Unnecessary pass statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 553,
+          "endLine": 553
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R51"
+    },
+    {
+      "canonical": "ruff:PIE790",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE790"
+      ],
+      "line": 553,
+      "endLine": 553,
+      "message": "Unnecessary `pass` statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 553,
+          "endLine": 553
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R53"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0718"
+      ],
+      "line": 629,
+      "endLine": 629,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 629,
+          "endLine": 629
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R32"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "__init__",
+      "line": 310,
+      "endLine": 324,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 16,
+      "threshold": 6,
+      "function": "__init__",
+      "line": 417,
+      "endLine": 441,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__repr__",
+      "startLine": 200,
+      "endLine": 201,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_set_meta",
+      "startLine": 203,
+      "endLine": 207,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_meta",
+      "startLine": 209,
+      "endLine": 211,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 217,
+      "endLine": 232,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "__eq__",
+      "startLine": 234,
+      "endLine": 236,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__ne__",
+      "startLine": 238,
+      "endLine": 239,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "is_in_subnet",
+      "startLine": 241,
+      "endLine": 246,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "hydrate",
+      "startLine": 249,
+      "endLine": 252,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 258,
+      "endLine": 263,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "add_floating_ip",
+      "startLine": 265,
+      "endLine": 267,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "floating_ip_addresses",
+      "startLine": 269,
+      "endLine": 270,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "hydrate",
+      "startLine": 273,
+      "endLine": 277,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__eq__",
+      "startLine": 279,
+      "endLine": 281,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__ne__",
+      "startLine": 283,
+      "endLine": 284,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 290,
+      "endLine": 298,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "hydrate",
+      "startLine": 301,
+      "endLine": 304,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 310,
+      "endLine": 324,
+      "ccn": 6,
+      "nloc": 12,
+      "params": 7,
+      "maxNesting": 1
+    },
+    {
+      "function": "__eq__",
+      "startLine": 326,
+      "endLine": 328,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__ne__",
+      "startLine": 330,
+      "endLine": 331,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "add_route",
+      "startLine": 333,
+      "endLine": 335,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "add_dns",
+      "startLine": 337,
+      "endLine": 339,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "add_ip",
+      "startLine": 341,
+      "endLine": 343,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "as_netaddr",
+      "startLine": 345,
+      "endLine": 347,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "hydrate",
+      "startLine": 350,
+      "endLine": 356,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 362,
+      "endLine": 371,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "add_subnet",
+      "startLine": 373,
+      "endLine": 375,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "hydrate",
+      "startLine": 378,
+      "endLine": 383,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__eq__",
+      "startLine": 385,
+      "endLine": 387,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__ne__",
+      "startLine": 389,
+      "endLine": 390,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 396,
+      "endLine": 402,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 408,
+      "endLine": 411,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 417,
+      "endLine": 441,
+      "ccn": 3,
+      "nloc": 22,
+      "params": 16,
+      "maxNesting": 0
+    },
+    {
+      "function": "__eq__",
+      "startLine": 443,
+      "endLine": 448,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__ne__",
+      "startLine": 450,
+      "endLine": 451,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "fixed_ips",
+      "startLine": 453,
+      "endLine": 458,
+      "ccn": 4,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "floating_ips",
+      "startLine": 460,
+      "endLine": 462,
+      "ccn": 3,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "labeled_ips",
+      "startLine": 464,
+      "endLine": 496,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "is_hybrid_plug_enabled",
+      "startLine": 498,
+      "endLine": 499,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "is_neutron_filtering_enabled",
+      "startLine": 501,
+      "endLine": 502,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_physical_network",
+      "startLine": 504,
+      "endLine": 508,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "hydrate",
+      "startLine": 511,
+      "endLine": 514,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_allocation",
+      "startLine": 516,
+      "endLine": 517,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_netmask",
+      "startLine": 520,
+      "endLine": 524,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "fixed_ips",
+      "startLine": 532,
+      "endLine": 534,
+      "ccn": 3,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "floating_ips",
+      "startLine": 536,
+      "endLine": 538,
+      "ccn": 3,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "hydrate",
+      "startLine": 541,
+      "endLine": 544,
+      "ccn": 3,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "wait",
+      "startLine": 546,
+      "endLine": 553,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "json",
+      "startLine": 555,
+      "endLine": 556,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_port_with_allocation",
+      "startLine": 558,
+      "endLine": 559,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 583,
+      "endLine": 592,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_sync_wrapper",
+      "startLine": 594,
+      "endLine": 597,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "__getitem__",
+      "startLine": 599,
+      "endLine": 601,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__iter__",
+      "startLine": 603,
+      "endLine": 605,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__len__",
+      "startLine": 607,
+      "endLine": 609,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__str__",
+      "startLine": 611,
+      "endLine": 613,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__repr__",
+      "startLine": 615,
+      "endLine": 617,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "wait",
+      "startLine": 619,
+      "endLine": 633,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 3
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

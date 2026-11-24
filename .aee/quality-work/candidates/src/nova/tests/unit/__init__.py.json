@@ -1,0 +1,89 @@
+{
+  "file": "src/nova/tests/unit/__init__.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0321",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0321"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "More than one statement on a single line",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R78"
+    },
+    {
+      "canonical": "pylint:C0413",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0413"
+      ],
+      "line": 40,
+      "endLine": 40,
+      "message": "Import \"from nova import objects\" should be placed at the top of the module",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 40,
+          "endLine": 40
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R82"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [],
+  "dropped": {}
+}

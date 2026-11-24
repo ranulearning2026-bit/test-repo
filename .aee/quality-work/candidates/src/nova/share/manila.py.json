@@ -1,0 +1,431 @@
+{
+  "file": "src/nova/share/manila.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 52,
+      "endLine": 52,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 52,
+          "endLine": 52
+        },
+        {
+          "line": 91,
+          "endLine": 91
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0902"
+      ],
+      "line": 52,
+      "endLine": 52,
+      "message": "Too many instance attributes (15/7)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 52,
+          "endLine": 52
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R30"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 70,
+      "endLine": 70,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 70,
+          "endLine": 70
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 111,
+          "endLine": 111
+        },
+        {
+          "line": 255,
+          "endLine": 255
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 190,
+      "endLine": 190,
+      "message": "Class 'API' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 190,
+          "endLine": 190
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 190,
+      "endLine": 190,
+      "message": "Class `API` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 190,
+          "endLine": 190
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 207,
+      "endLine": 210,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 207,
+          "endLine": 210
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 262,
+      "endLine": 262,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 262,
+          "endLine": 262
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R17"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "allow",
+      "line": 262,
+      "endLine": 308,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_manilaclient",
+      "startLine": 32,
+      "endLine": 48,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "from_manila_share",
+      "startLine": 70,
+      "endLine": 87,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "from_manila_access",
+      "startLine": 100,
+      "endLine": 108,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "from_dict",
+      "startLine": 111,
+      "endLine": 119,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "translate_sdk_exception",
+      "startLine": 122,
+      "endLine": 136,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "translate_sdk_exception.wrapper",
+      "startLine": 125,
+      "endLine": 135,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "translate_share_exception",
+      "startLine": 139,
+      "endLine": 153,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "translate_share_exception.wrapper",
+      "startLine": 143,
+      "endLine": 152,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "translate_allow_exception",
+      "startLine": 156,
+      "endLine": 170,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "translate_allow_exception.wrapper",
+      "startLine": 160,
+      "endLine": 169,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "translate_deny_exception",
+      "startLine": 173,
+      "endLine": 187,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "translate_deny_exception.wrapper",
+      "startLine": 177,
+      "endLine": 186,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "get",
+      "startLine": 194,
+      "endLine": 221,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "get.filter_export_locations",
+      "startLine": 202,
+      "endLine": 213,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_access",
+      "startLine": 224,
+      "endLine": 252,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_access_rules",
+      "startLine": 255,
+      "endLine": 259,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "allow",
+      "startLine": 262,
+      "endLine": 308,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 7,
+      "maxNesting": 1
+    },
+    {
+      "function": "allow.check_manila_access_response",
+      "startLine": 284,
+      "endLine": 291,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "deny",
+      "startLine": 311,
+      "endLine": 346,
+      "ccn": 3,
+      "nloc": 25,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "has_access",
+      "startLine": 348,
+      "endLine": 362,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 5,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

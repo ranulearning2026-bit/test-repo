@@ -1,0 +1,452 @@
+{
+  "file": "src/nova/policy.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 28,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 28
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 209,
+          "endLine": 209
+        },
+        {
+          "line": 241,
+          "endLine": 241
+        },
+        {
+          "line": 246,
+          "endLine": 246
+        },
+        {
+          "line": 250,
+          "endLine": 250
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0603",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0603"
+      ],
+      "line": 46,
+      "endLine": 46,
+      "message": "Using the global statement",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 46,
+          "endLine": 46
+        },
+        {
+          "line": 67,
+          "endLine": 67
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R52"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 199,
+      "endLine": 199,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exc(action=action) from exc'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 199,
+          "endLine": 199
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 200,
+      "endLine": 200,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 200,
+          "endLine": 200
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 225,
+      "endLine": 225,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 225,
+          "endLine": 225
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:C0325",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0325"
+      ],
+      "line": 231,
+      "endLine": 231,
+      "message": "Unnecessary parens after '=' keyword",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 231,
+          "endLine": 231
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R41"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 233,
+      "endLine": 233,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 233,
+          "endLine": 233
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 233,
+      "endLine": 233,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 233,
+          "endLine": 233
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 241,
+      "endLine": 241,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 241,
+          "endLine": 241
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 277,
+      "endLine": 285,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 277,
+          "endLine": 285
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R21"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_warning_for_deprecated_user_based_rules",
+      "line": 117,
+      "endLine": 133,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "reset",
+      "startLine": 45,
+      "endLine": 49,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "init",
+      "startLine": 52,
+      "endLine": 105,
+      "ccn": 5,
+      "nloc": 24,
+      "params": 5,
+      "maxNesting": 4
+    },
+    {
+      "function": "_serialize_rules",
+      "startLine": 108,
+      "endLine": 114,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_warning_for_deprecated_user_based_rules",
+      "startLine": 117,
+      "endLine": 133,
+      "ccn": 6,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 5
+    },
+    {
+      "function": "set_rules",
+      "startLine": 136,
+      "endLine": 146,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "authorize",
+      "startLine": 149,
+      "endLine": 206,
+      "ccn": 6,
+      "nloc": 25,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "default_target",
+      "startLine": 209,
+      "endLine": 210,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "check_is_admin",
+      "startLine": 213,
+      "endLine": 221,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 228,
+      "endLine": 233,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__call__",
+      "startLine": 235,
+      "endLine": 238,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_rules",
+      "startLine": 241,
+      "endLine": 243,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "register_rules",
+      "startLine": 246,
+      "endLine": 247,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_enforcer",
+      "startLine": 250,
+      "endLine": 255,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "verify_deprecated_policy",
+      "startLine": 258,
+      "endLine": 285,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

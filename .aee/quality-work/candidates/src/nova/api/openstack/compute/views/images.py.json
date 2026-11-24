@@ -1,0 +1,278 @@
+{
+  "file": "src/nova/api/openstack/compute/views/images.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 21,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 21
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 24,
+      "endLine": 24,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 24,
+          "endLine": 24
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 82,
+      "endLine": 82,
+      "message": "Consider using '{\"image\": image_dict}' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 82,
+      "endLine": 82,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 144,
+      "endLine": 144,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 144,
+          "endLine": 144
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R27"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "basic",
+      "startLine": 28,
+      "endLine": 38,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "show",
+      "startLine": 40,
+      "endLine": 82,
+      "ccn": 6,
+      "nloc": 38,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "detail",
+      "startLine": 84,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "index",
+      "startLine": 90,
+      "endLine": 94,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_list_view",
+      "startLine": 96,
+      "endLine": 114,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_links",
+      "startLine": 116,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_alternate_link",
+      "startLine": 134,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_format_date",
+      "startLine": 144,
+      "endLine": 147,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_status",
+      "startLine": 150,
+      "endLine": 159,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_progress",
+      "startLine": 162,
+      "endLine": 167,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

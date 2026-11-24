@@ -1,0 +1,404 @@
+{
+  "file": "src/nova/api/openstack/compute/server_shares.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 31,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 31
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 46,
+      "endLine": 46,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 46,
+          "endLine": 46
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 46,
+      "endLine": 46,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 46,
+          "endLine": 46
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 79,
+      "endLine": 79,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 79,
+          "endLine": 79
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 206,
+          "endLine": 206
+        },
+        {
+          "line": 236,
+          "endLine": 236
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 93,
+      "endLine": 93,
+      "message": "Access to a protected member _list_view of a client class",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 93,
+          "endLine": 93
+        },
+        {
+          "line": 182,
+          "endLine": 182
+        },
+        {
+          "line": 225,
+          "endLine": 225
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 100,
+      "endLine": 100,
+      "message": "Too many local variables (16/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 100,
+          "endLine": 100
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 100,
+      "endLine": 100,
+      "message": "Too many statements (58/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 100,
+          "endLine": 100
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 121,
+      "endLine": 123,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.ShareMappingAlreadyExists(share_id=share_mapping.share_id, tag=share_mapping.tag) from exc'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 121,
+          "endLine": 123
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 206,
+      "endLine": 206,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 206,
+          "endLine": 206
+        },
+        {
+          "line": 236,
+          "endLine": 236
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R20"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_get_instance_mapping",
+      "startLine": 34,
+      "endLine": 38,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 45,
+      "endLine": 48,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_instance_from_server_uuid",
+      "startLine": 50,
+      "endLine": 52,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_instance_in_valid_state",
+      "startLine": 54,
+      "endLine": 72,
+      "ccn": 6,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "index",
+      "startLine": 79,
+      "endLine": 93,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "create",
+      "startLine": 100,
+      "endLine": 199,
+      "ccn": 8,
+      "nloc": 48,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "create._try_create_share_mapping",
+      "startLine": 101,
+      "endLine": 123,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "create._check_manila_share",
+      "startLine": 125,
+      "endLine": 144,
+      "ccn": 4,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "show",
+      "startLine": 206,
+      "endLine": 230,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "delete",
+      "startLine": 236,
+      "endLine": 265,
+      "ccn": 2,
+      "nloc": 25,
+      "params": 4,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

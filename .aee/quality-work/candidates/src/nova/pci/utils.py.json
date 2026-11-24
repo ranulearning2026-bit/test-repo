@@ -1,0 +1,485 @@
+{
+  "file": "src/nova/pci/utils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 98,
+      "endLine": 98,
+      "message": "Unpacked variable `sep` is never used",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 98,
+          "endLine": 98
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 98,
+      "endLine": 98,
+      "message": "Unused variable 'sep'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 98,
+          "endLine": 98
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 111,
+      "endLine": 111,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 111,
+          "endLine": 111
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 153,
+          "endLine": 153
+        },
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 201,
+          "endLine": 201
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 111,
+      "endLine": 111,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 111,
+          "endLine": 111
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 135,
+          "endLine": 136
+        },
+        {
+          "line": 153,
+          "endLine": 153
+        },
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 201,
+          "endLine": 201
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 123,
+      "endLine": 123,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 139,
+          "endLine": 139
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 233,
+          "endLine": 233
+        },
+        {
+          "line": 259,
+          "endLine": 259
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R50"
+    },
+    {
+      "canonical": "ruff:UP024",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP024"
+      ],
+      "line": 127,
+      "endLine": 127,
+      "message": "Replace aliased errors with `OSError`",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 186,
+          "endLine": 186
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        },
+        {
+          "line": 265,
+          "endLine": 265
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R74"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 132,
+      "endLine": 132,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 132,
+          "endLine": 132
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001"
+      ],
+      "line": 169,
+      "endLine": 169,
+      "message": "Do not catch blind exception: `Exception`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 169,
+          "endLine": 169
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 170,
+      "endLine": 170,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.PciDeviceNotFoundById(id=pci_addr) from exc'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 170,
+          "endLine": 170
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 200,
+      "endLine": 200,
+      "message": "Variable name \"VIRTFN_RE\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 200,
+          "endLine": 200
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R12"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "pci_device_prop_match._matching_devices",
+      "line": 56,
+      "endLine": 73,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "pci_device_prop_match",
+      "startLine": 40,
+      "endLine": 75,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "pci_device_prop_match._matching_devices",
+      "startLine": 56,
+      "endLine": 73,
+      "ccn": 9,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 6
+    },
+    {
+      "function": "parse_address",
+      "startLine": 78,
+      "endLine": 87,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_pci_address_fields",
+      "startLine": 90,
+      "endLine": 100,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_pci_address",
+      "startLine": 103,
+      "endLine": 111,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_function_by_ifname",
+      "startLine": 114,
+      "endLine": 129,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "is_physical_function",
+      "startLine": 132,
+      "endLine": 144,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_sysfs_netdev_path",
+      "startLine": 147,
+      "endLine": 154,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_ifname_by_pci_address",
+      "startLine": 157,
+      "endLine": 170,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_mac_by_pci_address",
+      "startLine": 173,
+      "endLine": 191,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_vf_num_by_pci_address",
+      "startLine": 194,
+      "endLine": 213,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_vf_product_id_by_pf_addr",
+      "startLine": 216,
+      "endLine": 246,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_pci_ids_by_pci_addr",
+      "startLine": 249,
+      "endLine": 273,
+      "ccn": 4,
+      "nloc": 20,
+      "params": 1,
+      "maxNesting": 3
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

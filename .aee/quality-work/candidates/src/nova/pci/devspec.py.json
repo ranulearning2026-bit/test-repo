@@ -1,0 +1,720 @@
+{
+  "file": "src/nova/pci/devspec.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 14,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 14,
+          "endLine": 27
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "third party import \"oslo_log.log\" should be placed before first party imports \"nova.conf\", \"nova.exception\", \"nova.i18n._\", \"nova.objects\", \"nova.pci.request.PCI_REMOTE_MANAGED_TAG\", \"nova.pci.utils\"",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 50,
+      "endLine": 50,
+      "message": "Unused argument 'pci_addr'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 50
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 404,
+          "endLine": 404
+        },
+        {
+          "line": 415,
+          "endLine": 415
+        },
+        {
+          "line": 429,
+          "endLine": 429
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 76,
+      "endLine": 78,
+      "message": "Consider explicitly re-raising using 'except ValueError as exc' and 'raise exception.PciConfigInvalidSpec(reason=_(\"property %(property)s ('%(attr)s') does not parse as a hex number.\") % {'property': prop, 'attr': a}) from exc'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 78
+        },
+        {
+          "line": 110,
+          "endLine": 110
+        },
+        {
+          "line": 186,
+          "endLine": 186
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:W0231",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0231"
+      ],
+      "line": 94,
+      "endLine": 94,
+      "message": "__init__ method from base class 'PciAddressSpec' is not called",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 94,
+          "endLine": 94
+        },
+        {
+          "line": 132,
+          "endLine": 132
+        },
+        {
+          "line": 175,
+          "endLine": 175
+        },
+        {
+          "line": 272,
+          "endLine": 272
+        }
+      ],
+      "id": "T8"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 112,
+      "endLine": 112,
+      "message": "Parameter 'pci_addr' has been renamed to 'phys_pci_addr' in overriding 'PhysicalPciAddress.match' method",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 112,
+          "endLine": 112
+        },
+        {
+          "line": 157,
+          "endLine": 157
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        },
+        {
+          "line": 391,
+          "endLine": 391
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 138,
+      "endLine": 138,
+      "message": "Unpacked variable `sep` is never used",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 138,
+          "endLine": 138
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 138,
+      "endLine": 138,
+      "message": "Unused variable 'sep'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 138,
+          "endLine": 138
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:R0902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0902"
+      ],
+      "line": 167,
+      "endLine": 167,
+      "message": "Too many instance attributes (8/7)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 167,
+          "endLine": 167
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R30"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 198,
+      "endLine": 198,
+      "message": "Class 'WhitelistPciAddress' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 198,
+          "endLine": 198
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 198,
+      "endLine": 198,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 198,
+          "endLine": 198
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 198,
+      "endLine": 198,
+      "message": "Class `WhitelistPciAddress` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 198,
+          "endLine": 198
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 271,
+      "endLine": 271,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 271,
+          "endLine": 271
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 327,
+      "endLine": 330,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 327,
+          "endLine": 330
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "pylint:R1720",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1720"
+      ],
+      "line": 336,
+      "endLine": 371,
+      "message": "Unnecessary \"elif\" after \"raise\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 336,
+          "endLine": 371
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R42"
+    },
+    {
+      "canonical": "pylint:W0632",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0632"
+      ],
+      "line": 347,
+      "endLine": 348,
+      "message": "Possible unbalanced tuple unpacking with sequence defined at line 273 of nova.pci.utils: left side has 2 labels, right side has 0 values",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 347,
+          "endLine": 348
+        }
+      ],
+      "id": "T19"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "_init_dev_details",
+      "line": 294,
+      "endLine": 371,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 50,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "match",
+      "startLine": 57,
+      "endLine": 58,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "is_single_address",
+      "startLine": 60,
+      "endLine": 65,
+      "ccn": 5,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "_set_pci_dev_info",
+      "startLine": 67,
+      "endLine": 84,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 94,
+      "endLine": 110,
+      "ccn": 3,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "match",
+      "startLine": 112,
+      "endLine": 119,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__str__",
+      "startLine": 121,
+      "endLine": 122,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 132,
+      "endLine": 155,
+      "ccn": 6,
+      "nloc": 20,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "match",
+      "startLine": 157,
+      "endLine": 164,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 175,
+      "endLine": 186,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "match",
+      "startLine": 188,
+      "endLine": 195,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 217,
+      "endLine": 221,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_physical_function",
+      "startLine": 223,
+      "endLine": 230,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_init_address_fields",
+      "startLine": 232,
+      "endLine": 243,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "match",
+      "startLine": 245,
+      "endLine": 268,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 272,
+      "endLine": 278,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_address_obj",
+      "startLine": 280,
+      "endLine": 292,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_init_dev_details",
+      "startLine": 294,
+      "endLine": 371,
+      "ccn": 14,
+      "nloc": 48,
+      "params": 1,
+      "maxNesting": 7
+    },
+    {
+      "function": "_ensure_remote_managed_dev_vpd_serial",
+      "startLine": 373,
+      "endLine": 389,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "match",
+      "startLine": 391,
+      "endLine": 402,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "match_pci_obj",
+      "startLine": 404,
+      "endLine": 413,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_tags",
+      "startLine": 415,
+      "endLine": 416,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_normalize_device_spec_tag",
+      "startLine": 418,
+      "endLine": 427,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "enhanced_pci_device_with_spec_tags",
+      "startLine": 429,
+      "endLine": 434,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

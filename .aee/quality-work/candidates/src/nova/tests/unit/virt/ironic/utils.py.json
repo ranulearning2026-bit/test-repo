@@ -1,0 +1,316 @@
+{
+  "file": "src/nova/tests/unit/virt/ironic/utils.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 57,
+          "endLine": 57
+        },
+        {
+          "line": 94,
+          "endLine": 94
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 156,
+          "endLine": 156
+        },
+        {
+          "line": 174,
+          "endLine": 174
+        },
+        {
+          "line": 196,
+          "endLine": 196
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        },
+        {
+          "line": 217,
+          "endLine": 217
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0719",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0719"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Raising too general exception: Exception",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 159,
+          "endLine": 159
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R46"
+    },
+    {
+      "canonical": "ruff:TRY002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "TRY002"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Create your own exception",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 159,
+          "endLine": 159
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R48"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "get_test_validation",
+      "startLine": 45,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_test_node",
+      "startLine": 57,
+      "endLine": 91,
+      "ccn": 7,
+      "nloc": 31,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_test_port",
+      "startLine": 94,
+      "endLine": 110,
+      "ccn": 4,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_test_portgroup",
+      "startLine": 113,
+      "endLine": 134,
+      "ccn": 3,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_test_vif",
+      "startLine": 137,
+      "endLine": 153,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_test_volume_connector",
+      "startLine": 156,
+      "endLine": 171,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_test_volume_target",
+      "startLine": 174,
+      "endLine": 193,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_test_flavor",
+      "startLine": 196,
+      "endLine": 208,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_test_image_meta",
+      "startLine": 211,
+      "endLine": 214,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_test_instance_driver_metadata",
+      "startLine": 217,
+      "endLine": 256,
+      "ccn": 1,
+      "nloc": 39,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

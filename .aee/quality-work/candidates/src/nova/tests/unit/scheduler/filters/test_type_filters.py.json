@@ -1,0 +1,250 @@
+{
+  "file": "src/nova/tests/unit/scheduler/filters/test_type_filters.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 18,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 18
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 24,
+      "endLine": 24,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 24,
+          "endLine": 24
+        },
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 87,
+          "endLine": 87
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Attribute 'filt_cls' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 62,
+          "endLine": 62
+        },
+        {
+          "line": 88,
+          "endLine": 88
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 52,
+          "endLine": 52
+        },
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 102,
+          "endLine": 102
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R29"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "test_aggregate_type_filter_no_metadata",
+      "startLine": 24,
+      "endLine": 36,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_type_filter_single_instance_type",
+      "startLine": 39,
+      "endLine": 58,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_type_filter_multi_aggregate",
+      "startLine": 61,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_aggregate_type_filter_multi_instance_type",
+      "startLine": 87,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

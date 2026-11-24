@@ -1,0 +1,296 @@
+{
+  "file": "src/nova/scheduler/filters/affinity_filter.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Parameter 'filter_properties' has been renamed to 'spec_obj' in overriding 'DifferentHostFilter.host_passes' method",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 52,
+          "endLine": 52
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        },
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 93,
+      "endLine": 93,
+      "message": "Instance of '_GroupAntiAffinityFilter' has no 'policy_name' member",
+      "toolSeverity": "error",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 93,
+          "endLine": 93
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        }
+      ],
+      "id": "T4"
+    },
+    {
+      "canonical": "ruff:SIM118",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM118"
+      ],
+      "line": 98,
+      "endLine": 98,
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 98,
+          "endLine": 98
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R49"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 131,
+      "endLine": 131,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 134,
+      "endLine": 134,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 165,
+          "endLine": 165
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 134,
+      "endLine": 134,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 165,
+          "endLine": 165
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R07"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "host_passes",
+      "startLine": 34,
+      "endLine": 40,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "host_passes",
+      "startLine": 52,
+      "endLine": 58,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "host_passes",
+      "startLine": 68,
+      "endLine": 79,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "host_passes",
+      "startLine": 89,
+      "endLine": 128,
+      "ccn": 8,
+      "nloc": 25,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 132,
+      "endLine": 134,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "host_passes",
+      "startLine": 143,
+      "endLine": 159,
+      "ccn": 5,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 163,
+      "endLine": 165,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

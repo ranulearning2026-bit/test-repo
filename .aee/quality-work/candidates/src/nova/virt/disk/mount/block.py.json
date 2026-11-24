@@ -1,0 +1,86 @@
+{
+  "file": "src/nova/virt/disk/mount/block.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:W0223",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0223"
+      ],
+      "line": 19,
+      "endLine": 19,
+      "message": "Method '_inner_get_dev' is abstract in class 'Mount' but is not overridden in child class 'BlockMount'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 19
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R59"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "get_dev",
+      "startLine": 26,
+      "endLine": 29,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "unget_dev",
+      "startLine": 31,
+      "endLine": 33,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

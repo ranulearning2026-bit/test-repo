@@ -1,0 +1,158 @@
+{
+  "file": "src/nova/scheduler/weights/image_props.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 23,
+      "endLine": 28,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 28
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 49,
+      "endLine": 49,
+      "message": "Parameter 'obj' has been renamed to 'host_state' in overriding 'ImagePropertiesWeigher._weigh_object' method",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 49,
+          "endLine": 49
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R40"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_weigh_object",
+      "line": 49,
+      "endLine": 115,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 34,
+      "endLine": 35,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_parse_setting",
+      "startLine": 37,
+      "endLine": 41,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "weight_multiplier",
+      "startLine": 43,
+      "endLine": 47,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_weigh_object",
+      "startLine": 49,
+      "endLine": 115,
+      "ccn": 12,
+      "nloc": 36,
+      "params": 3,
+      "maxNesting": 8
+    }
+  ],
+  "dropped": {}
+}

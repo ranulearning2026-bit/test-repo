@@ -1,0 +1,535 @@
+{
+  "file": "src/nova/api/openstack/urlmap.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 22,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 22
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 28,
+      "endLine": 28,
+      "message": "Constant name \"_quoted_string_re\" doesn't conform to UPPER_CASE naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 28,
+          "endLine": 28
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 29,
+      "endLine": 30,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 29,
+          "endLine": 30
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 29,
+      "endLine": 31,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 29,
+          "endLine": 31
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 101,
+      "endLine": 101,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 160,
+          "endLine": 160
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 101,
+      "endLine": 101,
+      "message": "Class 'Accept' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 101,
+          "endLine": 101
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 101,
+      "endLine": 101,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 160,
+          "endLine": 160
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 101,
+      "endLine": 101,
+      "message": "Class `Accept` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 101,
+          "endLine": 101
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 106,
+      "endLine": 106,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0511",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0511"
+      ],
+      "line": 107,
+      "endLine": 107,
+      "message": "FIXME: Should we have a more sophisticated matching algorithm that",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 107,
+          "endLine": 107
+        }
+      ],
+      "id": "T12"
+    },
+    {
+      "canonical": "pylint:R1724",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1724"
+      ],
+      "line": 121,
+      "endLine": 125,
+      "message": "Unnecessary \"elif\" after \"continue\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 121,
+          "endLine": 125
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R68"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 123,
+      "endLine": 124,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 123,
+          "endLine": 124
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R38"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "best_match",
+      "line": 106,
+      "endLine": 133,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "_match",
+      "line": 161,
+      "endLine": 189,
+      "id": "M2"
+    },
+    {
+      "metric": "ccn",
+      "value": 17,
+      "threshold": 15,
+      "function": "__call__",
+      "line": 252,
+      "endLine": 309,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "__call__",
+      "line": 252,
+      "endLine": 309,
+      "id": "M4"
+    }
+  ],
+  "functions": [
+    {
+      "function": "unquote_header_value",
+      "startLine": 34,
+      "endLine": 47,
+      "ccn": 3,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_list_header",
+      "startLine": 50,
+      "endLine": 71,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "parse_options_header",
+      "startLine": 74,
+      "endLine": 98,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "parse_options_header._tokenize",
+      "startLine": 84,
+      "endLine": 90,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 102,
+      "endLine": 104,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "best_match",
+      "startLine": 106,
+      "endLine": 133,
+      "ccn": 8,
+      "nloc": 22,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "_match_mask",
+      "startLine": 135,
+      "endLine": 142,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "urlmap_factory",
+      "startLine": 145,
+      "endLine": 157,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_match",
+      "startLine": 161,
+      "endLine": 189,
+      "ccn": 10,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 6
+    },
+    {
+      "function": "_set_script_name",
+      "startLine": 191,
+      "endLine": 196,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_set_script_name.wrap",
+      "startLine": 192,
+      "endLine": 194,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_munge_path",
+      "startLine": 198,
+      "endLine": 204,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_munge_path.wrap",
+      "startLine": 199,
+      "endLine": 202,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_path_strategy",
+      "startLine": 206,
+      "endLine": 224,
+      "ccn": 6,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "_content_type_strategy",
+      "startLine": 226,
+      "endLine": 235,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_accept_strategy",
+      "startLine": 237,
+      "endLine": 250,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "__call__",
+      "startLine": 252,
+      "endLine": 309,
+      "ccn": 17,
+      "nloc": 36,
+      "params": 3,
+      "maxNesting": 9
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

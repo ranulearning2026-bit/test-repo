@@ -1,0 +1,404 @@
+{
+  "file": "src/nova/api/validation/validators.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 19,
+      "endLine": 31,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 31
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 63,
+      "endLine": 68,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 68
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "ruff:SIM103",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM103"
+      ],
+      "line": 105,
+      "endLine": 108,
+      "message": "Return the condition `not re.search(r'\\s', instance)` directly",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 105,
+          "endLine": 108
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R66"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 200,
+      "endLine": 200,
+      "message": "Too many branches (13/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 200,
+          "endLine": 200
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 258,
+      "endLine": 258,
+      "message": "Class '_SchemaValidator' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 258,
+          "endLine": 258
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 258,
+      "endLine": 258,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 258,
+          "endLine": 258
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 258,
+      "endLine": 258,
+      "message": "Class `_SchemaValidator` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 258,
+          "endLine": 258
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 286,
+      "endLine": 286,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 286,
+          "endLine": 286
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 334,
+      "endLine": 334,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 334,
+          "endLine": 334
+        },
+        {
+          "line": 341,
+          "endLine": 341
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R27"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "_soft_validate_additional_properties",
+      "line": 200,
+      "endLine": 255,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_validate_regex_format",
+      "startLine": 38,
+      "endLine": 53,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_validate_datetime_format",
+      "startLine": 57,
+      "endLine": 68,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_validate_base64_format",
+      "startLine": 72,
+      "endLine": 87,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_validate_cidr_format",
+      "startLine": 91,
+      "endLine": 108,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "_validate_uuid_format",
+      "startLine": 112,
+      "endLine": 118,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_validate_uri",
+      "startLine": 122,
+      "endLine": 139,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_validate_name_with_leading_trailing_spaces",
+      "startLine": 144,
+      "endLine": 153,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_validate_name",
+      "startLine": 157,
+      "endLine": 166,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_validate_az_name_with_leading_trailing_spaces",
+      "startLine": 171,
+      "endLine": 180,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_validate_az_name",
+      "startLine": 184,
+      "endLine": 193,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_soft_validate_additional_properties",
+      "startLine": 200,
+      "endLine": 255,
+      "ccn": 13,
+      "nloc": 29,
+      "params": 4,
+      "maxNesting": 9
+    },
+    {
+      "function": "__init__",
+      "startLine": 271,
+      "endLine": 284,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "validate",
+      "startLine": 286,
+      "endLine": 322,
+      "ccn": 6,
+      "nloc": 25,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_number_from_str",
+      "startLine": 324,
+      "endLine": 332,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_validate_minimum",
+      "startLine": 334,
+      "endLine": 339,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_validate_maximum",
+      "startLine": 341,
+      "endLine": 346,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

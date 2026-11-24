@@ -1,0 +1,815 @@
+{
+  "file": "src/nova/network/security_group_api.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 36,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 36
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        },
+        {
+          "line": 95,
+          "endLine": 95
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 181,
+          "endLine": 181
+        },
+        {
+          "line": 219,
+          "endLine": 219
+        },
+        {
+          "line": 240,
+          "endLine": 240
+        },
+        {
+          "line": 293,
+          "endLine": 293
+        },
+        {
+          "line": 428,
+          "endLine": 428
+        },
+        {
+          "line": 443,
+          "endLine": 443
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 293,
+          "endLine": 293
+        },
+        {
+          "line": 307,
+          "endLine": 307
+        },
+        {
+          "line": 357,
+          "endLine": 357
+        },
+        {
+          "line": 443,
+          "endLine": 443
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:R1720",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1720"
+      ],
+      "line": 72,
+      "endLine": 77,
+      "message": "Unnecessary \"else\" after \"raise\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 72,
+          "endLine": 77
+        },
+        {
+          "line": 135,
+          "endLine": 140
+        },
+        {
+          "line": 229,
+          "endLine": 235
+        },
+        {
+          "line": 299,
+          "endLine": 304
+        },
+        {
+          "line": 348,
+          "endLine": 354
+        },
+        {
+          "line": 372,
+          "endLine": 383
+        },
+        {
+          "line": 449,
+          "endLine": 454
+        },
+        {
+          "line": 599,
+          "endLine": 606
+        },
+        {
+          "line": 639,
+          "endLine": 644
+        },
+        {
+          "line": 661,
+          "endLine": 668
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R42"
+    },
+    {
+      "canonical": "ruff:TRY201",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "TRY201"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Use `raise` without specifying exception name",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 236,
+          "endLine": 236
+        },
+        {
+          "line": 253,
+          "endLine": 253
+        },
+        {
+          "line": 304,
+          "endLine": 304
+        },
+        {
+          "line": 354,
+          "endLine": 354
+        },
+        {
+          "line": 383,
+          "endLine": 383
+        },
+        {
+          "line": 454,
+          "endLine": 454
+        },
+        {
+          "line": 606,
+          "endLine": 606
+        },
+        {
+          "line": 644,
+          "endLine": 644
+        },
+        {
+          "line": 668,
+          "endLine": 668
+        }
+      ],
+      "id": "T7"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 86,
+      "endLine": 86,
+      "message": "Do not catch blind exception: `Exception`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 645,
+          "endLine": 645
+        },
+        {
+          "line": 701,
+          "endLine": 701
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 87,
+      "endLine": 87,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.InvalidCidr(cidr=cidr) from exc'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 136,
+          "endLine": 137
+        },
+        {
+          "line": 139,
+          "endLine": 140
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 106,
+      "endLine": 106,
+      "message": "Too many branches (13/12)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 587,
+          "endLine": 587
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 157,
+      "endLine": 158,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 157,
+          "endLine": 158
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 157,
+      "endLine": 159,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 157,
+          "endLine": 159
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 357,
+      "endLine": 357,
+      "message": "Unused argument 'id'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 357,
+          "endLine": 357
+        },
+        {
+          "line": 428,
+          "endLine": 428
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "ruff:TRY401",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "TRY401"
+      ],
+      "line": 380,
+      "endLine": 380,
+      "message": "Redundant exception object included in `logging.exception` call",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 380,
+          "endLine": 380
+        }
+      ],
+      "id": "T14"
+    },
+    {
+      "canonical": "ruff:PIE808",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE808"
+      ],
+      "line": 436,
+      "endLine": 436,
+      "message": "Unnecessary `start` argument in `range`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 436,
+          "endLine": 436
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R47"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 436,
+      "endLine": 436,
+      "message": "Unused variable 'rule_id'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 436,
+          "endLine": 436
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R26"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "ccn",
+      "value": 27,
+      "threshold": 15,
+      "function": "_new_ingress_rule",
+      "line": 106,
+      "endLine": 178,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_new_ingress_rule",
+      "line": 106,
+      "endLine": 178,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "validate_id",
+      "startLine": 47,
+      "endLine": 51,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "validate_name",
+      "startLine": 54,
+      "endLine": 77,
+      "ccn": 4,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "parse_cidr",
+      "startLine": 80,
+      "endLine": 92,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "new_group_ingress_rule",
+      "startLine": 95,
+      "endLine": 98,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "new_cidr_ingress_rule",
+      "startLine": 101,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_new_ingress_rule",
+      "startLine": 106,
+      "endLine": 178,
+      "ccn": 27,
+      "nloc": 54,
+      "params": 5,
+      "maxNesting": 8
+    },
+    {
+      "function": "create_security_group_rule",
+      "startLine": 181,
+      "endLine": 189,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_rule_exists",
+      "startLine": 192,
+      "endLine": 203,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "populate_security_groups",
+      "startLine": 206,
+      "endLine": 216,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "create_security_group",
+      "startLine": 219,
+      "endLine": 237,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "update_security_group",
+      "startLine": 240,
+      "endLine": 254,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_convert_to_nova_security_group_format",
+      "startLine": 257,
+      "endLine": 269,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_convert_to_nova_security_group_rule_format",
+      "startLine": 272,
+      "endLine": 290,
+      "ccn": 5,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get",
+      "startLine": 293,
+      "endLine": 304,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "list",
+      "startLine": 307,
+      "endLine": 338,
+      "ccn": 6,
+      "nloc": 19,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "destroy",
+      "startLine": 341,
+      "endLine": 354,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "add_rules",
+      "startLine": 357,
+      "endLine": 388,
+      "ccn": 6,
+      "nloc": 24,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "_make_neutron_security_group_dict",
+      "startLine": 391,
+      "endLine": 393,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_make_neutron_security_group_rules_list",
+      "startLine": 396,
+      "endLine": 425,
+      "ccn": 8,
+      "nloc": 20,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "remove_rules",
+      "startLine": 428,
+      "endLine": 440,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_rule",
+      "startLine": 443,
+      "endLine": 455,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_ports_from_server_list",
+      "startLine": 458,
+      "endLine": 486,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_ports_from_server_list._chunk_by_ids",
+      "startLine": 461,
+      "endLine": 469,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_secgroups_from_port_list",
+      "startLine": 489,
+      "endLine": 518,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_secgroups_from_port_list._chunk_by_ids",
+      "startLine": 492,
+      "endLine": 500,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_instances_security_groups_bindings",
+      "startLine": 521,
+      "endLine": 563,
+      "ccn": 7,
+      "nloc": 25,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_instance_security_groups",
+      "startLine": 566,
+      "endLine": 575,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_has_security_group_requirements",
+      "startLine": 578,
+      "endLine": 584,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "add_to_instance",
+      "startLine": 587,
+      "endLine": 647,
+      "ccn": 13,
+      "nloc": 57,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "remove_from_instance",
+      "startLine": 650,
+      "endLine": 709,
+      "ccn": 10,
+      "nloc": 51,
+      "params": 3,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 9
+  }
+}

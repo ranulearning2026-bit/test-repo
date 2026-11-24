@@ -1,0 +1,415 @@
+{
+  "file": "src/nova/virt/vmwareapi/imagecache.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0223",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0223"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "Method '_age_and_verify_cached_images' is abstract in class 'ImageCacheManager' but is not overridden in child class 'ImageCacheManager'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R59"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 58,
+      "endLine": 58,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 58,
+          "endLine": 58
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 58,
+      "endLine": 58,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 58,
+          "endLine": 58
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 76,
+      "endLine": 76,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 76
+        },
+        {
+          "line": 95,
+          "endLine": 95
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 103,
+      "endLine": 103,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 103,
+          "endLine": 103
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 111,
+      "endLine": 111,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 111,
+          "endLine": 111
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 111,
+      "endLine": 112,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 111,
+          "endLine": 112
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 140,
+      "endLine": 140,
+      "message": "Unused argument 'context'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 140,
+          "endLine": 140
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 178,
+      "endLine": 178,
+      "message": "Number of parameters was 3 in 'ImageCacheManager.update' and is now 4 in overriding 'ImageCacheManager.update' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 178,
+          "endLine": 178
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 187,
+      "endLine": 187,
+      "message": "Attribute 'used_images' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 187,
+          "endLine": 187
+        },
+        {
+          "line": 192,
+          "endLine": 192
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R28"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 57,
+      "endLine": 61,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_folder_delete",
+      "startLine": 63,
+      "endLine": 74,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "enlist_image",
+      "startLine": 76,
+      "endLine": 89,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "timestamp_folder_get",
+      "startLine": 91,
+      "endLine": 93,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "timestamp_cleanup",
+      "startLine": 95,
+      "endLine": 101,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_timestamp",
+      "startLine": 103,
+      "endLine": 108,
+      "ccn": 4,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_timestamp_filename",
+      "startLine": 110,
+      "endLine": 112,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_datetime_from_filename",
+      "startLine": 114,
+      "endLine": 116,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_ds_browser",
+      "startLine": 118,
+      "endLine": 125,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_list_datastore_images",
+      "startLine": 127,
+      "endLine": 138,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_age_cached_images",
+      "startLine": 140,
+      "endLine": 176,
+      "ccn": 6,
+      "nloc": 30,
+      "params": 5,
+      "maxNesting": 4
+    },
+    {
+      "function": "update",
+      "startLine": 178,
+      "endLine": 193,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_image_cache_folder",
+      "startLine": 195,
+      "endLine": 197,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 6
+  }
+}

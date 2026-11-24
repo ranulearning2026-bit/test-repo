@@ -1,0 +1,895 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_keypairs.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 29,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 29
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Constant name \"keypair_name_2_92_compatible\" doesn't conform to UPPER_CASE naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 40,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 111,
+          "endLine": 111
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 125,
+          "endLine": 125
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 146,
+          "endLine": 146
+        },
+        {
+          "line": 153,
+          "endLine": 153
+        },
+        {
+          "line": 164,
+          "endLine": 164
+        },
+        {
+          "line": 175,
+          "endLine": 175
+        },
+        {
+          "line": 186,
+          "endLine": 186
+        },
+        {
+          "line": 193,
+          "endLine": 193
+        },
+        {
+          "line": 215,
+          "endLine": 215
+        },
+        {
+          "line": 238,
+          "endLine": 238
+        },
+        {
+          "line": 251,
+          "endLine": 251
+        },
+        {
+          "line": 261,
+          "endLine": 261
+        },
+        {
+          "line": 266,
+          "endLine": 266
+        },
+        {
+          "line": 270,
+          "endLine": 270
+        },
+        {
+          "line": 274,
+          "endLine": 274
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 50,
+      "endLine": 50,
+      "message": "Unused argument 'context'",
+      "toolSeverity": "warning",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 50
+        },
+        {
+          "line": 58,
+          "endLine": 58
+        },
+        {
+          "line": 62,
+          "endLine": 62
+        },
+        {
+          "line": 66,
+          "endLine": 66
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0719",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0719"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Raising too general exception: Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R46"
+    },
+    {
+      "canonical": "ruff:TRY002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "TRY002"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Create your own exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R48"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 78,
+      "endLine": 78,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 78,
+          "endLine": 78
+        },
+        {
+          "line": 290,
+          "endLine": 290
+        },
+        {
+          "line": 307,
+          "endLine": 307
+        },
+        {
+          "line": 408,
+          "endLine": 408
+        },
+        {
+          "line": 472,
+          "endLine": 472
+        },
+        {
+          "line": 520,
+          "endLine": 520
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 87,
+      "endLine": 87,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 417,
+          "endLine": 417
+        },
+        {
+          "line": 474,
+          "endLine": 474
+        },
+        {
+          "line": 525,
+          "endLine": 525
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 87,
+      "endLine": 87,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 417,
+          "endLine": 417
+        },
+        {
+          "line": 474,
+          "endLine": 474
+        },
+        {
+          "line": 525,
+          "endLine": 525
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R07"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "fake_keypair",
+      "startLine": 45,
+      "endLine": 47,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_fake_get_from_db",
+      "startLine": 50,
+      "endLine": 55,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "_fake_get_count_from_db",
+      "startLine": 58,
+      "endLine": 59,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_fake_create_in_db",
+      "startLine": 62,
+      "endLine": 63,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_fake_destroy_in_db",
+      "startLine": 66,
+      "endLine": 71,
+      "ccn": 4,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "db_key_pair_create_duplicate",
+      "startLine": 74,
+      "endLine": 75,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_setup_app_and_controller",
+      "startLine": 82,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 86,
+      "endLine": 104,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list",
+      "startLine": 106,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create",
+      "startLine": 111,
+      "endLine": 116,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_empty_name",
+      "startLine": 118,
+      "endLine": 123,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_name_too_long",
+      "startLine": 125,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_name_leading_trailing_spaces",
+      "startLine": 135,
+      "endLine": 144,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_name_leading_trailing_spaces_compat_mode",
+      "startLine": 146,
+      "endLine": 151,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_non_alphanumeric_name",
+      "startLine": 153,
+      "endLine": 162,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_special_characters",
+      "startLine": 164,
+      "endLine": 173,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_import_bad_key",
+      "startLine": 175,
+      "endLine": 184,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_invalid_keypair_body",
+      "startLine": 186,
+      "endLine": 191,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_import",
+      "startLine": 193,
+      "endLine": 212,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_import_quota_limit",
+      "startLine": 215,
+      "endLine": 235,
+      "ccn": 1,
+      "nloc": 20,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_quota_limit",
+      "startLine": 238,
+      "endLine": 249,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_duplicate",
+      "startLine": 251,
+      "endLine": 258,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_delete",
+      "startLine": 261,
+      "endLine": 264,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_get_keypair_not_found",
+      "startLine": 266,
+      "endLine": 268,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_delete_not_found",
+      "startLine": 270,
+      "endLine": 272,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_show",
+      "startLine": 274,
+      "endLine": 280,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_show_not_found",
+      "startLine": 282,
+      "endLine": 284,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_keypair_type",
+      "startLine": 286,
+      "endLine": 287,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list",
+      "startLine": 293,
+      "endLine": 297,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_keypair_type",
+      "startLine": 299,
+      "endLine": 300,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_name_leading_trailing_spaces_compat_mode",
+      "startLine": 302,
+      "endLine": 304,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_with_name_leading_trailing_spaces_compat_mode",
+      "startLine": 310,
+      "endLine": 312,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_other_user",
+      "startLine": 314,
+      "endLine": 331,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_show_other_user",
+      "startLine": 333,
+      "endLine": 346,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_delete_other_user",
+      "startLine": 348,
+      "endLine": 358,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_other_user",
+      "startLine": 360,
+      "endLine": 376,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_import_other_user",
+      "startLine": 378,
+      "endLine": 395,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_other_user_invalid_in_old_microversion",
+      "startLine": 397,
+      "endLine": 405,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_setup_app_and_controller",
+      "startLine": 412,
+      "endLine": 414,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 416,
+      "endLine": 418,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_limit_and_marker",
+      "startLine": 421,
+      "endLine": 435,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_limit_and_marker_invalid_marker",
+      "startLine": 438,
+      "endLine": 445,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_limit_and_marker_invalid_limit",
+      "startLine": 447,
+      "endLine": 453,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_limit_and_marker_invalid_in_old_microversion",
+      "startLine": 456,
+      "endLine": 469,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 473,
+      "endLine": 475,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_additional_param_old_version",
+      "startLine": 477,
+      "endLine": 496,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_list_additional_param",
+      "startLine": 498,
+      "endLine": 503,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_show_additional_param",
+      "startLine": 505,
+      "endLine": 510,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_delete_additional_param",
+      "startLine": 512,
+      "endLine": 517,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 524,
+      "endLine": 532,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_no_longer_supported",
+      "startLine": 534,
+      "endLine": 541,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_works_with_old_version",
+      "startLine": 543,
+      "endLine": 551,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_import_works_with_new_version",
+      "startLine": 553,
+      "endLine": 570,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_create_refuses_special_chars_with_old_version",
+      "startLine": 572,
+      "endLine": 579,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_keypair_import_with_special_characters",
+      "startLine": 581,
+      "endLine": 599,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

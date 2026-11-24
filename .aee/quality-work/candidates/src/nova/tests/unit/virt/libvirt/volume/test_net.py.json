@@ -1,0 +1,303 @@
+{
+  "file": "src/nova/tests/unit/virt/libvirt/volume/test_net.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Method name \"_assertNetworkAndProtocolEquals\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 29,
+      "endLine": 29,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 35,
+          "endLine": 35
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 29,
+      "endLine": 29,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 35,
+          "endLine": 35
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 54,
+          "endLine": 54
+        },
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 83,
+          "endLine": 83
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 161,
+          "endLine": 161
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        },
+        {
+          "line": 203,
+          "endLine": 203
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_assertNetworkAndProtocolEquals",
+      "startLine": 26,
+      "endLine": 30,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assertISCSINetworkAndProtocolEquals",
+      "startLine": 32,
+      "endLine": 36,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "rbd_connection",
+      "startLine": 38,
+      "endLine": 52,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_rbd_driver",
+      "startLine": 54,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_rbd_driver_hosts",
+      "startLine": 66,
+      "endLine": 81,
+      "ccn": 3,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_libvirt_rbd_driver_auth_enabled",
+      "startLine": 83,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_rbd_driver_auth_enabled_flags",
+      "startLine": 101,
+      "endLine": 125,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_rbd_driver_auth_enabled_flags_secret_uuid_fallback",
+      "startLine": 127,
+      "endLine": 159,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_rbd_driver_auth_disabled",
+      "startLine": 161,
+      "endLine": 175,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_rbd_driver_auth_disabled_flags_override",
+      "startLine": 177,
+      "endLine": 201,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_extend_volume",
+      "startLine": 203,
+      "endLine": 216,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

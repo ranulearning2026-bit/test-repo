@@ -1,0 +1,587 @@
+{
+  "file": "src/nova/compute/multi_cell_list.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 23
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Class 'RecordSortContext' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Class `RecordSortContext` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 48,
+      "endLine": 51,
+      "message": "Unnecessary \"elif\" after \"return\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 51
+        },
+        {
+          "line": 82,
+          "endLine": 85
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 55,
+      "endLine": 55,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 55,
+          "endLine": 55
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:W0107",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0107"
+      ],
+      "line": 142,
+      "endLine": 142,
+      "message": "Unnecessary pass statement",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 158,
+          "endLine": 158
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        },
+        {
+          "line": 193,
+          "endLine": 193
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R51"
+    },
+    {
+      "canonical": "ruff:PIE790",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE790"
+      ],
+      "line": 142,
+      "endLine": 142,
+      "message": "Unnecessary `pass` statement",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 158,
+          "endLine": 158
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        },
+        {
+          "line": 193,
+          "endLine": 193
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R53"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 216,
+      "endLine": 216,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 216,
+          "endLine": 216
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 223,
+      "endLine": 223,
+      "message": "Too many statements (61/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 223,
+          "endLine": 223
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 267,
+      "endLine": 267,
+      "message": "Too many branches (13/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 267,
+          "endLine": 267
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 420,
+      "endLine": 420,
+      "message": "Access to a protected member _db_record of a client class",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 420,
+          "endLine": 420
+        },
+        {
+          "line": 438,
+          "endLine": 438
+        },
+        {
+          "line": 440,
+          "endLine": 440
+        },
+        {
+          "line": 448,
+          "endLine": 448
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "function_lines",
+      "value": 232,
+      "threshold": 100,
+      "function": "get_records_sorted",
+      "line": 223,
+      "endLine": 454,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 10,
+      "threshold": 4,
+      "function": "get_records_sorted",
+      "line": 223,
+      "endLine": 454,
+      "id": "M2"
+    },
+    {
+      "metric": "function_lines",
+      "value": 117,
+      "threshold": 100,
+      "function": "get_records_sorted.do_query",
+      "line": 267,
+      "endLine": 383,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "get_records_sorted.do_query",
+      "line": 267,
+      "endLine": 383,
+      "id": "M4"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 31,
+      "endLine": 34,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "timeout_expired",
+      "startLine": 37,
+      "endLine": 38,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "compare_records",
+      "startLine": 40,
+      "endLine": 52,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 67,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "__lt__",
+      "startLine": 72,
+      "endLine": 90,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 104,
+      "endLine": 110,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "cells_responded",
+      "startLine": 113,
+      "endLine": 117,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "cells_failed",
+      "startLine": 120,
+      "endLine": 124,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "cells_timed_out",
+      "startLine": 127,
+      "endLine": 131,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "marker_identifier",
+      "startLine": 135,
+      "endLine": 142,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_marker_record",
+      "startLine": 145,
+      "endLine": 158,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_marker_by_values",
+      "startLine": 161,
+      "endLine": 177,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_by_filters",
+      "startLine": 180,
+      "endLine": 193,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "query_wrapper",
+      "startLine": 195,
+      "endLine": 221,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_records_sorted",
+      "startLine": 223,
+      "endLine": 454,
+      "ccn": 14,
+      "nloc": 46,
+      "params": 6,
+      "maxNesting": 10
+    },
+    {
+      "function": "get_records_sorted.do_query",
+      "startLine": 267,
+      "endLine": 383,
+      "ccn": 15,
+      "nloc": 48,
+      "params": 1,
+      "maxNesting": 7
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "file": "src/nova/safe_utils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 34,
+      "endLine": 37,
+      "message": "Unnecessary \"elif\" after \"return\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 37
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "ruff:B004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "B004"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Using `hasattr(x, \"__call__\")` to test if x is callable is unreliable. Use `callable(x)` for consistent results.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        }
+      ],
+      "id": "T3"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "get_wrapped_function",
+      "startLine": 21,
+      "endLine": 41,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_wrapped_function._get_wrapped_function",
+      "startLine": 26,
+      "endLine": 39,
+      "ccn": 6,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 3
+    }
+  ],
+  "dropped": {}
+}

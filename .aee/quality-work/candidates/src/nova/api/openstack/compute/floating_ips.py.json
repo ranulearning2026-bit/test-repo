@@ -1,0 +1,502 @@
+{
+  "file": "src/nova/api/openstack/compute/floating_ips.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 32,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 32
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        },
+        {
+          "line": 70,
+          "endLine": 70
+        },
+        {
+          "line": 125,
+          "endLine": 125
+        },
+        {
+          "line": 159,
+          "endLine": 159
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 74,
+      "endLine": 74,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise webob.exc.HTTPForbidden() from exc'",
+      "toolSeverity": "warning",
+      "count": 11,
+      "occurrences": [
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        },
+        {
+          "line": 169,
+          "endLine": 169
+        },
+        {
+          "line": 181,
+          "endLine": 181
+        },
+        {
+          "line": 243,
+          "endLine": 243
+        },
+        {
+          "line": 254,
+          "endLine": 254
+        },
+        {
+          "line": 259,
+          "endLine": 259
+        },
+        {
+          "line": 262,
+          "endLine": 262
+        },
+        {
+          "line": 302,
+          "endLine": 302
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 82,
+      "endLine": 82,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 191,
+          "endLine": 191
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 82,
+      "endLine": 82,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 191,
+          "endLine": 191
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 90,
+      "endLine": 90,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 159,
+          "endLine": 159
+        },
+        {
+          "line": 200,
+          "endLine": 200
+        },
+        {
+          "line": 281,
+          "endLine": 281
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 187,
+      "endLine": 187,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 187,
+          "endLine": 187
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 200,
+      "endLine": 200,
+      "message": "Too many branches (15/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 200,
+          "endLine": 200
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 200,
+      "endLine": 200,
+      "message": "Too many statements (53/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 200,
+          "endLine": 200
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 305,
+      "endLine": 311,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 305,
+          "endLine": 311
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R21"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "ccn",
+      "value": 17,
+      "threshold": 15,
+      "function": "_add_floating_ip",
+      "line": 200,
+      "endLine": 274,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "_add_floating_ip",
+      "line": 200,
+      "endLine": 274,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_translate_floating_ip_view",
+      "startLine": 38,
+      "endLine": 53,
+      "ccn": 3,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_instance_by_floating_ip_addr",
+      "startLine": 56,
+      "endLine": 67,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "disassociate_floating_ip",
+      "startLine": 70,
+      "endLine": 74,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 81,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "show",
+      "startLine": 90,
+      "endLine": 104,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "index",
+      "startLine": 110,
+      "endLine": 119,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "create",
+      "startLine": 125,
+      "endLine": 153,
+      "ccn": 9,
+      "nloc": 27,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "delete",
+      "startLine": 159,
+      "endLine": 183,
+      "ccn": 5,
+      "nloc": 20,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 190,
+      "endLine": 193,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_add_floating_ip",
+      "startLine": 200,
+      "endLine": 274,
+      "ccn": 17,
+      "nloc": 67,
+      "params": 4,
+      "maxNesting": 9
+    },
+    {
+      "function": "_remove_floating_ip",
+      "startLine": 281,
+      "endLine": 311,
+      "ccn": 6,
+      "nloc": 22,
+      "params": 4,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

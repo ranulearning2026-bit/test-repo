@@ -1,0 +1,262 @@
+{
+  "file": "src/nova/tests/unit/virt/libvirt/volume/test_nvme.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 18,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 18
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 18,
+      "endLine": 18,
+      "message": "third party import \"os_brick.initiator\" should be placed before first party imports \"nova.tests.unit.virt.libvirt.volume.test_volume\", \"nova.virt.libvirt.volume.nvme\"",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 18
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 52,
+          "endLine": 52
+        },
+        {
+          "line": 65,
+          "endLine": 65
+        },
+        {
+          "line": 85,
+          "endLine": 85
+        },
+        {
+          "line": 104,
+          "endLine": 104
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Unused argument 'exists'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 53,
+          "endLine": 53
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R11"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "test_libvirt_nvme_driver",
+      "startLine": 26,
+      "endLine": 33,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_nvme_driver_multipath",
+      "startLine": 38,
+      "endLine": 47,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_nvme_driver_multipath_enforced",
+      "startLine": 52,
+      "endLine": 61,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_nvme_driver_connect",
+      "startLine": 65,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_nvme_driver_disconnect",
+      "startLine": 85,
+      "endLine": 100,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_libvirt_nvme_driver_get_config",
+      "startLine": 104,
+      "endLine": 114,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

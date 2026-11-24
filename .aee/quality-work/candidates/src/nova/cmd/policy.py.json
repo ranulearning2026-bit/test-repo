@@ -1,0 +1,528 @@
+{
+  "file": "src/nova/cmd/policy.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0321",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0321"
+      ],
+      "line": 20,
+      "endLine": 20,
+      "message": "More than one statement on a single line",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 20
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R78"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 23,
+      "endLine": 23,
+      "message": "standard import \"atexit\" should be placed before first party import \"nova.monkey_patch\"",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 24,
+          "endLine": 24
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 28,
+          "endLine": 28
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0413",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0413"
+      ],
+      "line": 23,
+      "endLine": 23,
+      "message": "Import \"import atexit\" should be placed at the top of the module",
+      "toolSeverity": "info",
+      "count": 15,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 24,
+          "endLine": 24
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 35,
+          "endLine": 35
+        },
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R82"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 23,
+      "endLine": 39,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 39
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0412",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0412"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Imports from package nova are not grouped",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R85"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Class 'PolicyCommands' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Class `PolicyCommands` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 66,
+      "endLine": 68,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 68
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 80,
+      "endLine": 83,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 83
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 80,
+      "endLine": 85,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 85
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 96,
+      "endLine": 101,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 96,
+          "endLine": 101
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 109,
+      "endLine": 109,
+      "message": "Unused argument 'context'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 109,
+          "endLine": 109
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 179,
+      "endLine": 179,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 179,
+          "endLine": 179
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:C0415",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0415"
+      ],
+      "line": 191,
+      "endLine": 191,
+      "message": "Import outside toplevel (logging)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 191,
+          "endLine": 191
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R58"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 192,
+      "endLine": 192,
+      "message": "Access to a protected member _handlerList of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 192,
+          "endLine": 192
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "check",
+      "startLine": 88,
+      "endLine": 101,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_context",
+      "startLine": 103,
+      "endLine": 107,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_target",
+      "startLine": 109,
+      "endLine": 138,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_filter_rules",
+      "startLine": 140,
+      "endLine": 143,
+      "ccn": 4,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "main",
+      "startLine": 161,
+      "endLine": 181,
+      "ccn": 4,
+      "nloc": 17,
+      "params": 0,
+      "maxNesting": 3
+    },
+    {
+      "function": "_at_exit",
+      "startLine": 189,
+      "endLine": 192,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

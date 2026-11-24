@@ -1,0 +1,621 @@
+{
+  "file": "src/nova/virt/vmwareapi/ds_util.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 30,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 30
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 117,
+      "endLine": 117,
+      "message": "Access to a protected member _call_method of a client class",
+      "toolSeverity": "warning",
+      "count": 26,
+      "occurrences": [
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        },
+        {
+          "line": 185,
+          "endLine": 185
+        },
+        {
+          "line": 203,
+          "endLine": 203
+        },
+        {
+          "line": 213,
+          "endLine": 213
+        },
+        {
+          "line": 219,
+          "endLine": 219
+        },
+        {
+          "line": 227,
+          "endLine": 227
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        },
+        {
+          "line": 265,
+          "endLine": 265
+        },
+        {
+          "line": 274,
+          "endLine": 274
+        },
+        {
+          "line": 283,
+          "endLine": 283
+        },
+        {
+          "line": 292,
+          "endLine": 292
+        },
+        {
+          "line": 300,
+          "endLine": 300
+        },
+        {
+          "line": 306,
+          "endLine": 306
+        },
+        {
+          "line": 337,
+          "endLine": 337
+        },
+        {
+          "line": 345,
+          "endLine": 345
+        },
+        {
+          "line": 365,
+          "endLine": 365
+        },
+        {
+          "line": 371,
+          "endLine": 371
+        },
+        {
+          "line": 384,
+          "endLine": 384
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:R1720",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1720"
+      ],
+      "line": 147,
+      "endLine": 156,
+      "message": "Unnecessary \"elif\" after \"raise\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 147,
+          "endLine": 156
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R42"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 196,
+      "endLine": 196,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 196,
+          "endLine": 196
+        },
+        {
+          "line": 202,
+          "endLine": 202
+        },
+        {
+          "line": 210,
+          "endLine": 210
+        },
+        {
+          "line": 223,
+          "endLine": 223
+        },
+        {
+          "line": 492,
+          "endLine": 492
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 375,
+      "endLine": 375,
+      "message": "Redefining name 'file_exists' from outer scope (line 361)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 375,
+          "endLine": 375
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 380,
+      "endLine": 380,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 380,
+          "endLine": 380
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:R1718",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1718"
+      ],
+      "line": 423,
+      "endLine": 423,
+      "message": "Consider using a set comprehension",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 423,
+          "endLine": 423
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R56"
+    },
+    {
+      "canonical": "ruff:C403",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C403"
+      ],
+      "line": 423,
+      "endLine": 423,
+      "message": "Unnecessary list comprehension (rewrite as a set comprehension)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 423,
+          "endLine": 423
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R57"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 448,
+      "endLine": 448,
+      "message": "Module 'nova.virt.vmwareapi.vim_util' has no 'get_moref_value' member",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 448,
+          "endLine": 448
+        }
+      ],
+      "id": "T11"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 467,
+      "endLine": 467,
+      "message": "Variable name \"vmFolder\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 467,
+          "endLine": 467
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:W0603",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0603"
+      ],
+      "line": 493,
+      "endLine": 493,
+      "message": "Using the global statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 493,
+          "endLine": 493
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R52"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_select_datastore",
+      "line": 47,
+      "endLine": 87,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_select_datastore",
+      "startLine": 47,
+      "endLine": 87,
+      "ccn": 8,
+      "nloc": 24,
+      "params": 6,
+      "maxNesting": 5
+    },
+    {
+      "function": "_is_datastore_valid",
+      "startLine": 90,
+      "endLine": 110,
+      "ccn": 6,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_datastore",
+      "startLine": 113,
+      "endLine": 156,
+      "ccn": 5,
+      "nloc": 37,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_allowed_datastores",
+      "startLine": 159,
+      "endLine": 172,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_available_datastores",
+      "startLine": 175,
+      "endLine": 193,
+      "ccn": 2,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_allowed_datastore_types",
+      "startLine": 196,
+      "endLine": 199,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_datacenter_ref",
+      "startLine": 202,
+      "endLine": 207,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "file_delete",
+      "startLine": 210,
+      "endLine": 220,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "file_copy",
+      "startLine": 223,
+      "endLine": 236,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "disk_move",
+      "startLine": 239,
+      "endLine": 276,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "disk_copy",
+      "startLine": 279,
+      "endLine": 294,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "disk_delete",
+      "startLine": 297,
+      "endLine": 307,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "file_move",
+      "startLine": 310,
+      "endLine": 346,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "search_datastore_spec",
+      "startLine": 349,
+      "endLine": 358,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "file_exists",
+      "startLine": 361,
+      "endLine": 377,
+      "ccn": 3,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "file_size",
+      "startLine": 380,
+      "endLine": 391,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "mkdir",
+      "startLine": 394,
+      "endLine": 404,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_sub_folders",
+      "startLine": 407,
+      "endLine": 424,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_filter_datastores_matching_storage_policy",
+      "startLine": 427,
+      "endLine": 456,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_update_datacenter_cache_from_objects",
+      "startLine": 459,
+      "endLine": 478,
+      "ccn": 5,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_dc_info",
+      "startLine": 481,
+      "endLine": 489,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "dc_cache_reset",
+      "startLine": 492,
+      "endLine": 494,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_connected_hosts",
+      "startLine": 497,
+      "endLine": 513,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "file": "src/nova/tests/unit/scheduler/weights/test_weights_metrics.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 23
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 14,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 35,
+          "endLine": 35
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        },
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 126,
+          "endLine": 126
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 151,
+          "endLine": 151
+        },
+        {
+          "line": 169,
+          "endLine": 169
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        },
+        {
+          "line": 223,
+          "endLine": 223
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 40,
+      "endLine": 40,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 40,
+          "endLine": 40
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 51,
+      "endLine": 51,
+      "message": "Access to a protected member _parse_setting of a client class",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 51,
+          "endLine": 51
+        },
+        {
+          "line": 146,
+          "endLine": 146
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "fake_metric",
+      "startLine": 31,
+      "endLine": 32,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "fake_list",
+      "startLine": 35,
+      "endLine": 37,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp",
+      "startLine": 41,
+      "endLine": 45,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_weighed_host",
+      "startLine": 47,
+      "endLine": 53,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_all_hosts",
+      "startLine": 55,
+      "endLine": 73,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_do_test",
+      "startLine": 75,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_resource_no_metrics",
+      "startLine": 81,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_resource",
+      "startLine": 90,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multiple_resource",
+      "startLine": 99,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_resource_duplicate_setting",
+      "startLine": 108,
+      "endLine": 115,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_resourcenegative_ratio",
+      "startLine": 117,
+      "endLine": 124,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multiple_resource_missing_ratio",
+      "startLine": 126,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multiple_resource_wrong_ratio",
+      "startLine": 135,
+      "endLine": 142,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_parsing_result",
+      "startLine": 144,
+      "endLine": 149,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_parse_setting",
+      "startLine": 151,
+      "endLine": 167,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_metric_not_found_required",
+      "startLine": 169,
+      "endLine": 175,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_metric_not_found_non_required",
+      "startLine": 177,
+      "endLine": 187,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_metrics_weigher_multiplier",
+      "startLine": 189,
+      "endLine": 221,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_with_agg",
+      "startLine": 223,
+      "endLine": 243,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

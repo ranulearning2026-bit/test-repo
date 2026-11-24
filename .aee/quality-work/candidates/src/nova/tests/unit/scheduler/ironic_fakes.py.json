@@ -1,0 +1,177 @@
+{
+  "file": "src/nova/tests/unit/scheduler/ironic_fakes.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 20,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 20
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 31,
+      "endLine": 33,
+      "message": "Consider using '{\"ironic_driver\": 'nova.virt.ironic.driver.IronicDriver', \"cpu_arch\": 'i386', ... }' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 33
+        },
+        {
+          "line": 46,
+          "endLine": 48
+        },
+        {
+          "line": 61,
+          "endLine": 63
+        },
+        {
+          "line": 76,
+          "endLine": 78
+        },
+        {
+          "line": 88,
+          "endLine": 90
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 31,
+      "endLine": 33,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 33
+        },
+        {
+          "line": 46,
+          "endLine": 48
+        },
+        {
+          "line": 61,
+          "endLine": 63
+        },
+        {
+          "line": 76,
+          "endLine": 78
+        },
+        {
+          "line": 88,
+          "endLine": 90
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 105,
+      "endLine": 105,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 105,
+          "endLine": 105
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "get_service_by_host",
+      "startLine": 105,
+      "endLine": 107,
+      "ccn": 3,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

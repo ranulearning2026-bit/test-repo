@@ -1,0 +1,293 @@
+{
+  "file": "src/nova/cmd/compute.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0321",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0321"
+      ],
+      "line": 19,
+      "endLine": 19,
+      "message": "More than one statement on a single line",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 19
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R78"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 22,
+      "endLine": 22,
+      "message": "standard import \"shlex\" should be placed before first party import \"nova.monkey_patch\"",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 22
+        },
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        },
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0413",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0413"
+      ],
+      "line": 22,
+      "endLine": 22,
+      "message": "Import \"import shlex\" should be placed at the top of the module",
+      "toolSeverity": "info",
+      "count": 19,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 22
+        },
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        },
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 35,
+          "endLine": 35
+        },
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R82"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 22,
+      "endLine": 42,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 42
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0412",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0412"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Imports from package nova are not grouped",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R85"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "main",
+      "startLine": 48,
+      "endLine": 80,
+      "ccn": 3,
+      "nloc": 21,
+      "params": 0,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

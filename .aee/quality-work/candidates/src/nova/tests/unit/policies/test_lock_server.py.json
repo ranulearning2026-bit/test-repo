@@ -1,0 +1,438 @@
+{
+  "file": "src/nova/tests/unit/policies/test_lock_server.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 27
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 41,
+      "endLine": 41,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 167,
+          "endLine": 168
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 41,
+      "endLine": 41,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 41
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 167,
+          "endLine": 168
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 73,
+      "endLine": 73,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 73,
+          "endLine": 73
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 73,
+      "endLine": 73,
+      "message": "Unused argument 'mock_lock'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 73,
+          "endLine": 73
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 120,
+          "endLine": 120
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Access to a protected member _lock of a client class",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 115,
+      "endLine": 115,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 115,
+          "endLine": 115
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 115,
+      "endLine": 115,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 115,
+          "endLine": 115
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 160,
+      "endLine": 160,
+      "message": "Number of parameters was 3 in 'LockServerPolicyTest.test_unlock_override_server_policy' and is now 1 in overriding 'LockServerOverridePolicyTest.test_unlock_override_server_policy' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 160,
+          "endLine": 160
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "pylint:E1120",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1120"
+      ],
+      "line": 167,
+      "endLine": 168,
+      "message": "No value for argument 'mock_expected' in method call",
+      "toolSeverity": "error",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 167,
+          "endLine": 168
+        }
+      ],
+      "id": "T12"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 40,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_lock_server_policy",
+      "startLine": 73,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unlock_server_policy",
+      "startLine": 82,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unlock_override_server_policy",
+      "startLine": 92,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_lock_server_policy_failed_with_other_user",
+      "startLine": 105,
+      "endLine": 116,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_lock_server_overridden_policy_pass_with_same_user",
+      "startLine": 119,
+      "endLine": 125,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 136,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 151,
+      "endLine": 158,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unlock_override_server_policy",
+      "startLine": 160,
+      "endLine": 168,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "file": "src/nova/privsep/qemu.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 19,
+      "endLine": 31,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 31
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Too many arguments (8/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        },
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Too many local variables (19/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "ruff:RUF100",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF100"
+      ],
+      "line": 150,
+      "endLine": 150,
+      "message": "Unused blanket `noqa` directive",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 150,
+          "endLine": 150
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R45"
+    },
+    {
+      "canonical": "ruff:ISC004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "ISC004"
+      ],
+      "line": 157,
+      "endLine": 158,
+      "message": "Unparenthesized implicit string concatenation in collection",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 157,
+          "endLine": 158
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R61"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 226,
+      "endLine": 226,
+      "message": "Redefining built-in 'format'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 226,
+          "endLine": 226
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R20"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "convert_image",
+      "line": 48,
+      "endLine": 53,
+      "id": "M1"
+    },
+    {
+      "metric": "function_lines",
+      "value": 166,
+      "threshold": 100,
+      "function": "unprivileged_convert_image",
+      "line": 57,
+      "endLine": 222,
+      "id": "M2"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "unprivileged_convert_image",
+      "line": 57,
+      "endLine": 222,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "unprivileged_convert_image",
+      "line": 57,
+      "endLine": 222,
+      "id": "M4"
+    }
+  ],
+  "functions": [
+    {
+      "function": "convert_image",
+      "startLine": 48,
+      "endLine": 53,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 8,
+      "maxNesting": 0
+    },
+    {
+      "function": "unprivileged_convert_image",
+      "startLine": 57,
+      "endLine": 222,
+      "ccn": 14,
+      "nloc": 70,
+      "params": 8,
+      "maxNesting": 7
+    },
+    {
+      "function": "privileged_qemu_img_info",
+      "startLine": 226,
+      "endLine": 232,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "unprivileged_qemu_img_info",
+      "startLine": 235,
+      "endLine": 270,
+      "ccn": 9,
+      "nloc": 27,
+      "params": 2,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

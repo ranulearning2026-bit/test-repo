@@ -1,0 +1,361 @@
+{
+  "file": "src/nova/limit/local.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 36,
+      "endLine": 41,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 41
+        },
+        {
+          "line": 48,
+          "endLine": 52
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 110,
+      "endLine": 110,
+      "message": "Unused argument 'project_id'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 110,
+          "endLine": 110
+        },
+        {
+          "line": 215,
+          "endLine": 215
+        },
+        {
+          "line": 220,
+          "endLine": 220
+        },
+        {
+          "line": 225,
+          "endLine": 225
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 134,
+      "endLine": 134,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 184,
+          "endLine": 184
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 134,
+      "endLine": 135,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 134,
+          "endLine": 135
+        },
+        {
+          "line": 184,
+          "endLine": 185
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0201"
+      ],
+      "line": 172,
+      "endLine": 172,
+      "message": "Consider iterating the dictionary directly instead of calling .keys()",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 172,
+          "endLine": 172
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R63"
+    },
+    {
+      "canonical": "ruff:SIM118",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM118"
+      ],
+      "line": 172,
+      "endLine": 172,
+      "message": "Use `key not in dict` instead of `key not in dict.keys()`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 172,
+          "endLine": 172
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R49"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 208,
+      "endLine": 208,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 208,
+          "endLine": 208
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "enforce_db_limit",
+      "line": 148,
+      "endLine": 195,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "get_in_use",
+      "startLine": 82,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "always_zero_usage",
+      "startLine": 109,
+      "endLine": 115,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "enforce_api_limit",
+      "startLine": 118,
+      "endLine": 145,
+      "ccn": 6,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "enforce_db_limit",
+      "startLine": 148,
+      "endLine": 195,
+      "ccn": 7,
+      "nloc": 27,
+      "params": 4,
+      "maxNesting": 5
+    },
+    {
+      "function": "_convert_keys_to_legacy_name",
+      "startLine": 198,
+      "endLine": 205,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_legacy_default_limits",
+      "startLine": 208,
+      "endLine": 212,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "_keypair_count",
+      "startLine": 215,
+      "endLine": 217,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_server_group_count",
+      "startLine": 220,
+      "endLine": 222,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_server_group_members_count",
+      "startLine": 225,
+      "endLine": 229,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "file": "src/nova/tests/unit/test_json_ref.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 21,
+      "endLine": 21,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 21
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 23,
+      "endLine": 23,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 23
+        },
+        {
+          "line": 59,
+          "endLine": 59
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 98,
+          "endLine": 98
+        },
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 138,
+          "endLine": 138
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 24,
+      "endLine": 24,
+      "message": "Redefining built-in 'input'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 24,
+          "endLine": 24
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Access to a protected member _update_dict_recursively of a client class",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 51,
+          "endLine": 51
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "test_update_dict_recursively",
+      "startLine": 23,
+      "endLine": 55,
+      "ccn": 1,
+      "nloc": 30,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resolve_ref",
+      "startLine": 59,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resolve_ref_recursively",
+      "startLine": 74,
+      "endLine": 94,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resolve_ref_with_override",
+      "startLine": 98,
+      "endLine": 112,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resolve_ref_with_nested_override",
+      "startLine": 116,
+      "endLine": 134,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resolve_ref_with_override_having_refs",
+      "startLine": 138,
+      "endLine": 160,
+      "ccn": 1,
+      "nloc": 20,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ref_with_json_path_not_supported",
+      "startLine": 162,
+      "endLine": 170,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

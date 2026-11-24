@@ -1,0 +1,3185 @@
+{
+  "file": "src/nova/tests/unit/virt/test_hardware.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "pylint:C0302",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0302"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Too many lines in module (6448/1000)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R25"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 31,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 31
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "third party import \"os_traits\" should be placed before first party imports \"nova.conf\", \"nova.exception\", \"nova.objects\" (...) \"nova.tests.unit.fake_pci_device_pools\", \"nova.tests.unit.image.fake.fake_image_obj\", \"nova.virt.hardware\"",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 33,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 244,
+          "endLine": 244
+        },
+        {
+          "line": 792,
+          "endLine": 792
+        },
+        {
+          "line": 2532,
+          "endLine": 2532
+        },
+        {
+          "line": 2688,
+          "endLine": 2688
+        },
+        {
+          "line": 2871,
+          "endLine": 2871
+        },
+        {
+          "line": 2912,
+          "endLine": 2912
+        },
+        {
+          "line": 2979,
+          "endLine": 2979
+        },
+        {
+          "line": 3239,
+          "endLine": 3239
+        },
+        {
+          "line": 3954,
+          "endLine": 3954
+        },
+        {
+          "line": 4658,
+          "endLine": 4658
+        },
+        {
+          "line": 4699,
+          "endLine": 4699
+        },
+        {
+          "line": 4858,
+          "endLine": 4858
+        },
+        {
+          "line": 5347,
+          "endLine": 5347
+        },
+        {
+          "line": 5387,
+          "endLine": 5387
+        },
+        {
+          "line": 5427,
+          "endLine": 5427
+        },
+        {
+          "line": 5481,
+          "endLine": 5481
+        },
+        {
+          "line": 5505,
+          "endLine": 5505
+        },
+        {
+          "line": 5549,
+          "endLine": 5549
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 190,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 49,
+          "endLine": 49
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 66,
+          "endLine": 66
+        },
+        {
+          "line": 71,
+          "endLine": 71
+        },
+        {
+          "line": 75,
+          "endLine": 75
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        },
+        {
+          "line": 85,
+          "endLine": 85
+        },
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 94,
+          "endLine": 94
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        },
+        {
+          "line": 104,
+          "endLine": 104
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 194,
+          "endLine": 194
+        },
+        {
+          "line": 246,
+          "endLine": 246
+        },
+        {
+          "line": 419,
+          "endLine": 419
+        },
+        {
+          "line": 441,
+          "endLine": 441
+        },
+        {
+          "line": 553,
+          "endLine": 553
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 64,
+      "endLine": 64,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 653,
+      "occurrences": [
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 78,
+          "endLine": 78
+        },
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 110,
+          "endLine": 110
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 122,
+          "endLine": 122
+        },
+        {
+          "line": 125,
+          "endLine": 125
+        },
+        {
+          "line": 128,
+          "endLine": 128
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        },
+        {
+          "line": 195,
+          "endLine": 195
+        },
+        {
+          "line": 203,
+          "endLine": 203
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        },
+        {
+          "line": 219,
+          "endLine": 219
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "pylint:C0123",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0123"
+      ],
+      "line": 403,
+      "endLine": 403,
+      "message": "Use isinstance() rather than type() for a typecheck.",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 403,
+          "endLine": 403
+        },
+        {
+          "line": 529,
+          "endLine": 529
+        },
+        {
+          "line": 1005,
+          "endLine": 1005
+        },
+        {
+          "line": 1994,
+          "endLine": 1994
+        }
+      ],
+      "id": "T9"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 531,
+      "endLine": 531,
+      "message": "Access to a protected member _get_possible_cpu_topologies of a client class",
+      "toolSeverity": "warning",
+      "count": 64,
+      "occurrences": [
+        {
+          "line": 531,
+          "endLine": 531
+        },
+        {
+          "line": 545,
+          "endLine": 545
+        },
+        {
+          "line": 624,
+          "endLine": 624
+        },
+        {
+          "line": 631,
+          "endLine": 631
+        },
+        {
+          "line": 782,
+          "endLine": 782
+        },
+        {
+          "line": 2526,
+          "endLine": 2526
+        },
+        {
+          "line": 2554,
+          "endLine": 2554
+        },
+        {
+          "line": 2561,
+          "endLine": 2561
+        },
+        {
+          "line": 2569,
+          "endLine": 2569
+        },
+        {
+          "line": 2597,
+          "endLine": 2597
+        },
+        {
+          "line": 2604,
+          "endLine": 2604
+        },
+        {
+          "line": 2612,
+          "endLine": 2612
+        },
+        {
+          "line": 2637,
+          "endLine": 2637
+        },
+        {
+          "line": 2647,
+          "endLine": 2647
+        },
+        {
+          "line": 2668,
+          "endLine": 2668
+        },
+        {
+          "line": 2677,
+          "endLine": 2677
+        },
+        {
+          "line": 2683,
+          "endLine": 2683
+        },
+        {
+          "line": 3004,
+          "endLine": 3004
+        },
+        {
+          "line": 3013,
+          "endLine": 3013
+        },
+        {
+          "line": 3112,
+          "endLine": 3112
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0200",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0200"
+      ],
+      "line": 2009,
+      "endLine": 2021,
+      "message": "Consider using enumerate instead of iterating with range and len",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 2009,
+          "endLine": 2021
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R77"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 2495,
+      "endLine": 2495,
+      "message": "Method name \"assertNUMACellMatches\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 2495,
+          "endLine": 2495
+        },
+        {
+          "line": 3202,
+          "endLine": 3202
+        },
+        {
+          "line": 3207,
+          "endLine": 3207
+        },
+        {
+          "line": 3219,
+          "endLine": 3219
+        },
+        {
+          "line": 6319,
+          "endLine": 6319
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 2690,
+      "endLine": 2690,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 2690,
+          "endLine": 2690
+        },
+        {
+          "line": 5225,
+          "endLine": 5225
+        },
+        {
+          "line": 6215,
+          "endLine": 6215
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 2690,
+      "endLine": 2690,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 2690,
+          "endLine": 2690
+        },
+        {
+          "line": 5225,
+          "endLine": 5225
+        },
+        {
+          "line": 6215,
+          "endLine": 6215
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 3201,
+      "endLine": 3201,
+      "message": "Class '_CPUPinningTestCaseBase' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 3201,
+          "endLine": 3201
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 3201,
+      "endLine": 3201,
+      "message": "Class `_CPUPinningTestCaseBase` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 3201,
+          "endLine": 3201
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 3204,
+      "endLine": 3204,
+      "message": "Instance of '_CPUPinningTestCaseBase' has no 'assertEqual' member",
+      "toolSeverity": "error",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 3204,
+          "endLine": 3204
+        },
+        {
+          "line": 3210,
+          "endLine": 3210
+        },
+        {
+          "line": 3212,
+          "endLine": 3212
+        },
+        {
+          "line": 3214,
+          "endLine": 3214
+        },
+        {
+          "line": 3216,
+          "endLine": 3216
+        },
+        {
+          "line": 3234,
+          "endLine": 3234
+        }
+      ],
+      "id": "T17"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 3205,
+      "endLine": 3205,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 3205,
+          "endLine": 3205
+        },
+        {
+          "line": 5531,
+          "endLine": 5531
+        },
+        {
+          "line": 5537,
+          "endLine": 5537
+        },
+        {
+          "line": 5544,
+          "endLine": 5545
+        },
+        {
+          "line": 5692,
+          "endLine": 5692
+        },
+        {
+          "line": 5700,
+          "endLine": 5700
+        },
+        {
+          "line": 5709,
+          "endLine": 5710
+        },
+        {
+          "line": 5754,
+          "endLine": 5755
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 3205,
+      "endLine": 3205,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 3205,
+          "endLine": 3205
+        },
+        {
+          "line": 5531,
+          "endLine": 5531
+        },
+        {
+          "line": 5537,
+          "endLine": 5537
+        },
+        {
+          "line": 5544,
+          "endLine": 5546
+        },
+        {
+          "line": 5692,
+          "endLine": 5692
+        },
+        {
+          "line": 5700,
+          "endLine": 5700
+        },
+        {
+          "line": 5709,
+          "endLine": 5711
+        },
+        {
+          "line": 5754,
+          "endLine": 5756
+        }
+      ],
+      "id": "T19",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "ruff:PERF102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PERF102"
+      ],
+      "line": 3232,
+      "endLine": 3232,
+      "message": "When using only the values of a dict use the `values()` method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 3232,
+          "endLine": 3232
+        }
+      ],
+      "id": "T20",
+      "ruleGroup": "R73"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 3232,
+      "endLine": 3232,
+      "message": "Unused variable 'inst_p'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 3232,
+          "endLine": 3232
+        }
+      ],
+      "id": "T21",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 3239,
+      "endLine": 3239,
+      "message": "Too many public methods (27/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 3239,
+          "endLine": 3239
+        }
+      ],
+      "id": "T22",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "ruff:PIE808",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE808"
+      ],
+      "line": 3315,
+      "endLine": 3315,
+      "message": "Unnecessary `start` argument in `range`",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 3315,
+          "endLine": 3315
+        },
+        {
+          "line": 3370,
+          "endLine": 3370
+        },
+        {
+          "line": 3398,
+          "endLine": 3398
+        },
+        {
+          "line": 3426,
+          "endLine": 3426
+        },
+        {
+          "line": 3480,
+          "endLine": 3480
+        },
+        {
+          "line": 3507,
+          "endLine": 3507
+        },
+        {
+          "line": 3514,
+          "endLine": 3514
+        },
+        {
+          "line": 3518,
+          "endLine": 3518
+        }
+      ],
+      "id": "T23",
+      "ruleGroup": "R47"
+    },
+    {
+      "canonical": "pylint:E1120",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1120"
+      ],
+      "line": 5689,
+      "endLine": 5693,
+      "message": "No value for argument 'mock_log' in method call",
+      "toolSeverity": "error",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 5689,
+          "endLine": 5693
+        },
+        {
+          "line": 5697,
+          "endLine": 5701
+        },
+        {
+          "line": 5706,
+          "endLine": 5712
+        }
+      ],
+      "id": "T24"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 6320,
+      "endLine": 6320,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 6320,
+          "endLine": 6320
+        }
+      ],
+      "id": "T25",
+      "ruleGroup": "R20"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "function_lines",
+      "value": 172,
+      "threshold": 100,
+      "function": "test_validate_config",
+      "line": 246,
+      "endLine": 417,
+      "id": "M1"
+    },
+    {
+      "metric": "function_lines",
+      "value": 111,
+      "threshold": 100,
+      "function": "test_possible_topologies",
+      "line": 441,
+      "endLine": 551,
+      "id": "M2"
+    },
+    {
+      "metric": "function_lines",
+      "value": 147,
+      "threshold": 100,
+      "function": "test_best_config",
+      "line": 643,
+      "endLine": 789,
+      "id": "M3"
+    },
+    {
+      "metric": "function_lines",
+      "value": 221,
+      "threshold": 100,
+      "function": "test_cpu_policy_constraint",
+      "line": 794,
+      "endLine": 1014,
+      "id": "M4"
+    },
+    {
+      "metric": "function_lines",
+      "value": 1006,
+      "threshold": 100,
+      "function": "test_topology_constraints",
+      "line": 1016,
+      "endLine": 2021,
+      "id": "M5"
+    },
+    {
+      "metric": "function_lines",
+      "value": 109,
+      "threshold": 100,
+      "function": "test_host_usage_contiguous",
+      "line": 2023,
+      "endLine": 2131,
+      "id": "M6"
+    },
+    {
+      "metric": "function_lines",
+      "value": 104,
+      "threshold": 100,
+      "function": "setUp",
+      "line": 6214,
+      "endLine": 6317,
+      "id": "M7"
+    },
+    {
+      "metric": "file_lines",
+      "value": 5653,
+      "threshold": 1000,
+      "function": null,
+      "line": 1,
+      "endLine": 5653,
+      "id": "M8"
+    }
+  ],
+  "functions": [
+    {
+      "function": "test_instance_info_default",
+      "startLine": 38,
+      "endLine": 41,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_info",
+      "startLine": 43,
+      "endLine": 47,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_instance_info_equals",
+      "startLine": 49,
+      "endLine": 57,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vcpu_pin_set",
+      "startLine": 61,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vcpu_pin_set__unset",
+      "startLine": 66,
+      "endLine": 69,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vcpu_pin_set__invalid",
+      "startLine": 71,
+      "endLine": 73,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_cpu_shared_set",
+      "startLine": 75,
+      "endLine": 78,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_cpu_shared_set__unset",
+      "startLine": 80,
+      "endLine": 83,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_cpu_shared_set__error",
+      "startLine": 85,
+      "endLine": 87,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_cpu_dedicated_set",
+      "startLine": 89,
+      "endLine": 92,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_cpu_dedicated_set_nozero",
+      "startLine": 94,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_cpu_dedicated_set__unset",
+      "startLine": 99,
+      "endLine": 102,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_cpu_dedicated_set__error",
+      "startLine": 104,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_parse_cpu_spec_valid_syntax_works",
+      "startLine": 108,
+      "endLine": 143,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_parse_cpu_spec_invalid_syntax_raises",
+      "startLine": 145,
+      "endLine": 192,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_format_cpu_spec",
+      "startLine": 194,
+      "endLine": 241,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_validate_config",
+      "startLine": 246,
+      "endLine": 417,
+      "ccn": 3,
+      "nloc": 170,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_invalid_flavor_values",
+      "startLine": 419,
+      "endLine": 439,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_possible_topologies",
+      "startLine": 441,
+      "endLine": 551,
+      "ccn": 4,
+      "nloc": 109,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "test_sorting_topologies",
+      "startLine": 553,
+      "endLine": 641,
+      "ccn": 3,
+      "nloc": 86,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_best_config",
+      "startLine": 643,
+      "endLine": 789,
+      "ccn": 2,
+      "nloc": 145,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_cpu_policy_constraint",
+      "startLine": 794,
+      "endLine": 1014,
+      "ccn": 4,
+      "nloc": 219,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_topology_constraints",
+      "startLine": 1016,
+      "endLine": 2021,
+      "ccn": 5,
+      "nloc": 940,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "test_host_usage_contiguous",
+      "startLine": 2023,
+      "endLine": 2131,
+      "ccn": 1,
+      "nloc": 96,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_contiguous_pages_compute",
+      "startLine": 2133,
+      "endLine": 2172,
+      "ccn": 1,
+      "nloc": 34,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_sparse",
+      "startLine": 2174,
+      "endLine": 2263,
+      "ccn": 1,
+      "nloc": 85,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_cumulative_with_free",
+      "startLine": 2265,
+      "endLine": 2337,
+      "ccn": 1,
+      "nloc": 64,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_topo_usage_reserved_page_size",
+      "startLine": 2339,
+      "endLine": 2375,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_numa_get_reserved_huge_pages",
+      "startLine": 2377,
+      "endLine": 2388,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reserved_hugepages_success",
+      "startLine": 2390,
+      "endLine": 2408,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reserved_huge_pages_invalid_format",
+      "startLine": 2410,
+      "endLine": 2414,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reserved_huge_pages_invalid_value",
+      "startLine": 2416,
+      "endLine": 2420,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_topo_usage_none",
+      "startLine": 2422,
+      "endLine": 2459,
+      "ccn": 1,
+      "nloc": 36,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_topo_usage_with_network_metadata",
+      "startLine": 2461,
+      "endLine": 2493,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "assertNUMACellMatches",
+      "startLine": 2495,
+      "endLine": 2502,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_json",
+      "startLine": 2504,
+      "endLine": 2529,
+      "ccn": 2,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_fit_instance_cell_no_host_mempages",
+      "startLine": 2533,
+      "endLine": 2570,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_fit_instance_cell_no_guest_mempages",
+      "startLine": 2572,
+      "endLine": 2613,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_fit_instance_cell_mempages",
+      "startLine": 2615,
+      "endLine": 2648,
+      "ccn": 1,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_fit_instance_cell_with_limit",
+      "startLine": 2650,
+      "endLine": 2685,
+      "ccn": 1,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 2689,
+      "endLine": 2730,
+      "ccn": 1,
+      "nloc": 40,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_success_no_limits",
+      "startLine": 2732,
+      "endLine": 2740,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_success_limits",
+      "startLine": 2742,
+      "endLine": 2746,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_fails_no_limits",
+      "startLine": 2748,
+      "endLine": 2751,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_cumulative_fails_limits",
+      "startLine": 2753,
+      "endLine": 2762,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_cumulative_success_limits",
+      "startLine": 2764,
+      "endLine": 2774,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_success_limits_with_networks",
+      "startLine": 2778,
+      "endLine": 2791,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_fails_limits_with_networks",
+      "startLine": 2795,
+      "endLine": 2810,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_pci_success",
+      "startLine": 2812,
+      "endLine": 2825,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_pci_fail",
+      "startLine": 2827,
+      "endLine": 2840,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_fitting_pci_avoided",
+      "startLine": 2842,
+      "endLine": 2868,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_fitting_pci_avoided._create_pci_stats",
+      "startLine": 2844,
+      "endLine": 2849,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_flavor",
+      "startLine": 2872,
+      "endLine": 2877,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_image_meta",
+      "startLine": 2879,
+      "endLine": 2884,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_flavor_invalid_value",
+      "startLine": 2886,
+      "endLine": 2892,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_image_meta_smaller_than_flavor",
+      "startLine": 2894,
+      "endLine": 2900,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_flavor_smaller_than_image_meta",
+      "startLine": 2902,
+      "endLine": 2909,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_get_locked_memory_constraint",
+      "startLine": 2913,
+      "endLine": 2918,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_locked_memory_constraint_image",
+      "startLine": 2920,
+      "endLine": 2924,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_locked_memory_conflict",
+      "startLine": 2926,
+      "endLine": 2939,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_locked_memory_constraint_forbidden",
+      "startLine": 2941,
+      "endLine": 2951,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_locked_memory_constraint_image_false",
+      "startLine": 2953,
+      "endLine": 2958,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_locked_memory_constraint_mem_enc_accepted",
+      "startLine": 2960,
+      "endLine": 2966,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_locked_memory_constraint_mem_enc_matched",
+      "startLine": 2968,
+      "endLine": 2976,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cell_instance_pagesize",
+      "startLine": 2980,
+      "endLine": 2987,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_numa_pagesize_usage_from_cell",
+      "startLine": 2989,
+      "endLine": 3007,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_get_requested_mempages_pagesize",
+      "startLine": 3009,
+      "endLine": 3013,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesize_from_flavor_swipe",
+      "startLine": 3015,
+      "endLine": 3026,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesize_from_flavor_specific",
+      "startLine": 3028,
+      "endLine": 3032,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesize_from_flavor_invalid",
+      "startLine": 3034,
+      "endLine": 3051,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesizes_from_flavor_suffix_sweep",
+      "startLine": 3053,
+      "endLine": 3067,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesize_from_image_flavor_any",
+      "startLine": 3069,
+      "endLine": 3074,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesize_from_image_flavor_large",
+      "startLine": 3076,
+      "endLine": 3081,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesize_from_image_forbidden",
+      "startLine": 3083,
+      "endLine": 3088,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_requested_mempages_pagesize_from_image_forbidden2",
+      "startLine": 3090,
+      "endLine": 3094,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cell_accepts_request_wipe",
+      "startLine": 3096,
+      "endLine": 3125,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cell_accepts_request_large_pass",
+      "startLine": 3127,
+      "endLine": 3144,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cell_accepts_request_custom_pass",
+      "startLine": 3146,
+      "endLine": 3162,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cell_accepts_request_remainder_memory",
+      "startLine": 3164,
+      "endLine": 3180,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cell_accepts_request_host_mempages",
+      "startLine": 3182,
+      "endLine": 3198,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "assertEqualTopology",
+      "startLine": 3202,
+      "endLine": 3205,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "assertInstanceCellPinned",
+      "startLine": 3207,
+      "endLine": 3217,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "assertPinningPreferThreads",
+      "startLine": 3219,
+      "endLine": 3236,
+      "ccn": 6,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "test_get_pinning_inst_too_large_cpu",
+      "startLine": 3240,
+      "endLine": 3263,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_inst_not_avail",
+      "startLine": 3265,
+      "endLine": 3288,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_no_sibling_fits_empty",
+      "startLine": 3290,
+      "endLine": 3316,
+      "ccn": 2,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pinning_no_sibling_fits_w_usage",
+      "startLine": 3318,
+      "endLine": 3343,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_instance_siblings_fits",
+      "startLine": 3345,
+      "endLine": 3371,
+      "ccn": 2,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pinning_instance_siblings_host_siblings_fits_empty",
+      "startLine": 3373,
+      "endLine": 3399,
+      "ccn": 2,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pinning_instance_siblings_host_siblings_fits_empty_2",
+      "startLine": 3401,
+      "endLine": 3427,
+      "ccn": 2,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pinning_instance_siblings_host_siblings_fits_w_usage",
+      "startLine": 3429,
+      "endLine": 3454,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_host_siblings_fit_single_core",
+      "startLine": 3456,
+      "endLine": 3481,
+      "ccn": 2,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pinning_host_siblings_fit",
+      "startLine": 3483,
+      "endLine": 3508,
+      "ccn": 2,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pinning_require_policy_no_siblings",
+      "startLine": 3510,
+      "endLine": 3533,
+      "ccn": 2,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pinning_require_policy_too_few_siblings",
+      "startLine": 3535,
+      "endLine": 3558,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_require_policy_fits",
+      "startLine": 3560,
+      "endLine": 3584,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_require_policy_fits_w_usage",
+      "startLine": 3586,
+      "endLine": 3610,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_host_siblings_instance_odd_fit",
+      "startLine": 3612,
+      "endLine": 3634,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_host_siblings_instance_fit_optimize_threads",
+      "startLine": 3636,
+      "endLine": 3658,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_host_siblings_instance_odd_fit_w_usage",
+      "startLine": 3660,
+      "endLine": 3682,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_host_siblings_instance_mixed_siblings",
+      "startLine": 3684,
+      "endLine": 3706,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_host_siblings_instance_odd_fit_orphan_only",
+      "startLine": 3708,
+      "endLine": 3730,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_host_siblings_large_instance_odd_fit",
+      "startLine": 3732,
+      "endLine": 3757,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_isolate_policy_too_few_fully_free_cores",
+      "startLine": 3760,
+      "endLine": 3785,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_isolate_policy_no_fully_free_cores",
+      "startLine": 3788,
+      "endLine": 3813,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_isolate_policy_fits",
+      "startLine": 3816,
+      "endLine": 3840,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_isolate_policy_fits_ht_host",
+      "startLine": 3843,
+      "endLine": 3868,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_isolate_policy_fits_w_usage",
+      "startLine": 3871,
+      "endLine": 3896,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_isolate_policy_bug_1889633",
+      "startLine": 3900,
+      "endLine": 3928,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pinning_mixed_policy_bug_1898272",
+      "startLine": 3930,
+      "endLine": 3951,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_numa_fit_instance_to_host_single_cell",
+      "startLine": 3955,
+      "endLine": 3991,
+      "ccn": 2,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_host_numa_fit_instance_to_host_single_cell_w_usage",
+      "startLine": 3993,
+      "endLine": 4029,
+      "ccn": 2,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_host_numa_fit_instance_to_host_single_cell_fail",
+      "startLine": 4031,
+      "endLine": 4065,
+      "ccn": 1,
+      "nloc": 34,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_numa_fit_instance_to_host_fit",
+      "startLine": 4067,
+      "endLine": 4110,
+      "ccn": 2,
+      "nloc": 42,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_host_numa_fit_instance_to_host_barely_fit",
+      "startLine": 4112,
+      "endLine": 4165,
+      "ccn": 2,
+      "nloc": 51,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_host_numa_fit_instance_to_host_fail_capacity",
+      "startLine": 4167,
+      "endLine": 4208,
+      "ccn": 1,
+      "nloc": 41,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_numa_fit_instance_to_host_fail_topology",
+      "startLine": 4210,
+      "endLine": 4242,
+      "ccn": 1,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cpu_pinning_usage_from_instances",
+      "startLine": 4244,
+      "endLine": 4272,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cpu_pinning_usage_from_instances_free",
+      "startLine": 4274,
+      "endLine": 4302,
+      "ccn": 1,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_instances_fail",
+      "startLine": 4304,
+      "endLine": 4331,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_instances_isolate",
+      "startLine": 4333,
+      "endLine": 4358,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_instances_isolate_free",
+      "startLine": 4360,
+      "endLine": 4385,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_instances_isolated_without_siblings",
+      "startLine": 4387,
+      "endLine": 4412,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_instances_isolated_without_siblings_free",
+      "startLine": 4414,
+      "endLine": 4439,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_mixed_instance",
+      "startLine": 4441,
+      "endLine": 4470,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_mixed_instance_free",
+      "startLine": 4472,
+      "endLine": 4502,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_mixed_instance_emu_isolate",
+      "startLine": 4504,
+      "endLine": 4537,
+      "ccn": 2,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_host_usage_from_mixed_instance_emu_isolate_free",
+      "startLine": 4539,
+      "endLine": 4573,
+      "ccn": 2,
+      "nloc": 30,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_host_usage_from_mixed_instance_cpu_isolate",
+      "startLine": 4575,
+      "endLine": 4614,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_host_usage_from_mixed_instance_cpu_isolate_free",
+      "startLine": 4616,
+      "endLine": 4655,
+      "ccn": 1,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_reserved",
+      "startLine": 4659,
+      "endLine": 4682,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_no_reserved",
+      "startLine": 4684,
+      "endLine": 4687,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reserved",
+      "startLine": 4689,
+      "endLine": 4692,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reserved_exceeded",
+      "startLine": 4694,
+      "endLine": 4696,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_success_flavor",
+      "startLine": 4700,
+      "endLine": 4710,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_success_image",
+      "startLine": 4712,
+      "endLine": 4723,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_success_image_no_exclusion",
+      "startLine": 4725,
+      "endLine": 4735,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_success_image_leading_space",
+      "startLine": 4737,
+      "endLine": 4747,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_success_image_no_implicit_exclusion",
+      "startLine": 4749,
+      "endLine": 4759,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_no_mask_configured",
+      "startLine": 4761,
+      "endLine": 4771,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_invalid_mask_no_rt_cpus",
+      "startLine": 4773,
+      "endLine": 4785,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_invalid_mask_exclude_out_of_range",
+      "startLine": 4787,
+      "endLine": 4799,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_explicit_range",
+      "startLine": 4801,
+      "endLine": 4813,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_invalid_mask_no_exclusion_wo_emulator_policy",
+      "startLine": 4815,
+      "endLine": 4828,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_all_cpus_w_emulator_policy",
+      "startLine": 4830,
+      "endLine": 4840,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_invalid_mask_rt_cpus_out_of_range",
+      "startLine": 4842,
+      "endLine": 4855,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_host_topology",
+      "startLine": 4861,
+      "endLine": 4886,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_node_not_defined",
+      "startLine": 4888,
+      "endLine": 4898,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_node_shared",
+      "startLine": 4900,
+      "endLine": 4912,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_node_isolate",
+      "startLine": 4914,
+      "endLine": 4926,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_single_node_isolate_exceeded",
+      "startLine": 4928,
+      "endLine": 4939,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multi_nodes_isolate",
+      "startLine": 4941,
+      "endLine": 4959,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multi_nodes_isolate_exceeded",
+      "startLine": 4961,
+      "endLine": 4979,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multi_nodes_isolate_full_usage",
+      "startLine": 4981,
+      "endLine": 4999,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_isolate_usage",
+      "startLine": 5001,
+      "endLine": 5016,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_isolate_full_usage",
+      "startLine": 5018,
+      "endLine": 5042,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_isolate_w_isolate_thread_alloc",
+      "startLine": 5045,
+      "endLine": 5072,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_isolate_w_isolate_thread_alloc_usage",
+      "startLine": 5075,
+      "endLine": 5103,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_mixed_instance",
+      "startLine": 5105,
+      "endLine": 5130,
+      "ccn": 3,
+      "nloc": 25,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_mixed_instance_not_define",
+      "startLine": 5132,
+      "endLine": 5138,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_mixed_instance_shared",
+      "startLine": 5140,
+      "endLine": 5147,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_mixed_instance_isolated",
+      "startLine": 5149,
+      "endLine": 5156,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_asymmetric_host",
+      "startLine": 5158,
+      "endLine": 5188,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_asymmetric_host_w_isolate_thread_alloc",
+      "startLine": 5191,
+      "endLine": 5218,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 5224,
+      "endLine": 5257,
+      "ccn": 1,
+      "nloc": 31,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_no_required_networks",
+      "startLine": 5259,
+      "endLine": 5268,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_missing_networks",
+      "startLine": 5270,
+      "endLine": 5280,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_physnet_networks",
+      "startLine": 5282,
+      "endLine": 5301,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_tunnel_network",
+      "startLine": 5303,
+      "endLine": 5321,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_multiple_networks",
+      "startLine": 5323,
+      "endLine": 5344,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_encrypted_memory_support_not_required",
+      "startLine": 5348,
+      "endLine": 5356,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_requirement_disabled",
+      "startLine": 5358,
+      "endLine": 5359,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_require_false_extra_spec",
+      "startLine": 5361,
+      "endLine": 5365,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_require_false_image_prop",
+      "startLine": 5367,
+      "endLine": 5373,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_require_both_false",
+      "startLine": 5375,
+      "endLine": 5384,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_invalid",
+      "startLine": 5388,
+      "endLine": 5391,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sev",
+      "startLine": 5393,
+      "endLine": 5399,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sev_es",
+      "startLine": 5401,
+      "endLine": 5407,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sev_snp",
+      "startLine": 5409,
+      "endLine": 5416,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_tdx",
+      "startLine": 5418,
+      "endLine": 5424,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_encrypted_memory_support_conflict",
+      "startLine": 5428,
+      "endLine": 5464,
+      "ccn": 1,
+      "nloc": 32,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_require_encrypted_memory_support_conflict1",
+      "startLine": 5466,
+      "endLine": 5471,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_require_encrypted_memory_support_conflict2",
+      "startLine": 5473,
+      "endLine": 5478,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_test_encrypted_memory_support_raises",
+      "startLine": 5487,
+      "endLine": 5502,
+      "ccn": 3,
+      "nloc": 16,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "_test_encrypted_memory_support_no_uefi",
+      "startLine": 5514,
+      "endLine": 5525,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_flavor_requires_encrypted_memory_support_no_uefi",
+      "startLine": 5527,
+      "endLine": 5531,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_image_requires_encrypted_memory_support_no_uefi",
+      "startLine": 5533,
+      "endLine": 5537,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_flavor_image_require_encrypted_memory_support_no_uefi",
+      "startLine": 5539,
+      "endLine": 5546,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_test_encrypted_memory_support_pc",
+      "startLine": 5556,
+      "endLine": 5565,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_encrypted_memory_support_pc_image_id",
+      "startLine": 5567,
+      "endLine": 5575,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_flavor_requires_encrypted_memory_support_pc",
+      "startLine": 5577,
+      "endLine": 5579,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_image_requires_encrypted_memory_support_pc",
+      "startLine": 5581,
+      "endLine": 5583,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_flavor_image_require_encrypted_memory_support_pc",
+      "startLine": 5585,
+      "endLine": 5589,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_encrypted_memory_support_pc_no_image_id",
+      "startLine": 5591,
+      "endLine": 5601,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_encrypted_memory_support_pc_has_image_id",
+      "startLine": 5603,
+      "endLine": 5614,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_encrypted_memory_support_without_stateless",
+      "startLine": 5627,
+      "endLine": 5634,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_encrypted_memory_support_without_disabled_video",
+      "startLine": 5645,
+      "endLine": 5653,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_encrypted_memory_support_required",
+      "startLine": 5662,
+      "endLine": 5685,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "_test_encrypted_memory_support_required._test_get_mem_encryption_constraint",
+      "startLine": 5667,
+      "endLine": 5680,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_require_encrypted_memory_support_extra_spec",
+      "startLine": 5687,
+      "endLine": 5693,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_require_encrypted_memory_support_image_prop",
+      "startLine": 5695,
+      "endLine": 5701,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_require_encrypted_memory_support_both_required",
+      "startLine": 5703,
+      "endLine": 5712,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_encrypted_memory_support_flavor_for_volume",
+      "startLine": 5714,
+      "endLine": 5731,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_encrypted_memory_support_no_id_for_volume",
+      "startLine": 5734,
+      "endLine": 5762,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pci_numa_policy_flavor",
+      "startLine": 5767,
+      "endLine": 5777,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pci_numa_policy_image",
+      "startLine": 5779,
+      "endLine": 5788,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pci_numa_policy_no_conflict",
+      "startLine": 5790,
+      "endLine": 5803,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_pci_numa_policy_conflict",
+      "startLine": 5805,
+      "endLine": 5819,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_pci_numa_policy_invalid",
+      "startLine": 5821,
+      "endLine": 5832,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pmu_image_and_flavor_conflict",
+      "startLine": 5837,
+      "endLine": 5851,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pmu_image_and_flavor_same_value",
+      "startLine": 5853,
+      "endLine": 5861,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pmu_image_only",
+      "startLine": 5863,
+      "endLine": 5873,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pmu_flavor_only",
+      "startLine": 5875,
+      "endLine": 5882,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vif_multiqueue_constraint",
+      "startLine": 5901,
+      "endLine": 5926,
+      "ccn": 5,
+      "nloc": 21,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_vif_virtio_constraint",
+      "startLine": 5946,
+      "endLine": 5973,
+      "ccn": 5,
+      "nloc": 23,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_vtpm_constraint",
+      "startLine": 6000,
+      "endLine": 6032,
+      "ccn": 7,
+      "nloc": 26,
+      "params": 6,
+      "maxNesting": 3
+    },
+    {
+      "function": "test_get_tpm_secret_security_constraint",
+      "startLine": 6043,
+      "endLine": 6054,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_secure_boot_constraint",
+      "startLine": 6075,
+      "endLine": 6100,
+      "ccn": 5,
+      "nloc": 21,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_maxphysaddr_mode",
+      "startLine": 6121,
+      "endLine": 6146,
+      "ccn": 5,
+      "nloc": 21,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_stateless_firmware_constraint",
+      "startLine": 6165,
+      "endLine": 6185,
+      "ccn": 4,
+      "nloc": 19,
+      "params": 6,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_check_hw_rescue_props",
+      "startLine": 6197,
+      "endLine": 6200,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 6214,
+      "endLine": 6317,
+      "ccn": 1,
+      "nloc": 90,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp._create_pci_stats",
+      "startLine": 6217,
+      "endLine": 6225,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "assertInstanceNUMAcellOrder",
+      "startLine": 6319,
+      "endLine": 6321,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_sort_host_numa_cell_num_equal_instance_cell_num",
+      "startLine": 6323,
+      "endLine": 6326,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sort_no_pci_stats_no_shared_cpu_policy",
+      "startLine": 6328,
+      "endLine": 6342,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sort_no_pci_stats_shared_cpu_policy",
+      "startLine": 6344,
+      "endLine": 6358,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sort_pci_stats_pci_req_no_shared_cpu_policy",
+      "startLine": 6360,
+      "endLine": 6383,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sort_pci_stats_pci_req_shared_cpu_policy",
+      "startLine": 6385,
+      "endLine": 6408,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sort_pci_stats_no_pci_req_no_shared_cpu_policy",
+      "startLine": 6410,
+      "endLine": 6428,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_sort_pci_stats_no_pci_req_shared_cpu_policy",
+      "startLine": 6430,
+      "endLine": 6448,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "file": "src/nova/virt/vmwareapi/network_util.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 26,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 26
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 73,
+      "endLine": 73,
+      "message": "Access to a protected member _type of a client class",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 73,
+          "endLine": 73
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 84,
+          "endLine": 84
+        },
+        {
+          "line": 91,
+          "endLine": 91
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "_get_network_obj",
+      "line": 45,
+      "endLine": 98,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_get_name_from_dvs_name",
+      "startLine": 38,
+      "endLine": 42,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_network_obj",
+      "startLine": 45,
+      "endLine": 98,
+      "ccn": 8,
+      "nloc": 34,
+      "params": 3,
+      "maxNesting": 6
+    },
+    {
+      "function": "get_network_with_the_name",
+      "startLine": 101,
+      "endLine": 115,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

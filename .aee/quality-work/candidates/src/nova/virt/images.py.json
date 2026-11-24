@@ -1,0 +1,558 @@
+{
+  "file": "src/nova/virt/images.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 22,
+      "endLine": 35,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 35
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Redefining built-in 'format'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 52,
+          "endLine": 52
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 52,
+      "endLine": 52,
+      "message": "Unused argument 'output_format'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 52,
+          "endLine": 52
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 61,
+      "endLine": 61,
+      "message": "Too many arguments (8/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 85,
+          "endLine": 85
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 106,
+      "endLine": 106,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 169,
+          "endLine": 169
+        },
+        {
+          "line": 226,
+          "endLine": 226
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "ruff:SIM117",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM117"
+      ],
+      "line": 107,
+      "endLine": 108,
+      "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 107,
+          "endLine": 108
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R60"
+    },
+    {
+      "canonical": "pylint:C1802",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C1802"
+      ],
+      "line": 125,
+      "endLine": 125,
+      "message": "Do not use `len(SEQUENCE)` without comparison to determine if a sequence is empty",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 125,
+          "endLine": 125
+        }
+      ],
+      "id": "T8"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 135,
+      "endLine": 135,
+      "message": "Consider explicitly re-raising using 'except KeyError as exc' and 'raise exception.ImageUnacceptable(image_id=image_id, reason=msg) from exc'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 212,
+          "endLine": 214
+        },
+        {
+          "line": 216,
+          "endLine": 218
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "ruff:C401",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C401"
+      ],
+      "line": 159,
+      "endLine": 159,
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 159,
+          "endLine": 159
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R72"
+    },
+    {
+      "canonical": "ruff:RUF015",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF015"
+      ],
+      "line": 164,
+      "endLine": 164,
+      "message": "Prefer `next(x for x in wrapper.formats if str(x) == 'iso')` over single element slice",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 164,
+          "endLine": 164
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R54"
+    },
+    {
+      "canonical": "pylint:C0325",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0325"
+      ],
+      "line": 208,
+      "endLine": 208,
+      "message": "Unnecessary parens after '=' keyword",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 208,
+          "endLine": 208
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R41"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001"
+      ],
+      "line": 215,
+      "endLine": 215,
+      "message": "Do not catch blind exception: `Exception`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 215,
+          "endLine": 215
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 226,
+      "endLine": 226,
+      "message": "Too many branches (13/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 226,
+          "endLine": 226
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 227,
+      "endLine": 227,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 227,
+          "endLine": 227
+        },
+        {
+          "line": 280,
+          "endLine": 280
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 227,
+      "endLine": 227,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 227,
+          "endLine": 227
+        },
+        {
+          "line": 280,
+          "endLine": 280
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "convert_image",
+      "line": 61,
+      "endLine": 69,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "_convert_image",
+      "line": 85,
+      "endLine": 103,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "get_image_format",
+      "line": 145,
+      "endLine": 166,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "fetch_to_raw",
+      "line": 226,
+      "endLine": 301,
+      "id": "M4"
+    }
+  ],
+  "functions": [
+    {
+      "function": "qemu_img_info",
+      "startLine": 43,
+      "endLine": 49,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "privileged_qemu_img_info",
+      "startLine": 52,
+      "endLine": 58,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "convert_image",
+      "startLine": 61,
+      "endLine": 69,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 8,
+      "maxNesting": 1
+    },
+    {
+      "function": "convert_image_unsafe",
+      "startLine": 72,
+      "endLine": 82,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_convert_image",
+      "startLine": 85,
+      "endLine": 103,
+      "ccn": 3,
+      "nloc": 18,
+      "params": 8,
+      "maxNesting": 2
+    },
+    {
+      "function": "fetch",
+      "startLine": 106,
+      "endLine": 110,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_info",
+      "startLine": 113,
+      "endLine": 114,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "check_vmdk_image",
+      "startLine": 117,
+      "endLine": 142,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_image_format",
+      "startLine": 145,
+      "endLine": 166,
+      "ccn": 9,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 7
+    },
+    {
+      "function": "do_image_deep_inspection",
+      "startLine": 169,
+      "endLine": 223,
+      "ccn": 11,
+      "nloc": 36,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "fetch_to_raw",
+      "startLine": 226,
+      "endLine": 301,
+      "ccn": 15,
+      "nloc": 57,
+      "params": 4,
+      "maxNesting": 6
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

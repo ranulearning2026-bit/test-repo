@@ -1,0 +1,761 @@
+{
+  "file": "src/nova/tests/functional/libvirt/test_server_shares.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 30,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 30
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 15,
+      "endLine": 15,
+      "message": "standard import \"os\" should be placed before third party imports \"fixtures\", \"lxml.etree\"",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 15
+        },
+        {
+          "line": 17,
+          "endLine": 17
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        },
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 136,
+          "endLine": 136
+        },
+        {
+          "line": 517,
+          "endLine": 517
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0902"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Too many instance attributes (11/7)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R30"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 520,
+          "endLine": 520
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 520,
+          "endLine": 520
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Access to a protected member _host of a client class",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 291,
+          "endLine": 291
+        },
+        {
+          "line": 529,
+          "endLine": 529
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 79,
+      "endLine": 79,
+      "message": "Attribute 'instance' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 79,
+          "endLine": 79
+        },
+        {
+          "line": 348,
+          "endLine": 348
+        },
+        {
+          "line": 395,
+          "endLine": 395
+        },
+        {
+          "line": 407,
+          "endLine": 407
+        },
+        {
+          "line": 440,
+          "endLine": 440
+        },
+        {
+          "line": 448,
+          "endLine": 448
+        },
+        {
+          "line": 476,
+          "endLine": 476
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 85,
+      "endLine": 85,
+      "message": "Unused argument 'tag'",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 85,
+          "endLine": 85
+        },
+        {
+          "line": 107,
+          "endLine": 107
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 114,
+      "endLine": 114,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 114,
+          "endLine": 114
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 114,
+      "endLine": 114,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 114,
+          "endLine": 114
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 278,
+      "endLine": 278,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 278,
+          "endLine": 278
+        },
+        {
+          "line": 309,
+          "endLine": 309
+        },
+        {
+          "line": 452,
+          "endLine": 452
+        },
+        {
+          "line": 481,
+          "endLine": 481
+        },
+        {
+          "line": 494,
+          "endLine": 494
+        },
+        {
+          "line": 542,
+          "endLine": 542
+        },
+        {
+          "line": 563,
+          "endLine": 563
+        },
+        {
+          "line": 582,
+          "endLine": 582
+        },
+        {
+          "line": 602,
+          "endLine": 602
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 279,
+      "endLine": 279,
+      "message": "Unpacked variable `server` is never used",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 279,
+          "endLine": 279
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 279,
+      "endLine": 279,
+      "message": "Unused variable 'server'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 279,
+          "endLine": 279
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R26"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 42,
+      "endLine": 76,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_xml",
+      "startLine": 78,
+      "endLine": 83,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_filesystem_tag",
+      "startLine": 85,
+      "endLine": 93,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_assert_filesystem_tag",
+      "startLine": 95,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_filesystem_tag_not_present",
+      "startLine": 99,
+      "endLine": 101,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_metadata_url",
+      "startLine": 103,
+      "endLine": 115,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_metadata_url.fake_get_fixed_ip_by_address",
+      "startLine": 107,
+      "endLine": 108,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_share_in_metadata",
+      "startLine": 117,
+      "endLine": 124,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_check_traits",
+      "startLine": 126,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_share_metadata",
+      "startLine": 138,
+      "endLine": 155,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_share_metadata_with_tag",
+      "startLine": 157,
+      "endLine": 175,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_share_fails_with_tag_already_used",
+      "startLine": 177,
+      "endLine": 203,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_cephfs_share_metadata",
+      "startLine": 205,
+      "endLine": 238,
+      "ccn": 4,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_cephfs_grants",
+      "startLine": 240,
+      "endLine": 244,
+      "ccn": 4,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_cephfs_share_per_instance_identity",
+      "startLine": 246,
+      "endLine": 276,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_reconcile_removes_stale_cephfs_grant",
+      "startLine": 278,
+      "endLine": 297,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_share_after_hard_reboot",
+      "startLine": 299,
+      "endLine": 307,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_share_mount_failure",
+      "startLine": 309,
+      "endLine": 351,
+      "ccn": 1,
+      "nloc": 31,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_start_fails_share_in_error",
+      "startLine": 353,
+      "endLine": 359,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_verify_start_fails_share_in_error",
+      "startLine": 361,
+      "endLine": 409,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_detach_server_share_in_error",
+      "startLine": 411,
+      "endLine": 450,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_share_umount_failure",
+      "startLine": 452,
+      "endLine": 479,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_resume_with_shares",
+      "startLine": 481,
+      "endLine": 492,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_server_rescue_with_shares",
+      "startLine": 494,
+      "endLine": 514,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 519,
+      "endLine": 526,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_xml_on_host",
+      "startLine": 528,
+      "endLine": 532,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_setup_server_with_share",
+      "startLine": 534,
+      "endLine": 540,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migrate_with_share",
+      "startLine": 542,
+      "endLine": 561,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migrate_revert_with_share",
+      "startLine": 563,
+      "endLine": 580,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migrate_with_share_mount_failure",
+      "startLine": 582,
+      "endLine": 600,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migrate_same_host_with_share",
+      "startLine": 602,
+      "endLine": 645,
+      "ccn": 3,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

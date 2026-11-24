@@ -1,0 +1,144 @@
+{
+  "file": "src/nova/scheduler/filters/aggregate_multitenancy_isolation.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 19,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 19
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Parameter 'filter_properties' has been renamed to 'spec_obj' in overriding 'AggregateMultiTenancyIsolation.host_passes' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "pylint:C1803",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C1803"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "\"metadata != {}\" can be simplified to \"metadata\", if it is strictly a sequence, as an empty dict is falsey",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T5"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "host_passes",
+      "startLine": 33,
+      "endLine": 59,
+      "ccn": 6,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

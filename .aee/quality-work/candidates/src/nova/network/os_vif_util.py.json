@@ -1,0 +1,335 @@
+{
+  "file": "src/nova/network/os_vif_util.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 21,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 27
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 399,
+      "endLine": 446,
+      "message": "Unnecessary \"elif\" after \"return\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 399,
+          "endLine": 446
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 548,
+      "endLine": 548,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 548,
+          "endLine": 548
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 548,
+      "endLine": 548,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 548,
+          "endLine": 548
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "_nova_to_osvif_network",
+      "line": 202,
+      "endLine": 233,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_get_vif_name",
+      "startLine": 41,
+      "endLine": 54,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_hybrid_bridge_name",
+      "startLine": 57,
+      "endLine": 68,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_set_vhostuser_settings",
+      "startLine": 71,
+      "endLine": 88,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "nova_to_osvif_instance",
+      "startLine": 91,
+      "endLine": 107,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_nova_to_osvif_ip",
+      "startLine": 110,
+      "endLine": 120,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_nova_to_osvif_ips",
+      "startLine": 123,
+      "endLine": 132,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_nova_to_osvif_route",
+      "startLine": 135,
+      "endLine": 153,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_nova_to_osvif_routes",
+      "startLine": 156,
+      "endLine": 165,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_nova_to_osvif_subnet",
+      "startLine": 168,
+      "endLine": 187,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_nova_to_osvif_subnets",
+      "startLine": 190,
+      "endLine": 199,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_nova_to_osvif_network",
+      "startLine": 202,
+      "endLine": 233,
+      "ccn": 8,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 7
+    },
+    {
+      "function": "_get_vif_instance",
+      "startLine": 236,
+      "endLine": 253,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_set_representor_datapath_offload_settings",
+      "startLine": 256,
+      "endLine": 270,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_vnic_direct_vif_instance",
+      "startLine": 273,
+      "endLine": 294,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_ovs_representor_port_profile",
+      "startLine": 297,
+      "endLine": 312,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_nova_to_osvif_vif_ovs",
+      "startLine": 316,
+      "endLine": 368,
+      "ccn": 7,
+      "nloc": 43,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_nova_to_osvif_vif_agilio_ovs",
+      "startLine": 372,
+      "endLine": 394,
+      "ccn": 4,
+      "nloc": 23,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_nova_to_osvif_vif_vhostuser",
+      "startLine": 398,
+      "endLine": 446,
+      "ccn": 11,
+      "nloc": 49,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "_nova_to_osvif_vif_ivs",
+      "startLine": 450,
+      "endLine": 464,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_nova_to_osvif_vif_vrouter",
+      "startLine": 468,
+      "endLine": 495,
+      "ccn": 4,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "nova_to_osvif_vif",
+      "startLine": 498,
+      "endLine": 551,
+      "ccn": 9,
+      "nloc": 26,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

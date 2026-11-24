@@ -1,0 +1,595 @@
+{
+  "file": "src/nova/manager.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 54,
+      "endLine": 63,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 63
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Access to a protected member _skip_automatic_rpc_tracking of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 84,
+      "endLine": 84,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 84,
+          "endLine": 84
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 84,
+      "endLine": 84,
+      "message": "Too few public methods (0/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 84,
+          "endLine": 84
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 86,
+      "endLine": 86,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 125,
+          "endLine": 125
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 86,
+      "endLine": 86,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 125,
+          "endLine": 125
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:R0902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0902"
+      ],
+      "line": 108,
+      "endLine": 108,
+      "message": "Too many instance attributes (11/7)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 108,
+          "endLine": 108
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R30"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 109,
+      "endLine": 109,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 109,
+          "endLine": 109
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 127,
+      "endLine": 127,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 127,
+          "endLine": 127
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:W0107",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0107"
+      ],
+      "line": 144,
+      "endLine": 144,
+      "message": "Unnecessary pass statement",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 174,
+          "endLine": 174
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R51"
+    },
+    {
+      "canonical": "ruff:PIE790",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE790"
+      ],
+      "line": 144,
+      "endLine": 144,
+      "message": "Unnecessary `pass` statement",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 174,
+          "endLine": 174
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R53"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 146,
+      "endLine": 146,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 146,
+          "endLine": 146
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 272,
+      "endLine": 272,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 272,
+          "endLine": 272
+        },
+        {
+          "line": 279,
+          "endLine": 279
+        },
+        {
+          "line": 314,
+          "endLine": 314
+        },
+        {
+          "line": 330,
+          "endLine": 330
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 272,
+      "endLine": 274,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 272,
+          "endLine": 274
+        },
+        {
+          "line": 279,
+          "endLine": 280
+        },
+        {
+          "line": 314,
+          "endLine": 314
+        },
+        {
+          "line": 330,
+          "endLine": 330
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_record_task_end",
+      "line": 222,
+      "endLine": 268,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_wait_for_in_progress_tasks",
+      "line": 283,
+      "endLine": 331,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "skip_automatic_rpc_tracking",
+      "startLine": 70,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 85,
+      "endLine": 86,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 111,
+      "endLine": 125,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "periodic_tasks",
+      "startLine": 127,
+      "endLine": 132,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "init_host",
+      "startLine": 134,
+      "endLine": 144,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_shutdown_in_progress",
+      "startLine": 146,
+      "endLine": 147,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "graceful_shutdown",
+      "startLine": 149,
+      "endLine": 155,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "cleanup_host",
+      "startLine": 157,
+      "endLine": 162,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "pre_start_hook",
+      "startLine": 164,
+      "endLine": 174,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "post_start_hook",
+      "startLine": 176,
+      "endLine": 183,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "reset",
+      "startLine": 185,
+      "endLine": 189,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_record_task_start",
+      "startLine": 191,
+      "endLine": 220,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_record_task_end",
+      "startLine": 222,
+      "endLine": 268,
+      "ccn": 9,
+      "nloc": 27,
+      "params": 4,
+      "maxNesting": 5
+    },
+    {
+      "function": "_summarize_in_progress_tasks",
+      "startLine": 270,
+      "endLine": 275,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_summarize_failed_tasks",
+      "startLine": 277,
+      "endLine": 281,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_wait_for_in_progress_tasks",
+      "startLine": 283,
+      "endLine": 331,
+      "ccn": 7,
+      "nloc": 39,
+      "params": 2,
+      "maxNesting": 5
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

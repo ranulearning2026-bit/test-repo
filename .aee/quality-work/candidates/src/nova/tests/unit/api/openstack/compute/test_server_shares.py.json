@@ -1,0 +1,519 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_server_shares.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 27
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "third party import \"oslo_utils.timeutils\" should be placed before first party imports \"nova.api.openstack.compute.server_shares\", \"nova.compute.vm_states\", \"nova.context\" (...) \"nova.tests.unit.compute.test_compute.BaseTestCase\", \"nova.tests.unit.fake_instance\", \"nova.tests.fixtures\"",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 158,
+          "endLine": 158
+        },
+        {
+          "line": 214,
+          "endLine": 214
+        },
+        {
+          "line": 295,
+          "endLine": 295
+        },
+        {
+          "line": 330,
+          "endLine": 330
+        },
+        {
+          "line": 373,
+          "endLine": 373
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Unused argument 'compute_api'",
+      "toolSeverity": "warning",
+      "count": 15,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 163,
+          "endLine": 163
+        },
+        {
+          "line": 164,
+          "endLine": 164
+        },
+        {
+          "line": 219,
+          "endLine": 219
+        },
+        {
+          "line": 298,
+          "endLine": 298
+        },
+        {
+          "line": 333,
+          "endLine": 333
+        },
+        {
+          "line": 377,
+          "endLine": 377
+        },
+        {
+          "line": 378,
+          "endLine": 378
+        },
+        {
+          "line": 379,
+          "endLine": 379
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Redefining name 'context' from outer scope (line 17)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "line": 37,
+          "endLine": 37
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 43,
+      "endLine": 43,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 43,
+          "endLine": 43
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 91,
+      "endLine": 91,
+      "message": "Variable name \"NOW\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 91,
+          "endLine": 91
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 373,
+      "endLine": 373,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 373,
+          "endLine": 373
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R17"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "test_delete",
+      "line": 373,
+      "endLine": 411,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "return_server",
+      "startLine": 33,
+      "endLine": 34,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "return_invalid_server",
+      "startLine": 37,
+      "endLine": 40,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 46,
+      "endLine": 59,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "fake_get_instance",
+      "startLine": 61,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_index",
+      "startLine": 86,
+      "endLine": 144,
+      "ccn": 1,
+      "nloc": 56,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create",
+      "startLine": 158,
+      "endLine": 203,
+      "ccn": 1,
+      "nloc": 41,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_share_with_new_tag",
+      "startLine": 214,
+      "endLine": 289,
+      "ccn": 1,
+      "nloc": 66,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_passing_a_share_with_an_error",
+      "startLine": 295,
+      "endLine": 324,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_passing_unknown_protocol",
+      "startLine": 330,
+      "endLine": 358,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete",
+      "startLine": 373,
+      "endLine": 411,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 7,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

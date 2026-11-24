@@ -1,0 +1,832 @@
+{
+  "file": "src/nova/tests/unit/test_block_device.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 33,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 33
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 271,
+          "endLine": 271
+        },
+        {
+          "line": 694,
+          "endLine": 694
+        },
+        {
+          "line": 830,
+          "endLine": 830
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 273,
+          "endLine": 273
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 273,
+          "endLine": 273
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 44,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 93,
+          "endLine": 93
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 139,
+          "endLine": 139
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        },
+        {
+          "line": 158,
+          "endLine": 158
+        },
+        {
+          "line": 172,
+          "endLine": 172
+        },
+        {
+          "line": 207,
+          "endLine": 207
+        },
+        {
+          "line": 220,
+          "endLine": 220
+        },
+        {
+          "line": 224,
+          "endLine": 224
+        },
+        {
+          "line": 229,
+          "endLine": 229
+        },
+        {
+          "line": 233,
+          "endLine": 233
+        },
+        {
+          "line": 239,
+          "endLine": 239
+        },
+        {
+          "line": 245,
+          "endLine": 245
+        },
+        {
+          "line": 251,
+          "endLine": 251
+        },
+        {
+          "line": 259,
+          "endLine": 259
+        },
+        {
+          "line": 389,
+          "endLine": 389
+        },
+        {
+          "line": 436,
+          "endLine": 436
+        },
+        {
+          "line": 454,
+          "endLine": 454
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 390,
+      "endLine": 390,
+      "message": "Unused argument 'obj'",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 390,
+          "endLine": 390
+        },
+        {
+          "line": 717,
+          "endLine": 717
+        },
+        {
+          "line": 809,
+          "endLine": 809
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 394,
+      "endLine": 394,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 394,
+          "endLine": 394
+        },
+        {
+          "line": 396,
+          "endLine": 396
+        },
+        {
+          "line": 420,
+          "endLine": 420
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 688,
+      "endLine": 688,
+      "message": "Access to a protected member _from_db_object of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 688,
+          "endLine": 688
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "function_lines",
+      "value": 116,
+      "threshold": 100,
+      "function": "setUp",
+      "line": 272,
+      "endLine": 387,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 37,
+      "endLine": 75,
+      "ccn": 1,
+      "nloc": 38,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_properties",
+      "startLine": 77,
+      "endLine": 91,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ephemeral",
+      "startLine": 93,
+      "endLine": 111,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_mappings_prepend_dev",
+      "startLine": 113,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_strip_dev",
+      "startLine": 134,
+      "endLine": 137,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_strip_prefix",
+      "startLine": 139,
+      "endLine": 145,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_device_letter",
+      "startLine": 147,
+      "endLine": 156,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generate_device_name",
+      "startLine": 158,
+      "endLine": 170,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_volume_in_mapping",
+      "startLine": 172,
+      "endLine": 205,
+      "ccn": 1,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_volume_in_mapping._assert_volume_in_mapping",
+      "startLine": 193,
+      "endLine": 196,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_root_bdm",
+      "startLine": 207,
+      "endLine": 218,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_ephemeral_disk_size",
+      "startLine": 220,
+      "endLine": 222,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_swap_list",
+      "startLine": 224,
+      "endLine": 227,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_local_disk_num",
+      "startLine": 229,
+      "endLine": 231,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_new_format_is_swap",
+      "startLine": 233,
+      "endLine": 237,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_new_format_is_ephemeral",
+      "startLine": 239,
+      "endLine": 243,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_validate_device_name",
+      "startLine": 245,
+      "endLine": 249,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_validate_and_default_volume_size",
+      "startLine": 251,
+      "endLine": 257,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_bdms_to_connect",
+      "startLine": 259,
+      "endLine": 268,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 272,
+      "endLine": 387,
+      "ccn": 1,
+      "nloc": 110,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_init",
+      "startLine": 389,
+      "endLine": 434,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_init.fake_validate",
+      "startLine": 390,
+      "endLine": 391,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_init_prepend_dev_to_device_name",
+      "startLine": 436,
+      "endLine": 452,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_init_boolify_delete_on_termination",
+      "startLine": 454,
+      "endLine": 464,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_validate",
+      "startLine": 466,
+      "endLine": 512,
+      "ccn": 1,
+      "nloc": 39,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_from_legacy",
+      "startLine": 514,
+      "endLine": 518,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_from_legacy_mapping",
+      "startLine": 520,
+      "endLine": 556,
+      "ccn": 2,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "test_from_legacy_mapping._get_image_bdms",
+      "startLine": 521,
+      "endLine": 522,
+      "ccn": 3,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_from_legacy_mapping._get_bootable_bdms",
+      "startLine": 524,
+      "endLine": 527,
+      "ccn": 4,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_from_api",
+      "startLine": 558,
+      "endLine": 565,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_from_api_invalid_blank_id",
+      "startLine": 567,
+      "endLine": 576,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_from_api_invalid_source_to_local_mapping",
+      "startLine": 578,
+      "endLine": 585,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_from_api_valid_source_to_local_mapping",
+      "startLine": 587,
+      "endLine": 603,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_from_api_valid_source_to_local_mapping_with_string_bi",
+      "startLine": 605,
+      "endLine": 621,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_from_api_invalid_image_to_destination_local_mapping",
+      "startLine": 623,
+      "endLine": 633,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_from_api_invalid_volume_type_to_destination_local_mapping",
+      "startLine": 635,
+      "endLine": 645,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_from_api_invalid_specify_volume_type_with_source_volume_mapping",
+      "startLine": 647,
+      "endLine": 658,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_image_mapping",
+      "startLine": 660,
+      "endLine": 667,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_test_snapshot_from_bdm",
+      "startLine": 669,
+      "endLine": 679,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_snapshot_from_bdm",
+      "startLine": 681,
+      "endLine": 683,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_snapshot_from_object",
+      "startLine": 685,
+      "endLine": 691,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp",
+      "startLine": 696,
+      "endLine": 699,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_get_bdm_image_metadata__bootable",
+      "startLine": 701,
+      "endLine": 735,
+      "ccn": 2,
+      "nloc": 31,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_test_get_bdm_image_metadata__bootable.get_vol_data",
+      "startLine": 717,
+      "endLine": 718,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_image_metadata__non_bootable",
+      "startLine": 737,
+      "endLine": 738,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_image_metadata__bootable",
+      "startLine": 740,
+      "endLine": 741,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_image_metadata__basic_property",
+      "startLine": 743,
+      "endLine": 767,
+      "ccn": 1,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_image_metadata__snapshot_basic_property",
+      "startLine": 769,
+      "endLine": 804,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_bdm_image_metadata__cinder_down",
+      "startLine": 809,
+      "endLine": 827,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_inherit_image_properties",
+      "startLine": 831,
+      "endLine": 835,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_image_size",
+      "startLine": 837,
+      "endLine": 840,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_image_status",
+      "startLine": 842,
+      "endLine": 845,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_values_conversion",
+      "startLine": 847,
+      "endLine": 852,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_suppress_not_image_properties",
+      "startLine": 854,
+      "endLine": 865,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

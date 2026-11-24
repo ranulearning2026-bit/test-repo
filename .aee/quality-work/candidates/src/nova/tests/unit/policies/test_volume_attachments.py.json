@@ -1,0 +1,406 @@
+{
+  "file": "src/nova/tests/unit/policies/test_volume_attachments.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 28,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 28
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 9,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 164,
+          "endLine": 164
+        },
+        {
+          "line": 171,
+          "endLine": 171
+        },
+        {
+          "line": 203,
+          "endLine": 203
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Unused argument 'cls'",
+      "toolSeverity": "warning",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 164,
+          "endLine": 164
+        },
+        {
+          "line": 171,
+          "endLine": 171
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 51,
+      "endLine": 51,
+      "message": "Access to a protected member _from_db_object of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 51,
+          "endLine": 51
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 55,
+      "endLine": 55,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 55,
+          "endLine": 55
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:R0902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0902"
+      ],
+      "line": 75,
+      "endLine": 75,
+      "message": "Too many instance attributes (8/7)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 75,
+          "endLine": 75
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R30"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 196,
+      "endLine": 196,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 196,
+          "endLine": 196
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 196,
+      "endLine": 196,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 196,
+          "endLine": 196
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "fake_bdm_get_by_volume_and_instance",
+      "startLine": 38,
+      "endLine": 52,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "fake_get_volume",
+      "startLine": 55,
+      "endLine": 72,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp",
+      "startLine": 84,
+      "endLine": 126,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_index_volume_attach_policy",
+      "startLine": 129,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_show_volume_attach_policy",
+      "startLine": 135,
+      "endLine": 139,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_volume_attach_policy",
+      "startLine": 142,
+      "endLine": 149,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_volume_attach_policy",
+      "startLine": 152,
+      "endLine": 161,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_volume_attach_policy",
+      "startLine": 164,
+      "endLine": 168,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_swap_volume_attach_policy",
+      "startLine": 171,
+      "endLine": 177,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_swap_volume_attach_policy_failed",
+      "startLine": 181,
+      "endLine": 199,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_pass_swap_and_update_volume_attach_policy",
+      "startLine": 203,
+      "endLine": 215,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 226,
+      "endLine": 233,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

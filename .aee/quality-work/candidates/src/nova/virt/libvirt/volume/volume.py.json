@@ -1,0 +1,429 @@
+{
+  "file": "src/nova/virt/libvirt/volume/volume.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 19,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Class 'LibvirtBaseVolumeDriver' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Class `LibvirtBaseVolumeDriver` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Too many branches (17/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Too many statements (53/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "ruff:RUF019",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF019"
+      ],
+      "line": 65,
+      "endLine": 65,
+      "message": "Unnecessary key check before dictionary access",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 65,
+          "endLine": 65
+        },
+        {
+          "line": 84,
+          "endLine": 84
+        }
+      ],
+      "id": "T7"
+    },
+    {
+      "canonical": "pylint:W0107",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0107"
+      ],
+      "line": 137,
+      "endLine": 137,
+      "message": "Unnecessary pass statement",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R51"
+    },
+    {
+      "canonical": "ruff:PIE790",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE790"
+      ],
+      "line": 137,
+      "endLine": 137,
+      "message": "Unnecessary `pass` statement",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R53"
+    },
+    {
+      "canonical": "pylint:W0223",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0223"
+      ],
+      "line": 159,
+      "endLine": 159,
+      "message": "Method 'extend_volume' is abstract in class 'LibvirtBaseVolumeDriver' but is not overridden in child class 'LibvirtVolumeDriver'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 159,
+          "endLine": 159
+        },
+        {
+          "line": 175,
+          "endLine": 175
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R59"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 163,
+      "endLine": 164,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 163,
+          "endLine": 164
+        },
+        {
+          "line": 168,
+          "endLine": 169
+        },
+        {
+          "line": 179,
+          "endLine": 180
+        },
+        {
+          "line": 184,
+          "endLine": 185
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 163,
+      "endLine": 164,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 163,
+          "endLine": 164
+        },
+        {
+          "line": 168,
+          "endLine": 169
+        },
+        {
+          "line": 179,
+          "endLine": 180
+        },
+        {
+          "line": 184,
+          "endLine": 185
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R07"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "ccn",
+      "value": 19,
+      "threshold": 15,
+      "function": "get_config",
+      "line": 39,
+      "endLine": 133,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 12,
+      "threshold": 4,
+      "function": "get_config",
+      "line": 39,
+      "endLine": 133,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 35,
+      "endLine": 37,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_config",
+      "startLine": 39,
+      "endLine": 133,
+      "ccn": 19,
+      "nloc": 65,
+      "params": 3,
+      "maxNesting": 12
+    },
+    {
+      "function": "connect_volume",
+      "startLine": 135,
+      "endLine": 137,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "disconnect_volume",
+      "startLine": 139,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "extend_volume",
+      "startLine": 143,
+      "endLine": 156,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 162,
+      "endLine": 164,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_config",
+      "startLine": 166,
+      "endLine": 172,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 178,
+      "endLine": 180,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_config",
+      "startLine": 182,
+      "endLine": 189,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

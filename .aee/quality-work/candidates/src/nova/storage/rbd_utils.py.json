@@ -1,0 +1,867 @@
+{
+  "file": "src/nova/storage/rbd_utils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 29,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 29
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Class 'RbdProxy' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 102,
+          "endLine": 102
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Class `RbdProxy` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 102,
+          "endLine": 102
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 116,
+      "endLine": 116,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 190,
+          "endLine": 190
+        },
+        {
+          "line": 209,
+          "endLine": 209
+        },
+        {
+          "line": 224,
+          "endLine": 224
+        },
+        {
+          "line": 228,
+          "endLine": 228
+        },
+        {
+          "line": 256,
+          "endLine": 256
+        },
+        {
+          "line": 276,
+          "endLine": 276
+        },
+        {
+          "line": 316,
+          "endLine": 316
+        },
+        {
+          "line": 411,
+          "endLine": 411
+        },
+        {
+          "line": 417,
+          "endLine": 417
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 123,
+      "endLine": 123,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 123,
+          "endLine": 123
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0603",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0603"
+      ],
+      "line": 144,
+      "endLine": 144,
+      "message": "Using the global statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 144,
+          "endLine": 144
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R52"
+    },
+    {
+      "canonical": "pylint:C0415",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0415"
+      ],
+      "line": 149,
+      "endLine": 149,
+      "message": "Import outside toplevel (rados)",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 149,
+          "endLine": 149
+        },
+        {
+          "line": 150,
+          "endLine": 150
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R58"
+    },
+    {
+      "canonical": "ruff:RUF100",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF100"
+      ],
+      "line": 149,
+      "endLine": 149,
+      "message": "Unused `noqa` directive (unused: `F401`)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 149,
+          "endLine": 149
+        },
+        {
+          "line": 150,
+          "endLine": 150
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R45"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 238,
+      "endLine": 238,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 238,
+          "endLine": 238
+        },
+        {
+          "line": 446,
+          "endLine": 446
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 238,
+      "endLine": 238,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 238,
+          "endLine": 238
+        },
+        {
+          "line": 446,
+          "endLine": 446
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 253,
+      "endLine": 253,
+      "message": "Consider using '{\"loc\": url, \"err\": e}' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 253,
+          "endLine": 253
+        },
+        {
+          "line": 261,
+          "endLine": 262
+        },
+        {
+          "line": 312,
+          "endLine": 312
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 253,
+      "endLine": 253,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 253,
+          "endLine": 253
+        },
+        {
+          "line": 261,
+          "endLine": 262
+        },
+        {
+          "line": 312,
+          "endLine": 312
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "ruff:SIM117",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM117"
+      ],
+      "line": 263,
+      "endLine": 264,
+      "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 263,
+          "endLine": 264
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R60"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 273,
+      "endLine": 274,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.Forbidden(_('no write permission on storage pool %s') % dest_pool) from exc'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 273,
+          "endLine": 274
+        },
+        {
+          "line": 302,
+          "endLine": 303
+        },
+        {
+          "line": 433,
+          "endLine": 434
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 379,
+      "endLine": 379,
+      "message": "Unused argument 'pool'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 379,
+          "endLine": 379
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "ruff:B025",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "B025"
+      ],
+      "line": 389,
+      "endLine": 389,
+      "message": "try-except block with duplicate exception `rbd.ImageHasSnapshots`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 389,
+          "endLine": 389
+        }
+      ],
+      "id": "T19"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 53,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__getattr__",
+      "startLine": 56,
+      "endLine": 57,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 70,
+      "endLine": 87,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 6,
+      "maxNesting": 1
+    },
+    {
+      "function": "__enter__",
+      "startLine": 89,
+      "endLine": 90,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__exit__",
+      "startLine": 92,
+      "endLine": 96,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "__getattr__",
+      "startLine": 98,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 105,
+      "endLine": 107,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__enter__",
+      "startLine": 109,
+      "endLine": 110,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__exit__",
+      "startLine": 112,
+      "endLine": 113,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "features",
+      "startLine": 116,
+      "endLine": 120,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 125,
+      "endLine": 137,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_for_import_failure",
+      "startLine": 139,
+      "endLine": 154,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_connect_to_rados",
+      "startLine": 156,
+      "endLine": 171,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_disconnect_from_rados",
+      "startLine": 173,
+      "endLine": 176,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "ceph_args",
+      "startLine": 178,
+      "endLine": 188,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_mon_addrs",
+      "startLine": 190,
+      "endLine": 207,
+      "ccn": 5,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "parse_url",
+      "startLine": 209,
+      "endLine": 222,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_fsid",
+      "startLine": 224,
+      "endLine": 226,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "is_cloneable",
+      "startLine": 228,
+      "endLine": 254,
+      "ccn": 5,
+      "nloc": 23,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "clone",
+      "startLine": 256,
+      "endLine": 274,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "size",
+      "startLine": 276,
+      "endLine": 278,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "resize",
+      "startLine": 280,
+      "endLine": 288,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "parent_info",
+      "startLine": 290,
+      "endLine": 303,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "flatten",
+      "startLine": 305,
+      "endLine": 314,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "exists",
+      "startLine": 316,
+      "endLine": 324,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "remove_image",
+      "startLine": 326,
+      "endLine": 341,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "import_image",
+      "startLine": 343,
+      "endLine": 358,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "export_image",
+      "startLine": 360,
+      "endLine": 377,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_destroy_volume",
+      "startLine": 379,
+      "endLine": 409,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_destroy_volume._cleanup_vol",
+      "startLine": 382,
+      "endLine": 394,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "cleanup_volumes",
+      "startLine": 411,
+      "endLine": 415,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_pool_info",
+      "startLine": 417,
+      "endLine": 450,
+      "ccn": 5,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "create_snap",
+      "startLine": 452,
+      "endLine": 465,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "remove_snap",
+      "startLine": 467,
+      "endLine": 493,
+      "ccn": 7,
+      "nloc": 19,
+      "params": 6,
+      "maxNesting": 4
+    },
+    {
+      "function": "rollback_to_snap",
+      "startLine": 495,
+      "endLine": 507,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "destroy_volume",
+      "startLine": 509,
+      "endLine": 513,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 6
+  }
+}

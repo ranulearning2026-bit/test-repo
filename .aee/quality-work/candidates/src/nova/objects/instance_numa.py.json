@@ -1,0 +1,531 @@
+{
+  "file": "src/nova/objects/instance_numa.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 146,
+          "endLine": 146
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 11,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 130,
+          "endLine": 130
+        },
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 172,
+          "endLine": 172
+        },
+        {
+          "line": 322,
+          "endLine": 322
+        },
+        {
+          "line": 330,
+          "endLine": 330
+        },
+        {
+          "line": 352,
+          "endLine": 352
+        },
+        {
+          "line": 370,
+          "endLine": 370
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 49,
+      "endLine": 49,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 49,
+          "endLine": 49
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 49,
+      "endLine": 49,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 49,
+          "endLine": 49
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 80,
+      "endLine": 100,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 100
+        },
+        {
+          "line": 161,
+          "endLine": 169
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "ruff:C414",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C414"
+      ],
+      "line": 113,
+      "endLine": 113,
+      "message": "Unnecessary `list()` call within `sorted()`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 113,
+          "endLine": 113
+        }
+      ],
+      "id": "T9"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 139,
+      "endLine": 139,
+      "message": "Attribute 'id' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 139,
+          "endLine": 139
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "ruff:C401",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C401"
+      ],
+      "line": 353,
+      "endLine": 353,
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 353,
+          "endLine": 353
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R72"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "obj_make_compatible",
+      "line": 48,
+      "endLine": 78,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "_migrate_legacy_dedicated_instance_cpuset",
+      "line": 189,
+      "endLine": 272,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "obj_make_compatible",
+      "startLine": 48,
+      "endLine": 78,
+      "ccn": 6,
+      "nloc": 23,
+      "params": 3,
+      "maxNesting": 5
+    },
+    {
+      "function": "__len__",
+      "startLine": 104,
+      "endLine": 105,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "total_cpus",
+      "startLine": 108,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "siblings",
+      "startLine": 112,
+      "endLine": 121,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "pin",
+      "startLine": 123,
+      "endLine": 128,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "pin_vcpus",
+      "startLine": 130,
+      "endLine": 132,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "clear_host_pinning",
+      "startLine": 134,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "obj_make_compatible",
+      "startLine": 154,
+      "endLine": 159,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "obj_from_db_obj",
+      "startLine": 172,
+      "endLine": 184,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_migrate_legacy_dedicated_instance_cpuset",
+      "startLine": 189,
+      "endLine": 272,
+      "ccn": 12,
+      "nloc": 46,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "_save_migrated_cpuset_to_instance_extra",
+      "startLine": 277,
+      "endLine": 285,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_migrate_legacy_object",
+      "startLine": 289,
+      "endLine": 318,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "create",
+      "startLine": 322,
+      "endLine": 326,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_by_instance_uuid",
+      "startLine": 330,
+      "endLine": 340,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_to_json",
+      "startLine": 342,
+      "endLine": 343,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__len__",
+      "startLine": 345,
+      "endLine": 347,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "cpu_policy",
+      "startLine": 352,
+      "endLine": 360,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "cpu_pinning",
+      "startLine": 363,
+      "endLine": 367,
+      "ccn": 3,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "cpuset_reserved",
+      "startLine": 370,
+      "endLine": 373,
+      "ccn": 3,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "clear_host_pinning",
+      "startLine": 375,
+      "endLine": 382,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "emulator_threads_isolated",
+      "startLine": 385,
+      "endLine": 389,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

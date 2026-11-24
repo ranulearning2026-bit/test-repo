@@ -1,0 +1,647 @@
+{
+  "file": "src/nova/tests/functional/test_availability_zones.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 22,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 22
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Too many public methods (23/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 76,
+      "endLine": 76,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 76
+        },
+        {
+          "line": 400,
+          "endLine": 400
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 76,
+      "endLine": 76,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 76
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 78,
+      "endLine": 78,
+      "message": "Number of parameters was 9 in 'InstanceHelperMixin._create_server' and is now 3 in overriding 'TestAvailabilityZoneScheduling._create_server' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 78,
+          "endLine": 78
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 128,
+      "endLine": 128,
+      "message": "Unused argument 'ctxt'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 128,
+          "endLine": 128
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 138,
+      "endLine": 138,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 17,
+      "occurrences": [
+        {
+          "line": 138,
+          "endLine": 138
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        },
+        {
+          "line": 273,
+          "endLine": 273
+        },
+        {
+          "line": 284,
+          "endLine": 284
+        },
+        {
+          "line": 299,
+          "endLine": 299
+        },
+        {
+          "line": 315,
+          "endLine": 315
+        },
+        {
+          "line": 338,
+          "endLine": 338
+        },
+        {
+          "line": 361,
+          "endLine": 361
+        },
+        {
+          "line": 379,
+          "endLine": 379
+        },
+        {
+          "line": 409,
+          "endLine": 409
+        },
+        {
+          "line": 426,
+          "endLine": 426
+        },
+        {
+          "line": 443,
+          "endLine": 443
+        },
+        {
+          "line": 457,
+          "endLine": 457
+        },
+        {
+          "line": 483,
+          "endLine": 483
+        },
+        {
+          "line": 501,
+          "endLine": 501
+        },
+        {
+          "line": 521,
+          "endLine": 521
+        },
+        {
+          "line": 537,
+          "endLine": 537
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "ruff:UP032",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP032"
+      ],
+      "line": 400,
+      "endLine": 401,
+      "message": "Use f-string instead of `format` call",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 400,
+          "endLine": 401
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R69"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 29,
+      "endLine": 55,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_start_host_in_zone",
+      "startLine": 57,
+      "endLine": 76,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_server",
+      "startLine": 78,
+      "endLine": 85,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_instance_az_and_host",
+      "startLine": 87,
+      "endLine": 100,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_assert_request_spec_az",
+      "startLine": 102,
+      "endLine": 105,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_server_with_az_unshelved_to_specified_az",
+      "startLine": 107,
+      "endLine": 126,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_shelve_unshelve_server",
+      "startLine": 128,
+      "endLine": 136,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "other_az_than",
+      "startLine": 138,
+      "endLine": 139,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "other_host_than",
+      "startLine": 141,
+      "endLine": 142,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_live_migrate_implicit_az",
+      "startLine": 144,
+      "endLine": 188,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server",
+      "startLine": 190,
+      "endLine": 196,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_server_to_zone",
+      "startLine": 198,
+      "endLine": 208,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_cold_migrate_cross_az",
+      "startLine": 210,
+      "endLine": 223,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_server_without_az_constraint",
+      "startLine": 273,
+      "endLine": 282,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_unpin_az_server_without_az_constraint",
+      "startLine": 284,
+      "endLine": 293,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_host_server_without_az_constraint",
+      "startLine": 299,
+      "endLine": 313,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_host_and_unpin_server_without_az_constraint",
+      "startLine": 315,
+      "endLine": 332,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_az_server_without_az_constraint",
+      "startLine": 338,
+      "endLine": 354,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_unshelve_to_az_and_host_server_without_az_constraint",
+      "startLine": 361,
+      "endLine": 377,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_unshelve_to_wrong_az_and_host_server_without_az_constraint",
+      "startLine": 379,
+      "endLine": 403,
+      "ccn": 2,
+      "nloc": 22,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_unshelve_a_server_with_az_constraint",
+      "startLine": 409,
+      "endLine": 420,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_unpin_az_a_server_with_az_constraint",
+      "startLine": 426,
+      "endLine": 435,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_host_server_with_az_constraint",
+      "startLine": 443,
+      "endLine": 455,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_host_wrong_az_server_with_az_constraint",
+      "startLine": 457,
+      "endLine": 477,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_host_and_unpin_server_with_az_constraint",
+      "startLine": 483,
+      "endLine": 495,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_az_a_server_with_az_constraint",
+      "startLine": 501,
+      "endLine": 513,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_host_and_az_a_server_with_az_constraint",
+      "startLine": 521,
+      "endLine": 535,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_unshelve_to_host_and_wrong_az_a_server_with_az_constraint",
+      "startLine": 537,
+      "endLine": 560,
+      "ccn": 1,
+      "nloc": 20,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resize_revert_across_azs",
+      "startLine": 562,
+      "endLine": 584,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

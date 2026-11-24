@@ -1,0 +1,548 @@
+{
+  "file": "src/nova/tests/functional/libvirt/test_vpmem.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 14,
+      "endLine": 24,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 14,
+          "endLine": 24
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 15,
+      "endLine": 15,
+      "message": "standard import \"unittest.mock\" should be placed before third party import \"fixtures\"",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 15
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 180,
+          "endLine": 180
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        },
+        {
+          "line": 183,
+          "endLine": 183
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 101,
+      "endLine": 101,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 201,
+          "endLine": 201
+        },
+        {
+          "line": 206,
+          "endLine": 206
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 101,
+      "endLine": 101,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 201,
+          "endLine": 201
+        },
+        {
+          "line": 206,
+          "endLine": 206
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 105,
+      "endLine": 105,
+      "message": "Access to a protected member _vpmems_by_name of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 105,
+          "endLine": 105
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 126,
+      "endLine": 126,
+      "message": "Number of parameters was 9 in 'InstanceHelperMixin._create_server' and is now 4 in overriding 'VPMEMTestBase._create_server' method",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 126,
+          "endLine": 126
+        },
+        {
+          "line": 204,
+          "endLine": 204
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 151,
+      "endLine": 151,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 151,
+          "endLine": 151
+        },
+        {
+          "line": 214,
+          "endLine": 214
+        },
+        {
+          "line": 251,
+          "endLine": 251
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 153,
+      "endLine": 153,
+      "message": "Attribute 'compute1' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 153,
+          "endLine": 153
+        },
+        {
+          "line": 217,
+          "endLine": 217
+        },
+        {
+          "line": 218,
+          "endLine": 218
+        },
+        {
+          "line": 254,
+          "endLine": 254
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 195,
+      "endLine": 195,
+      "message": "Parameter 'flavor_id' has been renamed to 'flavor' in overriding 'VPMEMResizeTests._resize_server' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 195,
+          "endLine": 195
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R40"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 33,
+      "endLine": 84,
+      "ccn": 1,
+      "nloc": 50,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_connection",
+      "startLine": 86,
+      "endLine": 91,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_start_compute_service",
+      "startLine": 93,
+      "endLine": 124,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_server",
+      "startLine": 126,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_delete_server",
+      "startLine": 134,
+      "endLine": 135,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_vpmem_allocations",
+      "startLine": 137,
+      "endLine": 141,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp",
+      "startLine": 146,
+      "endLine": 149,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_servers_with_vpmem",
+      "startLine": 151,
+      "endLine": 177,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 182,
+      "endLine": 193,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_resize_server",
+      "startLine": 195,
+      "endLine": 202,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_confirm_resize",
+      "startLine": 204,
+      "endLine": 207,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_revert_resize",
+      "startLine": 209,
+      "endLine": 212,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resize",
+      "startLine": 214,
+      "endLine": 249,
+      "ccn": 1,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_resize_same_host",
+      "startLine": 251,
+      "endLine": 284,
+      "ccn": 1,
+      "nloc": 27,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

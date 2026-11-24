@@ -1,0 +1,175 @@
+{
+  "file": "src/nova/db/api/migrations/versions/d67eeaabee36_initial_version.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 28,
+      "endLine": 28,
+      "message": "Constant name \"revision\" doesn't conform to UPPER_CASE naming style",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 29,
+          "endLine": 29
+        },
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 31,
+          "endLine": 31
+        },
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 602,
+          "endLine": 602
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "function_lines",
+      "value": 560,
+      "threshold": 100,
+      "function": "upgrade",
+      "line": 40,
+      "endLine": 599,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "InetSmall",
+      "startLine": 34,
+      "endLine": 37,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "upgrade",
+      "startLine": 40,
+      "endLine": 599,
+      "ccn": 2,
+      "nloc": 524,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "downgrade",
+      "startLine": 602,
+      "endLine": 603,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 0,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

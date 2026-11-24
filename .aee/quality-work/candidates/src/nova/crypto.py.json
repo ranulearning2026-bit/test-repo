@@ -1,0 +1,439 @@
+{
+  "file": "src/nova/crypto.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 22,
+      "endLine": 47,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 22,
+          "endLine": 47
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0603",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0603"
+      ],
+      "line": 62,
+      "endLine": 62,
+      "message": "Using the global statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 62,
+          "endLine": 62
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R52"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        },
+        {
+          "line": 84,
+          "endLine": 84
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 280,
+          "endLine": 280
+        },
+        {
+          "line": 302,
+          "endLine": 302
+        },
+        {
+          "line": 316,
+          "endLine": 316
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001"
+      ],
+      "line": 79,
+      "endLine": 79,
+      "message": "Do not catch blind exception: `Exception`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 79,
+          "endLine": 79
+        },
+        {
+          "line": 122,
+          "endLine": 122
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 80,
+      "endLine": 81,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.InvalidKeypair(reason=_('failed to generate fingerprint')) from exc'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 81
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 105,
+      "endLine": 105,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 132,
+          "endLine": 132
+        },
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 229,
+          "endLine": 229
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 105,
+      "endLine": 105,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 131,
+          "endLine": 131
+        },
+        {
+          "line": 132,
+          "endLine": 132
+        },
+        {
+          "line": 142,
+          "endLine": 142
+        },
+        {
+          "line": 229,
+          "endLine": 229
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 166,
+      "endLine": 166,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 166,
+          "endLine": 166
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R50"
+    },
+    {
+      "canonical": "pylint:E0704",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E0704"
+      ],
+      "line": 178,
+      "endLine": 178,
+      "message": "The raise statement is not inside an except clause",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 178,
+          "endLine": 178
+        }
+      ],
+      "id": "T10"
+    },
+    {
+      "canonical": "ruff:PLE0704",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PLE0704"
+      ],
+      "line": 178,
+      "endLine": 178,
+      "message": "Bare `raise` statement is not inside an exception handler",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 178,
+          "endLine": 178
+        }
+      ],
+      "id": "T11"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_get_key_manager",
+      "startLine": 61,
+      "endLine": 65,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "generate_fingerprint",
+      "startLine": 68,
+      "endLine": 81,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "generate_x509_fingerprint",
+      "startLine": 84,
+      "endLine": 97,
+      "ccn": 4,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "generate_key_pair",
+      "startLine": 100,
+      "endLine": 107,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "ssh_encrypt_text",
+      "startLine": 110,
+      "endLine": 123,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "generate_winrm_x509_cert",
+      "startLine": 126,
+      "endLine": 156,
+      "ccn": 1,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_x509_openssl_config",
+      "startLine": 159,
+      "endLine": 167,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_handle_key_manager_error_forbidden",
+      "startLine": 170,
+      "endLine": 180,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "ensure_vtpm_secret",
+      "startLine": 183,
+      "endLine": 239,
+      "ccn": 5,
+      "nloc": 35,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "delete_vtpm_secret",
+      "startLine": 242,
+      "endLine": 277,
+      "ccn": 4,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "create_encryption_secret",
+      "startLine": 280,
+      "endLine": 299,
+      "ccn": 2,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_encryption_secret",
+      "startLine": 302,
+      "endLine": 313,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "delete_encryption_secret",
+      "startLine": 316,
+      "endLine": 329,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 12
+  }
+}

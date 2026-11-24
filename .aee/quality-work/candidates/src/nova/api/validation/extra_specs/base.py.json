@@ -1,0 +1,207 @@
+{
+  "file": "src/nova/api/validation/extra_specs/base.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 70,
+      "endLine": 71,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 70,
+          "endLine": 71
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 81,
+      "endLine": 83,
+      "message": "Consider explicitly re-raising using 'except ValueError as exc' and 'raise exception.ValidationError(f\"Validation failed; '{value}' is not a valid integer value.\") from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 81,
+          "endLine": 83
+        },
+        {
+          "line": 101,
+          "endLine": 104
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 106,
+      "endLine": 106,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 106,
+          "endLine": 106
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__post_init__",
+      "startLine": 37,
+      "endLine": 60,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_validate_str",
+      "startLine": 62,
+      "endLine": 75,
+      "ccn": 6,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "_validate_int",
+      "startLine": 77,
+      "endLine": 95,
+      "ccn": 6,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "_validate_bool",
+      "startLine": 97,
+      "endLine": 104,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "validate",
+      "startLine": 106,
+      "endLine": 120,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

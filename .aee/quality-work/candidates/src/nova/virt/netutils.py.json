@@ -1,0 +1,511 @@
+{
+  "file": "src/nova/virt/netutils.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 44,
+          "endLine": 44
+        },
+        {
+          "line": 227,
+          "endLine": 227
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 41,
+      "endLine": 41,
+      "message": "Access to a protected member _prefixlen of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 41,
+          "endLine": 41
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 49,
+      "endLine": 49,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 49,
+          "endLine": 49
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 168,
+          "endLine": 168
+        },
+        {
+          "line": 334,
+          "endLine": 334
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Too many local variables (31/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Too many branches (15/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Too many statements (57/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 140,
+      "endLine": 140,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 254,
+          "endLine": 254
+        },
+        {
+          "line": 291,
+          "endLine": 291
+        },
+        {
+          "line": 295,
+          "endLine": 295
+        },
+        {
+          "line": 296,
+          "endLine": 296
+        },
+        {
+          "line": 310,
+          "endLine": 310
+        },
+        {
+          "line": 311,
+          "endLine": 311
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 140,
+      "endLine": 140,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 254,
+          "endLine": 254
+        },
+        {
+          "line": 291,
+          "endLine": 291
+        },
+        {
+          "line": 295,
+          "endLine": 295
+        },
+        {
+          "line": 296,
+          "endLine": 296
+        },
+        {
+          "line": 310,
+          "endLine": 310
+        },
+        {
+          "line": 311,
+          "endLine": 311
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:E0606",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E0606"
+      ],
+      "line": 314,
+      "endLine": 314,
+      "message": "Possibly using variable 'netmask' before assignment",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 314,
+          "endLine": 314
+        }
+      ],
+      "id": "T10"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 345,
+      "endLine": 356,
+      "message": "Unnecessary \"elif\" after \"return\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 345,
+          "endLine": 356
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R21"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "ccn",
+      "value": 20,
+      "threshold": 15,
+      "function": "get_injected_network_template",
+      "line": 60,
+      "endLine": 165,
+      "id": "M1"
+    },
+    {
+      "metric": "function_lines",
+      "value": 106,
+      "threshold": 100,
+      "function": "get_injected_network_template",
+      "line": 60,
+      "endLine": 165,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 15,
+      "threshold": 4,
+      "function": "get_injected_network_template",
+      "line": 60,
+      "endLine": 165,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 10,
+      "threshold": 4,
+      "function": "get_network_metadata",
+      "line": 168,
+      "endLine": 224,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "get_ec2_ip_info",
+      "line": 227,
+      "endLine": 240,
+      "id": "M5"
+    }
+  ],
+  "functions": [
+    {
+      "function": "get_net_and_mask",
+      "startLine": 34,
+      "endLine": 36,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_net_and_prefixlen",
+      "startLine": 39,
+      "endLine": 41,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_ip_version",
+      "startLine": 44,
+      "endLine": 46,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_first_network",
+      "startLine": 49,
+      "endLine": 57,
+      "ccn": 4,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_injected_network_template",
+      "startLine": 60,
+      "endLine": 165,
+      "ccn": 20,
+      "nloc": 82,
+      "params": 3,
+      "maxNesting": 15
+    },
+    {
+      "function": "get_network_metadata",
+      "startLine": 168,
+      "endLine": 224,
+      "ccn": 15,
+      "nloc": 34,
+      "params": 1,
+      "maxNesting": 10
+    },
+    {
+      "function": "get_ec2_ip_info",
+      "startLine": 227,
+      "endLine": 240,
+      "ccn": 7,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 5
+    },
+    {
+      "function": "_get_eth_link",
+      "startLine": 243,
+      "endLine": 269,
+      "ccn": 3,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_link_mtu",
+      "startLine": 272,
+      "endLine": 276,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_nets",
+      "startLine": 279,
+      "endLine": 331,
+      "ccn": 7,
+      "nloc": 38,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_default_route",
+      "startLine": 334,
+      "endLine": 356,
+      "ccn": 5,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_dns_services",
+      "startLine": 359,
+      "endLine": 365,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_cached_vifs_with_vlan",
+      "startLine": 368,
+      "endLine": 375,
+      "ccn": 4,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_cached_vifs_with_trusted",
+      "startLine": 378,
+      "endLine": 384,
+      "ccn": 4,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

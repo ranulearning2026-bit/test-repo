@@ -1,0 +1,576 @@
+{
+  "file": "src/nova/api/openstack/compute/simple_tenant_usage.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 34,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 34
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 54,
+      "endLine": 55,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 55
+        },
+        {
+          "line": 60,
+          "endLine": 61
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 69,
+      "endLine": 82,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 69,
+          "endLine": 82
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 109,
+      "endLine": 109,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 109,
+          "endLine": 109
+        },
+        {
+          "line": 140,
+          "endLine": 140
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 140,
+      "endLine": 140,
+      "message": "Too many local variables (18/15)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 140,
+          "endLine": 140
+        },
+        {
+          "line": 328,
+          "endLine": 328
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 140,
+      "endLine": 140,
+      "message": "Too many statements (53/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 140,
+          "endLine": 140
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "pylint:R1730",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1730"
+      ],
+      "line": 290,
+      "endLine": 291,
+      "message": "Consider using 'period_stop = min(period_stop, now)' instead of unnecessary if block",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 290,
+          "endLine": 291
+        },
+        {
+          "line": 341,
+          "endLine": 342
+        }
+      ],
+      "id": "T11"
+    },
+    {
+      "canonical": "ruff:PLR1730",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PLR1730"
+      ],
+      "line": 290,
+      "endLine": 291,
+      "message": "Replace `if` statement with `period_stop = min(period_stop, now)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 290,
+          "endLine": 291
+        },
+        {
+          "line": 341,
+          "endLine": 342
+        }
+      ],
+      "id": "T12"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 320,
+      "endLine": 320,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 320,
+          "endLine": 320
+        },
+        {
+          "line": 328,
+          "endLine": 328
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 336,
+      "endLine": 336,
+      "message": "Unpacked variable `ignore` is never used",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 336,
+          "endLine": 336
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 336,
+      "endLine": 336,
+      "message": "Unused variable 'ignore'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 336,
+          "endLine": 336
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:C1802",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C1802"
+      ],
+      "line": 356,
+      "endLine": 356,
+      "message": "Do not use `len(SEQUENCE)` without comparison to determine if a sequence is empty",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 356,
+          "endLine": 356
+        }
+      ],
+      "id": "T16"
+    },
+    {
+      "canonical": "ruff:RUF015",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF015"
+      ],
+      "line": 357,
+      "endLine": 357,
+      "message": "Prefer `next(iter(usage))` over single element slice",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 357,
+          "endLine": 357
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R54"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_hours_for",
+      "line": 51,
+      "endLine": 82,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "_get_instances_all_cells",
+      "line": 109,
+      "endLine": 138,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_get_instances_all_cells",
+      "line": 109,
+      "endLine": 138,
+      "id": "M3"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "_tenant_usages_for_period",
+      "line": 140,
+      "endLine": 222,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_index",
+      "line": 279,
+      "endLine": 312,
+      "id": "M5"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_show",
+      "line": 328,
+      "endLine": 369,
+      "id": "M6"
+    }
+  ],
+  "functions": [
+    {
+      "function": "parse_strtime",
+      "startLine": 39,
+      "endLine": 43,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_hours_for",
+      "startLine": 51,
+      "endLine": 82,
+      "ccn": 11,
+      "nloc": 23,
+      "params": 4,
+      "maxNesting": 8
+    },
+    {
+      "function": "_get_flavor",
+      "startLine": 84,
+      "endLine": 107,
+      "ccn": 5,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "_get_instances_all_cells",
+      "startLine": 109,
+      "endLine": 138,
+      "ccn": 7,
+      "nloc": 23,
+      "params": 7,
+      "maxNesting": 5
+    },
+    {
+      "function": "_tenant_usages_for_period",
+      "startLine": 140,
+      "endLine": 222,
+      "ccn": 10,
+      "nloc": 65,
+      "params": 8,
+      "maxNesting": 3
+    },
+    {
+      "function": "_parse_datetime",
+      "startLine": 224,
+      "endLine": 248,
+      "ccn": 6,
+      "nloc": 20,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "_parse_qs_params",
+      "startLine": 250,
+      "endLine": 263,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "index",
+      "startLine": 271,
+      "endLine": 277,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_index",
+      "startLine": 279,
+      "endLine": 312,
+      "ccn": 7,
+      "nloc": 26,
+      "params": 3,
+      "maxNesting": 5
+    },
+    {
+      "function": "show",
+      "startLine": 320,
+      "endLine": 326,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_show",
+      "startLine": 328,
+      "endLine": 369,
+      "ccn": 8,
+      "nloc": 33,
+      "params": 4,
+      "maxNesting": 5
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

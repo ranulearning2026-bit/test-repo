@@ -1,0 +1,4498 @@
+{
+  "file": "src/nova/virt/libvirt/config.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0302",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0302"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Too many lines in module (4271/1000)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R25"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 26,
+      "endLine": 38,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 38
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 46,
+      "endLine": 46,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 43,
+      "occurrences": [
+        {
+          "line": 46,
+          "endLine": 46
+        },
+        {
+          "line": 50,
+          "endLine": 50
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        },
+        {
+          "line": 83,
+          "endLine": 83
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 96,
+          "endLine": 96
+        },
+        {
+          "line": 103,
+          "endLine": 103
+        },
+        {
+          "line": 114,
+          "endLine": 114
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        },
+        {
+          "line": 194,
+          "endLine": 194
+        },
+        {
+          "line": 200,
+          "endLine": 200
+        },
+        {
+          "line": 210,
+          "endLine": 210
+        },
+        {
+          "line": 216,
+          "endLine": 216
+        },
+        {
+          "line": 314,
+          "endLine": 314
+        },
+        {
+          "line": 318,
+          "endLine": 318
+        },
+        {
+          "line": 322,
+          "endLine": 322
+        },
+        {
+          "line": 663,
+          "endLine": 663
+        },
+        {
+          "line": 709,
+          "endLine": 709
+        },
+        {
+          "line": 748,
+          "endLine": 748
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 2009,
+          "endLine": 2009
+        },
+        {
+          "line": 2010,
+          "endLine": 2010
+        },
+        {
+          "line": 2011,
+          "endLine": 2011
+        },
+        {
+          "line": 2012,
+          "endLine": 2012
+        },
+        {
+          "line": 3075,
+          "endLine": 3075
+        },
+        {
+          "line": 3101,
+          "endLine": 3101
+        },
+        {
+          "line": 3670,
+          "endLine": 3670
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 47,
+      "endLine": 47,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 2009,
+          "endLine": 2009
+        },
+        {
+          "line": 2010,
+          "endLine": 2010
+        },
+        {
+          "line": 2011,
+          "endLine": 2011
+        },
+        {
+          "line": 2012,
+          "endLine": 2012
+        },
+        {
+          "line": 3075,
+          "endLine": 3075
+        },
+        {
+          "line": 3101,
+          "endLine": 3101
+        },
+        {
+          "line": 3670,
+          "endLine": 3671
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 51,
+      "endLine": 54,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 51,
+          "endLine": 54
+        },
+        {
+          "line": 67,
+          "endLine": 72
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 108,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        },
+        {
+          "line": 125,
+          "endLine": 125
+        },
+        {
+          "line": 157,
+          "endLine": 157
+        },
+        {
+          "line": 220,
+          "endLine": 220
+        },
+        {
+          "line": 236,
+          "endLine": 236
+        },
+        {
+          "line": 252,
+          "endLine": 252
+        },
+        {
+          "line": 286,
+          "endLine": 286
+        },
+        {
+          "line": 326,
+          "endLine": 326
+        },
+        {
+          "line": 361,
+          "endLine": 361
+        },
+        {
+          "line": 382,
+          "endLine": 382
+        },
+        {
+          "line": 402,
+          "endLine": 402
+        },
+        {
+          "line": 415,
+          "endLine": 415
+        },
+        {
+          "line": 459,
+          "endLine": 459
+        },
+        {
+          "line": 490,
+          "endLine": 490
+        },
+        {
+          "line": 540,
+          "endLine": 540
+        },
+        {
+          "line": 579,
+          "endLine": 579
+        },
+        {
+          "line": 604,
+          "endLine": 604
+        },
+        {
+          "line": 641,
+          "endLine": 641
+        },
+        {
+          "line": 725,
+          "endLine": 725
+        },
+        {
+          "line": 781,
+          "endLine": 781
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Class 'LibvirtConfigObject' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 57,
+      "endLine": 57,
+      "message": "Class `LibvirtConfigObject` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 57,
+          "endLine": 57
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 199,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 128,
+          "endLine": 128
+        },
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        },
+        {
+          "line": 160,
+          "endLine": 160
+        },
+        {
+          "line": 169,
+          "endLine": 169
+        },
+        {
+          "line": 244,
+          "endLine": 244
+        },
+        {
+          "line": 264,
+          "endLine": 264
+        },
+        {
+          "line": 329,
+          "endLine": 329
+        },
+        {
+          "line": 334,
+          "endLine": 334
+        },
+        {
+          "line": 462,
+          "endLine": 462
+        },
+        {
+          "line": 469,
+          "endLine": 469
+        },
+        {
+          "line": 478,
+          "endLine": 478
+        },
+        {
+          "line": 493,
+          "endLine": 493
+        },
+        {
+          "line": 502,
+          "endLine": 502
+        },
+        {
+          "line": 519,
+          "endLine": 519
+        },
+        {
+          "line": 543,
+          "endLine": 543
+        },
+        {
+          "line": 552,
+          "endLine": 552
+        },
+        {
+          "line": 565,
+          "endLine": 565
+        },
+        {
+          "line": 582,
+          "endLine": 582
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 199,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 128,
+          "endLine": 128
+        },
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 147,
+          "endLine": 147
+        },
+        {
+          "line": 160,
+          "endLine": 160
+        },
+        {
+          "line": 169,
+          "endLine": 169
+        },
+        {
+          "line": 244,
+          "endLine": 244
+        },
+        {
+          "line": 264,
+          "endLine": 264
+        },
+        {
+          "line": 329,
+          "endLine": 329
+        },
+        {
+          "line": 334,
+          "endLine": 334
+        },
+        {
+          "line": 462,
+          "endLine": 462
+        },
+        {
+          "line": 469,
+          "endLine": 469
+        },
+        {
+          "line": 478,
+          "endLine": 478
+        },
+        {
+          "line": 493,
+          "endLine": 493
+        },
+        {
+          "line": 502,
+          "endLine": 502
+        },
+        {
+          "line": 519,
+          "endLine": 519
+        },
+        {
+          "line": 543,
+          "endLine": 543
+        },
+        {
+          "line": 552,
+          "endLine": 552
+        },
+        {
+          "line": 565,
+          "endLine": 565
+        },
+        {
+          "line": 582,
+          "endLine": 582
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0202",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0202"
+      ],
+      "line": 103,
+      "endLine": 103,
+      "message": "Class method parse_on_off_str should have 'cls' as first argument",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 103,
+          "endLine": 103
+        },
+        {
+          "line": 114,
+          "endLine": 114
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        }
+      ],
+      "id": "T13"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 263,
+      "endLine": 263,
+      "message": "Too many branches (13/12)",
+      "toolSeverity": "warning",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 263,
+          "endLine": 263
+        },
+        {
+          "line": 1249,
+          "endLine": 1249
+        },
+        {
+          "line": 1307,
+          "endLine": 1307
+        },
+        {
+          "line": 1412,
+          "endLine": 1412
+        },
+        {
+          "line": 1552,
+          "endLine": 1552
+        },
+        {
+          "line": 1611,
+          "endLine": 1611
+        },
+        {
+          "line": 1955,
+          "endLine": 1955
+        },
+        {
+          "line": 2080,
+          "endLine": 2080
+        },
+        {
+          "line": 3012,
+          "endLine": 3012
+        },
+        {
+          "line": 3217,
+          "endLine": 3217
+        },
+        {
+          "line": 3379,
+          "endLine": 3379
+        },
+        {
+          "line": 3425,
+          "endLine": 3425
+        },
+        {
+          "line": 3627,
+          "endLine": 3627
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:C0325",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0325"
+      ],
+      "line": 267,
+      "endLine": 267,
+      "message": "Unnecessary parens after '=' keyword",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 267,
+          "endLine": 267
+        },
+        {
+          "line": 2092,
+          "endLine": 2092
+        },
+        {
+          "line": 3395,
+          "endLine": 3395
+        },
+        {
+          "line": 3397,
+          "endLine": 3397
+        },
+        {
+          "line": 3400,
+          "endLine": 3400
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R41"
+    },
+    {
+      "canonical": "too-many-nested-blocks",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1702"
+      ],
+      "line": 268,
+      "endLine": 283,
+      "message": "Too many nested blocks (6/5)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 268,
+          "endLine": 283
+        }
+      ],
+      "id": "T16"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 287,
+      "endLine": 291,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 287,
+          "endLine": 291
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:C0123",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0123"
+      ],
+      "line": 309,
+      "endLine": 309,
+      "message": "Use isinstance() rather than type() for a typecheck.",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 309,
+          "endLine": 309
+        }
+      ],
+      "id": "T18"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 396,
+      "endLine": 397,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 396,
+          "endLine": 397
+        },
+        {
+          "line": 1513,
+          "endLine": 1514
+        }
+      ],
+      "id": "T19",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "pylint:E1121",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1121"
+      ],
+      "line": 757,
+      "endLine": 758,
+      "message": "Too many positional arguments for constructor call",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 757,
+          "endLine": 758
+        }
+      ],
+      "id": "T20"
+    },
+    {
+      "canonical": "pylint:W0715",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0715"
+      ],
+      "line": 757,
+      "endLine": 758,
+      "message": "Exception arguments suggest string formatting might be intended",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 757,
+          "endLine": 758
+        }
+      ],
+      "id": "T21"
+    },
+    {
+      "canonical": "pylint:R0902",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0902"
+      ],
+      "line": 900,
+      "endLine": 900,
+      "message": "Too many instance attributes (8/7)",
+      "toolSeverity": "warning",
+      "count": 15,
+      "occurrences": [
+        {
+          "line": 900,
+          "endLine": 900
+        },
+        {
+          "line": 1100,
+          "endLine": 1100
+        },
+        {
+          "line": 1198,
+          "endLine": 1198
+        },
+        {
+          "line": 1479,
+          "endLine": 1479
+        },
+        {
+          "line": 1519,
+          "endLine": 1519
+        },
+        {
+          "line": 1650,
+          "endLine": 1650
+        },
+        {
+          "line": 1899,
+          "endLine": 1899
+        },
+        {
+          "line": 2196,
+          "endLine": 2196
+        },
+        {
+          "line": 2985,
+          "endLine": 2985
+        },
+        {
+          "line": 3140,
+          "endLine": 3140
+        },
+        {
+          "line": 3604,
+          "endLine": 3604
+        },
+        {
+          "line": 3754,
+          "endLine": 3754
+        },
+        {
+          "line": 3880,
+          "endLine": 3880
+        },
+        {
+          "line": 3928,
+          "endLine": 3928
+        },
+        {
+          "line": 4092,
+          "endLine": 4092
+        }
+      ],
+      "id": "T22",
+      "ruleGroup": "R30"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 996,
+      "endLine": 996,
+      "message": "Attribute name \"memAccess\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 996,
+          "endLine": 996
+        },
+        {
+          "line": 3091,
+          "endLine": 3091
+        },
+        {
+          "line": 3093,
+          "endLine": 3093
+        },
+        {
+          "line": 3892,
+          "endLine": 3892
+        }
+      ],
+      "id": "T23",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 1307,
+      "endLine": 1307,
+      "message": "Too many statements (71/50)",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 1307,
+          "endLine": 1307
+        },
+        {
+          "line": 1412,
+          "endLine": 1412
+        },
+        {
+          "line": 1955,
+          "endLine": 1955
+        },
+        {
+          "line": 2080,
+          "endLine": 2080
+        },
+        {
+          "line": 3217,
+          "endLine": 3217
+        },
+        {
+          "line": 3425,
+          "endLine": 3425
+        }
+      ],
+      "id": "T24",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 1806,
+      "endLine": 1806,
+      "message": "Redefining built-in 'type'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 1806,
+          "endLine": 1806
+        },
+        {
+          "line": 2050,
+          "endLine": 2050
+        }
+      ],
+      "id": "T25",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 1817,
+      "endLine": 1817,
+      "message": "Number of parameters was 2 in 'LibvirtConfigObject.parse_dom' and is now 1 in overriding 'LibvirtConfigGuestDeviceAddress.parse_dom' method",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 1817,
+          "endLine": 1817
+        },
+        {
+          "line": 1852,
+          "endLine": 1852
+        },
+        {
+          "line": 1885,
+          "endLine": 1885
+        }
+      ],
+      "id": "T26",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 1891,
+      "endLine": 1891,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1891,
+          "endLine": 1891
+        }
+      ],
+      "id": "T27",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 1955,
+      "endLine": 1955,
+      "message": "Too many local variables (18/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1955,
+          "endLine": 1955
+        }
+      ],
+      "id": "T28",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "pylint:R0916",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0916"
+      ],
+      "line": 1985,
+      "endLine": 1989,
+      "message": "Too many boolean expressions in if statement (6/5)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1985,
+          "endLine": 1989
+        }
+      ],
+      "id": "T29"
+    },
+    {
+      "canonical": "pylint:R1734",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1734"
+      ],
+      "line": 3679,
+      "endLine": 3679,
+      "message": "Consider using [] instead of list()",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 3679,
+          "endLine": 3679
+        },
+        {
+          "line": 3699,
+          "endLine": 3699
+        }
+      ],
+      "id": "T30"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 3679,
+      "endLine": 3679,
+      "message": "Unnecessary `list()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 3679,
+          "endLine": 3679
+        },
+        {
+          "line": 3699,
+          "endLine": 3699
+        }
+      ],
+      "id": "T31",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 4191,
+      "endLine": 4191,
+      "message": "Attribute 'aw_bits' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 4191,
+          "endLine": 4191
+        }
+      ],
+      "id": "T32",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 4260,
+      "endLine": 4260,
+      "message": "Unused argument 'kwargs'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 4260,
+          "endLine": 4260
+        }
+      ],
+      "id": "T33",
+      "ruleGroup": "R11"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 13,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 263,
+      "endLine": 283,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 333,
+      "endLine": 346,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 389,
+      "endLine": 399,
+      "id": "M3"
+    },
+    {
+      "metric": "ccn",
+      "value": 16,
+      "threshold": 15,
+      "function": "parse_dom",
+      "line": 427,
+      "endLine": 456,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 12,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 427,
+      "endLine": 456,
+      "id": "M5"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 941,
+      "endLine": 967,
+      "id": "M6"
+    },
+    {
+      "metric": "nesting",
+      "value": 10,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 1116,
+      "endLine": 1162,
+      "id": "M7"
+    },
+    {
+      "metric": "nesting",
+      "value": 14,
+      "threshold": 4,
+      "function": "_format_iotune",
+      "line": 1249,
+      "endLine": 1305,
+      "id": "M8"
+    },
+    {
+      "metric": "ccn",
+      "value": 31,
+      "threshold": 15,
+      "function": "format_dom",
+      "line": 1307,
+      "endLine": 1410,
+      "id": "M9"
+    },
+    {
+      "metric": "function_lines",
+      "value": 104,
+      "threshold": 100,
+      "function": "format_dom",
+      "line": 1307,
+      "endLine": 1410,
+      "id": "M10"
+    },
+    {
+      "metric": "nesting",
+      "value": 22,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 1307,
+      "endLine": 1410,
+      "id": "M11"
+    },
+    {
+      "metric": "ccn",
+      "value": 23,
+      "threshold": 15,
+      "function": "parse_dom",
+      "line": 1412,
+      "endLine": 1476,
+      "id": "M12"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 1412,
+      "endLine": 1476,
+      "id": "M13"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 1495,
+      "endLine": 1516,
+      "id": "M14"
+    },
+    {
+      "metric": "ccn",
+      "value": 22,
+      "threshold": 15,
+      "function": "format_dom",
+      "line": 1552,
+      "endLine": 1609,
+      "id": "M15"
+    },
+    {
+      "metric": "nesting",
+      "value": 14,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 1552,
+      "endLine": 1609,
+      "id": "M16"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 1611,
+      "endLine": 1647,
+      "id": "M17"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 1687,
+      "endLine": 1708,
+      "id": "M18"
+    },
+    {
+      "metric": "ccn",
+      "value": 45,
+      "threshold": 15,
+      "function": "format_dom",
+      "line": 1955,
+      "endLine": 2078,
+      "id": "M19"
+    },
+    {
+      "metric": "function_lines",
+      "value": 124,
+      "threshold": 100,
+      "function": "format_dom",
+      "line": 1955,
+      "endLine": 2078,
+      "id": "M20"
+    },
+    {
+      "metric": "nesting",
+      "value": 27,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 1955,
+      "endLine": 2078,
+      "id": "M21"
+    },
+    {
+      "metric": "ccn",
+      "value": 37,
+      "threshold": 15,
+      "function": "parse_dom",
+      "line": 2080,
+      "endLine": 2169,
+      "id": "M22"
+    },
+    {
+      "metric": "nesting",
+      "value": 17,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 2080,
+      "endLine": 2169,
+      "id": "M23"
+    },
+    {
+      "metric": "nesting",
+      "value": 10,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 2214,
+      "endLine": 2247,
+      "id": "M24"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 2472,
+      "endLine": 2481,
+      "id": "M25"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 2710,
+      "endLine": 2732,
+      "id": "M26"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 2749,
+      "endLine": 2770,
+      "id": "M27"
+    },
+    {
+      "metric": "nesting",
+      "value": 13,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 3012,
+      "endLine": 3044,
+      "id": "M28"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "_format_basic_props",
+      "line": 3190,
+      "endLine": 3215,
+      "id": "M29"
+    },
+    {
+      "metric": "ccn",
+      "value": 25,
+      "threshold": 15,
+      "function": "_format_os",
+      "line": 3217,
+      "endLine": 3291,
+      "id": "M30"
+    },
+    {
+      "metric": "nesting",
+      "value": 19,
+      "threshold": 4,
+      "function": "_format_os",
+      "line": 3217,
+      "endLine": 3291,
+      "id": "M31"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 3329,
+      "endLine": 3363,
+      "id": "M32"
+    },
+    {
+      "metric": "ccn",
+      "value": 21,
+      "threshold": 15,
+      "function": "_parse_os",
+      "line": 3379,
+      "endLine": 3423,
+      "id": "M33"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "_parse_os",
+      "line": 3379,
+      "endLine": 3423,
+      "id": "M34"
+    },
+    {
+      "metric": "ccn",
+      "value": 30,
+      "threshold": 15,
+      "function": "parse_dom",
+      "line": 3425,
+      "endLine": 3497,
+      "id": "M35"
+    },
+    {
+      "metric": "nesting",
+      "value": 12,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 3425,
+      "endLine": 3497,
+      "id": "M36"
+    },
+    {
+      "metric": "ccn",
+      "value": 19,
+      "threshold": 15,
+      "function": "parse_dom",
+      "line": 3627,
+      "endLine": 3667,
+      "id": "M37"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 3797,
+      "endLine": 3810,
+      "id": "M38"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 3898,
+      "endLine": 3925,
+      "id": "M39"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "format_dom",
+      "line": 3945,
+      "endLine": 3963,
+      "id": "M40"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "parse_dom",
+      "line": 4131,
+      "endLine": 4146,
+      "id": "M41"
+    },
+    {
+      "metric": "file_lines",
+      "value": 3241,
+      "threshold": 1000,
+      "function": null,
+      "line": 1,
+      "endLine": 3241,
+      "id": "M42"
+    }
+  ],
+  "functions": [
+    {
+      "function": "make_libvirt_device_alias",
+      "startLine": 46,
+      "endLine": 47,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_libvirt_device_alias",
+      "startLine": 50,
+      "endLine": 54,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 59,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_new_node",
+      "startLine": 66,
+      "endLine": 72,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_text_node",
+      "startLine": 74,
+      "endLine": 78,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "format_dom",
+      "startLine": 80,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_str",
+      "startLine": 83,
+      "endLine": 88,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 90,
+      "endLine": 94,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "to_xml",
+      "startLine": 96,
+      "endLine": 100,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_on_off_str",
+      "startLine": 103,
+      "endLine": 111,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_yes_no_str",
+      "startLine": 114,
+      "endLine": 115,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_on_off_str",
+      "startLine": 118,
+      "endLine": 119,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__repr__",
+      "startLine": 121,
+      "endLine": 122,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 127,
+      "endLine": 131,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 133,
+      "endLine": 144,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "format_dom",
+      "startLine": 146,
+      "endLine": 154,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 159,
+      "endLine": 166,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 168,
+      "endLine": 185,
+      "ccn": 6,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "features",
+      "startLine": 188,
+      "endLine": 191,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "machine_type",
+      "startLine": 194,
+      "endLine": 197,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "machine_type_alias",
+      "startLine": 200,
+      "endLine": 203,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "machine_type_alias",
+      "startLine": 206,
+      "endLine": 207,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "devices",
+      "startLine": 210,
+      "endLine": 213,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "os",
+      "startLine": 216,
+      "endLine": 217,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 222,
+      "endLine": 225,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 227,
+      "endLine": 233,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 238,
+      "endLine": 241,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 243,
+      "endLine": 249,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 254,
+      "endLine": 261,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 263,
+      "endLine": 283,
+      "ccn": 14,
+      "nloc": 20,
+      "params": 2,
+      "maxNesting": 13
+    },
+    {
+      "function": "__init__",
+      "startLine": 293,
+      "endLine": 295,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 297,
+      "endLine": 305,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_device",
+      "startLine": 307,
+      "endLine": 311,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "disk",
+      "startLine": 314,
+      "endLine": 315,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "video",
+      "startLine": 318,
+      "endLine": 319,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "tpm",
+      "startLine": 322,
+      "endLine": 323,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 328,
+      "endLine": 331,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 333,
+      "endLine": 346,
+      "ccn": 6,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "format_dom",
+      "startLine": 357,
+      "endLine": 358,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 363,
+      "endLine": 367,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 369,
+      "endLine": 379,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 384,
+      "endLine": 387,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 389,
+      "endLine": 399,
+      "ccn": 7,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "__init__",
+      "startLine": 404,
+      "endLine": 406,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 408,
+      "endLine": 412,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 417,
+      "endLine": 425,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 427,
+      "endLine": 456,
+      "ccn": 16,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 12
+    },
+    {
+      "function": "__init__",
+      "startLine": 461,
+      "endLine": 466,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 468,
+      "endLine": 475,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "format_dom",
+      "startLine": 477,
+      "endLine": 487,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 492,
+      "endLine": 499,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 501,
+      "endLine": 516,
+      "ccn": 6,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "format_dom",
+      "startLine": 518,
+      "endLine": 537,
+      "ccn": 3,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 542,
+      "endLine": 549,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 551,
+      "endLine": 562,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "format_dom",
+      "startLine": 564,
+      "endLine": 576,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 581,
+      "endLine": 586,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 588,
+      "endLine": 592,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 594,
+      "endLine": 601,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 606,
+      "endLine": 612,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 614,
+      "endLine": 626,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "format_dom",
+      "startLine": 628,
+      "endLine": 638,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 643,
+      "endLine": 652,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 654,
+      "endLine": 661,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "parse_arch",
+      "startLine": 663,
+      "endLine": 696,
+      "ccn": 4,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "format_dom",
+      "startLine": 698,
+      "endLine": 707,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "format_arch",
+      "startLine": 709,
+      "endLine": 722,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 726,
+      "endLine": 738,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 740,
+      "endLine": 746,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_child",
+      "startLine": 748,
+      "endLine": 752,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_domain",
+      "startLine": 754,
+      "endLine": 758,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_machine",
+      "startLine": 760,
+      "endLine": 764,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "format_dom",
+      "startLine": 766,
+      "endLine": 778,
+      "ccn": 5,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "__init__",
+      "startLine": 783,
+      "endLine": 790,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 792,
+      "endLine": 803,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 808,
+      "endLine": 815,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 817,
+      "endLine": 829,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "add_timer",
+      "startLine": 831,
+      "endLine": 832,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 837,
+      "endLine": 842,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 844,
+      "endLine": 848,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 850,
+      "endLine": 855,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__eq__",
+      "startLine": 857,
+      "endLine": 860,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__ne__",
+      "startLine": 862,
+      "endLine": 863,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__hash__",
+      "startLine": 865,
+      "endLine": 866,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 871,
+      "endLine": 876,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 878,
+      "endLine": 883,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "format_dom",
+      "startLine": 885,
+      "endLine": 893,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 902,
+      "endLine": 916,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 918,
+      "endLine": 939,
+      "ccn": 9,
+      "nloc": 21,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "format_dom",
+      "startLine": 941,
+      "endLine": 967,
+      "ccn": 9,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 6
+    },
+    {
+      "function": "add_feature",
+      "startLine": 969,
+      "endLine": 970,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 975,
+      "endLine": 978,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 980,
+      "endLine": 985,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 990,
+      "endLine": 996,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 998,
+      "endLine": 1005,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1007,
+      "endLine": 1020,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "__init__",
+      "startLine": 1025,
+      "endLine": 1029,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1031,
+      "endLine": 1038,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1040,
+      "endLine": 1046,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 1051,
+      "endLine": 1057,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1059,
+      "endLine": 1071,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1073,
+      "endLine": 1082,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 1087,
+      "endLine": 1091,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1093,
+      "endLine": 1097,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1102,
+      "endLine": 1114,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1116,
+      "endLine": 1162,
+      "ccn": 11,
+      "nloc": 34,
+      "params": 1,
+      "maxNesting": 10
+    },
+    {
+      "function": "__init__",
+      "startLine": 1167,
+      "endLine": 1168,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1173,
+      "endLine": 1178,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1180,
+      "endLine": 1195,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1200,
+      "endLine": 1247,
+      "ccn": 1,
+      "nloc": 47,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_format_iotune",
+      "startLine": 1249,
+      "endLine": 1305,
+      "ccn": 15,
+      "nloc": 43,
+      "params": 2,
+      "maxNesting": 14
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1307,
+      "endLine": 1410,
+      "ccn": 31,
+      "nloc": 78,
+      "params": 1,
+      "maxNesting": 22
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1412,
+      "endLine": 1476,
+      "ccn": 23,
+      "nloc": 61,
+      "params": 2,
+      "maxNesting": 8
+    },
+    {
+      "function": "__init__",
+      "startLine": 1480,
+      "endLine": 1493,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1495,
+      "endLine": 1516,
+      "ccn": 8,
+      "nloc": 20,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "__init__",
+      "startLine": 1528,
+      "endLine": 1550,
+      "ccn": 1,
+      "nloc": 22,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1552,
+      "endLine": 1609,
+      "ccn": 22,
+      "nloc": 51,
+      "params": 1,
+      "maxNesting": 14
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1611,
+      "endLine": 1647,
+      "ccn": 14,
+      "nloc": 32,
+      "params": 2,
+      "maxNesting": 8
+    },
+    {
+      "function": "__init__",
+      "startLine": 1652,
+      "endLine": 1663,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1665,
+      "endLine": 1685,
+      "ccn": 6,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1687,
+      "endLine": 1708,
+      "ccn": 9,
+      "nloc": 20,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "__init__",
+      "startLine": 1712,
+      "endLine": 1716,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1718,
+      "endLine": 1720,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1722,
+      "endLine": 1726,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1733,
+      "endLine": 1737,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1739,
+      "endLine": 1745,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1747,
+      "endLine": 1752,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1757,
+      "endLine": 1760,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1762,
+      "endLine": 1763,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1768,
+      "endLine": 1774,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1776,
+      "endLine": 1779,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1781,
+      "endLine": 1788,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1793,
+      "endLine": 1795,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1800,
+      "endLine": 1802,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1806,
+      "endLine": 1809,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1811,
+      "endLine": 1814,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1817,
+      "endLine": 1826,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 1830,
+      "endLine": 1836,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1838,
+      "endLine": 1850,
+      "ccn": 5,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1852,
+      "endLine": 1856,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_address",
+      "startLine": 1858,
+      "endLine": 1859,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 1863,
+      "endLine": 1869,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1871,
+      "endLine": 1883,
+      "ccn": 5,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 1885,
+      "endLine": 1889,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_address",
+      "startLine": 1891,
+      "endLine": 1896,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 1901,
+      "endLine": 1935,
+      "ccn": 1,
+      "nloc": 34,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__eq__",
+      "startLine": 1937,
+      "endLine": 1953,
+      "ccn": 8,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "format_dom",
+      "startLine": 1955,
+      "endLine": 2078,
+      "ccn": 45,
+      "nloc": 108,
+      "params": 1,
+      "maxNesting": 27
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 2080,
+      "endLine": 2169,
+      "ccn": 37,
+      "nloc": 80,
+      "params": 2,
+      "maxNesting": 17
+    },
+    {
+      "function": "add_filter_param",
+      "startLine": 2171,
+      "endLine": 2172,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "add_vport_param",
+      "startLine": 2174,
+      "endLine": 2175,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2180,
+      "endLine": 2185,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2187,
+      "endLine": 2193,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2198,
+      "endLine": 2212,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2214,
+      "endLine": 2247,
+      "ccn": 11,
+      "nloc": 31,
+      "params": 1,
+      "maxNesting": 10
+    },
+    {
+      "function": "__init__",
+      "startLine": 2252,
+      "endLine": 2256,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2258,
+      "endLine": 2265,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 2270,
+      "endLine": 2276,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2278,
+      "endLine": 2292,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 2296,
+      "endLine": 2301,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2303,
+      "endLine": 2310,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 2315,
+      "endLine": 2321,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2323,
+      "endLine": 2333,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 2338,
+      "endLine": 2340,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2345,
+      "endLine": 2349,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2354,
+      "endLine": 2358,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2362,
+      "endLine": 2370,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2372,
+      "endLine": 2377,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 2379,
+      "endLine": 2384,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2388,
+      "endLine": 2404,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__eq__",
+      "startLine": 2406,
+      "endLine": 2417,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2419,
+      "endLine": 2433,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 2435,
+      "endLine": 2446,
+      "ccn": 6,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "__init__",
+      "startLine": 2450,
+      "endLine": 2459,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2461,
+      "endLine": 2470,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 2472,
+      "endLine": 2481,
+      "ccn": 6,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "__init__",
+      "startLine": 2486,
+      "endLine": 2493,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2495,
+      "endLine": 2513,
+      "ccn": 5,
+      "nloc": 15,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 2518,
+      "endLine": 2522,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2524,
+      "endLine": 2535,
+      "ccn": 5,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 2541,
+      "endLine": 2545,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 2547,
+      "endLine": 2550,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2552,
+      "endLine": 2556,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2561,
+      "endLine": 2563,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2568,
+      "endLine": 2570,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2575,
+      "endLine": 2580,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2582,
+      "endLine": 2590,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 2594,
+      "endLine": 2599,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2601,
+      "endLine": 2607,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2612,
+      "endLine": 2618,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2620,
+      "endLine": 2628,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 2633,
+      "endLine": 2638,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2640,
+      "endLine": 2647,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 2652,
+      "endLine": 2658,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2660,
+      "endLine": 2669,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 2674,
+      "endLine": 2681,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2683,
+      "endLine": 2694,
+      "ccn": 4,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 2699,
+      "endLine": 2708,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2710,
+      "endLine": 2732,
+      "ccn": 10,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 8
+    },
+    {
+      "function": "__init__",
+      "startLine": 2737,
+      "endLine": 2747,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2749,
+      "endLine": 2770,
+      "ccn": 9,
+      "nloc": 20,
+      "params": 1,
+      "maxNesting": 8
+    },
+    {
+      "function": "__init__",
+      "startLine": 2775,
+      "endLine": 2780,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2782,
+      "endLine": 2789,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2794,
+      "endLine": 2801,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2803,
+      "endLine": 2823,
+      "ccn": 5,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "__init__",
+      "startLine": 2828,
+      "endLine": 2833,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2835,
+      "endLine": 2841,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2846,
+      "endLine": 2852,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2854,
+      "endLine": 2861,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2866,
+      "endLine": 2871,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2873,
+      "endLine": 2881,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 2886,
+      "endLine": 2888,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__eq__",
+      "startLine": 2890,
+      "endLine": 2893,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 2898,
+      "endLine": 2900,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2905,
+      "endLine": 2907,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2912,
+      "endLine": 2914,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2916,
+      "endLine": 2921,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2926,
+      "endLine": 2927,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2934,
+      "endLine": 2939,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2944,
+      "endLine": 2947,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2949,
+      "endLine": 2954,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2959,
+      "endLine": 2965,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2967,
+      "endLine": 2970,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 2975,
+      "endLine": 2977,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 2979,
+      "endLine": 2982,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 2992,
+      "endLine": 3010,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3012,
+      "endLine": 3044,
+      "ccn": 14,
+      "nloc": 31,
+      "params": 1,
+      "maxNesting": 13
+    },
+    {
+      "function": "__init__",
+      "startLine": 3063,
+      "endLine": 3068,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3070,
+      "endLine": 3078,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3088,
+      "endLine": 3094,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3096,
+      "endLine": 3108,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3118,
+      "endLine": 3120,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3122,
+      "endLine": 3131,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3136,
+      "endLine": 3137,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3142,
+      "endLine": 3188,
+      "ccn": 1,
+      "nloc": 46,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_format_basic_props",
+      "startLine": 3190,
+      "endLine": 3215,
+      "ccn": 8,
+      "nloc": 25,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "_format_os",
+      "startLine": 3217,
+      "endLine": 3291,
+      "ccn": 25,
+      "nloc": 66,
+      "params": 2,
+      "maxNesting": 19
+    },
+    {
+      "function": "_format_features",
+      "startLine": 3293,
+      "endLine": 3298,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_format_devices",
+      "startLine": 3300,
+      "endLine": 3306,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_format_idmaps",
+      "startLine": 3308,
+      "endLine": 3314,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_format_perf_events",
+      "startLine": 3316,
+      "endLine": 3323,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_format_sev",
+      "startLine": 3325,
+      "endLine": 3327,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3329,
+      "endLine": 3363,
+      "ccn": 6,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 5
+    },
+    {
+      "function": "_parse_basic_props",
+      "startLine": 3365,
+      "endLine": 3377,
+      "ccn": 6,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_parse_os",
+      "startLine": 3379,
+      "endLine": 3423,
+      "ccn": 21,
+      "nloc": 42,
+      "params": 2,
+      "maxNesting": 9
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3425,
+      "endLine": 3497,
+      "ccn": 30,
+      "nloc": 61,
+      "params": 2,
+      "maxNesting": 12
+    },
+    {
+      "function": "add_feature",
+      "startLine": 3499,
+      "endLine": 3500,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "add_device",
+      "startLine": 3502,
+      "endLine": 3503,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "add_perf_event",
+      "startLine": 3505,
+      "endLine": 3506,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_clock",
+      "startLine": 3508,
+      "endLine": 3509,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3514,
+      "endLine": 3520,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3522,
+      "endLine": 3535,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "add_disk",
+      "startLine": 3537,
+      "endLine": 3538,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3544,
+      "endLine": 3553,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3555,
+      "endLine": 3563,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3565,
+      "endLine": 3588,
+      "ccn": 12,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 3592,
+      "endLine": 3595,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3597,
+      "endLine": 3601,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 3607,
+      "endLine": 3625,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3627,
+      "endLine": 3667,
+      "ccn": 19,
+      "nloc": 40,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "pci_address",
+      "startLine": 3669,
+      "endLine": 3671,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3675,
+      "endLine": 3679,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3681,
+      "endLine": 3689,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 3693,
+      "endLine": 3700,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3702,
+      "endLine": 3716,
+      "ccn": 7,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 3720,
+      "endLine": 3725,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3727,
+      "endLine": 3740,
+      "ccn": 4,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3742,
+      "endLine": 3751,
+      "ccn": 5,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "__init__",
+      "startLine": 3756,
+      "endLine": 3767,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_process_custom_field",
+      "startLine": 3770,
+      "endLine": 3773,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_parse_ro_fields",
+      "startLine": 3775,
+      "endLine": 3786,
+      "ccn": 7,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_parse_rw_fields",
+      "startLine": 3788,
+      "endLine": 3795,
+      "ccn": 5,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 3797,
+      "endLine": 3810,
+      "ccn": 7,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "card_name",
+      "startLine": 3813,
+      "endLine": 3814,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "change_level",
+      "startLine": 3817,
+      "endLine": 3818,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "manufacture_id",
+      "startLine": 3821,
+      "endLine": 3822,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "part_number",
+      "startLine": 3825,
+      "endLine": 3826,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "card_serial_number",
+      "startLine": 3829,
+      "endLine": 3830,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "asset_tag",
+      "startLine": 3833,
+      "endLine": 3834,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "ro_vendor_fields",
+      "startLine": 3837,
+      "endLine": 3838,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "rw_vendor_fields",
+      "startLine": 3841,
+      "endLine": 3842,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "rw_system_fields",
+      "startLine": 3845,
+      "endLine": 3846,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 3851,
+      "endLine": 3859,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3861,
+      "endLine": 3877,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 3882,
+      "endLine": 3896,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3898,
+      "endLine": 3925,
+      "ccn": 9,
+      "nloc": 25,
+      "params": 1,
+      "maxNesting": 7
+    },
+    {
+      "function": "__init__",
+      "startLine": 3930,
+      "endLine": 3943,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3945,
+      "endLine": 3963,
+      "ccn": 7,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 6
+    },
+    {
+      "function": "__init__",
+      "startLine": 3968,
+      "endLine": 3972,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3974,
+      "endLine": 3981,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 3986,
+      "endLine": 3997,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 3999,
+      "endLine": 4013,
+      "ccn": 6,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "__init__",
+      "startLine": 4018,
+      "endLine": 4022,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4024,
+      "endLine": 4031,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 4036,
+      "endLine": 4045,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4047,
+      "endLine": 4057,
+      "ccn": 5,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 4062,
+      "endLine": 4070,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4072,
+      "endLine": 4089,
+      "ccn": 6,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 4093,
+      "endLine": 4105,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4107,
+      "endLine": 4129,
+      "ccn": 2,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 4131,
+      "endLine": 4146,
+      "ccn": 9,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 7
+    },
+    {
+      "function": "__init__",
+      "startLine": 4152,
+      "endLine": 4159,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4161,
+      "endLine": 4178,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "parse_dom",
+      "startLine": 4180,
+      "endLine": 4193,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 4198,
+      "endLine": 4202,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4204,
+      "endLine": 4208,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 4213,
+      "endLine": 4218,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4220,
+      "endLine": 4225,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 4230,
+      "endLine": 4236,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4238,
+      "endLine": 4243,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 4248,
+      "endLine": 4250,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4252,
+      "endLine": 4255,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 4260,
+      "endLine": 4265,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "format_dom",
+      "startLine": 4267,
+      "endLine": 4271,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "file": "src/nova/cmd/common.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Redefining name 'args' from outer scope (line 64)",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 138,
+      "endLine": 138,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 138,
+          "endLine": 138
+        },
+        {
+          "line": 148,
+          "endLine": 148
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "add_command_parsers",
+      "line": 86,
+      "endLine": 135,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "get_action_fn",
+      "line": 148,
+      "endLine": 177,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "validate_args",
+      "startLine": 34,
+      "endLine": 60,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "args",
+      "startLine": 64,
+      "endLine": 71,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "args._decorator",
+      "startLine": 68,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "methods_of",
+      "startLine": 74,
+      "endLine": 83,
+      "ccn": 4,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "add_command_parsers",
+      "startLine": 86,
+      "endLine": 135,
+      "ccn": 7,
+      "nloc": 32,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "print_bash_completion",
+      "startLine": 138,
+      "endLine": 145,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_action_fn",
+      "startLine": 148,
+      "endLine": 177,
+      "ccn": 7,
+      "nloc": 22,
+      "params": 0,
+      "maxNesting": 5
+    },
+    {
+      "function": "action_description",
+      "startLine": 180,
+      "endLine": 192,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "action_description._decorator",
+      "startLine": 189,
+      "endLine": 191,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

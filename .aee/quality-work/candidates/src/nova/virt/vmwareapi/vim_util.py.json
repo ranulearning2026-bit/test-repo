@@ -1,0 +1,284 @@
+{
+  "file": "src/nova/virt/vmwareapi/vim_util.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 23,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 23
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 54,
+      "endLine": 54,
+      "message": "Redefining built-in 'type'",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 54
+        },
+        {
+          "line": 78,
+          "endLine": 78
+        },
+        {
+          "line": 85,
+          "endLine": 85
+        },
+        {
+          "line": 132,
+          "endLine": 132
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 84,
+      "endLine": 84,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 84,
+          "endLine": 84
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 88,
+      "endLine": 88,
+      "message": "Access to a protected member _type of a client class",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 88,
+          "endLine": 88
+        },
+        {
+          "line": 159,
+          "endLine": 159
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 158,
+      "endLine": 158,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 158,
+          "endLine": 158
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "object_to_dict",
+      "line": 28,
+      "endLine": 51,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "object_to_dict",
+      "startLine": 28,
+      "endLine": 51,
+      "ccn": 7,
+      "nloc": 19,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "get_object_properties",
+      "startLine": 54,
+      "endLine": 75,
+      "ccn": 4,
+      "nloc": 21,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_objects",
+      "startLine": 78,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_inner_objects",
+      "startLine": 84,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_prop_spec",
+      "startLine": 106,
+      "endLine": 111,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_obj_spec",
+      "startLine": 114,
+      "endLine": 121,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_prop_filter_spec",
+      "startLine": 124,
+      "endLine": 129,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_properties_for_a_collection_of_objects",
+      "startLine": 132,
+      "endLine": 150,
+      "ccn": 3,
+      "nloc": 16,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_about_info",
+      "startLine": 153,
+      "endLine": 155,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_entity_name",
+      "startLine": 158,
+      "endLine": 160,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_array_items",
+      "startLine": 163,
+      "endLine": 170,
+      "ccn": 3,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

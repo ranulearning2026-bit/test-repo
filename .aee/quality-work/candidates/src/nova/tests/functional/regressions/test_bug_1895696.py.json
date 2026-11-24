@@ -1,0 +1,257 @@
+{
+  "file": "src/nova/tests/functional/regressions/test_bug_1895696.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 20,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 20
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 23,
+      "endLine": 23,
+      "message": "Access to a protected member _IntegratedTestBase of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 23,
+          "endLine": 23
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Unused argument 'self_api'",
+      "toolSeverity": "warning",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 88,
+          "endLine": 88
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Too many arguments (10/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R17"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "setUp.fake_cinder_create",
+      "line": 80,
+      "endLine": 84,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 33,
+      "endLine": 91,
+      "ccn": 1,
+      "nloc": 45,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "setUp.fake_cinder_create",
+      "startLine": 80,
+      "endLine": 84,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 10,
+      "maxNesting": 1
+    },
+    {
+      "function": "setUp.fake_cinder_get",
+      "startLine": 88,
+      "endLine": 89,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nonbootable_metadata_image_metadata",
+      "startLine": 93,
+      "endLine": 109,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nonbootable_metadata_bfv_image_metadata",
+      "startLine": 111,
+      "endLine": 129,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nonbootable_metadata_bfv_volume_image_metadata",
+      "startLine": 131,
+      "endLine": 148,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

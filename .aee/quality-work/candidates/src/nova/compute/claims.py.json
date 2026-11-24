@@ -1,0 +1,461 @@
+{
+  "file": "src/nova/compute/claims.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Class 'NopClaim' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 31,
+      "endLine": 31,
+      "message": "Class `NopClaim` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 31,
+          "endLine": 31
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Unused argument 'args'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 78,
+          "endLine": 78
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Too many arguments (8/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 177,
+          "endLine": 177
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 124,
+      "endLine": 124,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 207,
+          "endLine": 207
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 160,
+      "endLine": 166,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 160,
+          "endLine": 166
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 230,
+      "endLine": 230,
+      "message": "Parameter 'compute_node' has been renamed to 'resources' in overriding 'MoveClaim._test_numa_topology' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 230,
+          "endLine": 230
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R40"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 237,
+      "endLine": 238,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 237,
+          "endLine": 238
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 237,
+      "endLine": 238,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 237,
+          "endLine": 238
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R07"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 9,
+      "threshold": 6,
+      "function": "__init__",
+      "line": 60,
+      "endLine": 75,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 11,
+      "threshold": 6,
+      "function": "__init__",
+      "line": 177,
+      "endLine": 190,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 34,
+      "endLine": 36,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__enter__",
+      "startLine": 38,
+      "endLine": 39,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__exit__",
+      "startLine": 41,
+      "endLine": 43,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "abort",
+      "startLine": 45,
+      "endLine": 46,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 60,
+      "endLine": 75,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 9,
+      "maxNesting": 0
+    },
+    {
+      "function": "numa_topology",
+      "startLine": 78,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "abort",
+      "startLine": 81,
+      "endLine": 87,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_claim_test",
+      "startLine": 89,
+      "endLine": 122,
+      "ccn": 6,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "_test_pci",
+      "startLine": 124,
+      "endLine": 135,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_test_numa_topology",
+      "startLine": 137,
+      "endLine": 168,
+      "ccn": 7,
+      "nloc": 27,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "__init__",
+      "startLine": 177,
+      "endLine": 190,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 11,
+      "maxNesting": 1
+    },
+    {
+      "function": "numa_topology",
+      "startLine": 193,
+      "endLine": 194,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "abort",
+      "startLine": 196,
+      "endLine": 205,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_live_migration_page_size",
+      "startLine": 207,
+      "endLine": 228,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_test_numa_topology",
+      "startLine": 230,
+      "endLine": 241,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "file": "src/nova/api/openstack/compute/hosts.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 29,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 29
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 97,
+      "endLine": 97,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 190,
+          "endLine": 190
+        },
+        {
+          "line": 200,
+          "endLine": 200
+        },
+        {
+          "line": 210,
+          "endLine": 210
+        },
+        {
+          "line": 269,
+          "endLine": 269
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 190,
+      "endLine": 190,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 190,
+          "endLine": 190
+        },
+        {
+          "line": 200,
+          "endLine": 200
+        },
+        {
+          "line": 210,
+          "endLine": 210
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 38,
+      "endLine": 40,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "index",
+      "startLine": 46,
+      "endLine": 91,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "update",
+      "startLine": 97,
+      "endLine": 132,
+      "ccn": 5,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "update.read_enabled",
+      "startLine": 109,
+      "endLine": 112,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_set_host_maintenance",
+      "startLine": 134,
+      "endLine": 150,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_set_enabled_status",
+      "startLine": 152,
+      "endLine": 171,
+      "ccn": 6,
+      "nloc": 16,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_host_power_action",
+      "startLine": 173,
+      "endLine": 184,
+      "ccn": 4,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "startup",
+      "startLine": 190,
+      "endLine": 194,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "shutdown",
+      "startLine": 200,
+      "endLine": 204,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "reboot",
+      "startLine": 210,
+      "endLine": 214,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_total_resources",
+      "startLine": 217,
+      "endLine": 222,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_used_now_resources",
+      "startLine": 225,
+      "endLine": 230,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_resource_totals_from_instances",
+      "startLine": 233,
+      "endLine": 246,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_resources_by_project",
+      "startLine": 249,
+      "endLine": 263,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "show",
+      "startLine": 269,
+      "endLine": 303,
+      "ccn": 3,
+      "nloc": 25,
+      "params": 3,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

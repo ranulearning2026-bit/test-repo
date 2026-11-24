@@ -1,0 +1,776 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_remote_consoles.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 29,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 29
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 316,
+          "endLine": 316
+        },
+        {
+          "line": 453,
+          "endLine": 453
+        },
+        {
+          "line": 476,
+          "endLine": 476
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Too many public methods (30/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 318,
+          "endLine": 318
+        },
+        {
+          "line": 455,
+          "endLine": 455
+        },
+        {
+          "line": 478,
+          "endLine": 478
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 37,
+      "endLine": 37,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 37,
+          "endLine": 37
+        },
+        {
+          "line": 318,
+          "endLine": 318
+        },
+        {
+          "line": 455,
+          "endLine": 455
+        },
+        {
+          "line": 478,
+          "endLine": 478
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:E1120",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1120"
+      ],
+      "line": 56,
+      "endLine": 56,
+      "message": "No value for argument 'mock_method' in function call",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 56
+        }
+      ],
+      "id": "T8"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 64,
+      "endLine": 64,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 43,
+      "occurrences": [
+        {
+          "line": 64,
+          "endLine": 64
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 83,
+          "endLine": 83
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 99,
+          "endLine": 99
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        },
+        {
+          "line": 120,
+          "endLine": 120
+        },
+        {
+          "line": 127,
+          "endLine": 127
+        },
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 164,
+          "endLine": 164
+        },
+        {
+          "line": 171,
+          "endLine": 171
+        },
+        {
+          "line": 180,
+          "endLine": 180
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        },
+        {
+          "line": 196,
+          "endLine": 196
+        },
+        {
+          "line": 205,
+          "endLine": 205
+        },
+        {
+          "line": 212,
+          "endLine": 212
+        },
+        {
+          "line": 219,
+          "endLine": 219
+        },
+        {
+          "line": 226,
+          "endLine": 226
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 36,
+      "endLine": 41,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_check_console_failure",
+      "startLine": 43,
+      "endLine": 60,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 6,
+      "maxNesting": 2
+    },
+    {
+      "function": "_check_console_failure._do_test",
+      "startLine": 50,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console",
+      "startLine": 64,
+      "endLine": 72,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_not_ready",
+      "startLine": 74,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_no_type",
+      "startLine": 83,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_no_instance",
+      "startLine": 90,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_no_instance_on_console_get",
+      "startLine": 99,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_instance_invalid_state",
+      "startLine": 108,
+      "endLine": 118,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_invalid_type",
+      "startLine": 120,
+      "endLine": 125,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_type_unavailable",
+      "startLine": 127,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_not_implemented",
+      "startLine": 134,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console",
+      "startLine": 145,
+      "endLine": 153,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_not_ready",
+      "startLine": 155,
+      "endLine": 162,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_no_type",
+      "startLine": 164,
+      "endLine": 169,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_no_instance",
+      "startLine": 171,
+      "endLine": 178,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_no_instance_on_console_get",
+      "startLine": 180,
+      "endLine": 187,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_invalid_type",
+      "startLine": 189,
+      "endLine": 194,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_not_implemented",
+      "startLine": 196,
+      "endLine": 203,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_type_unavailable",
+      "startLine": 205,
+      "endLine": 210,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_rdp_console_bad_request",
+      "startLine": 212,
+      "endLine": 217,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_vnc_console_with_undefined_param",
+      "startLine": 219,
+      "endLine": 224,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_spice_console_with_undefined_param",
+      "startLine": 226,
+      "endLine": 232,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console",
+      "startLine": 236,
+      "endLine": 244,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_not_enable",
+      "startLine": 246,
+      "endLine": 253,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_invalid_type",
+      "startLine": 255,
+      "endLine": 260,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_no_type",
+      "startLine": 262,
+      "endLine": 267,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_no_instance",
+      "startLine": 269,
+      "endLine": 276,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_instance_not_ready",
+      "startLine": 278,
+      "endLine": 285,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_socket_exhausted",
+      "startLine": 287,
+      "endLine": 294,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_image_nport_invalid",
+      "startLine": 296,
+      "endLine": 304,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_serial_console_image_nport_exceed",
+      "startLine": 306,
+      "endLine": 313,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 317,
+      "endLine": 326,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_vnc_console",
+      "startLine": 328,
+      "endLine": 339,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_spice_console",
+      "startLine": 341,
+      "endLine": 353,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_rdp_console_bad_request",
+      "startLine": 355,
+      "endLine": 358,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_serial_console",
+      "startLine": 360,
+      "endLine": 371,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_instance_not_ready",
+      "startLine": 373,
+      "endLine": 381,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_unavailable",
+      "startLine": 383,
+      "endLine": 392,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_not_found",
+      "startLine": 394,
+      "endLine": 402,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_not_implemented",
+      "startLine": 404,
+      "endLine": 411,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_nport_invalid",
+      "startLine": 413,
+      "endLine": 421,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_nport_exceed",
+      "startLine": 423,
+      "endLine": 431,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_socket_exhausted",
+      "startLine": 433,
+      "endLine": 441,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_console_invalid_type",
+      "startLine": 443,
+      "endLine": 450,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 454,
+      "endLine": 460,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_mks_console",
+      "startLine": 462,
+      "endLine": 473,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 477,
+      "endLine": 483,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_spice_direct_console",
+      "startLine": 485,
+      "endLine": 505,
+      "ccn": 1,
+      "nloc": 20,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "file": "src/nova/tests/unit/virt/ironic/test_patcher.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 33,
+      "endLine": 33,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 33,
+          "endLine": 33
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 84,
+      "endLine": 84,
+      "message": "Method name \"assertPatchEqual\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 84,
+          "endLine": 84
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 84,
+      "endLine": 84,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 16,
+      "occurrences": [
+        {
+          "line": 84,
+          "endLine": 84
+        },
+        {
+          "line": 90,
+          "endLine": 90
+        },
+        {
+          "line": 95,
+          "endLine": 95
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        },
+        {
+          "line": 112,
+          "endLine": 112
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 134,
+          "endLine": 134
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        },
+        {
+          "line": 156,
+          "endLine": 156
+        },
+        {
+          "line": 164,
+          "endLine": 164
+        },
+        {
+          "line": 176,
+          "endLine": 176
+        },
+        {
+          "line": 189,
+          "endLine": 189
+        },
+        {
+          "line": 197,
+          "endLine": 197
+        },
+        {
+          "line": 215,
+          "endLine": 215
+        },
+        {
+          "line": 233,
+          "endLine": 233
+        },
+        {
+          "line": 244,
+          "endLine": 244
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 32,
+      "endLine": 82,
+      "ccn": 1,
+      "nloc": 50,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "assertPatchEqual",
+      "startLine": 84,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_generic",
+      "startLine": 90,
+      "endLine": 93,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch",
+      "startLine": 95,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_capabilities",
+      "startLine": 101,
+      "endLine": 110,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_capabilities_op",
+      "startLine": 112,
+      "endLine": 121,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_capabilities_nested_key",
+      "startLine": 123,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_traits",
+      "startLine": 134,
+      "endLine": 143,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_traits_granular",
+      "startLine": 145,
+      "endLine": 154,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_traits_ignores_not_required",
+      "startLine": 156,
+      "endLine": 162,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_image_traits_required",
+      "startLine": 164,
+      "endLine": 174,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_image_flavor_traits_required",
+      "startLine": 176,
+      "endLine": 187,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_image_flavor_traits_none",
+      "startLine": 189,
+      "endLine": 195,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_boot_from_volume_image_traits_required",
+      "startLine": 197,
+      "endLine": 213,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_generic_get_deploy_patch_ephemeral",
+      "startLine": 215,
+      "endLine": 231,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generic_get_deploy_patch_preserve_ephemeral",
+      "startLine": 233,
+      "endLine": 242,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_generic_get_deploy_patch_boot_from_volume",
+      "startLine": 244,
+      "endLine": 251,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

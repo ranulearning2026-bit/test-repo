@@ -1,0 +1,267 @@
+{
+  "file": "src/nova/conf/opts.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:R1721",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1721"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Unnecessary use of a comprehension, use list(dct.items()) instead.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R79"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:R1724",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1724"
+      ],
+      "line": 54,
+      "endLine": 57,
+      "message": "Unnecessary \"else\" after \"continue\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 54,
+          "endLine": 57
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R68"
+    },
+    {
+      "canonical": "pylint:R1720",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1720"
+      ],
+      "line": 65,
+      "endLine": 71,
+      "message": "Unnecessary \"else\" after \"raise\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 65,
+          "endLine": 71
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R42"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 66,
+      "endLine": 67,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 67
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 66,
+      "endLine": 68,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 66,
+          "endLine": 68
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0719",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0719"
+      ],
+      "line": 69,
+      "endLine": 69,
+      "message": "Raising too general exception: Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 69,
+          "endLine": 69
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R46"
+    },
+    {
+      "canonical": "ruff:TRY002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "TRY002"
+      ],
+      "line": 69,
+      "endLine": 69,
+      "message": "Create your own exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 69,
+          "endLine": 69
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R48"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_tupleize",
+      "startLine": 37,
+      "endLine": 39,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "list_opts",
+      "startLine": 42,
+      "endLine": 47,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 0,
+      "maxNesting": 0
+    },
+    {
+      "function": "_list_module_names",
+      "startLine": 50,
+      "endLine": 58,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 0,
+      "maxNesting": 2
+    },
+    {
+      "function": "_import_modules",
+      "startLine": 61,
+      "endLine": 72,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 2
+    },
+    {
+      "function": "_append_config_options",
+      "startLine": 75,
+      "endLine": 79,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {}
+}

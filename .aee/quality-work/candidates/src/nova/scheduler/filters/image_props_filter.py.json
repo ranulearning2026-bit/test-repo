@@ -1,0 +1,204 @@
+{
+  "file": "src/nova/scheduler/filters/image_props_filter.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 22,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 22
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 102,
+      "endLine": 104,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 102,
+          "endLine": 104
+        },
+        {
+          "line": 103,
+          "endLine": 104
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 116,
+      "endLine": 116,
+      "message": "Parameter 'filter_properties' has been renamed to 'spec_obj' in overriding 'ImagePropertiesFilter.host_passes' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 116,
+          "endLine": 116
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R40"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_instance_supported",
+      "line": 48,
+      "endLine": 114,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_get_default_architecture",
+      "startLine": 45,
+      "endLine": 46,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_instance_supported",
+      "startLine": 48,
+      "endLine": 114,
+      "ccn": 7,
+      "nloc": 36,
+      "params": 4,
+      "maxNesting": 8
+    },
+    {
+      "function": "_instance_supported._compare_props",
+      "startLine": 75,
+      "endLine": 79,
+      "ccn": 4,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_instance_supported._compare_product_version",
+      "startLine": 81,
+      "endLine": 88,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_instance_supported._compare_maxphysaddr_bits",
+      "startLine": 90,
+      "endLine": 99,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "host_passes",
+      "startLine": 116,
+      "endLine": 129,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

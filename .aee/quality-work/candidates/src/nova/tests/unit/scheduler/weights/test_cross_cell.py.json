@@ -1,0 +1,306 @@
+{
+  "file": "src/nova/tests/unit/scheduler/weights/test_cross_cell.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 14,
+      "endLine": 21,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 14,
+          "endLine": 21
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:R1729",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1729"
+      ],
+      "line": 56,
+      "endLine": 57,
+      "message": "Use a generator instead 'all(wh.weight == 0.0 for wh in weighed_hosts)'",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 57
+        },
+        {
+          "line": 61,
+          "endLine": 62
+        },
+        {
+          "line": 67,
+          "endLine": 68
+        },
+        {
+          "line": 73,
+          "endLine": 74
+        },
+        {
+          "line": 85,
+          "endLine": 86
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R80"
+    },
+    {
+      "canonical": "ruff:C419",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C419"
+      ],
+      "line": 56,
+      "endLine": 57,
+      "message": "Unnecessary list comprehension",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 56,
+          "endLine": 57
+        },
+        {
+          "line": 61,
+          "endLine": 62
+        },
+        {
+          "line": 67,
+          "endLine": 68
+        },
+        {
+          "line": 73,
+          "endLine": 74
+        },
+        {
+          "line": 85,
+          "endLine": 86
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R81"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 125,
+      "endLine": 125,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 125,
+          "endLine": 125
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 29,
+      "endLine": 32,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_weighed_hosts",
+      "startLine": 34,
+      "endLine": 37,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_all_hosts",
+      "startLine": 40,
+      "endLine": 47,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 0,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_weighed_hosts_no_requested_destination_or_cell",
+      "startLine": 49,
+      "endLine": 74,
+      "ccn": 5,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 4
+    },
+    {
+      "function": "test_get_weighed_hosts_allow_cross_cell_move_false",
+      "startLine": 76,
+      "endLine": 86,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_weighed_hosts_allow_cross_cell_move_true_positive",
+      "startLine": 88,
+      "endLine": 103,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_get_weighed_hosts_allow_cross_cell_move_true_negative",
+      "startLine": 105,
+      "endLine": 123,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_multiplier",
+      "startLine": 125,
+      "endLine": 142,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}

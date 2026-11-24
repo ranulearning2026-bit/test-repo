@@ -1,0 +1,330 @@
+{
+  "file": "src/nova/api/metadata/handler.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 35,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 35
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 59,
+      "endLine": 59,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 59,
+          "endLine": 59
+        },
+        {
+          "line": 80,
+          "endLine": 80
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 282,
+          "endLine": 282
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 63,
+      "endLine": 63,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 63,
+          "endLine": 63
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 282,
+          "endLine": 282
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 98,
+      "endLine": 98,
+      "message": "Number of parameters was 3 in 'Application.__call__' and is now 2 in overriding 'MetadataRequestHandler.__call__' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 98,
+          "endLine": 98
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 130,
+      "endLine": 130,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise webob.exc.HTTPNotFound() from exc'",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 130,
+          "endLine": 130
+        },
+        {
+          "line": 151,
+          "endLine": 151
+        },
+        {
+          "line": 326,
+          "endLine": 326
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001"
+      ],
+      "line": 232,
+      "endLine": 232,
+      "message": "Do not catch blind exception: `Exception`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 232,
+          "endLine": 232
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R32"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "__call__",
+      "line": 98,
+      "endLine": 139,
+      "id": "M1"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 50,
+      "endLine": 57,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_metadata_by_remote_address",
+      "startLine": 59,
+      "endLine": 78,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_metadata_by_instance_id",
+      "startLine": 80,
+      "endLine": 95,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "__call__",
+      "startLine": 98,
+      "endLine": 139,
+      "ccn": 10,
+      "nloc": 34,
+      "params": 2,
+      "maxNesting": 7
+    },
+    {
+      "function": "_handle_remote_ip_request",
+      "startLine": 141,
+      "endLine": 157,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_handle_instance_id_request",
+      "startLine": 159,
+      "endLine": 187,
+      "ccn": 7,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_instance_id_from_lb",
+      "startLine": 189,
+      "endLine": 263,
+      "ccn": 8,
+      "nloc": 48,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "_handle_instance_id_request_from_lb",
+      "startLine": 265,
+      "endLine": 296,
+      "ccn": 6,
+      "nloc": 29,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "_validate_shared_secret",
+      "startLine": 298,
+      "endLine": 315,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_meta_by_instance_id",
+      "startLine": 317,
+      "endLine": 338,
+      "ccn": 4,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

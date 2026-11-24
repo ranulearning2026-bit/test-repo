@@ -1,0 +1,836 @@
+{
+  "file": "src/nova/virt/vmwareapi/volumeops.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 30,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 30
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 42,
+      "endLine": 42,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 42,
+          "endLine": 42
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 45,
+      "endLine": 45,
+      "message": "Redefining name 'session' from outer scope (line 29)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 56,
+          "endLine": 56
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 50,
+      "endLine": 50,
+      "message": "Access to a protected member _get_vm_ref_from_vm_uuid of a client class",
+      "toolSeverity": "warning",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 50
+        },
+        {
+          "line": 107,
+          "endLine": 107
+        },
+        {
+          "line": 141,
+          "endLine": 141
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        },
+        {
+          "line": 218,
+          "endLine": 218
+        },
+        {
+          "line": 223,
+          "endLine": 223
+        },
+        {
+          "line": 251,
+          "endLine": 251
+        },
+        {
+          "line": 291,
+          "endLine": 291
+        },
+        {
+          "line": 394,
+          "endLine": 394
+        },
+        {
+          "line": 452,
+          "endLine": 452
+        },
+        {
+          "line": 458,
+          "endLine": 458
+        },
+        {
+          "line": 463,
+          "endLine": 463
+        },
+        {
+          "line": 593,
+          "endLine": 593
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 53,
+      "endLine": 53,
+      "message": "Class 'VMwareVolumeOps' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 53
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 53,
+      "endLine": 53,
+      "message": "Class `VMwareVolumeOps` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 53
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Too many local variables (17/15)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 132,
+          "endLine": 132
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 60,
+      "endLine": 60,
+      "message": "Too many arguments (9/5)",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 475,
+          "endLine": 475
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 97,
+      "endLine": 97,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 241,
+          "endLine": 241
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 97,
+      "endLine": 97,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 241,
+          "endLine": 241
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 105,
+      "endLine": 105,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 284,
+          "endLine": 284
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 132,
+      "endLine": 132,
+      "message": "Too many branches (21/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 132,
+          "endLine": 132
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "too-many-returns",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0911"
+      ],
+      "line": 132,
+      "endLine": 132,
+      "message": "Too many return statements (12/6)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 132,
+          "endLine": 132
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R75"
+    },
+    {
+      "canonical": "too-many-nested-blocks",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1702"
+      ],
+      "line": 173,
+      "endLine": 188,
+      "message": "Too many nested blocks (6/5)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 173,
+          "endLine": 188
+        }
+      ],
+      "id": "T18"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "attach_disk_to_vm",
+      "line": 60,
+      "endLine": 93,
+      "id": "M1"
+    },
+    {
+      "metric": "ccn",
+      "value": 23,
+      "threshold": 15,
+      "function": "_iscsi_get_target",
+      "line": 132,
+      "endLine": 202,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 19,
+      "threshold": 4,
+      "function": "_iscsi_get_target",
+      "line": 132,
+      "endLine": 202,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "_iscsi_rescan_hba",
+      "line": 215,
+      "endLine": 253,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_iscsi_get_host_iqn",
+      "line": 284,
+      "endLine": 305,
+      "id": "M5"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "_consolidate_vmdk_volume",
+      "line": 475,
+      "endLine": 552,
+      "id": "M6"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 37,
+      "endLine": 43,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "fetch_moref",
+      "startLine": 45,
+      "endLine": 50,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 56,
+      "endLine": 58,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "attach_disk_to_vm",
+      "startLine": 60,
+      "endLine": 93,
+      "ccn": 2,
+      "nloc": 31,
+      "params": 10,
+      "maxNesting": 1
+    },
+    {
+      "function": "_update_volume_details",
+      "startLine": 95,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_volume_uuid",
+      "startLine": 105,
+      "endLine": 112,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "detach_disk_from_vm",
+      "startLine": 114,
+      "endLine": 130,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "_iscsi_get_target",
+      "startLine": 132,
+      "endLine": 202,
+      "ccn": 23,
+      "nloc": 63,
+      "params": 2,
+      "maxNesting": 19
+    },
+    {
+      "function": "_iscsi_add_send_target_host",
+      "startLine": 204,
+      "endLine": 213,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_iscsi_rescan_hba",
+      "startLine": 215,
+      "endLine": 253,
+      "ccn": 8,
+      "nloc": 35,
+      "params": 2,
+      "maxNesting": 7
+    },
+    {
+      "function": "_iscsi_discover_target",
+      "startLine": 255,
+      "endLine": 282,
+      "ccn": 3,
+      "nloc": 23,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_iscsi_get_host_iqn",
+      "startLine": 284,
+      "endLine": 305,
+      "ccn": 6,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "get_volume_connector",
+      "startLine": 307,
+      "endLine": 319,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_volume_ref",
+      "startLine": 322,
+      "endLine": 324,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_vmdk_base_volume_device",
+      "startLine": 326,
+      "endLine": 330,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_attach_volume_vmdk",
+      "startLine": 332,
+      "endLine": 361,
+      "ccn": 4,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_attach_volume_iscsi",
+      "startLine": 363,
+      "endLine": 387,
+      "ccn": 3,
+      "nloc": 18,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_controller_key_and_unit",
+      "startLine": 389,
+      "endLine": 399,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_attach_fcd",
+      "startLine": 401,
+      "endLine": 418,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_attach_volume_fcd",
+      "startLine": 420,
+      "endLine": 434,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "attach_volume",
+      "startLine": 436,
+      "endLine": 448,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_host_of_vm",
+      "startLine": 450,
+      "endLine": 453,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_res_pool_of_host",
+      "startLine": 455,
+      "endLine": 466,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_res_pool_of_vm",
+      "startLine": 468,
+      "endLine": 473,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_consolidate_vmdk_volume",
+      "startLine": 475,
+      "endLine": 552,
+      "ccn": 5,
+      "nloc": 42,
+      "params": 7,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_vmdk_backed_disk_device",
+      "startLine": 554,
+      "endLine": 565,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_detach_volume_vmdk",
+      "startLine": 567,
+      "endLine": 605,
+      "ccn": 5,
+      "nloc": 26,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "_detach_volume_iscsi",
+      "startLine": 607,
+      "endLine": 627,
+      "ccn": 3,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_detach_volume_fcd",
+      "startLine": 629,
+      "endLine": 641,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "detach_volume",
+      "startLine": 643,
+      "endLine": 655,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "attach_root_volume",
+      "startLine": 657,
+      "endLine": 673,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 5,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

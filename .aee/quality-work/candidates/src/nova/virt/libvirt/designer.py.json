@@ -1,0 +1,244 @@
+{
+  "file": "src/nova/virt/libvirt/designer.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 26,
+      "endLine": 26,
+      "message": "Too many arguments (7/5)",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 190,
+      "endLine": 191,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 190,
+          "endLine": 191
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R38"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "set_vif_guest_frontend_config",
+      "line": 26,
+      "endLine": 43,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "set_vif_guest_frontend_config",
+      "line": 26,
+      "endLine": 43,
+      "id": "M2"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "set_vif_host_backend_802qbg_config",
+      "line": 60,
+      "endLine": 76,
+      "id": "M3"
+    }
+  ],
+  "functions": [
+    {
+      "function": "set_vif_guest_frontend_config",
+      "startLine": 26,
+      "endLine": 43,
+      "ccn": 6,
+      "nloc": 13,
+      "params": 7,
+      "maxNesting": 5
+    },
+    {
+      "function": "set_vif_host_backend_ethernet_config",
+      "startLine": 46,
+      "endLine": 57,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_vif_host_backend_802qbg_config",
+      "startLine": 60,
+      "endLine": 76,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 7,
+      "maxNesting": 1
+    },
+    {
+      "function": "set_vif_host_backend_802qbh_config",
+      "startLine": 79,
+      "endLine": 96,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "set_vif_host_backend_hw_veb",
+      "startLine": 99,
+      "endLine": 116,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "set_vif_host_backend_hostdev_pci_config",
+      "startLine": 119,
+      "endLine": 123,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_vif_host_backend_direct_config",
+      "startLine": 126,
+      "endLine": 134,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_vif_host_backend_vhostuser_config",
+      "startLine": 137,
+      "endLine": 153,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 6,
+      "maxNesting": 3
+    },
+    {
+      "function": "set_vif_host_backend_vdpa_config",
+      "startLine": 156,
+      "endLine": 169,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "set_vif_mtu_config",
+      "startLine": 172,
+      "endLine": 176,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_vif_bandwidth_config",
+      "startLine": 179,
+      "endLine": 192,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "set_numa_memnode",
+      "startLine": 195,
+      "endLine": 200,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "set_vcpu_realtime_scheduler",
+      "startLine": 203,
+      "endLine": 207,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

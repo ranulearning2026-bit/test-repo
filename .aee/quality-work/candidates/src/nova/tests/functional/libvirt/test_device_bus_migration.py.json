@@ -1,0 +1,333 @@
+{
+  "file": "src/nova/tests/functional/libvirt/test_device_bus_migration.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 28,
+      "endLine": 28,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 28,
+          "endLine": 28
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 149,
+      "endLine": 149,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 149,
+          "endLine": 149
+        },
+        {
+          "line": 174,
+          "endLine": 174
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 243,
+      "endLine": 243,
+      "message": "Too many branches (17/12)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 243,
+          "endLine": 243
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:W0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0201"
+      ],
+      "line": 314,
+      "endLine": 314,
+      "message": "Attribute 'guest_configs' defined outside __init__",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 314,
+          "endLine": 314
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R28"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 315,
+      "endLine": 315,
+      "message": "Access to a protected member _get_guest_config of a client class",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 315,
+          "endLine": 315
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "ccn",
+      "value": 19,
+      "threshold": 15,
+      "function": "_assert_guest_config",
+      "line": 243,
+      "endLine": 304,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 17,
+      "threshold": 4,
+      "function": "_assert_guest_config",
+      "line": 243,
+      "endLine": 304,
+      "id": "M2"
+    },
+    {
+      "metric": "function_lines",
+      "value": 108,
+      "threshold": 100,
+      "function": "test_machine_type_and_bus_and_model_migration",
+      "line": 306,
+      "endLine": 413,
+      "id": "M3"
+    }
+  ],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 34,
+      "endLine": 39,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_unset_stashed_image_properties",
+      "startLine": 41,
+      "endLine": 45,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_assert_stashed_image_properties",
+      "startLine": 47,
+      "endLine": 50,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_assert_stashed_image_properties_persist",
+      "startLine": 52,
+      "endLine": 72,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_default_image_property_registration",
+      "startLine": 74,
+      "endLine": 100,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_non_default_image_property_registration",
+      "startLine": 102,
+      "endLine": 147,
+      "ccn": 1,
+      "nloc": 40,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_default_image_property_persists_across_osinfo_changes",
+      "startLine": 149,
+      "endLine": 172,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_default_image_property_persists_across_host_flag_changes",
+      "startLine": 174,
+      "endLine": 241,
+      "ccn": 1,
+      "nloc": 40,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_assert_guest_config",
+      "startLine": 243,
+      "endLine": 304,
+      "ccn": 19,
+      "nloc": 47,
+      "params": 3,
+      "maxNesting": 17
+    },
+    {
+      "function": "test_machine_type_and_bus_and_model_migration",
+      "startLine": 306,
+      "endLine": 413,
+      "ccn": 2,
+      "nloc": 77,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_machine_type_and_bus_and_model_migration._get_guest_config",
+      "startLine": 317,
+      "endLine": 321,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

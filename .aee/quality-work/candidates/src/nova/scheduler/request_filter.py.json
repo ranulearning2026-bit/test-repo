@@ -1,0 +1,537 @@
+{
+  "file": "src/nova/scheduler/request_filter.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 27,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 27
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 474,
+          "endLine": 474
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 80,
+      "endLine": 80,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 80,
+          "endLine": 80
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "ruff:C405",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C405"
+      ],
+      "line": 117,
+      "endLine": 117,
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 117,
+          "endLine": 117
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R29"
+    },
+    {
+      "canonical": "ruff:PERF102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PERF102"
+      ],
+      "line": 119,
+      "endLine": 119,
+      "message": "When using only the keys of a dict use the `keys()` method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 119,
+          "endLine": 119
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R73"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 119,
+      "endLine": 119,
+      "message": "Unused variable 'value'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 119,
+          "endLine": 119
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 173,
+      "endLine": 173,
+      "message": "Unused argument 'ctxt'",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 173,
+          "endLine": 173
+        },
+        {
+          "line": 204,
+          "endLine": 204
+        },
+        {
+          "line": 248,
+          "endLine": 248
+        },
+        {
+          "line": 264,
+          "endLine": 264
+        },
+        {
+          "line": 280,
+          "endLine": 280
+        },
+        {
+          "line": 419,
+          "endLine": 419
+        },
+        {
+          "line": 454,
+          "endLine": 454
+        },
+        {
+          "line": 475,
+          "endLine": 475
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:E0606",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E0606"
+      ],
+      "line": 377,
+      "endLine": 377,
+      "message": "Possibly using variable 'aggregates' before assignment",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 377,
+          "endLine": 377
+        }
+      ],
+      "id": "T11"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 632,
+      "endLine": 632,
+      "message": "Redefining built-in 'filter'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 632,
+          "endLine": 632
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R20"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "isolate_aggregates",
+      "line": 58,
+      "endLine": 96,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "require_tenant_aggregate",
+      "line": 100,
+      "endLine": 140,
+      "id": "M2"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "routed_networks_filter",
+      "line": 296,
+      "endLine": 387,
+      "id": "M3"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "owner_nova_filter",
+      "line": 557,
+      "endLine": 605,
+      "id": "M4"
+    }
+  ],
+  "functions": [
+    {
+      "function": "trace_request_filter",
+      "startLine": 39,
+      "endLine": 54,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "trace_request_filter.wrapper",
+      "startLine": 41,
+      "endLine": 53,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "isolate_aggregates",
+      "startLine": 58,
+      "endLine": 96,
+      "ccn": 7,
+      "nloc": 17,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "require_tenant_aggregate",
+      "startLine": 100,
+      "endLine": 140,
+      "ccn": 9,
+      "nloc": 29,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "map_az_to_placement_aggregate",
+      "startLine": 144,
+      "endLine": 169,
+      "ccn": 6,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "require_image_type_support",
+      "startLine": 173,
+      "endLine": 200,
+      "ccn": 4,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "transform_image_metadata",
+      "startLine": 204,
+      "endLine": 244,
+      "ccn": 6,
+      "nloc": 30,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "compute_status_filter",
+      "startLine": 248,
+      "endLine": 260,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "accelerators_filter",
+      "startLine": 264,
+      "endLine": 276,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "packed_virtqueue_filter",
+      "startLine": 280,
+      "endLine": 292,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "routed_networks_filter",
+      "startLine": 296,
+      "endLine": 387,
+      "ccn": 15,
+      "nloc": 52,
+      "params": 2,
+      "maxNesting": 9
+    },
+    {
+      "function": "remote_managed_ports_filter",
+      "startLine": 391,
+      "endLine": 414,
+      "ccn": 5,
+      "nloc": 14,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "ephemeral_encryption_filter",
+      "startLine": 418,
+      "endLine": 449,
+      "ccn": 3,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "virtio_sound_filter",
+      "startLine": 453,
+      "endLine": 470,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "tpm_secret_security_filter",
+      "startLine": 474,
+      "endLine": 504,
+      "ccn": 6,
+      "nloc": 25,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_pci_request_ids",
+      "startLine": 507,
+      "endLine": 523,
+      "ccn": 7,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_should_filter_by_owner",
+      "startLine": 526,
+      "endLine": 553,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "owner_nova_filter",
+      "startLine": 557,
+      "endLine": 605,
+      "ccn": 8,
+      "nloc": 21,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "process_reqspec",
+      "startLine": 626,
+      "endLine": 633,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 3
+  }
+}

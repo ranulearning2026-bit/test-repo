@@ -1,0 +1,323 @@
+{
+  "file": "src/nova/api/openstack/compute/volumes_boot.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 16,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 16
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "ruff:RUF100",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF100"
+      ],
+      "line": 44,
+      "endLine": 44,
+      "message": "Unused `noqa` directive (non-enabled: `E501`)",
+      "toolSeverity": "warning",
+      "count": 32,
+      "occurrences": [
+        {
+          "line": 44,
+          "endLine": 44
+        },
+        {
+          "line": 45,
+          "endLine": 45
+        },
+        {
+          "line": 46,
+          "endLine": 46
+        },
+        {
+          "line": 47,
+          "endLine": 47
+        },
+        {
+          "line": 48,
+          "endLine": 48
+        },
+        {
+          "line": 49,
+          "endLine": 49
+        },
+        {
+          "line": 50,
+          "endLine": 50
+        },
+        {
+          "line": 51,
+          "endLine": 51
+        },
+        {
+          "line": 52,
+          "endLine": 52
+        },
+        {
+          "line": 53,
+          "endLine": 53
+        },
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 119,
+          "endLine": 119
+        },
+        {
+          "line": 120,
+          "endLine": 120
+        },
+        {
+          "line": 121,
+          "endLine": 121
+        },
+        {
+          "line": 122,
+          "endLine": 122
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 125,
+          "endLine": 125
+        },
+        {
+          "line": 179,
+          "endLine": 179
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R45"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "index",
+      "startLine": 31,
+      "endLine": 32,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "detail",
+      "startLine": 55,
+      "endLine": 56,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "show",
+      "startLine": 77,
+      "endLine": 78,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "create",
+      "startLine": 98,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "delete",
+      "startLine": 105,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "update",
+      "startLine": 127,
+      "endLine": 128,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_confirm_resize",
+      "startLine": 136,
+      "endLine": 137,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_revert_resize",
+      "startLine": 145,
+      "endLine": 146,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_reboot",
+      "startLine": 154,
+      "endLine": 155,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_resize",
+      "startLine": 163,
+      "endLine": 164,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_rebuild",
+      "startLine": 192,
+      "endLine": 193,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_create_image",
+      "startLine": 203,
+      "endLine": 204,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_start",
+      "startLine": 212,
+      "endLine": 213,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_stop",
+      "startLine": 221,
+      "endLine": 222,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_trigger_crash_dump",
+      "startLine": 230,
+      "endLine": 231,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

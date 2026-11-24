@@ -1,0 +1,619 @@
+{
+  "file": "src/nova/tests/unit/compute/test_flavors.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 18,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 28,
+      "endLine": 28,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 28,
+          "endLine": 28
+        },
+        {
+          "line": 60,
+          "endLine": 60
+        },
+        {
+          "line": 100,
+          "endLine": 100
+        },
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 299,
+          "endLine": 299
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 28,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        },
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 44,
+          "endLine": 44
+        },
+        {
+          "line": 51,
+          "endLine": 51
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 96,
+          "endLine": 96
+        },
+        {
+          "line": 106,
+          "endLine": 106
+        },
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 146,
+          "endLine": 146
+        },
+        {
+          "line": 151,
+          "endLine": 151
+        },
+        {
+          "line": 158,
+          "endLine": 158
+        },
+        {
+          "line": 165,
+          "endLine": 165
+        },
+        {
+          "line": 172,
+          "endLine": 172
+        },
+        {
+          "line": 180,
+          "endLine": 180
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        },
+        {
+          "line": 199,
+          "endLine": 199
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        },
+        {
+          "line": 224,
+          "endLine": 224
+        },
+        {
+          "line": 234,
+          "endLine": 234
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0201"
+      ],
+      "line": 112,
+      "endLine": 112,
+      "message": "Consider iterating the dictionary directly instead of calling .keys()",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 112,
+          "endLine": 112
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R63"
+    },
+    {
+      "canonical": "ruff:SIM118",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM118"
+      ],
+      "line": 112,
+      "endLine": 112,
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 112,
+          "endLine": 112
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R49"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 113,
+      "endLine": 113,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 114,
+          "endLine": 114
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 113,
+      "endLine": 113,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 114,
+          "endLine": 114
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 146,
+      "endLine": 146,
+      "message": "Method name \"assertInvalidInput\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 146,
+          "endLine": 146
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R12"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "test_flavor_validate_extra_spec_keys_invalid_input",
+      "startLine": 30,
+      "endLine": 34,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_flavor_validate_extra_spec_keys",
+      "startLine": 36,
+      "endLine": 38,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_will_not_get_instance_by_unknown_flavor_id",
+      "startLine": 44,
+      "endLine": 49,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_will_get_instance_by_flavor_id",
+      "startLine": 51,
+      "endLine": 57,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 62,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_dict_to_metadata",
+      "startLine": 66,
+      "endLine": 67,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_test_extract_flavor",
+      "startLine": 69,
+      "endLine": 84,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "test_extract_flavor",
+      "startLine": 86,
+      "endLine": 87,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_extract_flavor_no_sysmeta",
+      "startLine": 89,
+      "endLine": 94,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_extract_flavor_prefix",
+      "startLine": 96,
+      "endLine": 97,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 102,
+      "endLine": 104,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_save_flavor_info",
+      "startLine": 106,
+      "endLine": 122,
+      "ccn": 2,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_flavor_numa_extras_are_saved",
+      "startLine": 124,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "assertInvalidInput",
+      "startLine": 146,
+      "endLine": 149,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_memory_must_be_positive_db_integer",
+      "startLine": 151,
+      "endLine": 156,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_vcpus_must_be_positive_db_integer",
+      "startLine": 158,
+      "endLine": 163,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_root_gb_must_be_nonnegative_db_integer",
+      "startLine": 165,
+      "endLine": 170,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ephemeral_gb_must_be_nonnegative_db_integer",
+      "startLine": 172,
+      "endLine": 178,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_swap_must_be_nonnegative_db_integer",
+      "startLine": 180,
+      "endLine": 186,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rxtx_factor_must_be_positive_float",
+      "startLine": 188,
+      "endLine": 197,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rxtx_factor_must_be_within_sql_float_range",
+      "startLine": 199,
+      "endLine": 209,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_is_public_must_be_valid_bool_string",
+      "startLine": 211,
+      "endLine": 222,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_flavorid_populated",
+      "startLine": 224,
+      "endLine": 232,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_default_values",
+      "startLine": 234,
+      "endLine": 240,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_basic_create",
+      "startLine": 242,
+      "endLine": 258,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_then_delete",
+      "startLine": 260,
+      "endLine": 282,
+      "ccn": 2,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_duplicate_names_fail",
+      "startLine": 284,
+      "endLine": 289,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_duplicate_flavorids_fail",
+      "startLine": 291,
+      "endLine": 296,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 300,
+      "endLine": 326,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_redirected_usb_ports_flavor_specs_integer",
+      "startLine": 328,
+      "endLine": 336,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_redirected_usb_ports_flavor_specs_integer_as_string",
+      "startLine": 338,
+      "endLine": 346,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_redirected_usb_ports_flavor_specs_integer_is_negative",
+      "startLine": 348,
+      "endLine": 356,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_redirected_usb_ports_flavor_specs_non_integer",
+      "startLine": 358,
+      "endLine": 366,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {}
+}

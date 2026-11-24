@@ -1,0 +1,485 @@
+{
+  "file": "src/nova/virt/libvirt/volume/remotefs.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 26,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 26
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R0205",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0205"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Class 'RemoteFilesystem' inherits from object, can be safely removed from bases in python3",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R14"
+    },
+    {
+      "canonical": "ruff:UP004",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP004"
+      ],
+      "line": 68,
+      "endLine": 68,
+      "message": "Class `RemoteFilesystem` inherits from `object`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 68,
+          "endLine": 68
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R15"
+    },
+    {
+      "canonical": "ruff:FLY002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "FLY002"
+      ],
+      "line": 73,
+      "endLine": 73,
+      "message": "Consider `f'{__name__}.{transport.capitalize()}'` instead of string join",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 73,
+          "endLine": 73
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R67"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 77,
+      "endLine": 77,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 77,
+          "endLine": 77
+        },
+        {
+          "line": 83,
+          "endLine": 83
+        },
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 95,
+          "endLine": 95
+        },
+        {
+          "line": 101,
+          "endLine": 101
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 109,
+      "endLine": 109,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 109,
+          "endLine": 109
+        },
+        {
+          "line": 172,
+          "endLine": 172
+        },
+        {
+          "line": 200,
+          "endLine": 200
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 178,
+      "endLine": 178,
+      "message": "Parameter 'dst_path' has been renamed to 'dst' in overriding 'SshDriver.remove_file' method",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 178,
+          "endLine": 178
+        },
+        {
+          "line": 186,
+          "endLine": 186
+        },
+        {
+          "line": 224,
+          "endLine": 224
+        },
+        {
+          "line": 245,
+          "endLine": 245
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R40"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "mount_share",
+      "startLine": 33,
+      "endLine": 50,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "unmount_share",
+      "startLine": 53,
+      "endLine": 65,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 71,
+      "endLine": 75,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_file",
+      "startLine": 77,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_file",
+      "startLine": 83,
+      "endLine": 87,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_dir",
+      "startLine": 89,
+      "endLine": 93,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_dir",
+      "startLine": 95,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "copy_file",
+      "startLine": 101,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_file",
+      "startLine": 111,
+      "endLine": 119,
+      "ccn": 1,
+      "nloc": 1,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_file",
+      "startLine": 122,
+      "endLine": 130,
+      "ccn": 1,
+      "nloc": 1,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_dir",
+      "startLine": 133,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 1,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_dir",
+      "startLine": 144,
+      "endLine": 152,
+      "ccn": 1,
+      "nloc": 1,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "copy_file",
+      "startLine": 155,
+      "endLine": 169,
+      "ccn": 1,
+      "nloc": 1,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_file",
+      "startLine": 174,
+      "endLine": 176,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_file",
+      "startLine": 178,
+      "endLine": 180,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_dir",
+      "startLine": 182,
+      "endLine": 184,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_dir",
+      "startLine": 186,
+      "endLine": 188,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "copy_file",
+      "startLine": 190,
+      "endLine": 197,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 6,
+      "maxNesting": 1
+    },
+    {
+      "function": "create_file",
+      "startLine": 202,
+      "endLine": 222,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_file",
+      "startLine": 224,
+      "endLine": 228,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_dir",
+      "startLine": 230,
+      "endLine": 243,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_dir",
+      "startLine": 245,
+      "endLine": 257,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "_remove_object",
+      "startLine": 260,
+      "endLine": 277,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "_synchronize_object",
+      "startLine": 280,
+      "endLine": 308,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "copy_file",
+      "startLine": 310,
+      "endLine": 316,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 6,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 4
+  }
+}

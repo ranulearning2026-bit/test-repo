@@ -1,0 +1,555 @@
+{
+  "file": "src/nova/privsep/fs.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 20,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 20,
+          "endLine": 25
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 25,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 48,
+          "endLine": 48
+        },
+        {
+          "line": 62,
+          "endLine": 62
+        },
+        {
+          "line": 74,
+          "endLine": 74
+        },
+        {
+          "line": 81,
+          "endLine": 81
+        },
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 102,
+          "endLine": 102
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 118,
+          "endLine": 118
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 128,
+          "endLine": 128
+        },
+        {
+          "line": 133,
+          "endLine": 133
+        },
+        {
+          "line": 138,
+          "endLine": 138
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        },
+        {
+          "line": 150,
+          "endLine": 150
+        },
+        {
+          "line": 155,
+          "endLine": 155
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 53,
+      "endLine": 53,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 53
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 56,
+          "endLine": 56
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 53,
+      "endLine": 53,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 53,
+          "endLine": 53
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 56,
+          "endLine": 56
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0603",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0603"
+      ],
+      "line": 202,
+      "endLine": 202,
+      "message": "Using the global statement",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 202,
+          "endLine": 202
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R52"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 241,
+      "endLine": 241,
+      "message": "Unused argument 'label'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 241,
+          "endLine": 241
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 281,
+      "endLine": 281,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 281,
+          "endLine": 281
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R17"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "mount",
+      "startLine": 32,
+      "endLine": 39,
+      "ccn": 3,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "umount",
+      "startLine": 43,
+      "endLine": 44,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "lvcreate",
+      "startLine": 48,
+      "endLine": 58,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "vginfo",
+      "startLine": 62,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "lvlist",
+      "startLine": 74,
+      "endLine": 77,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "lvinfo",
+      "startLine": 81,
+      "endLine": 83,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "lvremove",
+      "startLine": 87,
+      "endLine": 88,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "blockdev_size",
+      "startLine": 92,
+      "endLine": 93,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "blockdev_flush",
+      "startLine": 97,
+      "endLine": 98,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "clear",
+      "startLine": 102,
+      "endLine": 109,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "loopsetup",
+      "startLine": 113,
+      "endLine": 114,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "loopremove",
+      "startLine": 118,
+      "endLine": 119,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "nbd_connect",
+      "startLine": 123,
+      "endLine": 124,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "nbd_disconnect",
+      "startLine": 128,
+      "endLine": 129,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_device_maps",
+      "startLine": 133,
+      "endLine": 134,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "remove_device_maps",
+      "startLine": 138,
+      "endLine": 139,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "e2fsck",
+      "startLine": 143,
+      "endLine": 144,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "unprivileged_e2fsck",
+      "startLine": 150,
+      "endLine": 151,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "resize2fs",
+      "startLine": 155,
+      "endLine": 156,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "unprivileged_resize2fs",
+      "startLine": 162,
+      "endLine": 168,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "load_mkfs_command",
+      "startLine": 201,
+      "endLine": 206,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_fs_type_for_os_type",
+      "startLine": 209,
+      "endLine": 210,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_hash_str",
+      "startLine": 215,
+      "endLine": 222,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_file_extension_for_os_type",
+      "startLine": 225,
+      "endLine": 237,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "mkfs",
+      "startLine": 241,
+      "endLine": 242,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "unprivileged_mkfs",
+      "startLine": 248,
+      "endLine": 270,
+      "ccn": 5,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_inner_configurable_mkfs",
+      "startLine": 274,
+      "endLine": 277,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "configurable_mkfs",
+      "startLine": 281,
+      "endLine": 305,
+      "ccn": 7,
+      "nloc": 19,
+      "params": 6,
+      "maxNesting": 4
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

@@ -1,0 +1,795 @@
+{
+  "file": "src/nova/tests/unit/network/test_os_vif_util.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "pylint:C0302",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0302"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Too many lines in module (1334/1000)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R25"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 22,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 22
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 25,
+      "endLine": 25,
+      "message": "Too many public methods (40/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 25,
+          "endLine": 25
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 28,
+      "endLine": 28,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 28,
+          "endLine": 28
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 28,
+      "endLine": 28,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 28,
+          "endLine": 28
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Method name \"assertObjEqual\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 34,
+      "endLine": 34,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 32,
+      "occurrences": [
+        {
+          "line": 34,
+          "endLine": 34
+        },
+        {
+          "line": 40,
+          "endLine": 40
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 68,
+          "endLine": 68
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 133,
+          "endLine": 133
+        },
+        {
+          "line": 285,
+          "endLine": 285
+        },
+        {
+          "line": 317,
+          "endLine": 317
+        },
+        {
+          "line": 358,
+          "endLine": 358
+        },
+        {
+          "line": 390,
+          "endLine": 390
+        },
+        {
+          "line": 406,
+          "endLine": 406
+        },
+        {
+          "line": 417,
+          "endLine": 417
+        },
+        {
+          "line": 435,
+          "endLine": 435
+        },
+        {
+          "line": 474,
+          "endLine": 474
+        },
+        {
+          "line": 517,
+          "endLine": 517
+        },
+        {
+          "line": 565,
+          "endLine": 565
+        },
+        {
+          "line": 606,
+          "endLine": 606
+        },
+        {
+          "line": 647,
+          "endLine": 647
+        },
+        {
+          "line": 687,
+          "endLine": 687
+        },
+        {
+          "line": 720,
+          "endLine": 720
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 50,
+      "endLine": 50,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 50
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 50,
+      "endLine": 50,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 50,
+          "endLine": 50
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 86,
+      "endLine": 86,
+      "message": "Access to a protected member _nova_to_osvif_ips of a client class",
+      "toolSeverity": "warning",
+      "count": 8,
+      "occurrences": [
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 281,
+          "endLine": 281
+        },
+        {
+          "line": 313,
+          "endLine": 313
+        },
+        {
+          "line": 354,
+          "endLine": 354
+        },
+        {
+          "line": 386,
+          "endLine": 386
+        },
+        {
+          "line": 403,
+          "endLine": 403
+        },
+        {
+          "line": 413,
+          "endLine": 413
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R10"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "function_lines",
+      "value": 151,
+      "threshold": 100,
+      "function": "test_nova_to_osvif_subnets",
+      "line": 133,
+      "endLine": 283,
+      "id": "M1"
+    },
+    {
+      "metric": "file_lines",
+      "value": 1178,
+      "threshold": 1000,
+      "function": null,
+      "line": 1,
+      "endLine": 1178,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 27,
+      "endLine": 30,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "assertObjEqual",
+      "startLine": 34,
+      "endLine": 38,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_instance",
+      "startLine": 40,
+      "endLine": 53,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_instance_minimal",
+      "startLine": 55,
+      "endLine": 66,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_ips",
+      "startLine": 68,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_routes",
+      "startLine": 105,
+      "endLine": 131,
+      "ccn": 1,
+      "nloc": 24,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_subnets",
+      "startLine": 133,
+      "endLine": 283,
+      "ccn": 1,
+      "nloc": 148,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_network",
+      "startLine": 285,
+      "endLine": 315,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_network_extra",
+      "startLine": 317,
+      "endLine": 356,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_network_labeled_no_bridge",
+      "startLine": 358,
+      "endLine": 388,
+      "ccn": 1,
+      "nloc": 28,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_network_labeled_no_vlan",
+      "startLine": 390,
+      "endLine": 404,
+      "ccn": 1,
+      "nloc": 14,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_network_mtu",
+      "startLine": 406,
+      "endLine": 415,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_linux_bridge_unsupported",
+      "startLine": 417,
+      "endLine": 433,
+      "ccn": 1,
+      "nloc": 16,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_agilio_ovs_fallthrough",
+      "startLine": 435,
+      "endLine": 472,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_agilio_ovs_direct",
+      "startLine": 474,
+      "endLine": 515,
+      "ccn": 1,
+      "nloc": 39,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_agilio_ovs_forwarder",
+      "startLine": 517,
+      "endLine": 563,
+      "ccn": 1,
+      "nloc": 44,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_ovs_plain",
+      "startLine": 565,
+      "endLine": 604,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_ovs_hybrid",
+      "startLine": 606,
+      "endLine": 645,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_ovs_with_vnic_direct",
+      "startLine": 647,
+      "endLine": 685,
+      "ccn": 1,
+      "nloc": 36,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_ovs_with_vnic_remote_managed",
+      "startLine": 687,
+      "endLine": 718,
+      "ccn": 1,
+      "nloc": 29,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_ovs_with_vnic_vdpa",
+      "startLine": 720,
+      "endLine": 758,
+      "ccn": 1,
+      "nloc": 36,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vhostuser_ovs",
+      "startLine": 760,
+      "endLine": 801,
+      "ccn": 1,
+      "nloc": 39,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vhostuser_ovs_no_socket_path",
+      "startLine": 803,
+      "endLine": 821,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vhostuser_non_ovs",
+      "startLine": 823,
+      "endLine": 860,
+      "ccn": 1,
+      "nloc": 35,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vhostuser_fp_ovs_hybrid",
+      "startLine": 862,
+      "endLine": 909,
+      "ccn": 1,
+      "nloc": 45,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vhostuser_fp_ovs_plain",
+      "startLine": 911,
+      "endLine": 960,
+      "ccn": 1,
+      "nloc": 47,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vhostuser_fp_lb",
+      "startLine": 962,
+      "endLine": 1004,
+      "ccn": 1,
+      "nloc": 40,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vhostuser_fp_no_socket_path",
+      "startLine": 1006,
+      "endLine": 1025,
+      "ccn": 1,
+      "nloc": 19,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_ivs_plain",
+      "startLine": 1027,
+      "endLine": 1046,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_ivs_bridged",
+      "startLine": 1048,
+      "endLine": 1068,
+      "ccn": 1,
+      "nloc": 18,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_unknown",
+      "startLine": 1070,
+      "endLine": 1083,
+      "ccn": 1,
+      "nloc": 13,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_binding_failed",
+      "startLine": 1085,
+      "endLine": 1094,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_unbound",
+      "startLine": 1096,
+      "endLine": 1105,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_contrail_vrouter",
+      "startLine": 1107,
+      "endLine": 1143,
+      "ccn": 1,
+      "nloc": 33,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_contrail_vrouter_no_socket_path",
+      "startLine": 1145,
+      "endLine": 1163,
+      "ccn": 1,
+      "nloc": 17,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vrouter",
+      "startLine": 1165,
+      "endLine": 1194,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vrouter_direct",
+      "startLine": 1196,
+      "endLine": 1236,
+      "ccn": 1,
+      "nloc": 37,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vrouter_forwarder",
+      "startLine": 1238,
+      "endLine": 1282,
+      "ccn": 1,
+      "nloc": 41,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_nova_to_osvif_vif_ovs_with_tap_creation",
+      "startLine": 1284,
+      "endLine": 1309,
+      "ccn": 2,
+      "nloc": 21,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_nova_to_osvif_vif_ovs_without_tap_creation",
+      "startLine": 1311,
+      "endLine": 1334,
+      "ccn": 2,
+      "nloc": 20,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

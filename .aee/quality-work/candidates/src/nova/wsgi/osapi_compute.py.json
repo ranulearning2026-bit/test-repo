@@ -1,0 +1,157 @@
+{
+  "file": "src/nova/wsgi/osapi_compute.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:R0401",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0401"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Cyclic import (nova.network.model -> nova.thread_pool_factory -> nova.utils -> nova.objects.service -> nova.notifications.objects.base -> nova.objects.fields)",
+      "toolSeverity": "warning",
+      "count": 71,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1"
+    },
+    {
+      "canonical": "pylint:R0801",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0801"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Similar lines in 2 files\n==nova.tests.unit.api.openstack.compute.test_extended_ips:[21:77]\n==nova.tests.unit.api.openstack.compute.test_extended_ips_mac:[21:77]\nUUID1 = '00000000-0000-0000-0000-000000000001'\nUUID2 = '00000000-0000-0000-0000-000000000002'\nUUID3 = '00000000-0000-0000-0000-000000000003'\nNW_CACHE = [\n    {\n        'address': 'aa:aa:aa:aa:aa:aa',\n        'id': 1,\n        'network': {\n            'bridge': 'br0',\n            'id': 1,\n            'label': 'private',\n            'subnets': [\n                {\n                    'cidr': '192.168.1.0/24',\n                    'ips': [\n                        {\n                            'address': '192.168.1.100',\n                            'type': 'fixed',\n                            'floating_ips': [\n                                {'address': '5.0.0.1', 'type': 'floating'},\n                            ],\n                        },\n                    ],\n                },\n            ]\n        }\n    },\n    {\n        'address': 'bb:bb:bb:bb:bb:bb',\n        'id': 2,\n        'network': {\n            'bridge': 'br1',\n            'id': 2,\n            'label': 'public',\n            'subnets': [\n                {\n                    'cidr': '10.0.0.0/24',\n                    'ips': [\n                        {\n                            'address': '10.0.0.100',\n                            'type': 'fixed',\n                            'floating_ips': [\n                                {'address': '5.0.0.2', 'type': 'floating'},\n                            ],\n                        }\n                    ],\n                },\n            ]\n        }\n    }\n]\nALL_IPS = []\nfor cache in NW_CACHE:\n    for subnet in cache['network']['subnets']:\n        for fixed in subnet['ips']:\n            sanitized = dict(fixed)",
+      "toolSeverity": "warning",
+      "count": 710,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0321",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0321"
+      ],
+      "line": 15,
+      "endLine": 15,
+      "message": "More than one statement on a single line",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 15
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R78"
+    },
+    {
+      "canonical": "pylint:C0411",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0411"
+      ],
+      "line": 18,
+      "endLine": 18,
+      "message": "standard import \"threading\" should be placed before first party import \"nova.monkey_patch\"",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 18
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R33"
+    },
+    {
+      "canonical": "pylint:C0413",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0413"
+      ],
+      "line": 18,
+      "endLine": 18,
+      "message": "Import \"import threading\" should be placed at the top of the module",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 18,
+          "endLine": 18
+        },
+        {
+          "line": 20,
+          "endLine": 20
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R82"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [],
+  "dropped": {}
+}

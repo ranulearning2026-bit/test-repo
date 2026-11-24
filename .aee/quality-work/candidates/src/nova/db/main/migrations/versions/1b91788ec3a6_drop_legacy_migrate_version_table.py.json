@@ -1,0 +1,117 @@
+{
+  "file": "src/nova/db/main/migrations/versions/1b91788ec3a6_drop_legacy_migrate_version_table.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Module name \"1b91788ec3a6_drop_legacy_migrate_version_table\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        },
+        {
+          "line": 24,
+          "endLine": 24
+        },
+        {
+          "line": 25,
+          "endLine": 25
+        },
+        {
+          "line": 26,
+          "endLine": 26
+        },
+        {
+          "line": 27,
+          "endLine": 27
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 30,
+      "endLine": 30,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 30,
+          "endLine": 30
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "upgrade",
+      "startLine": 30,
+      "endLine": 36,
+      "ccn": 2,
+      "nloc": 6,
+      "params": 0,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

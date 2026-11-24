@@ -1,0 +1,226 @@
+{
+  "file": "src/nova/scheduler/filters/compute_capabilities_filter.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 16,
+      "endLine": 20,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 16,
+          "endLine": 20
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0200",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0200"
+      ],
+      "line": 36,
+      "endLine": 65,
+      "message": "Consider using enumerate instead of iterating with range and len",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 65
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R77"
+    },
+    {
+      "canonical": "ruff:PIE808",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE808"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Unnecessary `start` argument in `range`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R47"
+    },
+    {
+      "canonical": "pylint:R1724",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1724"
+      ],
+      "line": 99,
+      "endLine": 102,
+      "message": "Unnecessary \"else\" after \"continue\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 99,
+          "endLine": 102
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R68"
+    },
+    {
+      "canonical": "pylint:W0237",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0237"
+      ],
+      "line": 116,
+      "endLine": 116,
+      "message": "Parameter 'filter_properties' has been renamed to 'spec_obj' in overriding 'ComputeCapabilitiesFilter.host_passes' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 116,
+          "endLine": 116
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R40"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_get_capabilities",
+      "line": 34,
+      "endLine": 66,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_satisfies_extra_specs",
+      "line": 68,
+      "endLine": 114,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_get_capabilities",
+      "startLine": 34,
+      "endLine": 66,
+      "ccn": 8,
+      "nloc": 32,
+      "params": 3,
+      "maxNesting": 5
+    },
+    {
+      "function": "_satisfies_extra_specs",
+      "startLine": 68,
+      "endLine": 114,
+      "ccn": 10,
+      "nloc": 30,
+      "params": 3,
+      "maxNesting": 5
+    },
+    {
+      "function": "host_passes",
+      "startLine": 116,
+      "endLine": 123,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

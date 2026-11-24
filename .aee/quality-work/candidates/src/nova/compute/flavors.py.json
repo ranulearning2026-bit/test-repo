@@ -1,0 +1,386 @@
+{
+  "file": "src/nova/compute/flavors.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 21,
+      "endLine": 32,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 32
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 40,
+      "endLine": 40,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 40,
+          "endLine": 40
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 64,
+      "endLine": 64,
+      "message": "Too many local variables (16/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 64,
+          "endLine": 64
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 64,
+      "endLine": 64,
+      "message": "Too many arguments (10/5)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 64,
+          "endLine": 64
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 113,
+      "endLine": 113,
+      "message": "Consider explicitly re-raising using 'except ValueError as exc' and 'raise exception.InvalidInput(reason=msg % db_const.SQL_SP_FLOAT_MAX) from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 122,
+          "endLine": 122
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:C0201",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0201"
+      ],
+      "line": 153,
+      "endLine": 153,
+      "message": "Consider iterating the dictionary directly instead of calling .keys()",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 153,
+          "endLine": 153
+        },
+        {
+          "line": 187,
+          "endLine": 187
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R63"
+    },
+    {
+      "canonical": "ruff:SIM118",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM118"
+      ],
+      "line": 153,
+      "endLine": 153,
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 153,
+          "endLine": 153
+        },
+        {
+          "line": 187,
+          "endLine": 187
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R49"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 154,
+      "endLine": 154,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 166,
+          "endLine": 166
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        },
+        {
+          "line": 199,
+          "endLine": 199
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 154,
+      "endLine": 154,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 154,
+          "endLine": 154
+        },
+        {
+          "line": 162,
+          "endLine": 162
+        },
+        {
+          "line": 166,
+          "endLine": 166
+        },
+        {
+          "line": 188,
+          "endLine": 188
+        },
+        {
+          "line": 199,
+          "endLine": 199
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 205,
+      "endLine": 205,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 205,
+          "endLine": 205
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R03"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "create",
+      "line": 64,
+      "endLine": 126,
+      "id": "M1"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "extract_flavor",
+      "line": 142,
+      "endLine": 169,
+      "id": "M2"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_int_or_none",
+      "startLine": 40,
+      "endLine": 42,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "create",
+      "startLine": 64,
+      "endLine": 126,
+      "ccn": 8,
+      "nloc": 47,
+      "params": 10,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_flavor_by_flavor_id",
+      "startLine": 131,
+      "endLine": 136,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "extract_flavor",
+      "startLine": 142,
+      "endLine": 169,
+      "ccn": 7,
+      "nloc": 16,
+      "params": 2,
+      "maxNesting": 5
+    },
+    {
+      "function": "save_flavor_info",
+      "startLine": 176,
+      "endLine": 202,
+      "ccn": 5,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "validate_extra_spec_keys",
+      "startLine": 205,
+      "endLine": 210,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 2
+    }
+  ],
+  "dropped": {
+    "env_noise": 2
+  }
+}

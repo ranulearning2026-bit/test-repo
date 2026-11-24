@@ -1,0 +1,411 @@
+{
+  "file": "src/nova/tests/unit/privsep/test_path.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 17,
+      "endLine": 25,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 17,
+          "endLine": 25
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 32,
+      "endLine": 32,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 32,
+          "endLine": 32
+        },
+        {
+          "line": 145,
+          "endLine": 145
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 36,
+      "endLine": 36,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 15,
+      "occurrences": [
+        {
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "line": 48,
+          "endLine": 48
+        },
+        {
+          "line": 55,
+          "endLine": 55
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 70,
+          "endLine": 70
+        },
+        {
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "line": 97,
+          "endLine": 97
+        },
+        {
+          "line": 103,
+          "endLine": 103
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        },
+        {
+          "line": 116,
+          "endLine": 116
+        },
+        {
+          "line": 122,
+          "endLine": 122
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 148,
+          "endLine": 148
+        },
+        {
+          "line": 161,
+          "endLine": 161
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Unused argument 'mock_exists'",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        },
+        {
+          "line": 61,
+          "endLine": 61
+        },
+        {
+          "line": 109,
+          "endLine": 109
+        },
+        {
+          "line": 122,
+          "endLine": 122
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R11"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "setUp",
+      "startLine": 31,
+      "endLine": 33,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_write",
+      "startLine": 36,
+      "endLine": 45,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_write_dir_missing",
+      "startLine": 48,
+      "endLine": 51,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_chown",
+      "startLine": 55,
+      "endLine": 58,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_chown_file_not_found",
+      "startLine": 61,
+      "endLine": 64,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_chown_recursive",
+      "startLine": 70,
+      "endLine": 81,
+      "ccn": 1,
+      "nloc": 12,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_chown_recursive_is_file",
+      "startLine": 87,
+      "endLine": 94,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_makedirs",
+      "startLine": 97,
+      "endLine": 99,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_chmod",
+      "startLine": 103,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_chmod_file_not_found",
+      "startLine": 109,
+      "endLine": 112,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_utime",
+      "startLine": 116,
+      "endLine": 119,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_utime_file_not_found",
+      "startLine": 122,
+      "endLine": 125,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rmdir",
+      "startLine": 129,
+      "endLine": 132,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_rmdir_file_not_found",
+      "startLine": 135,
+      "endLine": 138,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 144,
+      "endLine": 146,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_truncated",
+      "startLine": 148,
+      "endLine": 159,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_read_all",
+      "startLine": 161,
+      "endLine": 172,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {}
+}

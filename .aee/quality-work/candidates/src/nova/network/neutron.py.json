@@ -1,0 +1,2718 @@
+{
+  "file": "src/nova/network/neutron.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0302",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0302"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Too many lines in module (3989/1000)",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R25"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 21,
+      "endLine": 53,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 21,
+          "endLine": 53
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 94,
+      "endLine": 94,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 94,
+          "endLine": 94
+        },
+        {
+          "line": 185,
+          "endLine": 185
+        },
+        {
+          "line": 230,
+          "endLine": 230
+        },
+        {
+          "line": 1073,
+          "endLine": 1073
+        },
+        {
+          "line": 1459,
+          "endLine": 1459
+        },
+        {
+          "line": 2953,
+          "endLine": 2953
+        },
+        {
+          "line": 3010,
+          "endLine": 3010
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0212",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0212"
+      ],
+      "line": 104,
+      "endLine": 104,
+      "message": "Access to a protected member _get_instance_nw_info of a client class",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 104,
+          "endLine": 104
+        },
+        {
+          "line": 2812,
+          "endLine": 2812
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R10"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 129,
+      "endLine": 129,
+      "message": "Catching too general exception Exception",
+      "toolSeverity": "warning",
+      "count": 11,
+      "occurrences": [
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 295,
+          "endLine": 295
+        },
+        {
+          "line": 652,
+          "endLine": 652
+        },
+        {
+          "line": 704,
+          "endLine": 704
+        },
+        {
+          "line": 1058,
+          "endLine": 1058
+        },
+        {
+          "line": 1395,
+          "endLine": 1395
+        },
+        {
+          "line": 2145,
+          "endLine": 2145
+        },
+        {
+          "line": 2174,
+          "endLine": 2174
+        },
+        {
+          "line": 2781,
+          "endLine": 2781
+        },
+        {
+          "line": 3900,
+          "endLine": 3900
+        },
+        {
+          "line": 3923,
+          "endLine": 3923
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 150,
+      "endLine": 150,
+      "message": "Consider explicitly re-raising using 'except ValueError as exc' and 'raise Exception(msg) from exc'",
+      "toolSeverity": "warning",
+      "count": 19,
+      "occurrences": [
+        {
+          "line": 150,
+          "endLine": 150
+        },
+        {
+          "line": 196,
+          "endLine": 196
+        },
+        {
+          "line": 204,
+          "endLine": 204
+        },
+        {
+          "line": 542,
+          "endLine": 542
+        },
+        {
+          "line": 548,
+          "endLine": 548
+        },
+        {
+          "line": 553,
+          "endLine": 553
+        },
+        {
+          "line": 557,
+          "endLine": 557
+        },
+        {
+          "line": 579,
+          "endLine": 579
+        },
+        {
+          "line": 586,
+          "endLine": 586
+        },
+        {
+          "line": 1595,
+          "endLine": 1595
+        },
+        {
+          "line": 1805,
+          "endLine": 1805
+        },
+        {
+          "line": 2019,
+          "endLine": 2019
+        },
+        {
+          "line": 2021,
+          "endLine": 2021
+        },
+        {
+          "line": 2507,
+          "endLine": 2507
+        },
+        {
+          "line": 2517,
+          "endLine": 2517
+        },
+        {
+          "line": 2871,
+          "endLine": 2871
+        },
+        {
+          "line": 2903,
+          "endLine": 2903
+        },
+        {
+          "line": 2931,
+          "endLine": 2931
+        },
+        {
+          "line": 3133,
+          "endLine": 3135
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:W0719",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0719"
+      ],
+      "line": 150,
+      "endLine": 150,
+      "message": "Raising too general exception: Exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 150,
+          "endLine": 150
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R46"
+    },
+    {
+      "canonical": "ruff:TRY002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "TRY002"
+      ],
+      "line": 150,
+      "endLine": 150,
+      "message": "Create your own exception",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 150,
+          "endLine": 150
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R48"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 152,
+      "endLine": 152,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 16,
+      "occurrences": [
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 1340,
+          "endLine": 1340
+        },
+        {
+          "line": 1382,
+          "endLine": 1382
+        },
+        {
+          "line": 1658,
+          "endLine": 1658
+        },
+        {
+          "line": 2029,
+          "endLine": 2029
+        },
+        {
+          "line": 2131,
+          "endLine": 2131
+        },
+        {
+          "line": 2159,
+          "endLine": 2159
+        },
+        {
+          "line": 2162,
+          "endLine": 2162
+        },
+        {
+          "line": 2363,
+          "endLine": 2363
+        },
+        {
+          "line": 2599,
+          "endLine": 2599
+        },
+        {
+          "line": 2726,
+          "endLine": 2726
+        },
+        {
+          "line": 2735,
+          "endLine": 2735
+        },
+        {
+          "line": 3066,
+          "endLine": 3066
+        },
+        {
+          "line": 3806,
+          "endLine": 3806
+        },
+        {
+          "line": 3955,
+          "endLine": 3955
+        },
+        {
+          "line": 3982,
+          "endLine": 3982
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 152,
+      "endLine": 152,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 16,
+      "occurrences": [
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 1340,
+          "endLine": 1340
+        },
+        {
+          "line": 1382,
+          "endLine": 1383
+        },
+        {
+          "line": 1658,
+          "endLine": 1659
+        },
+        {
+          "line": 2029,
+          "endLine": 2029
+        },
+        {
+          "line": 2131,
+          "endLine": 2131
+        },
+        {
+          "line": 2159,
+          "endLine": 2159
+        },
+        {
+          "line": 2162,
+          "endLine": 2162
+        },
+        {
+          "line": 2363,
+          "endLine": 2364
+        },
+        {
+          "line": 2599,
+          "endLine": 2600
+        },
+        {
+          "line": 2726,
+          "endLine": 2726
+        },
+        {
+          "line": 2735,
+          "endLine": 2735
+        },
+        {
+          "line": 3066,
+          "endLine": 3066
+        },
+        {
+          "line": 3806,
+          "endLine": 3806
+        },
+        {
+          "line": 3955,
+          "endLine": 3955
+        },
+        {
+          "line": 3982,
+          "endLine": 3982
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:R1735",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1735"
+      ],
+      "line": 234,
+      "endLine": 237,
+      "message": "Consider using '{\"session\": session, \"auth\": auth_plugin, \"global_request_id\": context.global_id, ... }' instead of a call to 'dict'.",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 234,
+          "endLine": 237
+        },
+        {
+          "line": 1567,
+          "endLine": 1567
+        },
+        {
+          "line": 1998,
+          "endLine": 1998
+        },
+        {
+          "line": 2704,
+          "endLine": 2704
+        },
+        {
+          "line": 2801,
+          "endLine": 2802
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R24"
+    },
+    {
+      "canonical": "ruff:C408",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C408"
+      ],
+      "line": 234,
+      "endLine": 237,
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 234,
+          "endLine": 237
+        },
+        {
+          "line": 1567,
+          "endLine": 1567
+        },
+        {
+          "line": 1998,
+          "endLine": 1998
+        },
+        {
+          "line": 2704,
+          "endLine": 2704
+        },
+        {
+          "line": 2801,
+          "endLine": 2802
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R22"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 280,
+      "endLine": 280,
+      "message": "Too many public methods (49/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 280,
+          "endLine": 280
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "inconsistent-return",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1710"
+      ],
+      "line": 289,
+      "endLine": 289,
+      "message": "Either all return statements in a function should return an expression, or none of them should.",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 289,
+          "endLine": 289
+        },
+        {
+          "line": 472,
+          "endLine": 472
+        },
+        {
+          "line": 2228,
+          "endLine": 2228
+        },
+        {
+          "line": 2823,
+          "endLine": 2823
+        },
+        {
+          "line": 3051,
+          "endLine": 3051
+        }
+      ],
+      "id": "T15",
+      "ruleGroup": "R27"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 303,
+      "endLine": 303,
+      "message": "Unused argument 'context'",
+      "toolSeverity": "warning",
+      "count": 10,
+      "occurrences": [
+        {
+          "line": 303,
+          "endLine": 303
+        },
+        {
+          "line": 319,
+          "endLine": 319
+        },
+        {
+          "line": 1780,
+          "endLine": 1780
+        },
+        {
+          "line": 2035,
+          "endLine": 2039
+        },
+        {
+          "line": 2184,
+          "endLine": 2184
+        },
+        {
+          "line": 2753,
+          "endLine": 2753
+        },
+        {
+          "line": 3086,
+          "endLine": 3086
+        },
+        {
+          "line": 3109,
+          "endLine": 3109
+        },
+        {
+          "line": 3138,
+          "endLine": 3138
+        },
+        {
+          "line": 3139,
+          "endLine": 3139
+        }
+      ],
+      "id": "T16",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 472,
+      "endLine": 472,
+      "message": "Too many arguments (6/5)",
+      "toolSeverity": "warning",
+      "count": 14,
+      "occurrences": [
+        {
+          "line": 472,
+          "endLine": 472
+        },
+        {
+          "line": 1000,
+          "endLine": 1000
+        },
+        {
+          "line": 1165,
+          "endLine": 1165
+        },
+        {
+          "line": 1284,
+          "endLine": 1284
+        },
+        {
+          "line": 1750,
+          "endLine": 1750
+        },
+        {
+          "line": 2035,
+          "endLine": 2035
+        },
+        {
+          "line": 3443,
+          "endLine": 3443
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "too-many-branches",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0912"
+      ],
+      "line": 611,
+      "endLine": 611,
+      "message": "Too many branches (16/12)",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 611,
+          "endLine": 611
+        },
+        {
+          "line": 1878,
+          "endLine": 1878
+        },
+        {
+          "line": 2308,
+          "endLine": 2308
+        },
+        {
+          "line": 2523,
+          "endLine": 2523
+        },
+        {
+          "line": 3443,
+          "endLine": 3443
+        },
+        {
+          "line": 3780,
+          "endLine": 3780
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R37"
+    },
+    {
+      "canonical": "pylint:W0105",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0105"
+      ],
+      "line": 672,
+      "endLine": 672,
+      "message": "String statement has no effect",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 672,
+          "endLine": 672
+        }
+      ],
+      "id": "T19"
+    },
+    {
+      "canonical": "ruff:SIM102",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM102"
+      ],
+      "line": 769,
+      "endLine": 770,
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 769,
+          "endLine": 770
+        },
+        {
+          "line": 1669,
+          "endLine": 1677
+        },
+        {
+          "line": 1768,
+          "endLine": 1777
+        }
+      ],
+      "id": "T20",
+      "ruleGroup": "R38"
+    },
+    {
+      "canonical": "ruff:SIM114",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM114"
+      ],
+      "line": 798,
+      "endLine": 801,
+      "message": "Combine `if` branches using logical `or` operator",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 798,
+          "endLine": 801
+        }
+      ],
+      "id": "T21",
+      "ruleGroup": "R84"
+    },
+    {
+      "canonical": "unnecessary-else",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1705"
+      ],
+      "line": 1068,
+      "endLine": 1071,
+      "message": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 1068,
+          "endLine": 1071
+        },
+        {
+          "line": 1121,
+          "endLine": 1125
+        },
+        {
+          "line": 2714,
+          "endLine": 2717
+        },
+        {
+          "line": 2876,
+          "endLine": 2882
+        },
+        {
+          "line": 3023,
+          "endLine": 3030
+        }
+      ],
+      "id": "T22",
+      "ruleGroup": "R21"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 1165,
+      "endLine": 1165,
+      "message": "Too many local variables (23/15)",
+      "toolSeverity": "warning",
+      "count": 11,
+      "occurrences": [
+        {
+          "line": 1165,
+          "endLine": 1165
+        },
+        {
+          "line": 1284,
+          "endLine": 1284
+        },
+        {
+          "line": 1878,
+          "endLine": 1878
+        },
+        {
+          "line": 2121,
+          "endLine": 2121
+        },
+        {
+          "line": 2156,
+          "endLine": 2156
+        },
+        {
+          "line": 2308,
+          "endLine": 2308
+        },
+        {
+          "line": 2523,
+          "endLine": 2523
+        },
+        {
+          "line": 3284,
+          "endLine": 3284
+        },
+        {
+          "line": 3443,
+          "endLine": 3443
+        },
+        {
+          "line": 3636,
+          "endLine": 3636
+        },
+        {
+          "line": 3780,
+          "endLine": 3780
+        }
+      ],
+      "id": "T23",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "pylint:C0325",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0325"
+      ],
+      "line": 1777,
+      "endLine": 1777,
+      "message": "Unnecessary parens after 'if' keyword",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 1777,
+          "endLine": 1777
+        },
+        {
+          "line": 2306,
+          "endLine": 2306
+        }
+      ],
+      "id": "T24",
+      "ruleGroup": "R41"
+    },
+    {
+      "canonical": "pylint:R1718",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1718"
+      ],
+      "line": 1853,
+      "endLine": 1854,
+      "message": "Consider using a set comprehension",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 1853,
+          "endLine": 1854
+        },
+        {
+          "line": 2623,
+          "endLine": 2623
+        }
+      ],
+      "id": "T25",
+      "ruleGroup": "R56"
+    },
+    {
+      "canonical": "ruff:C403",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C403"
+      ],
+      "line": 1853,
+      "endLine": 1854,
+      "message": "Unnecessary list comprehension (rewrite as a set comprehension)",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 1853,
+          "endLine": 1854
+        },
+        {
+          "line": 2623,
+          "endLine": 2623
+        }
+      ],
+      "id": "T26",
+      "ruleGroup": "R57"
+    },
+    {
+      "canonical": "pylint:E0606",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E0606"
+      ],
+      "line": 2087,
+      "endLine": 2087,
+      "message": "Possibly using variable 'net_ids' before assignment",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 2087,
+          "endLine": 2087
+        }
+      ],
+      "id": "T27"
+    },
+    {
+      "canonical": "too-many-statements",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0915"
+      ],
+      "line": 2308,
+      "endLine": 2308,
+      "message": "Too many statements (59/50)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 2308,
+          "endLine": 2308
+        }
+      ],
+      "id": "T28",
+      "ruleGroup": "R36"
+    },
+    {
+      "canonical": "shadowed-builtin",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0622"
+      ],
+      "line": 2884,
+      "endLine": 2884,
+      "message": "Redefining built-in 'id'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 2884,
+          "endLine": 2884
+        }
+      ],
+      "id": "T29",
+      "ruleGroup": "R20"
+    },
+    {
+      "canonical": "ruff:PIE804",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PIE804"
+      ],
+      "line": 2977,
+      "endLine": 2977,
+      "message": "Unnecessary `dict` kwargs",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 2977,
+          "endLine": 2977
+        }
+      ],
+      "id": "T30",
+      "ruleGroup": "R62"
+    },
+    {
+      "canonical": "ruff:SIM401",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "SIM401"
+      ],
+      "line": 2980,
+      "endLine": 2984,
+      "message": "Use `fip['port_details'] = ports.get(port_id, None)` instead of an `if` block",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 2980,
+          "endLine": 2984
+        }
+      ],
+      "id": "T31"
+    },
+    {
+      "canonical": "pylint:R1720",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1720"
+      ],
+      "line": 3074,
+      "endLine": 3077,
+      "message": "Unnecessary \"elif\" after \"raise\", replace only that \"elif\" with \"if\"",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 3074,
+          "endLine": 3077
+        }
+      ],
+      "id": "T32",
+      "ruleGroup": "R42"
+    },
+    {
+      "canonical": "pylint:C0103",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0103"
+      ],
+      "line": 3265,
+      "endLine": 3265,
+      "message": "Variable name \"network_IPs\" doesn't conform to snake_case naming style",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 3265,
+          "endLine": 3265
+        },
+        {
+          "line": 3277,
+          "endLine": 3277
+        },
+        {
+          "line": 3393,
+          "endLine": 3393
+        },
+        {
+          "line": 3790,
+          "endLine": 3790
+        }
+      ],
+      "id": "T33",
+      "ruleGroup": "R12"
+    },
+    {
+      "canonical": "ruff:C401",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "C401"
+      ],
+      "line": 3649,
+      "endLine": 3649,
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 3649,
+          "endLine": 3649
+        }
+      ],
+      "id": "T34",
+      "ruleGroup": "R72"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "update_instance_cache_with_nw_info",
+      "line": 94,
+      "endLine": 131,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "_create_port_minimal",
+      "line": 472,
+      "endLine": 561,
+      "id": "M2"
+    },
+    {
+      "metric": "ccn",
+      "value": 17,
+      "threshold": 15,
+      "function": "_unbind_ports",
+      "line": 611,
+      "endLine": 711,
+      "id": "M3"
+    },
+    {
+      "metric": "function_lines",
+      "value": 101,
+      "threshold": 100,
+      "function": "_unbind_ports",
+      "line": 611,
+      "endLine": 711,
+      "id": "M4"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "_unbind_ports",
+      "line": 611,
+      "endLine": 711,
+      "id": "M5"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_validate_requested_port_ids",
+      "line": 713,
+      "endLine": 789,
+      "id": "M6"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_validate_requested_network_ids",
+      "line": 914,
+      "endLine": 998,
+      "id": "M7"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "_create_ports_for_instance",
+      "line": 1000,
+      "endLine": 1064,
+      "id": "M8"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "_create_ports_for_instance",
+      "line": 1000,
+      "endLine": 1064,
+      "id": "M9"
+    },
+    {
+      "metric": "function_lines",
+      "value": 118,
+      "threshold": 100,
+      "function": "allocate_for_instance",
+      "line": 1165,
+      "endLine": 1282,
+      "id": "M10"
+    },
+    {
+      "metric": "params",
+      "value": 8,
+      "threshold": 6,
+      "function": "allocate_for_instance",
+      "line": 1165,
+      "endLine": 1282,
+      "id": "M11"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "allocate_for_instance",
+      "line": 1165,
+      "endLine": 1282,
+      "id": "M12"
+    },
+    {
+      "metric": "function_lines",
+      "value": 122,
+      "threshold": 100,
+      "function": "_update_ports_for_instance",
+      "line": 1284,
+      "endLine": 1405,
+      "id": "M13"
+    },
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "_update_ports_for_instance",
+      "line": 1284,
+      "endLine": 1405,
+      "id": "M14"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "_update_ports_for_instance",
+      "line": 1284,
+      "endLine": 1405,
+      "id": "M15"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "bind_ports_to_host",
+      "line": 1512,
+      "endLine": 1599,
+      "id": "M16"
+    },
+    {
+      "metric": "params",
+      "value": 9,
+      "threshold": 6,
+      "function": "_populate_neutron_extension_values",
+      "line": 1750,
+      "endLine": 1778,
+      "id": "M17"
+    },
+    {
+      "metric": "params",
+      "value": 10,
+      "threshold": 6,
+      "function": "_get_instance_nw_info",
+      "line": 2035,
+      "endLine": 2061,
+      "id": "M18"
+    },
+    {
+      "metric": "nesting",
+      "value": 9,
+      "threshold": 4,
+      "function": "_gather_port_ids_and_networks",
+      "line": 2063,
+      "endLine": 2118,
+      "id": "M19"
+    },
+    {
+      "metric": "ccn",
+      "value": 19,
+      "threshold": 15,
+      "function": "create_resource_requests",
+      "line": 2308,
+      "endLine": 2468,
+      "id": "M20"
+    },
+    {
+      "metric": "function_lines",
+      "value": 161,
+      "threshold": 100,
+      "function": "create_resource_requests",
+      "line": 2308,
+      "endLine": 2468,
+      "id": "M21"
+    },
+    {
+      "metric": "nesting",
+      "value": 11,
+      "threshold": 4,
+      "function": "create_resource_requests",
+      "line": 2308,
+      "endLine": 2468,
+      "id": "M22"
+    },
+    {
+      "metric": "ccn",
+      "value": 28,
+      "threshold": 15,
+      "function": "_ports_needed_per_instance",
+      "line": 2523,
+      "endLine": 2630,
+      "id": "M23"
+    },
+    {
+      "metric": "function_lines",
+      "value": 108,
+      "threshold": 100,
+      "function": "_ports_needed_per_instance",
+      "line": 2523,
+      "endLine": 2630,
+      "id": "M24"
+    },
+    {
+      "metric": "nesting",
+      "value": 15,
+      "threshold": 4,
+      "function": "_ports_needed_per_instance",
+      "line": 2523,
+      "endLine": 2630,
+      "id": "M25"
+    },
+    {
+      "metric": "nesting",
+      "value": 5,
+      "threshold": 4,
+      "function": "get_floating_ip",
+      "line": 2884,
+      "endLine": 2917,
+      "id": "M26"
+    },
+    {
+      "metric": "nesting",
+      "value": 6,
+      "threshold": 4,
+      "function": "get_floating_ips_by_project",
+      "line": 2953,
+      "endLine": 2986,
+      "id": "M27"
+    },
+    {
+      "metric": "nesting",
+      "value": 7,
+      "threshold": 4,
+      "function": "migrate_instance_start",
+      "line": 3150,
+      "endLine": 3240,
+      "id": "M28"
+    },
+    {
+      "metric": "ccn",
+      "value": 20,
+      "threshold": 15,
+      "function": "_build_network_info_model",
+      "line": 3443,
+      "endLine": 3597,
+      "id": "M29"
+    },
+    {
+      "metric": "function_lines",
+      "value": 155,
+      "threshold": 100,
+      "function": "_build_network_info_model",
+      "line": 3443,
+      "endLine": 3597,
+      "id": "M30"
+    },
+    {
+      "metric": "params",
+      "value": 9,
+      "threshold": 6,
+      "function": "_build_network_info_model",
+      "line": 3443,
+      "endLine": 3597,
+      "id": "M31"
+    },
+    {
+      "metric": "nesting",
+      "value": 11,
+      "threshold": 4,
+      "function": "_build_network_info_model",
+      "line": 3443,
+      "endLine": 3597,
+      "id": "M32"
+    },
+    {
+      "metric": "nesting",
+      "value": 8,
+      "threshold": 4,
+      "function": "_get_subnets_from_port",
+      "line": 3636,
+      "endLine": 3698,
+      "id": "M33"
+    },
+    {
+      "metric": "ccn",
+      "value": 17,
+      "threshold": 15,
+      "function": "_update_port_binding_for_instance",
+      "line": 3780,
+      "endLine": 3904,
+      "id": "M34"
+    },
+    {
+      "metric": "function_lines",
+      "value": 125,
+      "threshold": 100,
+      "function": "_update_port_binding_for_instance",
+      "line": 3780,
+      "endLine": 3904,
+      "id": "M35"
+    },
+    {
+      "metric": "nesting",
+      "value": 10,
+      "threshold": 4,
+      "function": "_update_port_binding_for_instance",
+      "line": 3780,
+      "endLine": 3904,
+      "id": "M36"
+    },
+    {
+      "metric": "file_lines",
+      "value": 2964,
+      "threshold": 1000,
+      "function": null,
+      "line": 1,
+      "endLine": 2964,
+      "id": "M37"
+    }
+  ],
+  "functions": [
+    {
+      "function": "_load_auth_plugin",
+      "startLine": 60,
+      "endLine": 78,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 0,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_binding_profile",
+      "startLine": 81,
+      "endLine": 91,
+      "ccn": 2,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "update_instance_cache_with_nw_info",
+      "startLine": 94,
+      "endLine": 131,
+      "ccn": 7,
+      "nloc": 27,
+      "params": 4,
+      "maxNesting": 5
+    },
+    {
+      "function": "refresh_cache",
+      "startLine": 134,
+      "endLine": 160,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "refresh_cache.wrapper",
+      "startLine": 142,
+      "endLine": 159,
+      "ccn": 3,
+      "nloc": 13,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "__init__",
+      "startLine": 171,
+      "endLine": 173,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "__getattr__",
+      "startLine": 175,
+      "endLine": 183,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "proxy",
+      "startLine": 185,
+      "endLine": 208,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "proxy.wrapper",
+      "startLine": 186,
+      "endLine": 207,
+      "ccn": 4,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_auth_plugin",
+      "startLine": 211,
+      "endLine": 227,
+      "ccn": 6,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_client",
+      "startLine": 230,
+      "endLine": 254,
+      "ccn": 2,
+      "nloc": 18,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_is_not_duplicate",
+      "startLine": 257,
+      "endLine": 271,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_ensure_no_port_binding_failure",
+      "startLine": 274,
+      "endLine": 277,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "__init__",
+      "startLine": 283,
+      "endLine": 287,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_update_port_with_migration_profile",
+      "startLine": 289,
+      "endLine": 300,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_clear_migration_port_profile",
+      "startLine": 302,
+      "endLine": 316,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "_setup_migration_port_profile",
+      "startLine": 318,
+      "endLine": 341,
+      "ccn": 4,
+      "nloc": 15,
+      "params": 6,
+      "maxNesting": 3
+    },
+    {
+      "function": "setup_networks_on_host",
+      "startLine": 343,
+      "endLine": 389,
+      "ccn": 8,
+      "nloc": 20,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "_delete_port_bindings",
+      "startLine": 391,
+      "endLine": 422,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_available_networks",
+      "startLine": 424,
+      "endLine": 461,
+      "ccn": 4,
+      "nloc": 20,
+      "params": 6,
+      "maxNesting": 2
+    },
+    {
+      "function": "_cleanup_created_port",
+      "startLine": 463,
+      "endLine": 470,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_create_port_minimal",
+      "startLine": 472,
+      "endLine": 561,
+      "ccn": 10,
+      "nloc": 59,
+      "params": 7,
+      "maxNesting": 3
+    },
+    {
+      "function": "_update_port",
+      "startLine": 563,
+      "endLine": 586,
+      "ccn": 3,
+      "nloc": 24,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_check_external_network_attach",
+      "startLine": 588,
+      "endLine": 598,
+      "ccn": 5,
+      "nloc": 7,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "unbind_ports",
+      "startLine": 600,
+      "endLine": 609,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_unbind_ports",
+      "startLine": 611,
+      "endLine": 711,
+      "ccn": 17,
+      "nloc": 67,
+      "params": 6,
+      "maxNesting": 5
+    },
+    {
+      "function": "_validate_requested_port_ids",
+      "startLine": 713,
+      "endLine": 789,
+      "ccn": 10,
+      "nloc": 26,
+      "params": 5,
+      "maxNesting": 8
+    },
+    {
+      "function": "_clean_security_groups",
+      "startLine": 791,
+      "endLine": 802,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_security_group_ids",
+      "startLine": 804,
+      "endLine": 856,
+      "ccn": 6,
+      "nloc": 23,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "_process_security_groups",
+      "startLine": 858,
+      "endLine": 912,
+      "ccn": 4,
+      "nloc": 20,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_validate_requested_network_ids",
+      "startLine": 914,
+      "endLine": 998,
+      "ccn": 15,
+      "nloc": 32,
+      "params": 6,
+      "maxNesting": 8
+    },
+    {
+      "function": "_create_ports_for_instance",
+      "startLine": 1000,
+      "endLine": 1064,
+      "ccn": 9,
+      "nloc": 39,
+      "params": 7,
+      "maxNesting": 7
+    },
+    {
+      "function": "_has_resource_request",
+      "startLine": 1066,
+      "endLine": 1071,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "instance_has_extended_resource_request",
+      "startLine": 1073,
+      "endLine": 1095,
+      "ccn": 5,
+      "nloc": 13,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_binding_profile_allocation",
+      "startLine": 1097,
+      "endLine": 1125,
+      "ccn": 2,
+      "nloc": 14,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_binding_profile_allocation",
+      "startLine": 1127,
+      "endLine": 1163,
+      "ccn": 3,
+      "nloc": 17,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "allocate_for_instance",
+      "startLine": 1165,
+      "endLine": 1282,
+      "ccn": 7,
+      "nloc": 46,
+      "params": 8,
+      "maxNesting": 6
+    },
+    {
+      "function": "_update_ports_for_instance",
+      "startLine": 1284,
+      "endLine": 1405,
+      "ccn": 14,
+      "nloc": 65,
+      "params": 10,
+      "maxNesting": 7
+    },
+    {
+      "function": "_refresh_neutron_extensions_cache",
+      "startLine": 1407,
+      "endLine": 1415,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 2
+    },
+    {
+      "function": "_has_extension",
+      "startLine": 1417,
+      "endLine": 1429,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "has_multi_provider_extension",
+      "startLine": 1431,
+      "endLine": 1437,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_dns_extension",
+      "startLine": 1439,
+      "endLine": 1445,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_sg_shared_filter_extension",
+      "startLine": 1447,
+      "endLine": 1453,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_extended_resource_request_extension",
+      "startLine": 1459,
+      "endLine": 1464,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_vnic_index_extension",
+      "startLine": 1466,
+      "endLine": 1471,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_fip_port_details_extension",
+      "startLine": 1473,
+      "endLine": 1478,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_substr_port_filtering_extension",
+      "startLine": 1480,
+      "endLine": 1488,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_segment_extension",
+      "startLine": 1490,
+      "endLine": 1497,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "has_port_binding_extension",
+      "startLine": 1499,
+      "endLine": 1510,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "bind_ports_to_host",
+      "startLine": 1512,
+      "endLine": 1599,
+      "ccn": 11,
+      "nloc": 37,
+      "params": 6,
+      "maxNesting": 5
+    },
+    {
+      "function": "delete_port_binding",
+      "startLine": 1601,
+      "endLine": 1624,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_vf_pci_device_profile",
+      "startLine": 1626,
+      "endLine": 1652,
+      "ccn": 5,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 4
+    },
+    {
+      "function": "_get_pci_device_profile",
+      "startLine": 1654,
+      "endLine": 1683,
+      "ccn": 5,
+      "nloc": 20,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "_populate_neutron_binding_profile",
+      "startLine": 1685,
+      "endLine": 1717,
+      "ccn": 4,
+      "nloc": 21,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "_populate_pci_mac_address",
+      "startLine": 1720,
+      "endLine": 1748,
+      "ccn": 5,
+      "nloc": 20,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "_populate_neutron_extension_values",
+      "startLine": 1750,
+      "endLine": 1778,
+      "ccn": 4,
+      "nloc": 15,
+      "params": 9,
+      "maxNesting": 3
+    },
+    {
+      "function": "_update_port_dns_name",
+      "startLine": 1780,
+      "endLine": 1805,
+      "ccn": 4,
+      "nloc": 14,
+      "params": 6,
+      "maxNesting": 2
+    },
+    {
+      "function": "_reset_port_dns_name",
+      "startLine": 1807,
+      "endLine": 1823,
+      "ccn": 4,
+      "nloc": 8,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_delete_ports",
+      "startLine": 1825,
+      "endLine": 1839,
+      "ccn": 6,
+      "nloc": 15,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "deallocate_for_instance",
+      "startLine": 1841,
+      "endLine": 1876,
+      "ccn": 5,
+      "nloc": 19,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "deallocate_port_for_instance",
+      "startLine": 1878,
+      "endLine": 1968,
+      "ccn": 15,
+      "nloc": 56,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "_delete_nic_metadata",
+      "startLine": 1970,
+      "endLine": 1980,
+      "ccn": 5,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "list_ports",
+      "startLine": 1982,
+      "endLine": 1984,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "show_port",
+      "startLine": 1986,
+      "endLine": 1998,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_show_port",
+      "startLine": 2000,
+      "endLine": 2025,
+      "ccn": 6,
+      "nloc": 17,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_instance_nw_info",
+      "startLine": 2027,
+      "endLine": 2033,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_instance_nw_info",
+      "startLine": 2035,
+      "endLine": 2061,
+      "ccn": 3,
+      "nloc": 21,
+      "params": 10,
+      "maxNesting": 1
+    },
+    {
+      "function": "_gather_port_ids_and_networks",
+      "startLine": 2063,
+      "endLine": 2118,
+      "ccn": 14,
+      "nloc": 34,
+      "params": 6,
+      "maxNesting": 9
+    },
+    {
+      "function": "add_fixed_ip_to_instance",
+      "startLine": 2121,
+      "endLine": 2153,
+      "ccn": 5,
+      "nloc": 30,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "remove_fixed_ip_from_instance",
+      "startLine": 2156,
+      "endLine": 2182,
+      "ccn": 5,
+      "nloc": 25,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_physnet_tunneled_info",
+      "startLine": 2184,
+      "endLine": 2225,
+      "ccn": 5,
+      "nloc": 18,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_trusted_mode_from_port",
+      "startLine": 2228,
+      "endLine": 2238,
+      "ccn": 2,
+      "nloc": 4,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "_is_remote_managed",
+      "startLine": 2241,
+      "endLine": 2248,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "is_remote_managed_port",
+      "startLine": 2250,
+      "endLine": 2259,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_port_vnic_info",
+      "startLine": 2263,
+      "endLine": 2297,
+      "ccn": 2,
+      "nloc": 17,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "support_create_with_resource_request",
+      "startLine": 2299,
+      "endLine": 2306,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "create_resource_requests",
+      "startLine": 2308,
+      "endLine": 2468,
+      "ccn": 19,
+      "nloc": 96,
+      "params": 5,
+      "maxNesting": 11
+    },
+    {
+      "function": "_can_auto_allocate_network",
+      "startLine": 2470,
+      "endLine": 2488,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_auto_allocate_network",
+      "startLine": 2490,
+      "endLine": 2521,
+      "ccn": 3,
+      "nloc": 19,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_ports_needed_per_instance",
+      "startLine": 2523,
+      "endLine": 2630,
+      "ccn": 28,
+      "nloc": 72,
+      "params": 4,
+      "maxNesting": 15
+    },
+    {
+      "function": "get_requested_resource_for_instance",
+      "startLine": 2632,
+      "endLine": 2637,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "validate_networks",
+      "startLine": 2681,
+      "endLine": 2718,
+      "ccn": 5,
+      "nloc": 24,
+      "params": 4,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_instance_uuids_by_ip",
+      "startLine": 2720,
+      "endLine": 2730,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_port_id_by_fixed_address",
+      "startLine": 2732,
+      "endLine": 2748,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "associate_floating_ip",
+      "startLine": 2751,
+      "endLine": 2784,
+      "ccn": 4,
+      "nloc": 21,
+      "params": 6,
+      "maxNesting": 2
+    },
+    {
+      "function": "_update_inst_info_cache_for_disassociated_fip",
+      "startLine": 2786,
+      "endLine": 2820,
+      "ccn": 2,
+      "nloc": 21,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_instance_by_uuid_using_api_db",
+      "startLine": 2823,
+      "endLine": 2858,
+      "ccn": 4,
+      "nloc": 15,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_all",
+      "startLine": 2860,
+      "endLine": 2863,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get",
+      "startLine": 2865,
+      "endLine": 2871,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_fixed_ip_by_address",
+      "startLine": 2873,
+      "endLine": 2882,
+      "ccn": 3,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_floating_ip",
+      "startLine": 2884,
+      "endLine": 2917,
+      "ccn": 6,
+      "nloc": 23,
+      "params": 3,
+      "maxNesting": 5
+    },
+    {
+      "function": "get_floating_ip_by_address",
+      "startLine": 2919,
+      "endLine": 2945,
+      "ccn": 4,
+      "nloc": 17,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_floating_ip_pools",
+      "startLine": 2947,
+      "endLine": 2951,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_floating_ips_by_project",
+      "startLine": 2953,
+      "endLine": 2986,
+      "ccn": 10,
+      "nloc": 24,
+      "params": 2,
+      "maxNesting": 6
+    },
+    {
+      "function": "get_instance_id_by_floating_address",
+      "startLine": 2988,
+      "endLine": 3008,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "get_vifs_by_instance",
+      "startLine": 3010,
+      "endLine": 3012,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_floating_ip_pool_id_by_name_or_id",
+      "startLine": 3014,
+      "endLine": 3030,
+      "ccn": 4,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "allocate_floating_ip",
+      "startLine": 3032,
+      "endLine": 3049,
+      "ccn": 5,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_safe_get_floating_ips",
+      "startLine": 3051,
+      "endLine": 3067,
+      "ccn": 5,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_floating_ip_by_address",
+      "startLine": 3069,
+      "endLine": 3078,
+      "ccn": 4,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_get_floating_ips_by_fixed_and_port",
+      "startLine": 3080,
+      "endLine": 3083,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "release_floating_ip",
+      "startLine": 3085,
+      "endLine": 3098,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "disassociate_and_release_floating_ip",
+      "startLine": 3100,
+      "endLine": 3121,
+      "ccn": 2,
+      "nloc": 11,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "disassociate_and_release_floating_ip._release_floating_ip_and_refresh_cache",
+      "startLine": 3109,
+      "endLine": 3113,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "_release_floating_ip",
+      "startLine": 3123,
+      "endLine": 3135,
+      "ccn": 4,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "disassociate_floating_ip",
+      "startLine": 3138,
+      "endLine": 3148,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "migrate_instance_start",
+      "startLine": 3150,
+      "endLine": 3240,
+      "ccn": 8,
+      "nloc": 42,
+      "params": 4,
+      "maxNesting": 7
+    },
+    {
+      "function": "migrate_instance_finish",
+      "startLine": 3248,
+      "endLine": 3262,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 5,
+      "maxNesting": 0
+    },
+    {
+      "function": "_nw_info_get_ips",
+      "startLine": 3264,
+      "endLine": 3275,
+      "ccn": 3,
+      "nloc": 12,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_nw_info_get_subnets",
+      "startLine": 3277,
+      "endLine": 3282,
+      "ccn": 4,
+      "nloc": 6,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "_nw_info_build_network",
+      "startLine": 3284,
+      "endLine": 3356,
+      "ccn": 13,
+      "nloc": 62,
+      "params": 5,
+      "maxNesting": 3
+    },
+    {
+      "function": "_get_preexisting_port_ids",
+      "startLine": 3358,
+      "endLine": 3368,
+      "ccn": 4,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 3
+    },
+    {
+      "function": "_build_vif_model",
+      "startLine": 3370,
+      "endLine": 3422,
+      "ccn": 3,
+      "nloc": 33,
+      "params": 6,
+      "maxNesting": 1
+    },
+    {
+      "function": "_log_error_if_vnic_type_changed",
+      "startLine": 3424,
+      "endLine": 3441,
+      "ccn": 3,
+      "nloc": 18,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_build_network_info_model",
+      "startLine": 3443,
+      "endLine": 3597,
+      "ccn": 20,
+      "nloc": 97,
+      "params": 9,
+      "maxNesting": 11
+    },
+    {
+      "function": "_get_ordered_port_list",
+      "startLine": 3599,
+      "endLine": 3634,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 4,
+      "maxNesting": 4
+    },
+    {
+      "function": "_get_subnets_from_port",
+      "startLine": 3636,
+      "endLine": 3698,
+      "ccn": 12,
+      "nloc": 43,
+      "params": 4,
+      "maxNesting": 8
+    },
+    {
+      "function": "setup_instance_network_on_host",
+      "startLine": 3700,
+      "endLine": 3714,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 6,
+      "maxNesting": 0
+    },
+    {
+      "function": "cleanup_instance_network_on_host",
+      "startLine": 3716,
+      "endLine": 3741,
+      "ccn": 2,
+      "nloc": 12,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_pci_mapping_for_migration",
+      "startLine": 3743,
+      "endLine": 3749,
+      "ccn": 3,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_port_pci_dev",
+      "startLine": 3751,
+      "endLine": 3778,
+      "ccn": 5,
+      "nloc": 18,
+      "params": 3,
+      "maxNesting": 3
+    },
+    {
+      "function": "_update_port_binding_for_instance",
+      "startLine": 3780,
+      "endLine": 3904,
+      "ccn": 17,
+      "nloc": 82,
+      "params": 6,
+      "maxNesting": 10
+    },
+    {
+      "function": "update_instance_vnic_index",
+      "startLine": 3906,
+      "endLine": 3927,
+      "ccn": 3,
+      "nloc": 11,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_segment_ids_for_network",
+      "startLine": 3929,
+      "endLine": 3958,
+      "ccn": 5,
+      "nloc": 16,
+      "params": 3,
+      "maxNesting": 4
+    },
+    {
+      "function": "get_segment_id_for_subnet",
+      "startLine": 3960,
+      "endLine": 3983,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 3,
+      "maxNesting": 2
+    },
+    {
+      "function": "_ensure_requested_network_ordering",
+      "startLine": 3986,
+      "endLine": 3989,
+      "ccn": 2,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 1
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

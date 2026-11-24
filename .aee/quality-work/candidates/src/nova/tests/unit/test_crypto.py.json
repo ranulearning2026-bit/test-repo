@@ -1,0 +1,598 @@
+{
+  "file": "src/nova/tests/unit/test_crypto.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 19,
+      "endLine": 36,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 19,
+          "endLine": 36
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 39,
+      "endLine": 39,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 4,
+      "occurrences": [
+        {
+          "line": 39,
+          "endLine": 39
+        },
+        {
+          "line": 113,
+          "endLine": 113
+        },
+        {
+          "line": 237,
+          "endLine": 237
+        },
+        {
+          "line": 405,
+          "endLine": 405
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 79,
+      "endLine": 79,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 79,
+          "endLine": 79
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R50"
+    },
+    {
+      "canonical": "pylint:E1101",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1101"
+      ],
+      "line": 90,
+      "endLine": 90,
+      "message": "Module 'nova.exception' has no 'DecryptionFailure' member",
+      "toolSeverity": "error",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 90,
+          "endLine": 90
+        }
+      ],
+      "id": "T5"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 92,
+      "endLine": 92,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 13,
+      "occurrences": [
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 108,
+          "endLine": 108
+        },
+        {
+          "line": 185,
+          "endLine": 185
+        },
+        {
+          "line": 198,
+          "endLine": 198
+        },
+        {
+          "line": 205,
+          "endLine": 205
+        },
+        {
+          "line": 213,
+          "endLine": 213
+        },
+        {
+          "line": 232,
+          "endLine": 232
+        },
+        {
+          "line": 436,
+          "endLine": 436
+        },
+        {
+          "line": 439,
+          "endLine": 439
+        },
+        {
+          "line": 443,
+          "endLine": 443
+        },
+        {
+          "line": 452,
+          "endLine": 452
+        },
+        {
+          "line": 461,
+          "endLine": 461
+        },
+        {
+          "line": 468,
+          "endLine": 468
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 98,
+      "endLine": 98,
+      "message": "Unused argument 'key'",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 98,
+          "endLine": 98
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "ruff:RUF059",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF059"
+      ],
+      "line": 199,
+      "endLine": 199,
+      "message": "Unpacked variable `private_key` is never used",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 199,
+          "endLine": 199
+        },
+        {
+          "line": 207,
+          "endLine": 207
+        },
+        {
+          "line": 221,
+          "endLine": 221
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R34"
+    },
+    {
+      "canonical": "unused-variable",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0612"
+      ],
+      "line": 199,
+      "endLine": 199,
+      "message": "Unused variable 'private_key'",
+      "toolSeverity": "warning",
+      "count": 5,
+      "occurrences": [
+        {
+          "line": 199,
+          "endLine": 199
+        },
+        {
+          "line": 207,
+          "endLine": 207
+        },
+        {
+          "line": 221,
+          "endLine": 221
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R26"
+    },
+    {
+      "canonical": "pylint:R0903",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0903"
+      ],
+      "line": 226,
+      "endLine": 226,
+      "message": "Too few public methods (1/2)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 226,
+          "endLine": 226
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R16"
+    },
+    {
+      "canonical": "pylint:E1120",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "E1120"
+      ],
+      "line": 437,
+      "endLine": 437,
+      "message": "No value for argument 'mock_get_manager' in method call",
+      "toolSeverity": "error",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 437,
+          "endLine": 437
+        },
+        {
+          "line": 440,
+          "endLine": 440
+        }
+      ],
+      "id": "T11"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "_ssh_decrypt_text",
+      "startLine": 76,
+      "endLine": 90,
+      "ccn": 2,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_ssh_encrypt_decrypt_text",
+      "startLine": 92,
+      "endLine": 96,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_ssh_encrypt_decrypt_text",
+      "startLine": 98,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ssh_encrypt_failure",
+      "startLine": 108,
+      "endLine": 110,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generate_fingerprint",
+      "startLine": 185,
+      "endLine": 196,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generate_key_pair_2048_bits",
+      "startLine": 198,
+      "endLine": 203,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generate_key_pair_1024_bits",
+      "startLine": 205,
+      "endLine": 211,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_generate_key_pair_mocked_private_key",
+      "startLine": 213,
+      "endLine": 223,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "__init__",
+      "startLine": 229,
+      "endLine": 230,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_encoded",
+      "startLine": 232,
+      "endLine": 233,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 239,
+      "endLine": 241,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ensure_vtpm_secret",
+      "startLine": 244,
+      "endLine": 259,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ensure_vtpm_secret_error",
+      "startLine": 262,
+      "endLine": 275,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ensure_vtpm_secret_no_secret",
+      "startLine": 279,
+      "endLine": 299,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_vtpm_secret",
+      "startLine": 302,
+      "endLine": 318,
+      "ccn": 1,
+      "nloc": 11,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ensure_vtpm_secret_create_forbidden",
+      "startLine": 321,
+      "endLine": 335,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ensure_vtpm_secret_get_forbidden",
+      "startLine": 338,
+      "endLine": 352,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_vtpm_secret_get_forbidden",
+      "startLine": 355,
+      "endLine": 369,
+      "ccn": 1,
+      "nloc": 10,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_ensure_vtpm_secret_other_keymanager_error",
+      "startLine": 373,
+      "endLine": 387,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_delete_vtpm_secret_other_keymanager_error",
+      "startLine": 390,
+      "endLine": 402,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 407,
+      "endLine": 409,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_test_create_encryption_secret",
+      "startLine": 414,
+      "endLine": 434,
+      "ccn": 2,
+      "nloc": 18,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_create_encryption_secret",
+      "startLine": 436,
+      "endLine": 437,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_create_encryption_secret_for_image",
+      "startLine": 439,
+      "endLine": 440,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_encryption_secret",
+      "startLine": 443,
+      "endLine": 449,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_get_encryption_secret_not_found",
+      "startLine": 452,
+      "endLine": 458,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_encryption_secret",
+      "startLine": 461,
+      "endLine": 465,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_encryption_secret_not_found",
+      "startLine": 468,
+      "endLine": 474,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 7
+  }
+}

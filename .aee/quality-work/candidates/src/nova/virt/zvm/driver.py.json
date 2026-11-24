@@ -1,0 +1,733 @@
+{
+  "file": "src/nova/virt/zvm/driver.py",
+  "language": "python",
+  "role": "source",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 15,
+      "endLine": 34,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 15,
+          "endLine": 34
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:W0223",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0223"
+      ],
+      "line": 44,
+      "endLine": 44,
+      "message": "Method 'attach_interface' is abstract in class 'ComputeDriver' but is not overridden in child class 'ZVMDriver'",
+      "toolSeverity": "warning",
+      "count": 64,
+      "occurrences": [
+        {
+          "line": 44,
+          "endLine": 44
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R59"
+    },
+    {
+      "canonical": "ruff:RUF012",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "RUF012"
+      ],
+      "line": 46,
+      "endLine": 67,
+      "message": "Mutable default value for class attribute",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 46,
+          "endLine": 67
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R13"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 70,
+      "endLine": 70,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 70,
+          "endLine": 70
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 70,
+      "endLine": 70,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 70,
+          "endLine": 70
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "broad-except",
+      "tools": [
+        "pylint",
+        "ruff"
+      ],
+      "ruleIds": [
+        "BLE001",
+        "W0718"
+      ],
+      "line": 89,
+      "endLine": 89,
+      "message": "Do not catch blind exception: `Exception`",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 89,
+          "endLine": 89
+        },
+        {
+          "line": 199,
+          "endLine": 199
+        },
+        {
+          "line": 208,
+          "endLine": 208
+        },
+        {
+          "line": 297,
+          "endLine": 297
+        },
+        {
+          "line": 340,
+          "endLine": 340
+        },
+        {
+          "line": 354,
+          "endLine": 354
+        },
+        {
+          "line": 386,
+          "endLine": 386
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R32"
+    },
+    {
+      "canonical": "pylint:W0707",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0707"
+      ],
+      "line": 92,
+      "endLine": 92,
+      "message": "Consider explicitly re-raising using 'except Exception as exc' and 'raise exception.ZVMDriverException(error=msg) from exc'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 92,
+          "endLine": 92
+        },
+        {
+          "line": 296,
+          "endLine": 296
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R31"
+    },
+    {
+      "canonical": "pylint:R0914",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0914"
+      ],
+      "line": 150,
+      "endLine": 150,
+      "message": "Too many local variables (20/15)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 150,
+          "endLine": 150
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R23"
+    },
+    {
+      "canonical": "too-many-args",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0913",
+        "R0917"
+      ],
+      "line": 150,
+      "endLine": 150,
+      "message": "Too many arguments (10/5)",
+      "toolSeverity": "warning",
+      "count": 6,
+      "occurrences": [
+        {
+          "line": 150,
+          "endLine": 150
+        },
+        {
+          "line": 402,
+          "endLine": 402
+        },
+        {
+          "line": 412,
+          "endLine": 412
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R17"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 231,
+      "endLine": 231,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 231,
+          "endLine": 231
+        },
+        {
+          "line": 243,
+          "endLine": 243
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 231,
+      "endLine": 231,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 231,
+          "endLine": 231
+        },
+        {
+          "line": 243,
+          "endLine": 243
+        }
+      ],
+      "id": "T13",
+      "ruleGroup": "R08"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 252,
+      "endLine": 252,
+      "message": "Unused argument 'instance'",
+      "toolSeverity": "warning",
+      "count": 2,
+      "occurrences": [
+        {
+          "line": 252,
+          "endLine": 252
+        },
+        {
+          "line": 277,
+          "endLine": 277
+        }
+      ],
+      "id": "T14",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0211",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0211"
+      ],
+      "line": 277,
+      "endLine": 277,
+      "message": "Static method with 'self' as first argument",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 277,
+          "endLine": 277
+        }
+      ],
+      "id": "T15"
+    },
+    {
+      "canonical": "ruff:PLW0211",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "PLW0211"
+      ],
+      "line": 277,
+      "endLine": 277,
+      "message": "First argument of a static method should not be named `self`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 277,
+          "endLine": 277
+        }
+      ],
+      "id": "T16"
+    },
+    {
+      "canonical": "pylint:W0221",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0221"
+      ],
+      "line": 313,
+      "endLine": 313,
+      "message": "Number of parameters was 7 in 'ComputeDriver.destroy' and is now 6 in overriding 'ZVMDriver.destroy' method",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 313,
+          "endLine": 313
+        }
+      ],
+      "id": "T17",
+      "ruleGroup": "R39"
+    },
+    {
+      "canonical": "unspecified-encoding",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W1514"
+      ],
+      "line": 380,
+      "endLine": 380,
+      "message": "Using open without explicitly specifying an encoding",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 380,
+          "endLine": 380
+        }
+      ],
+      "id": "T18",
+      "ruleGroup": "R50"
+    }
+  ],
+  "metricCandidates": [
+    {
+      "metric": "params",
+      "value": 11,
+      "threshold": 6,
+      "function": "spawn",
+      "line": 150,
+      "endLine": 210,
+      "id": "M1"
+    },
+    {
+      "metric": "params",
+      "value": 7,
+      "threshold": 6,
+      "function": "power_on",
+      "line": 402,
+      "endLine": 404,
+      "id": "M2"
+    },
+    {
+      "metric": "params",
+      "value": 9,
+      "threshold": 6,
+      "function": "reboot",
+      "line": 412,
+      "endLine": 419,
+      "id": "M3"
+    }
+  ],
+  "functions": [
+    {
+      "function": "__init__",
+      "startLine": 69,
+      "endLine": 77,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_validate_options",
+      "startLine": 80,
+      "endLine": 100,
+      "ccn": 4,
+      "nloc": 17,
+      "params": 0,
+      "maxNesting": 3
+    },
+    {
+      "function": "init_host",
+      "startLine": 102,
+      "endLine": 103,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "list_instances",
+      "startLine": 105,
+      "endLine": 106,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "instance_exists",
+      "startLine": 108,
+      "endLine": 111,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_available_resource",
+      "startLine": 113,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 26,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_available_nodes",
+      "startLine": 143,
+      "endLine": 144,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "get_info",
+      "startLine": 146,
+      "endLine": 148,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "spawn",
+      "startLine": 150,
+      "endLine": 210,
+      "ccn": 7,
+      "nloc": 47,
+      "params": 11,
+      "maxNesting": 4
+    },
+    {
+      "function": "_get_image_info",
+      "startLine": 213,
+      "endLine": 224,
+      "ccn": 3,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 2
+    },
+    {
+      "function": "_set_disk_list",
+      "startLine": 226,
+      "endLine": 250,
+      "ccn": 5,
+      "nloc": 22,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "_setup_network",
+      "startLine": 252,
+      "endLine": 266,
+      "ccn": 3,
+      "nloc": 14,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "_get_neutron_event",
+      "startLine": 269,
+      "endLine": 274,
+      "ccn": 4,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 3
+    },
+    {
+      "function": "_neutron_failed_callback",
+      "startLine": 277,
+      "endLine": 281,
+      "ccn": 2,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "_wait_vif_plug_events",
+      "startLine": 283,
+      "endLine": 300,
+      "ccn": 4,
+      "nloc": 18,
+      "params": 5,
+      "maxNesting": 2
+    },
+    {
+      "function": "_import_spawn_image",
+      "startLine": 302,
+      "endLine": 311,
+      "ccn": 2,
+      "nloc": 10,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "destroy",
+      "startLine": 313,
+      "endLine": 326,
+      "ccn": 4,
+      "nloc": 14,
+      "params": 6,
+      "maxNesting": 3
+    },
+    {
+      "function": "get_host_uptime",
+      "startLine": 328,
+      "endLine": 329,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "snapshot",
+      "startLine": 331,
+      "endLine": 393,
+      "ccn": 5,
+      "nloc": 52,
+      "params": 5,
+      "maxNesting": 1
+    },
+    {
+      "function": "power_off",
+      "startLine": 395,
+      "endLine": 400,
+      "ccn": 3,
+      "nloc": 6,
+      "params": 4,
+      "maxNesting": 1
+    },
+    {
+      "function": "power_on",
+      "startLine": 402,
+      "endLine": 404,
+      "ccn": 1,
+      "nloc": 3,
+      "params": 7,
+      "maxNesting": 0
+    },
+    {
+      "function": "pause",
+      "startLine": 406,
+      "endLine": 407,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "unpause",
+      "startLine": 409,
+      "endLine": 410,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "reboot",
+      "startLine": 412,
+      "endLine": 419,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 9,
+      "maxNesting": 1
+    },
+    {
+      "function": "get_console_output",
+      "startLine": 421,
+      "endLine": 422,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "update_provider_tree",
+      "startLine": 424,
+      "endLine": 457,
+      "ccn": 1,
+      "nloc": 31,
+      "params": 4,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 5
+  }
+}

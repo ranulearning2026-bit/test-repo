@@ -1,0 +1,853 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_server_tags.py",
+  "language": "python",
+  "role": "test",
+  "toolsRun": [
+    "ruff",
+    "pylint",
+    "lizard"
+  ],
+  "toolsMissing": [],
+  "thresholds": {
+    "ccn": 15,
+    "function_lines": 100,
+    "params": 6,
+    "nesting": 4,
+    "file_lines": 1000
+  },
+  "toolCandidates": [
+    {
+      "canonical": "pylint:C0114",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0114"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "Missing module docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T1",
+      "ruleGroup": "R02"
+    },
+    {
+      "canonical": "ruff:EXE002",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "EXE002"
+      ],
+      "line": 1,
+      "endLine": 1,
+      "message": "The file is executable but no shebang is present",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "endLine": 1
+        }
+      ],
+      "id": "T2",
+      "ruleGroup": "R01"
+    },
+    {
+      "canonical": "ruff:I001",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "I001"
+      ],
+      "line": 13,
+      "endLine": 28,
+      "message": "Import block is un-sorted or un-formatted",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 13,
+          "endLine": 28
+        }
+      ],
+      "id": "T3",
+      "ruleGroup": "R04"
+    },
+    {
+      "canonical": "pylint:C0116",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0116"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Missing function or method docstring",
+      "toolSeverity": "info",
+      "count": 31,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        },
+        {
+          "line": 73,
+          "endLine": 73
+        },
+        {
+          "line": 82,
+          "endLine": 82
+        },
+        {
+          "line": 94,
+          "endLine": 94
+        },
+        {
+          "line": 105,
+          "endLine": 105
+        },
+        {
+          "line": 115,
+          "endLine": 115
+        },
+        {
+          "line": 123,
+          "endLine": 123
+        },
+        {
+          "line": 129,
+          "endLine": 129
+        },
+        {
+          "line": 135,
+          "endLine": 135
+        },
+        {
+          "line": 143,
+          "endLine": 143
+        },
+        {
+          "line": 149,
+          "endLine": 149
+        },
+        {
+          "line": 157,
+          "endLine": 157
+        },
+        {
+          "line": 167,
+          "endLine": 167
+        },
+        {
+          "line": 186,
+          "endLine": 186
+        },
+        {
+          "line": 199,
+          "endLine": 199
+        },
+        {
+          "line": 211,
+          "endLine": 211
+        },
+        {
+          "line": 222,
+          "endLine": 222
+        },
+        {
+          "line": 231,
+          "endLine": 231
+        },
+        {
+          "line": 242,
+          "endLine": 242
+        }
+      ],
+      "id": "T4",
+      "ruleGroup": "R03"
+    },
+    {
+      "canonical": "pylint:W0613",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0613"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Unused argument 'compute_api'",
+      "toolSeverity": "warning",
+      "count": 7,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        },
+        {
+          "line": 43,
+          "endLine": 43
+        },
+        {
+          "line": 256,
+          "endLine": 256
+        }
+      ],
+      "id": "T5",
+      "ruleGroup": "R11"
+    },
+    {
+      "canonical": "pylint:W0621",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "W0621"
+      ],
+      "line": 38,
+      "endLine": 38,
+      "message": "Redefining name 'context' from outer scope (line 20)",
+      "toolSeverity": "warning",
+      "count": 3,
+      "occurrences": [
+        {
+          "line": 38,
+          "endLine": 38
+        },
+        {
+          "line": 42,
+          "endLine": 42
+        },
+        {
+          "line": 256,
+          "endLine": 256
+        }
+      ],
+      "id": "T6",
+      "ruleGroup": "R19"
+    },
+    {
+      "canonical": "pylint:C0115",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0115"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Missing class docstring",
+      "toolSeverity": "info",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        }
+      ],
+      "id": "T7",
+      "ruleGroup": "R05"
+    },
+    {
+      "canonical": "pylint:R0904",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R0904"
+      ],
+      "line": 48,
+      "endLine": 48,
+      "message": "Too many public methods (30/20)",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 48,
+          "endLine": 48
+        }
+      ],
+      "id": "T8",
+      "ruleGroup": "R18"
+    },
+    {
+      "canonical": "pylint:R1725",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "R1725"
+      ],
+      "line": 52,
+      "endLine": 52,
+      "message": "Consider using Python 3 style super() without arguments",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 52,
+          "endLine": 52
+        }
+      ],
+      "id": "T9",
+      "ruleGroup": "R06"
+    },
+    {
+      "canonical": "ruff:UP008",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP008"
+      ],
+      "line": 52,
+      "endLine": 52,
+      "message": "Use `super()` instead of `super(__class__, self)`",
+      "toolSeverity": "warning",
+      "count": 1,
+      "occurrences": [
+        {
+          "line": 52,
+          "endLine": 52
+        }
+      ],
+      "id": "T10",
+      "ruleGroup": "R07"
+    },
+    {
+      "canonical": "pylint:C0209",
+      "tools": [
+        "pylint"
+      ],
+      "ruleIds": [
+        "C0209"
+      ],
+      "line": 76,
+      "endLine": 76,
+      "message": "Formatting a regular string which could be an f-string",
+      "toolSeverity": "info",
+      "count": 29,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 76
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 98,
+          "endLine": 98
+        },
+        {
+          "line": 110,
+          "endLine": 110
+        },
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 130,
+          "endLine": 130
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 160,
+          "endLine": 160
+        },
+        {
+          "line": 173,
+          "endLine": 173
+        },
+        {
+          "line": 191,
+          "endLine": 191
+        },
+        {
+          "line": 206,
+          "endLine": 206
+        },
+        {
+          "line": 217,
+          "endLine": 217
+        },
+        {
+          "line": 227,
+          "endLine": 227
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        },
+        {
+          "line": 246,
+          "endLine": 246
+        },
+        {
+          "line": 263,
+          "endLine": 263
+        },
+        {
+          "line": 271,
+          "endLine": 271
+        }
+      ],
+      "id": "T11",
+      "ruleGroup": "R09"
+    },
+    {
+      "canonical": "ruff:UP031",
+      "tools": [
+        "ruff"
+      ],
+      "ruleIds": [
+        "UP031"
+      ],
+      "line": 76,
+      "endLine": 76,
+      "message": "Use format specifiers instead of percent format",
+      "toolSeverity": "warning",
+      "count": 29,
+      "occurrences": [
+        {
+          "line": 76,
+          "endLine": 76
+        },
+        {
+          "line": 86,
+          "endLine": 86
+        },
+        {
+          "line": 98,
+          "endLine": 98
+        },
+        {
+          "line": 110,
+          "endLine": 110
+        },
+        {
+          "line": 117,
+          "endLine": 117
+        },
+        {
+          "line": 124,
+          "endLine": 124
+        },
+        {
+          "line": 130,
+          "endLine": 130
+        },
+        {
+          "line": 137,
+          "endLine": 137
+        },
+        {
+          "line": 144,
+          "endLine": 144
+        },
+        {
+          "line": 152,
+          "endLine": 152
+        },
+        {
+          "line": 160,
+          "endLine": 160
+        },
+        {
+          "line": 173,
+          "endLine": 173
+        },
+        {
+          "line": 191,
+          "endLine": 191
+        },
+        {
+          "line": 206,
+          "endLine": 206
+        },
+        {
+          "line": 217,
+          "endLine": 217
+        },
+        {
+          "line": 227,
+          "endLine": 227
+        },
+        {
+          "line": 235,
+          "endLine": 235
+        },
+        {
+          "line": 246,
+          "endLine": 246
+        },
+        {
+          "line": 263,
+          "endLine": 263
+        },
+        {
+          "line": 271,
+          "endLine": 271
+        }
+      ],
+      "id": "T12",
+      "ruleGroup": "R08"
+    }
+  ],
+  "metricCandidates": [],
+  "functions": [
+    {
+      "function": "return_server",
+      "startLine": 38,
+      "endLine": 39,
+      "ccn": 1,
+      "nloc": 2,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "return_invalid_server",
+      "startLine": 42,
+      "endLine": 45,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "setUp",
+      "startLine": 51,
+      "endLine": 59,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_tag",
+      "startLine": 61,
+      "endLine": 65,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "_get_request",
+      "startLine": 67,
+      "endLine": 70,
+      "ccn": 1,
+      "nloc": 4,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_show",
+      "startLine": 73,
+      "endLine": 79,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_index",
+      "startLine": 82,
+      "endLine": 90,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_update_all",
+      "startLine": 94,
+      "endLine": 103,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 3,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_update_all_too_many_tags",
+      "startLine": 105,
+      "endLine": 113,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_update_all_forbidden_characters",
+      "startLine": 115,
+      "endLine": 121,
+      "ccn": 2,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_update_all_invalid_tag_type",
+      "startLine": 123,
+      "endLine": 127,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_all_tags_with_one_tag_empty_string",
+      "startLine": 129,
+      "endLine": 133,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_all_too_long_tag",
+      "startLine": 135,
+      "endLine": 141,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_all_invalid_tag_list_type",
+      "startLine": 143,
+      "endLine": 147,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_all_invalid_instance_state",
+      "startLine": 149,
+      "endLine": 154,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_show_non_existing_tag",
+      "startLine": 157,
+      "endLine": 162,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update",
+      "startLine": 167,
+      "endLine": 183,
+      "ccn": 1,
+      "nloc": 15,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_existing_tag",
+      "startLine": 186,
+      "endLine": 196,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_tag_limit_exceed",
+      "startLine": 199,
+      "endLine": 208,
+      "ccn": 2,
+      "nloc": 9,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_update_too_long_tag",
+      "startLine": 211,
+      "endLine": 219,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_forbidden_characters",
+      "startLine": 222,
+      "endLine": 229,
+      "ccn": 2,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_update_invalid_instance_state",
+      "startLine": 231,
+      "endLine": 237,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete",
+      "startLine": 242,
+      "endLine": 250,
+      "ccn": 1,
+      "nloc": 9,
+      "params": 4,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_non_existing_tag",
+      "startLine": 253,
+      "endLine": 265,
+      "ccn": 1,
+      "nloc": 8,
+      "params": 2,
+      "maxNesting": 1
+    },
+    {
+      "function": "test_delete_non_existing_tag.fake_db_delete_tag",
+      "startLine": 256,
+      "endLine": 260,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_invalid_instance_state",
+      "startLine": 267,
+      "endLine": 273,
+      "ccn": 1,
+      "nloc": 7,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_all",
+      "startLine": 277,
+      "endLine": 282,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 3,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_all_invalid_instance_state",
+      "startLine": 284,
+      "endLine": 289,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_show_non_existing_instance",
+      "startLine": 291,
+      "endLine": 295,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_show_with_details_information_non_existing_instance",
+      "startLine": 297,
+      "endLine": 302,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_index_non_existing_instance",
+      "startLine": 304,
+      "endLine": 309,
+      "ccn": 1,
+      "nloc": 6,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_non_existing_instance",
+      "startLine": 311,
+      "endLine": 315,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_update_all_non_existing_instance",
+      "startLine": 317,
+      "endLine": 321,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_non_existing_instance",
+      "startLine": 323,
+      "endLine": 327,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    },
+    {
+      "function": "test_delete_all_non_existing_instance",
+      "startLine": 329,
+      "endLine": 333,
+      "ccn": 1,
+      "nloc": 5,
+      "params": 1,
+      "maxNesting": 0
+    }
+  ],
+  "dropped": {
+    "env_noise": 1
+  }
+}
