@@ -1,0 +1,7351 @@
+{
+  "file": "src/nova/tests/fixtures/libvirt.py",
+  "hash": "b2521be9fb2a7116ee8b6a3214a603812e9b8bdaac4f22b1fccb72c66f7390c4",
+  "language": "Python",
+  "component": "tests-fixtures",
+  "package": null,
+  "lines": {
+    "blank": 464,
+    "code": 2251,
+    "comment": 155,
+    "total": 2870
+  },
+  "symbols": [
+    {
+      "name": "import collections",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 15,
+        "end": 15
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import os",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 16,
+        "end": 16
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import sys",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 17,
+        "end": 17
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import textwrap",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 18,
+        "end": 18
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import time",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 19,
+        "end": 19
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import fixtures",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 21,
+        "end": 21
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from lxml import etree",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 22,
+        "end": 22
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from oslo_log import log as logging",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 23,
+        "end": 23
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from oslo_utils.fixture import uuidsentinel as uuids",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 24,
+        "end": 24
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from oslo_utils import versionutils",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 25,
+        "end": 25
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova import conf",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 27,
+        "end": 27
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.objects import fields as obj_fields",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 28,
+        "end": 28
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.tests.fixtures import libvirt_data as fake_libvirt_data",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 29,
+        "end": 29
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.virt.disk.vfs import guestfs",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 30,
+        "end": 30
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.virt.libvirt import config as vconfig",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 31,
+        "end": 31
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.virt.libvirt import driver as libvirt_driver",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 32,
+        "end": 32
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "allow_default_uri_connection",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 37,
+        "end": 37
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "connection_used",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 40,
+        "end": 40
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_reset",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 43,
+        "end": 45
+      },
+      "parameters": [],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "LOG",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 48,
+        "end": 48
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "CONF",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 49,
+        "end": 49
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_NOSTATE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 52,
+        "end": 52
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_RUNNING",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 53,
+        "end": 53
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCKED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 54,
+        "end": 54
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_PAUSED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 55,
+        "end": 55
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_SHUTDOWN",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 56,
+        "end": 56
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_SHUTOFF",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 57,
+        "end": 57
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_CRASHED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 58,
+        "end": 58
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_XML_SECURE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 61,
+        "end": 61
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_XML_INACTIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 62,
+        "end": 62
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_XML_UPDATE_CPU",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 63,
+        "end": 63
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_XML_MIGRATABLE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 64,
+        "end": 64
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_COPY_SHALLOW",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 66,
+        "end": 66
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_COPY_REUSE_EXT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 67,
+        "end": 67
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_COPY_TRANSIENT_JOB",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 68,
+        "end": 68
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_REBASE_SHALLOW",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 70,
+        "end": 70
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_REBASE_REUSE_EXT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 71,
+        "end": 71
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_REBASE_COPY",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 72,
+        "end": 72
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_REBASE_RELATIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 73,
+        "end": 73
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_REBASE_COPY_DEV",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 74,
+        "end": 74
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_RESIZE_BYTES",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 77,
+        "end": 77
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_JOB_ABORT_ASYNC",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 79,
+        "end": 79
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_JOB_ABORT_PIVOT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 80,
+        "end": 80
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_ID_LIFECYCLE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 82,
+        "end": 82
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_DEFINED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 84,
+        "end": 84
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_UNDEFINED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 85,
+        "end": 85
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_STARTED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 86,
+        "end": 86
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_SUSPENDED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 87,
+        "end": 87
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_RESUMED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 88,
+        "end": 88
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_STOPPED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 89,
+        "end": 89
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_SHUTDOWN",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 90,
+        "end": 90
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_PMSUSPENDED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 91,
+        "end": 91
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_ID_DEVICE_REMOVED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 93,
+        "end": 93
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_ID_DEVICE_REMOVAL_FAILED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 94,
+        "end": 94
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_SUSPENDED_MIGRATED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 96,
+        "end": 96
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_EVENT_SUSPENDED_POSTCOPY",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 97,
+        "end": 97
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_UNDEFINE_MANAGED_SAVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 99,
+        "end": 99
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_UNDEFINE_NVRAM",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 100,
+        "end": 100
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_UNDEFINE_KEEP_TPM",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 101,
+        "end": 101
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_UNDEFINE_KEEP_NVRAM",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 102,
+        "end": 102
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_AFFECT_CURRENT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 104,
+        "end": 104
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_AFFECT_LIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 105,
+        "end": 105
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_AFFECT_CONFIG",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 106,
+        "end": 106
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CPU_COMPARE_ERROR",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 108,
+        "end": 108
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CPU_COMPARE_INCOMPATIBLE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 109,
+        "end": 109
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CPU_COMPARE_IDENTICAL",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 110,
+        "end": 110
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CPU_COMPARE_SUPERSET",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 111,
+        "end": 111
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_USERNAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 113,
+        "end": 113
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_AUTHNAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 114,
+        "end": 114
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_LANGUAGE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 115,
+        "end": 115
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_CNONCE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 116,
+        "end": 116
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_PASSPHRASE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 117,
+        "end": 117
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_ECHOPROMPT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 118,
+        "end": 118
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_NOECHOPROMPT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 119,
+        "end": 119
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_REALM",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 120,
+        "end": 120
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CRED_EXTERNAL",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 121,
+        "end": 121
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_LIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 123,
+        "end": 123
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_PEER2PEER",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 124,
+        "end": 124
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_TUNNELLED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 125,
+        "end": 125
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_PERSIST_DEST",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 126,
+        "end": 126
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_UNDEFINE_SOURCE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 127,
+        "end": 127
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_NON_SHARED_INC",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 128,
+        "end": 128
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_AUTO_CONVERGE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 129,
+        "end": 129
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_PARALLEL",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 130,
+        "end": 130
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_PARAM_PARALLEL_CONNECTIONS",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 131,
+        "end": 131
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_POSTCOPY",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 132,
+        "end": 132
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_MIGRATE_TLS",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 133,
+        "end": 133
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_NODE_CPU_STATS_ALL_CPUS",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 135,
+        "end": 135
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_START_PAUSED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 137,
+        "end": 137
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_FROM_QEMU",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 143,
+        "end": 143
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_FROM_DOMAIN",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 144,
+        "end": 144
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_FROM_SECRET",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 145,
+        "end": 145
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_FROM_NWFILTER",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 146,
+        "end": 146
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_FROM_REMOTE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 147,
+        "end": 147
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_FROM_RPC",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 148,
+        "end": 148
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_FROM_NODEDEV",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 149,
+        "end": 149
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_INVALID_ARG",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 151,
+        "end": 151
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_NO_SUPPORT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 152,
+        "end": 152
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_XML_ERROR",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 153,
+        "end": 153
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_XML_DETAIL",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 154,
+        "end": 154
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_NO_DOMAIN",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 155,
+        "end": 155
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_OPERATION_FAILED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 156,
+        "end": 156
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_OPERATION_INVALID",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 157,
+        "end": 157
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_OPERATION_TIMEOUT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 158,
+        "end": 158
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_NO_NWFILTER",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 159,
+        "end": 159
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_SYSTEM_ERROR",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 160,
+        "end": 160
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_INTERNAL_ERROR",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 161,
+        "end": 161
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_CONFIG_UNSUPPORTED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 162,
+        "end": 162
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_NO_NODE_DEVICE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 163,
+        "end": 163
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_INVALID_SECRET",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 164,
+        "end": 164
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_NO_SECRET",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 165,
+        "end": 165
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_AGENT_UNRESPONSIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 166,
+        "end": 166
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_ARGUMENT_UNSUPPORTED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 167,
+        "end": 167
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_OPERATION_UNSUPPORTED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 168,
+        "end": 168
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_ERR_DEVICE_MISSING",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 169,
+        "end": 169
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_RO",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 171,
+        "end": 171
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_BASELINE_CPU_EXPAND_FEATURES",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 174,
+        "end": 174
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_SNAPSHOT_CREATE_NO_METADATA",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 177,
+        "end": 177
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_SNAPSHOT_CREATE_DISK_ONLY",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 178,
+        "end": 178
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_SNAPSHOT_CREATE_REUSE_EXT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 179,
+        "end": 179
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_SNAPSHOT_CREATE_QUIESCE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 180,
+        "end": 180
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_BLOCK_COMMIT_RELATIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 183,
+        "end": 183
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_LIST_DOMAINS_ACTIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 186,
+        "end": 186
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_LIST_DOMAINS_INACTIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 187,
+        "end": 187
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_LIST_NODE_DEVICES_CAP_PCI_DEV",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 190,
+        "end": 190
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_LIST_NODE_DEVICES_CAP_NET",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 191,
+        "end": 191
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_LIST_NODE_DEVICES_CAP_VDPA",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 192,
+        "end": 192
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_LIST_NODE_DEVICES_CAP_MDEV",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 193,
+        "end": 193
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_CONNECT_LIST_NODE_DEVICES_INACTIVE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 194,
+        "end": 194
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_SECRET_USAGE_TYPE_NONE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 197,
+        "end": 197
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_SECRET_USAGE_TYPE_VOLUME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 198,
+        "end": 198
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_SECRET_USAGE_TYPE_CEPH",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 199,
+        "end": 199
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_SECRET_USAGE_TYPE_ISCSI",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 200,
+        "end": 200
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_SECRET_USAGE_TYPE_VTPM",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 201,
+        "end": 201
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_METADATA_DESCRIPTION",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 204,
+        "end": 204
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_METADATA_TITLE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 205,
+        "end": 205
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_METADATA_ELEMENT",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 206,
+        "end": 206
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "FAKE_LIBVIRT_VERSION",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 209,
+        "end": 210
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "FAKE_QEMU_VERSION",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 212,
+        "end": 213
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PCI_VEND_ID",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 215,
+        "end": 215
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PCI_VEND_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 216,
+        "end": 216
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PCI_PROD_ID",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 218,
+        "end": 218
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PCI_PROD_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 219,
+        "end": 219
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PCI_DRIVER_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 220,
+        "end": 220
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PF_PROD_ID",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 222,
+        "end": 222
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PF_PROD_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 223,
+        "end": 223
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PF_DRIVER_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 224,
+        "end": 224
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "PF_CAP_TYPE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 225,
+        "end": 225
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VF_PROD_ID",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 227,
+        "end": 227
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VF_PROD_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 228,
+        "end": 228
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VF_DRIVER_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 229,
+        "end": 229
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VF_CAP_TYPE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 230,
+        "end": 230
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEV_CAPABLE_VEND_ID",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 232,
+        "end": 232
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEV_CAPABLE_VEND_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 233,
+        "end": 233
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEV_CAPABLE_PROD_ID",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 234,
+        "end": 234
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEV_CAPABLE_PROD_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 235,
+        "end": 235
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEV_CAPABLE_DRIVER_NAME",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 236,
+        "end": 236
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEV_CAPABLE_CAP_TYPE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 237,
+        "end": 237
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "NVIDIA_11_VGPU_TYPE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 239,
+        "end": 239
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "NVIDIA_12_VGPU_TYPE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 240,
+        "end": 240
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MLX5_CORE_TYPE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 241,
+        "end": 241
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEVCAP_DEV1_PCI_ADDR",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 242,
+        "end": 242
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEVCAP_DEV2_PCI_ADDR",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 243,
+        "end": 243
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "MDEVCAP_DEV3_PCI_ADDR",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 244,
+        "end": 244
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "os_uname",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 246,
+        "end": 248
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_get_libvirt_nodedev_name",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 251,
+        "end": 253
+      },
+      "parameters": [
+        {
+          "name": "bus"
+        },
+        {
+          "name": "slot"
+        },
+        {
+          "name": "function"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "f'pci_0000_{bus:02x}_{slot:02x}_{function:d}'",
+          "line": 253
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "FakePCIDevice",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 256,
+        "end": 513
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "pci_default_parent",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 267,
+        "end": 267
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "pci_device_template",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 268,
+        "end": 294
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "cap_templ",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 295,
+        "end": 295
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "addr_templ",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 296,
+        "end": 296
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "mdevtypes_templ",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 297,
+        "end": 301
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "vpd_cap_templ",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 303,
+        "end": 307
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "vpd_fields_templ",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 308,
+        "end": 309
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "vpd_field_templ",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 310,
+        "end": 310
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "is_capable_of_mdevs",
+      "kind": "field",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 312,
+        "end": 312
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 314,
+        "end": 364
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dev_type"
+        },
+        {
+          "name": "bus"
+        },
+        {
+          "name": "slot"
+        },
+        {
+          "name": "function"
+        },
+        {
+          "name": "iommu_group"
+        },
+        {
+          "name": "numa_node"
+        },
+        {
+          "name": "*"
+        },
+        {
+          "default": "None",
+          "name": "vf_ratio"
+        },
+        {
+          "default": "False",
+          "name": "multiple_gpu_types"
+        },
+        {
+          "default": "False",
+          "name": "generic_types"
+        },
+        {
+          "default": "None",
+          "name": "parent"
+        },
+        {
+          "default": "None",
+          "name": "vend_id"
+        },
+        {
+          "default": "None",
+          "name": "vend_name"
+        },
+        {
+          "default": "None",
+          "name": "prod_id"
+        },
+        {
+          "default": "None",
+          "name": "prod_name"
+        },
+        {
+          "default": "None",
+          "name": "driver_name"
+        },
+        {
+          "default": "None",
+          "name": "vpd_fields"
+        },
+        {
+          "default": "None",
+          "name": "mac_address"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 24,
+      "ccn": 1
+    },
+    {
+      "name": "generate_xml",
+      "kind": "method",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 366,
+        "end": 482
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "False",
+          "name": "skip_capability"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 97,
+      "ccn": 32
+    },
+    {
+      "name": "format_vpd_cap",
+      "kind": "method",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 484,
+        "end": 506
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "''",
+          "line": 486
+        },
+        {
+          "expr": "self.vpd_cap_templ % { 'name': self.vpd_fields.get('name', ''), 'fields': '\\n'.join(fields) }",
+          "line": 503
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 23,
+      "ccn": 5
+    },
+    {
+      "name": "XMLDesc",
+      "kind": "method",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 508,
+        "end": 509
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.pci_device",
+          "line": 509
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "address",
+      "kind": "method",
+      "scope": "FakePCIDevice",
+      "lineRange": {
+        "start": 512,
+        "end": 513
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "\"0000:%02x:%02x.%1x\" % (self.bus, self.slot, self.function)",
+          "line": 513
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "HostPCIDevicesInfo",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 518,
+        "end": 685
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TOTAL_NUMA_NODES",
+      "kind": "constant",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 521,
+        "end": 521
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 523,
+        "end": 631
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "0",
+          "name": "num_pci"
+        },
+        {
+          "default": "2",
+          "name": "num_pfs"
+        },
+        {
+          "default": "8",
+          "name": "num_vfs"
+        },
+        {
+          "default": "0",
+          "name": "num_mdevcap"
+        },
+        {
+          "default": "None",
+          "name": "numa_node"
+        },
+        {
+          "default": "False",
+          "name": "multiple_gpu_types"
+        },
+        {
+          "default": "False",
+          "name": "generic_types"
+        },
+        {
+          "default": "0x81",
+          "name": "bus"
+        },
+        {
+          "default": "[\"1515\"]",
+          "name": "product_ids"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "",
+          "line": 551
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 67,
+      "ccn": 16
+    },
+    {
+      "name": "add_device",
+      "kind": "method",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 633,
+        "end": 663
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dev_type"
+        },
+        {
+          "name": "bus"
+        },
+        {
+          "name": "slot"
+        },
+        {
+          "name": "function"
+        },
+        {
+          "name": "iommu_group"
+        },
+        {
+          "name": "numa_node"
+        },
+        {
+          "default": "None",
+          "name": "vf_ratio"
+        },
+        {
+          "default": "False",
+          "name": "multiple_gpu_types"
+        },
+        {
+          "default": "False",
+          "name": "generic_types"
+        },
+        {
+          "default": "None",
+          "name": "parent"
+        },
+        {
+          "default": "None",
+          "name": "vend_id"
+        },
+        {
+          "default": "None",
+          "name": "vend_name"
+        },
+        {
+          "default": "None",
+          "name": "prod_id"
+        },
+        {
+          "default": "None",
+          "name": "prod_name"
+        },
+        {
+          "default": "None",
+          "name": "driver_name"
+        },
+        {
+          "default": "None",
+          "name": "vpd_fields"
+        },
+        {
+          "default": "None",
+          "name": "mac_address"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "dev",
+          "line": 663
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 29,
+      "ccn": 1
+    },
+    {
+      "name": "_calc_numa_node",
+      "kind": "method",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 666,
+        "end": 667
+      },
+      "parameters": [
+        {
+          "name": "cls"
+        },
+        {
+          "name": "dev"
+        },
+        {
+          "name": "numa_node"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "dev % cls.TOTAL_NUMA_NODES if numa_node is None else numa_node",
+          "line": 667
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 2
+    },
+    {
+      "name": "get_all_devices",
+      "kind": "method",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 669,
+        "end": 670
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.devices.keys()",
+          "line": 670
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "get_device_by_name",
+      "kind": "method",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 672,
+        "end": 674
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "device_name"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "pci_dev",
+          "line": 674
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "get_all_mdev_capable_devices",
+      "kind": "method",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 676,
+        "end": 678
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[dev for dev in self.devices if self.devices[dev].is_capable_of_mdevs]",
+          "line": 677
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 3
+    },
+    {
+      "name": "get_pci_address_mac_mapping",
+      "kind": "method",
+      "scope": "HostPCIDevicesInfo",
+      "lineRange": {
+        "start": 680,
+        "end": 685
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "{ device.address: device.mac_address for dev_addr, device in self.devices.items() if device.mac_address }",
+          "line": 681
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 3
+    },
+    {
+      "name": "FakeMdevDevice",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 688,
+        "end": 711
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "template",
+      "kind": "field",
+      "scope": "FakeMdevDevice",
+      "lineRange": {
+        "start": 689,
+        "end": 702
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "FakeMdevDevice",
+      "lineRange": {
+        "start": 704,
+        "end": 708
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dev_name"
+        },
+        {
+          "name": "type_id"
+        },
+        {
+          "name": "parent"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "XMLDesc",
+      "kind": "method",
+      "scope": "FakeMdevDevice",
+      "lineRange": {
+        "start": 710,
+        "end": 711
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.xml",
+          "line": 711
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "HostMdevDevicesInfo",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 714,
+        "end": 726
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "HostMdevDevicesInfo",
+      "lineRange": {
+        "start": 715,
+        "end": 719
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "None",
+          "name": "devices"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 2
+    },
+    {
+      "name": "get_all_devices",
+      "kind": "method",
+      "scope": "HostMdevDevicesInfo",
+      "lineRange": {
+        "start": 721,
+        "end": 722
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.devices.keys()",
+          "line": 722
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "get_device_by_name",
+      "kind": "method",
+      "scope": "HostMdevDevicesInfo",
+      "lineRange": {
+        "start": 724,
+        "end": 726
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "device_name"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "dev",
+          "line": 726
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "FakeVDPADevice",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 729,
+        "end": 768
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "template",
+      "kind": "field",
+      "scope": "FakeVDPADevice",
+      "lineRange": {
+        "start": 731,
+        "end": 742
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "FakeVDPADevice",
+      "lineRange": {
+        "start": 744,
+        "end": 751
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "idx"
+        },
+        {
+          "name": "parent"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "generate_xml",
+      "kind": "method",
+      "scope": "FakeVDPADevice",
+      "lineRange": {
+        "start": 753,
+        "end": 765
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 13,
+      "ccn": 1
+    },
+    {
+      "name": "XMLDesc",
+      "kind": "method",
+      "scope": "FakeVDPADevice",
+      "lineRange": {
+        "start": 767,
+        "end": 768
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.xml",
+          "line": 768
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "HostVDPADevicesInfo",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 771,
+        "end": 788
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "HostVDPADevicesInfo",
+      "lineRange": {
+        "start": 773,
+        "end": 774
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "get_all_devices",
+      "kind": "method",
+      "scope": "HostVDPADevicesInfo",
+      "lineRange": {
+        "start": 776,
+        "end": 777
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.devices.keys()",
+          "line": 777
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "get_device_by_name",
+      "kind": "method",
+      "scope": "HostVDPADevicesInfo",
+      "lineRange": {
+        "start": 779,
+        "end": 781
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "device_name"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "dev",
+          "line": 781
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "add_device",
+      "kind": "method",
+      "scope": "HostVDPADevicesInfo",
+      "lineRange": {
+        "start": 783,
+        "end": 788
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "idx"
+        },
+        {
+          "name": "parent"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "dev",
+          "line": 788
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "HostInfo",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 791,
+        "end": 818
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "HostInfo",
+      "lineRange": {
+        "start": 793,
+        "end": 818
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "1",
+          "name": "cpu_nodes"
+        },
+        {
+          "default": "1",
+          "name": "cpu_sockets"
+        },
+        {
+          "default": "2",
+          "name": "cpu_cores"
+        },
+        {
+          "default": "1",
+          "name": "cpu_threads"
+        },
+        {
+          "default": "16780000",
+          "name": "kB_mem"
+        },
+        {
+          "default": "None",
+          "name": "mempages"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 1
+    },
+    {
+      "name": "NUMATopology",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 821,
+        "end": 860
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "NUMATopology",
+      "lineRange": {
+        "start": 828,
+        "end": 860
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "4",
+          "name": "cpu_nodes"
+        },
+        {
+          "default": "1",
+          "name": "cpu_sockets"
+        },
+        {
+          "default": "1",
+          "name": "cpu_cores"
+        },
+        {
+          "default": "2",
+          "name": "cpu_threads"
+        },
+        {
+          "default": "1048576",
+          "name": "kb_mem"
+        },
+        {
+          "default": "None",
+          "name": "mempages"
+        },
+        {
+          "name": "**kwargs"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 26,
+      "ccn": 6
+    },
+    {
+      "name": "create_mempages",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 863,
+        "end": 878
+      },
+      "parameters": [
+        {
+          "name": "mappings"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "mempages",
+          "line": 878
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 2
+    },
+    {
+      "name": "VIR_DOMAIN_JOB_NONE",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 881,
+        "end": 881
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_JOB_BOUNDED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 882,
+        "end": 882
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_JOB_UNBOUNDED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 883,
+        "end": 883
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_JOB_COMPLETED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 884,
+        "end": 884
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_JOB_FAILED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 885,
+        "end": 885
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "VIR_DOMAIN_JOB_CANCELLED",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 886,
+        "end": 886
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_parse_disk_info",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 889,
+        "end": 950
+      },
+      "parameters": [
+        {
+          "name": "element"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "disk_info",
+          "line": 950
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 50,
+      "ccn": 15
+    },
+    {
+      "name": "_parse_vcpu_info",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 953,
+        "end": 957
+      },
+      "parameters": [
+        {
+          "name": "element"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "vcpu_info",
+          "line": 957
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "_parse_filesystem_info",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 960,
+        "end": 976
+      },
+      "parameters": [
+        {
+          "name": "element"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "filesystem_info",
+          "line": 976
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 13,
+      "ccn": 4
+    },
+    {
+      "name": "_parse_nic_info",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 979,
+        "end": 999
+      },
+      "parameters": [
+        {
+          "name": "element"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "nic_info",
+          "line": 999
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 16,
+      "ccn": 5
+    },
+    {
+      "name": "_parse_hostdev_info",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 1002,
+        "end": 1020
+      },
+      "parameters": [
+        {
+          "name": "element"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "hostdev_info",
+          "line": 1020
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 16,
+      "ccn": 4
+    },
+    {
+      "name": "disable_event_thread",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 1023,
+        "end": 1045
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "import nova.virt.libvirt.host",
+      "kind": "import",
+      "scope": "disable_event_thread",
+      "lineRange": {
+        "start": 1038,
+        "end": 1038
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "evloop",
+      "kind": "function",
+      "scope": "disable_event_thread",
+      "lineRange": {
+        "start": 1040,
+        "end": 1041
+      },
+      "parameters": [
+        {
+          "name": "*args"
+        },
+        {
+          "name": "**kwargs"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "libvirtError",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1048,
+        "end": 1119
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1071,
+        "end": 1074
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "defmsg"
+        },
+        {
+          "default": "None",
+          "name": "conn"
+        },
+        {
+          "default": "None",
+          "name": "dom"
+        },
+        {
+          "default": "None",
+          "name": "net"
+        },
+        {
+          "default": "None",
+          "name": "pool"
+        },
+        {
+          "default": "None",
+          "name": "vol"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "get_error_code",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1076,
+        "end": 1079
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1078
+        },
+        {
+          "expr": "self.err[0]",
+          "line": 1079
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_error_domain",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1081,
+        "end": 1084
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1083
+        },
+        {
+          "expr": "self.err[1]",
+          "line": 1084
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_error_message",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1086,
+        "end": 1089
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1088
+        },
+        {
+          "expr": "self.err[2]",
+          "line": 1089
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_error_level",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1091,
+        "end": 1094
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1093
+        },
+        {
+          "expr": "self.err[3]",
+          "line": 1094
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_str1",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1096,
+        "end": 1099
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1098
+        },
+        {
+          "expr": "self.err[4]",
+          "line": 1099
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_str2",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1101,
+        "end": 1104
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1103
+        },
+        {
+          "expr": "self.err[5]",
+          "line": 1104
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_str3",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1106,
+        "end": 1109
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1108
+        },
+        {
+          "expr": "self.err[6]",
+          "line": 1109
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_int1",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1111,
+        "end": 1114
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1113
+        },
+        {
+          "expr": "self.err[7]",
+          "line": 1114
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "get_int2",
+      "kind": "method",
+      "scope": "libvirtError",
+      "lineRange": {
+        "start": 1116,
+        "end": 1119
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "None",
+          "line": 1118
+        },
+        {
+          "expr": "self.err[8]",
+          "line": 1119
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "NodeDevice",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1122,
+        "end": 1156
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1124,
+        "end": 1129
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "connection"
+        },
+        {
+          "default": "None",
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 2
+    },
+    {
+      "name": "_parse_xml",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1131,
+        "end": 1135
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "attach",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1137,
+        "end": 1138
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "detach",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1140,
+        "end": 1141
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "reset",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1143,
+        "end": 1144
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "XMLDesc",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1146,
+        "end": 1147
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags",
+          "type": "int"
+        }
+      ],
+      "returnType": "str",
+      "returns": [
+        {
+          "expr": "self._xml",
+          "line": 1147
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "parent",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1149,
+        "end": 1150
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": "str",
+      "returns": [
+        {
+          "expr": "self._parent",
+          "line": 1150
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "name",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1152,
+        "end": 1153
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": "str",
+      "returns": [
+        {
+          "expr": "self._name",
+          "line": 1153
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "listCaps",
+      "kind": "method",
+      "scope": "NodeDevice",
+      "lineRange": {
+        "start": 1155,
+        "end": 1156
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": "list[str]",
+      "returns": [
+        {
+          "expr": "[self.name().split('_')[0]]",
+          "line": 1156
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "Domain",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1159,
+        "end": 1991
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1160,
+        "end": 1171
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "connection"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "default": "False",
+          "name": "running"
+        },
+        {
+          "default": "False",
+          "name": "transient"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 4
+    },
+    {
+      "name": "_parse_definition",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1173,
+        "end": 1386
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "definition",
+          "line": 1386
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 170,
+      "ccn": 38
+    },
+    {
+      "name": "verify_hostdevs_interface_are_vfs",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1388,
+        "end": 1406
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 4
+    },
+    {
+      "name": "create",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1408,
+        "end": 1409
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "createWithFlags",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1411,
+        "end": 1416
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "isActive",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1418,
+        "end": 1419
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "int(self._state == VIR_DOMAIN_RUNNING)",
+          "line": 1419
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "undefine",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1421,
+        "end": 1422
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "isPersistent",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1424,
+        "end": 1425
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "True",
+          "line": 1425
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "undefineFlags",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1427,
+        "end": 1431
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 3
+    },
+    {
+      "name": "destroy",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1433,
+        "end": 1435
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "ID",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1437,
+        "end": 1438
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._id",
+          "line": 1438
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "name",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1440,
+        "end": 1441
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._def['name']",
+          "line": 1441
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "UUIDString",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1443,
+        "end": 1444
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._def['uuid']",
+          "line": 1444
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "interfaceStats",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1446,
+        "end": 1447
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "device"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[10000242400, 1234, 0, 2, 213412343233, 34214234, 23, 3]",
+          "line": 1447
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "blockStats",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1449,
+        "end": 1450
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "device"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[2, 10000242400, 234, 2343424234, 34]",
+          "line": 1450
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "setTime",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1452,
+        "end": 1453
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "None",
+          "name": "time"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "suspend",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1455,
+        "end": 1456
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "shutdown",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1458,
+        "end": 1460
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "reset",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1462,
+        "end": 1465
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "info",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1467,
+        "end": 1472
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[self._state, int(self._def['memory']), int(self._def['memory']), self._def['vcpu'], 123456789]",
+          "line": 1468
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "migrateToURI3",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1474,
+        "end": 1479
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dconnuri"
+        },
+        {
+          "name": "params"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "migrateSetMaxDowntime",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1481,
+        "end": 1482
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "downtime"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "attachDevice",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1484,
+        "end": 1517
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "result",
+          "line": 1517
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 33,
+      "ccn": 7
+    },
+    {
+      "name": "attachDeviceFlags",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1519,
+        "end": 1527
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 3
+    },
+    {
+      "name": "detachDevice",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1529,
+        "end": 1583
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "attached_disk_info is not None",
+          "line": 1543
+        },
+        {
+          "expr": "attached_nic_info is not None",
+          "line": 1556
+        },
+        {
+          "expr": "attached_hostdev_info is not None",
+          "line": 1575
+        },
+        {
+          "expr": "False",
+          "line": 1583
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 43,
+      "ccn": 16
+    },
+    {
+      "name": "detachDeviceFlags",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1585,
+        "end": 1586
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "setUserPassword",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1588,
+        "end": 1589
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "user"
+        },
+        {
+          "name": "password"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "XMLDesc",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1591,
+        "end": 1901
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "'''<domain type='kvm'> <name>%(name)s</name> <uuid>%(uuid)s</uuid> <memory>%(memory)s</memory> <currentMemory>%(memory)s</currentMemory> <vcpu%(vcpuset)s>%(vcpu)s</vcpu> %(iothreads)s <os> <type arch=",
+          "line": 1831
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 277,
+      "ccn": 41
+    },
+    {
+      "name": "managedSave",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1903,
+        "end": 1905
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "managedSaveRemove",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1907,
+        "end": 1908
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "hasManagedSaveImage",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1910,
+        "end": 1911
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "int(self._has_saved_state)",
+          "line": 1911
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "resume",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1913,
+        "end": 1914
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "snapshotCreateXML",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1916,
+        "end": 1921
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "snapshot",
+          "line": 1921
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "vcpus",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1923,
+        "end": 1928
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "vcpus",
+          "line": 1928
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 2
+    },
+    {
+      "name": "memoryStats",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1930,
+        "end": 1931
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "{}",
+          "line": 1931
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "maxMemory",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1933,
+        "end": 1934
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._def['memory']",
+          "line": 1934
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "blockJobInfo",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1936,
+        "end": 1937
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "disk"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "{}",
+          "line": 1937
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "blockJobAbort",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1939,
+        "end": 1940
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "disk"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "blockResize",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1942,
+        "end": 1943
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "disk"
+        },
+        {
+          "name": "size"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "blockRebase",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1945,
+        "end": 1953
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "disk"
+        },
+        {
+          "name": "base"
+        },
+        {
+          "default": "0",
+          "name": "bandwidth"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "0",
+          "line": 1953
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 4
+    },
+    {
+      "name": "blockCopy",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1955,
+        "end": 1956
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "disk"
+        },
+        {
+          "name": "base"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "0",
+          "line": 1956
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "blockCommit",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1958,
+        "end": 1959
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "disk"
+        },
+        {
+          "name": "base"
+        },
+        {
+          "name": "top"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "0",
+          "line": 1959
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "jobInfo",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1961,
+        "end": 1964
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[0] * 12",
+          "line": 1964
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "jobStats",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1966,
+        "end": 1970
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "{'type': self._job_type}",
+          "line": 1970
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "complete_job",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1972,
+        "end": 1973
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "fail_job",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1975,
+        "end": 1976
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "injectNMI",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1978,
+        "end": 1979
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "0",
+          "line": 1979
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "abortJob",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1981,
+        "end": 1982
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "fsFreeze",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1984,
+        "end": 1985
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "fsThaw",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1987,
+        "end": 1988
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "setMetadata",
+      "kind": "method",
+      "scope": "Domain",
+      "lineRange": {
+        "start": 1990,
+        "end": 1991
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "metadata_type"
+        },
+        {
+          "name": "metadata"
+        },
+        {
+          "name": "key"
+        },
+        {
+          "name": "uri"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "DomainSnapshot",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1994,
+        "end": 2000
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "DomainSnapshot",
+      "lineRange": {
+        "start": 1995,
+        "end": 1997
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "domain"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "delete",
+      "kind": "method",
+      "scope": "DomainSnapshot",
+      "lineRange": {
+        "start": 1999,
+        "end": 2000
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "Secret",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 2003,
+        "end": 2054
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "Secret",
+      "lineRange": {
+        "start": 2004,
+        "end": 2008
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "connection"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "_parse_xml",
+      "kind": "method",
+      "scope": "Secret",
+      "lineRange": {
+        "start": 2010,
+        "end": 2021
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 4
+    },
+    {
+      "name": "setValue",
+      "kind": "method",
+      "scope": "Secret",
+      "lineRange": {
+        "start": 2023,
+        "end": 2025
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "0",
+          "line": 2025
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "value",
+      "kind": "method",
+      "scope": "Secret",
+      "lineRange": {
+        "start": 2027,
+        "end": 2043
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._value",
+          "line": 2043
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 3
+    },
+    {
+      "name": "undefine",
+      "kind": "method",
+      "scope": "Secret",
+      "lineRange": {
+        "start": 2045,
+        "end": 2046
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "UUIDString",
+      "kind": "method",
+      "scope": "Secret",
+      "lineRange": {
+        "start": 2048,
+        "end": 2050
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._uuid",
+          "line": 2050
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 2
+    },
+    {
+      "name": "usageID",
+      "kind": "method",
+      "scope": "Secret",
+      "lineRange": {
+        "start": 2052,
+        "end": 2054
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._usage_id",
+          "line": 2054
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 2
+    },
+    {
+      "name": "Connection",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 2057,
+        "end": 2667
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2058,
+        "end": 2107
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "None",
+          "name": "uri"
+        },
+        {
+          "default": "False",
+          "name": "readonly"
+        },
+        {
+          "default": "FAKE_LIBVIRT_VERSION",
+          "name": "version"
+        },
+        {
+          "default": "FAKE_QEMU_VERSION",
+          "name": "hv_version"
+        },
+        {
+          "default": "None",
+          "name": "hostname"
+        },
+        {
+          "default": "None",
+          "name": "host_info"
+        },
+        {
+          "default": "None",
+          "name": "pci_info"
+        },
+        {
+          "default": "None",
+          "name": "mdev_info"
+        },
+        {
+          "default": "None",
+          "name": "vdpa_info"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 42,
+      "ccn": 10
+    },
+    {
+      "name": "_add_nodedev",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2109,
+        "end": 2110
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "nodedev"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "_remove_nodedev",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2112,
+        "end": 2113
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "nodedev"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "_add_secret",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2115,
+        "end": 2116
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "secret"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "_remove_secret",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2118,
+        "end": 2119
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "secret"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "_mark_running",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2121,
+        "end": 2124
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dom"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "_mark_not_running",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2126,
+        "end": 2136
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dom"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "",
+          "line": 2136
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 4
+    },
+    {
+      "name": "_undefine",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2138,
+        "end": 2141
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dom"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "getInfo",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2143,
+        "end": 2151
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[self.host_info.arch, self.host_info.kB_mem, self.host_info.cpus, self.host_info.cpu_mhz, self.host_info.cpu_nodes, self.host_info.cpu_sockets, self.host_info.cpu_cores, self.host_info.cpu_threads]",
+          "line": 2144
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "lookupByUUIDString",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2153,
+        "end": 2161
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "uuid"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "vm",
+          "line": 2156
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 3
+    },
+    {
+      "name": "listAllDomains",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2163,
+        "end": 2172
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "None",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "vms",
+          "line": 2172
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 6
+    },
+    {
+      "name": "_emit_lifecycle",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2174,
+        "end": 2181
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dom"
+        },
+        {
+          "name": "event"
+        },
+        {
+          "name": "detail"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "",
+          "line": 2176
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 2
+    },
+    {
+      "name": "defineXML",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2183,
+        "end": 2187
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "dom",
+          "line": 2187
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "createXML",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2189,
+        "end": 2193
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "dom",
+          "line": 2193
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "getType",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2195,
+        "end": 2197
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "'QEMU'",
+          "line": 2197
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 2
+    },
+    {
+      "name": "getLibVersion",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2199,
+        "end": 2200
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.fakeLibVersion",
+          "line": 2200
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "getVersion",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2202,
+        "end": 2203
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.fakeVersion",
+          "line": 2203
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "getHostname",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2205,
+        "end": 2206
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.hostname",
+          "line": 2206
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "domainEventRegisterAny",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2208,
+        "end": 2209
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dom"
+        },
+        {
+          "name": "eventid"
+        },
+        {
+          "name": "callback"
+        },
+        {
+          "name": "opaque"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "registerCloseCallback",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2211,
+        "end": 2212
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "cb"
+        },
+        {
+          "name": "opaque"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "getCPUMap",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2214,
+        "end": 2220
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "(total_cpus, cpu_map, total_cpus)",
+          "line": 2220
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "getDomainCapabilities",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2222,
+        "end": 2248
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "emulatorbin"
+        },
+        {
+          "name": "arch"
+        },
+        {
+          "name": "machine_type"
+        },
+        {
+          "name": "virt_type"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "xml",
+          "line": 2237
+        },
+        {
+          "expr": "fake_libvirt_data.DOMCAPABILITIES_X86_64_TEMPLATE % \\ {'devices': self._domain_capability_devices, 'tpm': self._domain_capability_tpm, 'features': self._domain_capability_features, 'mtype': aliases.ge",
+          "line": 2241
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 22,
+      "ccn": 5
+    },
+    {
+      "name": "getCPUModelNames",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2250,
+        "end": 2309
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "arch"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "mapping.get(arch, [])",
+          "line": 2309
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 60,
+      "ccn": 1
+    },
+    {
+      "name": "_domain_capability_devices_default",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2311,
+        "end": 2363
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_tpm_supported",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2365,
+        "end": 2377
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_tpm_unsupported",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2379,
+        "end": 2381
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_tpm_with_no_emulator",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2383,
+        "end": 2394
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_tpm_with_tpm_versions",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2398,
+        "end": 2413
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_devices",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2417,
+        "end": 2417
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_tpm",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2421,
+        "end": 2421
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2425,
+        "end": 2427
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_SEV_base",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2433,
+        "end": 2441
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_SEV",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2443,
+        "end": 2444
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_SEV_unsupported",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2446,
+        "end": 2449
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_launch_security_SEV",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2455,
+        "end": 2461
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_launch_security_unsupported",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2463,
+        "end": 2468
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_launch_security_SEV_SNP",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2470,
+        "end": 2477
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_TDX",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2479,
+        "end": 2483
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_domain_capability_features_with_TDX_unsupported",
+      "kind": "field",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2485,
+        "end": 2489
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "getCapabilities",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2491,
+        "end": 2511
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "''.join(_capabilities) % { 'sockets': self.host_info.cpu_sockets, 'cores': self.host_info.cpu_cores, 'threads': self.host_info.cpu_threads, 'topology': numa_topology, }",
+          "line": 2506
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 16,
+      "ccn": 2
+    },
+    {
+      "name": "compareCPU",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2513,
+        "end": 2543
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "VIR_CPU_COMPARE_INCOMPATIBLE",
+          "line": 2520
+        },
+        {
+          "expr": "VIR_CPU_COMPARE_INCOMPATIBLE",
+          "line": 2533
+        },
+        {
+          "expr": "VIR_CPU_COMPARE_INCOMPATIBLE",
+          "line": 2538
+        },
+        {
+          "expr": "VIR_CPU_COMPARE_IDENTICAL",
+          "line": 2543
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 23,
+      "ccn": 9
+    },
+    {
+      "name": "compareHypervisorCPU",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2545,
+        "end": 2549
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "emulator"
+        },
+        {
+          "name": "arch"
+        },
+        {
+          "name": "machine"
+        },
+        {
+          "name": "virttype"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.compareCPU(xml, flags)",
+          "line": 2549
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "getCPUStats",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2551,
+        "end": 2562
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "cpuNum"
+        },
+        {
+          "name": "flag"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "{'kernel': 5664160000000, 'idle': 1592705190000000, 'user': 26728850000000, 'iowait': 6121490000000}",
+          "line": 2553
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 2
+    },
+    {
+      "name": "device_lookup_by_name",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2564,
+        "end": 2565
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "dev_name"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.pci_info.get_device_by_name(dev_name)",
+          "line": 2565
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "nodeDeviceLookupByName",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2567,
+        "end": 2595
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "name"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.mdev_info.get_device_by_name(name)",
+          "line": 2580
+        },
+        {
+          "expr": "self.vdpa_info.get_device_by_name(name)",
+          "line": 2583
+        },
+        {
+          "expr": "pci_dev",
+          "line": 2587
+        },
+        {
+          "expr": "self._nodedevs[name]",
+          "line": 2589
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 20,
+      "ccn": 7
+    },
+    {
+      "name": "nodeDeviceCreateXML",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2597,
+        "end": 2598
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "nodeDeviceDefineXML",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2600,
+        "end": 2601
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "listDevices",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2603,
+        "end": 2613
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "cap"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.pci_info.get_all_devices()",
+          "line": 2605
+        },
+        {
+          "expr": "self.mdev_info.get_all_devices()",
+          "line": 2607
+        },
+        {
+          "expr": "self.pci_info.get_all_mdev_capable_devices()",
+          "line": 2609
+        },
+        {
+          "expr": "self.vdpa_info.get_all_devices()",
+          "line": 2611
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 5
+    },
+    {
+      "name": "baselineCPU",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2615,
+        "end": 2634
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "cpu"
+        },
+        {
+          "name": "flag"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "\"\"\"<cpu mode='custom' match='exact'> <model>Penryn</model> <vendor>Intel</vendor> <feature name='xtpr'/> <feature name='tm2'/> <feature name='est'/> <feature name='vmx'/> <feature name='ds_cpl'/> <fea",
+          "line": 2617
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 19,
+      "ccn": 1
+    },
+    {
+      "name": "listAllSecrets",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2636,
+        "end": 2637
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[secret for secret in self._secrets.values()]",
+          "line": 2637
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 2
+    },
+    {
+      "name": "secretLookupByUsage",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2639,
+        "end": 2644
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "usage_type_obj"
+        },
+        {
+          "name": "usage_id"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "secret",
+          "line": 2644
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 3
+    },
+    {
+      "name": "secretDefineXML",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2646,
+        "end": 2649
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "xml"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "secret",
+          "line": 2649
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "listAllDevices",
+      "kind": "method",
+      "scope": "Connection",
+      "lineRange": {
+        "start": 2651,
+        "end": 2667
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "devices",
+          "line": 2667
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 6
+    },
+    {
+      "name": "openAuth",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 2670,
+        "end": 2681
+      },
+      "parameters": [
+        {
+          "name": "uri"
+        },
+        {
+          "name": "auth"
+        },
+        {
+          "default": "0",
+          "name": "flags"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "Connection(uri, (flags == VIR_CONNECT_RO))",
+          "line": 2681
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 4
+    },
+    {
+      "name": "virEventRunDefaultImpl",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 2684,
+        "end": 2685
+      },
+      "parameters": [],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "virEventRegisterDefaultImpl",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 2688,
+        "end": 2691
+      },
+      "parameters": [],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "registerErrorHandler",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 2694,
+        "end": 2695
+      },
+      "parameters": [
+        {
+          "name": "handler"
+        },
+        {
+          "name": "ctxt"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "make_libvirtError",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 2698,
+        "end": 2713
+      },
+      "parameters": [
+        {
+          "name": "error_class"
+        },
+        {
+          "name": "msg"
+        },
+        {
+          "default": "None",
+          "name": "error_code"
+        },
+        {
+          "default": "None",
+          "name": "error_domain"
+        },
+        {
+          "default": "None",
+          "name": "error_message"
+        },
+        {
+          "default": "None",
+          "name": "error_level"
+        },
+        {
+          "default": "None",
+          "name": "str1"
+        },
+        {
+          "default": "None",
+          "name": "str2"
+        },
+        {
+          "default": "None",
+          "name": "str3"
+        },
+        {
+          "default": "None",
+          "name": "int1"
+        },
+        {
+          "default": "None",
+          "name": "int2"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "exc",
+          "line": 2713
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "virDomain",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 2716,
+        "end": 2716
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "virNodeDevice",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 2717,
+        "end": 2717
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "virConnect",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 2719,
+        "end": 2719
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "virSecret",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 2720,
+        "end": 2720
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "FakeHandler",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 2725,
+        "end": 2727
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "FakeHandler",
+      "lineRange": {
+        "start": 2726,
+        "end": 2727
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "_EventAddHandleFunc",
+      "kind": "variable",
+      "scope": "",
+      "lineRange": {
+        "start": 2730,
+        "end": 2730
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "AmdSevFixture",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 2733,
+        "end": 2754
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "AmdSevFixture",
+      "lineRange": {
+        "start": 2734,
+        "end": 2737
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "False",
+          "name": "sev"
+        },
+        {
+          "default": "False",
+          "name": "sev_es"
+        },
+        {
+          "default": "False",
+          "name": "sev_snp"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "AmdSevFixture",
+      "lineRange": {
+        "start": 2739,
+        "end": 2754
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "_mock_kernel_supports_amd_sev",
+      "kind": "function",
+      "scope": "AmdSevFixture.setUp",
+      "lineRange": {
+        "start": 2742,
+        "end": 2750
+      },
+      "parameters": [
+        {
+          "default": "'sev'",
+          "name": "model"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "{ 'sev': self.sev, 'sev-es': self.sev_es, 'sev-snp': self.sev_snp, }[model]",
+          "line": 2744
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 2
+    },
+    {
+      "name": "LibvirtFixture",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 2757,
+        "end": 2870
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "__init__",
+      "kind": "method",
+      "scope": "LibvirtFixture",
+      "lineRange": {
+        "start": 2761,
+        "end": 2765
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "True",
+          "name": "stub_os_vif"
+        },
+        {
+          "default": "True",
+          "name": "stub_amd_sev"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "update_sriov_mac_address_mapping",
+      "kind": "method",
+      "scope": "LibvirtFixture",
+      "lineRange": {
+        "start": 2767,
+        "end": 2768
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "pci_address_to_mac_map"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "fake_get_mac_by_pci_address",
+      "kind": "method",
+      "scope": "LibvirtFixture",
+      "lineRange": {
+        "start": 2770,
+        "end": 2772
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "pci_addr"
+        },
+        {
+          "default": "False",
+          "name": "pf_interface"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "res",
+          "line": 2772
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "LibvirtFixture",
+      "lineRange": {
+        "start": 2774,
+        "end": 2870
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 57,
+      "ccn": 4
+    },
+    {
+      "name": "import os_vif",
+      "kind": "import",
+      "scope": "LibvirtFixture.setUp",
+      "lineRange": {
+        "start": 2869,
+        "end": 2869
+      },
+      "source": "aee-inventory"
+    }
+  ],
+  "referencedSymbols": [
+    {
+      "name": "logging.getLogger",
+      "usage": "call",
+      "via": "oslo_log",
+      "count": 1,
+      "lineRange": {
+        "start": 48,
+        "end": 48
+      }
+    },
+    {
+      "name": "versionutils.convert_version_to_int",
+      "usage": "call",
+      "via": "oslo_utils",
+      "count": 2,
+      "lineRange": {
+        "start": 209,
+        "end": 209
+      }
+    },
+    {
+      "name": "collections.namedtuple",
+      "usage": "call",
+      "via": "collections",
+      "count": 1,
+      "lineRange": {
+        "start": 246,
+        "end": 246
+      }
+    },
+    {
+      "name": "object",
+      "usage": "inherit",
+      "via": null,
+      "count": 11,
+      "lineRange": {
+        "start": 256,
+        "end": 256
+      }
+    },
+    {
+      "name": "textwrap.dedent",
+      "usage": "call",
+      "via": "textwrap",
+      "count": 5,
+      "lineRange": {
+        "start": 268,
+        "end": 268
+      }
+    },
+    {
+      "name": "isinstance",
+      "usage": "call",
+      "via": null,
+      "count": 4,
+      "lineRange": {
+        "start": 382,
+        "end": 382
+      }
+    },
+    {
+      "name": "len",
+      "usage": "call",
+      "via": null,
+      "count": 6,
+      "lineRange": {
+        "start": 383,
+        "end": 383
+      }
+    },
+    {
+      "name": "range",
+      "usage": "call",
+      "via": null,
+      "count": 11,
+      "lineRange": {
+        "start": 409,
+        "end": 409
+      }
+    },
+    {
+      "name": "ValueError",
+      "usage": "call",
+      "via": null,
+      "count": 4,
+      "lineRange": {
+        "start": 554,
+        "end": 554
+      }
+    },
+    {
+      "name": "vconfig.LibvirtConfigCapsNUMATopology",
+      "usage": "inherit",
+      "via": "nova.virt.libvirt",
+      "count": 1,
+      "lineRange": {
+        "start": 821,
+        "end": 821
+      }
+    },
+    {
+      "name": "super",
+      "usage": "call",
+      "via": null,
+      "count": 3,
+      "lineRange": {
+        "start": 831,
+        "end": 831
+      }
+    },
+    {
+      "name": "vconfig.LibvirtConfigCapsNUMACell",
+      "usage": "call",
+      "via": "nova.virt.libvirt",
+      "count": 1,
+      "lineRange": {
+        "start": 837,
+        "end": 837
+      }
+    },
+    {
+      "name": "vconfig.LibvirtConfigCapsNUMACPU",
+      "usage": "call",
+      "via": "nova.virt.libvirt",
+      "count": 1,
+      "lineRange": {
+        "start": 841,
+        "end": 841
+      }
+    },
+    {
+      "name": "set",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 845,
+        "end": 845
+      }
+    },
+    {
+      "name": "vconfig.LibvirtConfigCapsNUMAPages",
+      "usage": "call",
+      "via": "nova.virt.libvirt",
+      "count": 1,
+      "lineRange": {
+        "start": 873,
+        "end": 873
+      }
+    },
+    {
+      "name": "int",
+      "usage": "call",
+      "via": null,
+      "count": 8,
+      "lineRange": {
+        "start": 955,
+        "end": 955
+      }
+    },
+    {
+      "name": "fixtures.MockPatch",
+      "usage": "call",
+      "via": "fixtures",
+      "count": 13,
+      "lineRange": {
+        "start": 1043,
+        "end": 1043
+      }
+    },
+    {
+      "name": "Exception",
+      "usage": "inherit",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 1048,
+        "end": 1048
+      }
+    },
+    {
+      "name": "etree.fromstring",
+      "usage": "call",
+      "via": "lxml",
+      "count": 12,
+      "lineRange": {
+        "start": 1132,
+        "end": 1132
+      }
+    },
+    {
+      "name": "list",
+      "usage": "type",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 1155,
+        "end": 1155
+      }
+    },
+    {
+      "name": "enumerate",
+      "usage": "call",
+      "via": null,
+      "count": 4,
+      "lineRange": {
+        "start": 1288,
+        "end": 1288
+      }
+    },
+    {
+      "name": "dict",
+      "usage": "call",
+      "via": null,
+      "count": 3,
+      "lineRange": {
+        "start": 1655,
+        "end": 1655
+      }
+    },
+    {
+      "name": "RuntimeError",
+      "usage": "call",
+      "via": null,
+      "count": 2,
+      "lineRange": {
+        "start": 1709,
+        "end": 1709
+      }
+    },
+    {
+      "name": "callback",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 2181,
+        "end": 2181
+      }
+    },
+    {
+      "name": "Exception",
+      "usage": "call",
+      "via": null,
+      "count": 6,
+      "lineRange": {
+        "start": 2233,
+        "end": 2233
+      }
+    },
+    {
+      "name": "os.uname",
+      "usage": "call",
+      "via": "os",
+      "count": 1,
+      "lineRange": {
+        "start": 2501,
+        "end": 2501
+      }
+    },
+    {
+      "name": "fake_libvirt_data.CAPABILITIES_GUEST.values",
+      "usage": "call",
+      "via": "nova.tests.fixtures",
+      "count": 1,
+      "lineRange": {
+        "start": 2502,
+        "end": 2502
+      }
+    },
+    {
+      "name": "list",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 2502,
+        "end": 2502
+      }
+    },
+    {
+      "name": "TypeError",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 2575,
+        "end": 2575
+      }
+    },
+    {
+      "name": "type",
+      "usage": "call",
+      "via": null,
+      "count": 3,
+      "lineRange": {
+        "start": 2577,
+        "end": 2577
+      }
+    },
+    {
+      "name": "callable",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 2678,
+        "end": 2678
+      }
+    },
+    {
+      "name": "time.sleep",
+      "usage": "call",
+      "via": "time",
+      "count": 1,
+      "lineRange": {
+        "start": 2685,
+        "end": 2685
+      }
+    },
+    {
+      "name": "error_class",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 2710,
+        "end": 2710
+      }
+    },
+    {
+      "name": "fixtures.Fixture",
+      "usage": "inherit",
+      "via": "fixtures",
+      "count": 2,
+      "lineRange": {
+        "start": 2733,
+        "end": 2733
+      }
+    },
+    {
+      "name": "collections.defaultdict",
+      "usage": "call",
+      "via": "collections",
+      "count": 1,
+      "lineRange": {
+        "start": 2764,
+        "end": 2764
+      }
+    },
+    {
+      "name": "fixtures.MonkeyPatch",
+      "usage": "call",
+      "via": "fixtures",
+      "count": 4,
+      "lineRange": {
+        "start": 2787,
+        "end": 2787
+      }
+    },
+    {
+      "name": "os_vif.initialize",
+      "usage": "call",
+      "via": "os_vif",
+      "count": 1,
+      "lineRange": {
+        "start": 2870,
+        "end": 2870
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "alias": null,
+      "module": "collections",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 15,
+        "end": 15
+      }
+    },
+    {
+      "alias": null,
+      "module": "os",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 16,
+        "end": 16
+      }
+    },
+    {
+      "alias": null,
+      "module": "sys",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 17,
+        "end": 17
+      }
+    },
+    {
+      "alias": null,
+      "module": "textwrap",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 18,
+        "end": 18
+      }
+    },
+    {
+      "alias": null,
+      "module": "time",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 19,
+        "end": 19
+      }
+    },
+    {
+      "alias": null,
+      "module": "fixtures",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 21,
+        "end": 21
+      }
+    },
+    {
+      "alias": null,
+      "module": "lxml",
+      "names": [
+        {
+          "alias": null,
+          "name": "etree"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 22,
+        "end": 22
+      }
+    },
+    {
+      "alias": null,
+      "module": "oslo_log",
+      "names": [
+        {
+          "alias": "logging",
+          "name": "log"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 23,
+        "end": 23
+      }
+    },
+    {
+      "alias": null,
+      "module": "oslo_utils.fixture",
+      "names": [
+        {
+          "alias": "uuids",
+          "name": "uuidsentinel"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 24,
+        "end": 24
+      }
+    },
+    {
+      "alias": null,
+      "module": "oslo_utils",
+      "names": [
+        {
+          "alias": null,
+          "name": "versionutils"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 25,
+        "end": 25
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova",
+      "names": [
+        {
+          "alias": null,
+          "name": "conf"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 27,
+        "end": 27
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.objects",
+      "names": [
+        {
+          "alias": "obj_fields",
+          "name": "fields"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 28,
+        "end": 28
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.tests.fixtures",
+      "names": [
+        {
+          "alias": "fake_libvirt_data",
+          "name": "libvirt_data"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 29,
+        "end": 29
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.virt.disk.vfs",
+      "names": [
+        {
+          "alias": null,
+          "name": "guestfs"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 30,
+        "end": 30
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.virt.libvirt",
+      "names": [
+        {
+          "alias": "vconfig",
+          "name": "config"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 31,
+        "end": 31
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.virt.libvirt",
+      "names": [
+        {
+          "alias": "libvirt_driver",
+          "name": "driver"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 32,
+        "end": 32
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.virt.libvirt.host",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 1038,
+        "end": 1038
+      }
+    },
+    {
+      "alias": null,
+      "module": "os_vif",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 2869,
+        "end": 2869
+      }
+    }
+  ],
+  "sideEffects": [],
+  "securitySurface": [],
+  "injection_flags": [],
+  "warnings": []
+}

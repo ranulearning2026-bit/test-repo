@@ -1,0 +1,3467 @@
+{
+  "file": "src/nova/tests/unit/api/openstack/compute/test_hypervisors.py",
+  "hash": "420553b6c85ed4868e7ab20a352abb1d0a1cb0d528bb55175c4a9b95130b2b79",
+  "language": "Python",
+  "component": "tests-unit",
+  "package": null,
+  "lines": {
+    "blank": 232,
+    "code": 1276,
+    "comment": 62,
+    "total": 1570
+  },
+  "symbols": [
+    {
+      "name": "import copy",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 16,
+        "end": 16
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from unittest import mock",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 17,
+        "end": 17
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import netaddr",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 19,
+        "end": 19
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from oslo_serialization import jsonutils",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 20,
+        "end": 20
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from oslo_utils.fixture import uuidsentinel as uuids",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 21,
+        "end": 21
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from webob import exc",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 22,
+        "end": 22
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.api.openstack.compute import hypervisors as hypervisors_v21",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 24,
+        "end": 24
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova import exception",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 25,
+        "end": 25
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova import objects",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 26,
+        "end": 26
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova import test",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 27,
+        "end": 27
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.tests.unit.api.openstack import fakes",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 28,
+        "end": 28
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.tests.unit import fake_instance",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 29,
+        "end": 29
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "CPU_INFO",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 32,
+        "end": 37
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TEST_HYPERS",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 39,
+        "end": 80
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TEST_SERVICES",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 83,
+        "end": 102
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TEST_HYPERS_OBJ",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 104,
+        "end": 105
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TEST_SERVERS",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 110,
+        "end": 113
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "fake_compute_node_get_all",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 116,
+        "end": 128
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "default": "None",
+          "name": "limit"
+        },
+        {
+          "default": "None",
+          "name": "marker"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "output",
+          "line": 128
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 9
+    },
+    {
+      "name": "fake_compute_node_search_by_hypervisor",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 131,
+        "end": 132
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "hypervisor_re"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "TEST_HYPERS_OBJ",
+          "line": 132
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "fake_compute_node_get",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 135,
+        "end": 145
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "compute_id"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "hyper",
+          "line": 138
+        },
+        {
+          "expr": "hyper",
+          "line": 144
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 6
+    },
+    {
+      "name": "fake_service_get_by_compute_host",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 148,
+        "end": 151
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "host"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "service",
+          "line": 151
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 3
+    },
+    {
+      "name": "fake_compute_node_statistics",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 154,
+        "end": 177
+      },
+      "parameters": [
+        {
+          "name": "context"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "result",
+          "line": 177
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 22,
+      "ccn": 4
+    },
+    {
+      "name": "fake_instance_get_all_by_host",
+      "kind": "function",
+      "scope": "",
+      "lineRange": {
+        "start": 180,
+        "end": 186
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "host"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "results",
+          "line": 186
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 3
+    },
+    {
+      "name": "HypervisorsTestV21",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 189,
+        "end": 744
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "api_version",
+      "kind": "field",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 190,
+        "end": 190
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "expect_uuid_for_id",
+      "kind": "field",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 193,
+        "end": 193
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TEST_HYPERS_OBJ",
+      "kind": "constant",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 196,
+        "end": 196
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TEST_SERVICES",
+      "kind": "constant",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 197,
+        "end": 197
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "TEST_SERVERS",
+      "kind": "constant",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 198,
+        "end": 198
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "DETAIL_HYPERS_DICTS",
+      "kind": "constant",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 200,
+        "end": 200
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "INDEX_HYPER_DICTS",
+      "kind": "constant",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 220,
+        "end": 224
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "DETAIL_NULL_CPUINFO_DICT",
+      "kind": "constant",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 225,
+        "end": 225
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_get_request",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 227,
+        "end": 231
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "use_admin_context"
+        },
+        {
+          "default": "''",
+          "name": "url"
+        },
+        {
+          "default": "None",
+          "name": "version"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "fakes.HTTPRequest.blank( url, use_admin_context=use_admin_context, version=version or self.api_version)",
+          "line": 228
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 2
+    },
+    {
+      "name": "_get_hyper_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 233,
+        "end": 240
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "(self.TEST_HYPERS_OBJ[0].uuid if self.expect_uuid_for_id else self.TEST_HYPERS_OBJ[0].id)",
+          "line": 239
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 2
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 242,
+        "end": 260
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 16,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_nodetail_noservers",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 262,
+        "end": 267
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_detail_noservers",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 269,
+        "end": 274
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_nodetail_service_down",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 276,
+        "end": 286
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_detail_service_down",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 288,
+        "end": 298
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_nodetail_service_disabled",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 300,
+        "end": 308
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_detail_service_disabled",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 310,
+        "end": 318
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 320,
+        "end": 333
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 13,
+      "ccn": 1
+    },
+    {
+      "name": "_test_view_hypervisor_detail_cpuinfo_null",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 335,
+        "end": 347
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "cpu_info"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_detail_cpuinfo_empty_string",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 349,
+        "end": 350
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_detail_cpuinfo_none",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 352,
+        "end": 353
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_index",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 355,
+        "end": 359
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_compute_host_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 361,
+        "end": 393
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 22,
+      "ccn": 2
+    },
+    {
+      "name": "fake_service_get_by_compute_host",
+      "kind": "function",
+      "scope": "HypervisorsTestV21.test_index_compute_host_not_found",
+      "lineRange": {
+        "start": 372,
+        "end": 375
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "host"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "TEST_SERVICES[0]",
+          "line": 374
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "test_index_compute_host_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 395,
+        "end": 424
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 21,
+      "ccn": 2
+    },
+    {
+      "name": "fake_service_get_by_compute_host",
+      "kind": "function",
+      "scope": "HypervisorsTestV21.test_index_compute_host_not_mapped",
+      "lineRange": {
+        "start": 404,
+        "end": 407
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "host"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "TEST_SERVICES[0]",
+          "line": 406
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "test_detail",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 426,
+        "end": 430
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_compute_host_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 432,
+        "end": 471
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 26,
+      "ccn": 1
+    },
+    {
+      "name": "fake_service_get_by_compute_host",
+      "kind": "function",
+      "scope": "HypervisorsTestV21.test_detail_compute_host_not_found",
+      "lineRange": {
+        "start": 443,
+        "end": 446
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "host"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "TEST_SERVICES[0]",
+          "line": 445
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "test_detail_compute_host_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 473,
+        "end": 510
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 25,
+      "ccn": 1
+    },
+    {
+      "name": "fake_service_get_by_compute_host",
+      "kind": "function",
+      "scope": "HypervisorsTestV21.test_detail_compute_host_not_mapped",
+      "lineRange": {
+        "start": 484,
+        "end": 487
+      },
+      "parameters": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "host"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "TEST_SERVICES[0]",
+          "line": 486
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "test_show",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 512,
+        "end": 517
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_compute_host_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 519,
+        "end": 532
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_noid",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 534,
+        "end": 537
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "test_show_non_integer_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 539,
+        "end": 541
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 543,
+        "end": 556
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_noid",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 558,
+        "end": 562
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 2
+    },
+    {
+      "name": "test_uptime_not_implemented",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 564,
+        "end": 574
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_host_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 576,
+        "end": 586
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_non_integer_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 588,
+        "end": 590
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_hypervisor_down",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 592,
+        "end": 601
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_hypervisor_not_mapped_service_get",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 603,
+        "end": 612
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_hypervisor_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 614,
+        "end": 623
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "test_search",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 625,
+        "end": 629
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_search_non_exist",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 631,
+        "end": 638
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "test_search_unmapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 640,
+        "end": 651
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 655,
+        "end": 671
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "mock_get"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 3
+    },
+    {
+      "name": "test_servers_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 673,
+        "end": 681
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_compute_host_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 683,
+        "end": 696
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_non_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 698,
+        "end": 707
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_with_non_integer_hypervisor_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 709,
+        "end": 717
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_with_no_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 719,
+        "end": 726
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "test_statistics",
+      "kind": "method",
+      "scope": "HypervisorsTestV21",
+      "lineRange": {
+        "start": 728,
+        "end": 744
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 16,
+      "ccn": 1
+    },
+    {
+      "name": "HypervisorsTestV228",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 747,
+        "end": 753
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "api_version",
+      "kind": "field",
+      "scope": "HypervisorsTestV228",
+      "lineRange": {
+        "start": 748,
+        "end": 748
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "DETAIL_HYPERS_DICTS",
+      "kind": "constant",
+      "scope": "HypervisorsTestV228",
+      "lineRange": {
+        "start": 750,
+        "end": 750
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "DETAIL_NULL_CPUINFO_DICT",
+      "kind": "constant",
+      "scope": "HypervisorsTestV228",
+      "lineRange": {
+        "start": 753,
+        "end": 753
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "HypervisorsTestV233",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 756,
+        "end": 983
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "api_version",
+      "kind": "field",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 757,
+        "end": 757
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_index_pagination",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 759,
+        "end": 777
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_pagination_with_invalid_marker",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 779,
+        "end": 782
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_pagination_with_invalid_non_int_limit",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 784,
+        "end": 787
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_pagination_with_invalid_string_limit",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 789,
+        "end": 792
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_duplicate_query_parameters_with_invalid_string_limit",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 794,
+        "end": 798
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_duplicate_query_parameters_validation",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 800,
+        "end": 818
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 2
+    },
+    {
+      "name": "test_index_pagination_with_additional_filter",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 820,
+        "end": 837
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_pagination",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 839,
+        "end": 878
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 39,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_pagination_with_invalid_marker",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 880,
+        "end": 884
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_pagination_with_invalid_string_limit",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 886,
+        "end": 890
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_duplicate_query_parameters_with_invalid_string_limit",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 892,
+        "end": 896
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_duplicate_query_parameters_validation",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 898,
+        "end": 941
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 42,
+      "ccn": 2
+    },
+    {
+      "name": "test_detail_pagination_with_additional_filter",
+      "kind": "method",
+      "scope": "HypervisorsTestV233",
+      "lineRange": {
+        "start": 943,
+        "end": 983
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 41,
+      "ccn": 1
+    },
+    {
+      "name": "HypervisorsTestV252",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 986,
+        "end": 988
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "api_version",
+      "kind": "field",
+      "scope": "HypervisorsTestV252",
+      "lineRange": {
+        "start": 988,
+        "end": 988
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "HypervisorsTestV253",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 991,
+        "end": 1377
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "api_version",
+      "kind": "field",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 992,
+        "end": 992
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "expect_uuid_for_id",
+      "kind": "field",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 993,
+        "end": 993
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "INDEX_HYPER_DICTS",
+      "kind": "constant",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 996,
+        "end": 1000
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1002,
+        "end": 1007
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 2
+    },
+    {
+      "name": "test_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1009,
+        "end": 1013
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1015,
+        "end": 1017
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_compute_host_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1019,
+        "end": 1021
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_non_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1023,
+        "end": 1025
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_with_non_integer_hypervisor_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1027,
+        "end": 1029
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_with_no_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1031,
+        "end": 1033
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_no_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1035,
+        "end": 1050
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_servers_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1052,
+        "end": 1061
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_servers_compute_host_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1063,
+        "end": 1079
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 13,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1081,
+        "end": 1106
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 24,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_servers_invalid_parameter",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1108,
+        "end": 1113
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_hostname_pattern_and_paging_parameters",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1115,
+        "end": 1126
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_hostname_pattern_no_match",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1128,
+        "end": 1142
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_with_hostname_pattern",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1144,
+        "end": 1165
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 14,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_invalid_hostname_pattern_parameter",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1167,
+        "end": 1175
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_search",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1177,
+        "end": 1181
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_search_non_exist",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1183,
+        "end": 1186
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_search_unmapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1188,
+        "end": 1190
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_non_integer_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1192,
+        "end": 1196
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_integer_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1198,
+        "end": 1204
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_with_servers_invalid_parameter",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1206,
+        "end": 1216
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_with_servers_host_mapping_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1218,
+        "end": 1230
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_with_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1232,
+        "end": 1251
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_duplicate_query_parameters_validation",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1253,
+        "end": 1262
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_non_integer_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1264,
+        "end": 1268
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_integer_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1270,
+        "end": 1277
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_pagination",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1279,
+        "end": 1293
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 14,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_pagination_with_invalid_marker",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1295,
+        "end": 1301
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_pagination_with_additional_filter",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1303,
+        "end": 1307
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_duplicate_query_parameters_validation",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1309,
+        "end": 1325
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 14,
+      "ccn": 2
+    },
+    {
+      "name": "test_index_pagination",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1327,
+        "end": 1345
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_pagination_with_invalid_marker",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1347,
+        "end": 1353
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_pagination_with_additional_filter",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1355,
+        "end": 1359
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_duplicate_query_parameters_validation",
+      "kind": "method",
+      "scope": "HypervisorsTestV253",
+      "lineRange": {
+        "start": 1361,
+        "end": 1377
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 14,
+      "ccn": 2
+    },
+    {
+      "name": "HypervisorsTestV275",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1380,
+        "end": 1429
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "api_version",
+      "kind": "field",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1381,
+        "end": 1381
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_test_servers_with_no_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1383,
+        "end": 1397
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "func"
+        },
+        {
+          "default": "None",
+          "name": "version"
+        },
+        {
+          "name": "**kwargs"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "result",
+          "line": 1397
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 1
+    },
+    {
+      "name": "test_index_with_no_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1399,
+        "end": 1402
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "test_index_with_no_servers_old_version",
+      "kind": "method",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1404,
+        "end": 1408
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 2
+    },
+    {
+      "name": "test_detail_with_no_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1410,
+        "end": 1413
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 2
+    },
+    {
+      "name": "test_detail_with_no_servers_old_version",
+      "kind": "method",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1415,
+        "end": 1419
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 2
+    },
+    {
+      "name": "test_show_with_no_servers",
+      "kind": "method",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1421,
+        "end": 1424
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_with_no_servers_old_version",
+      "kind": "method",
+      "scope": "HypervisorsTestV275",
+      "lineRange": {
+        "start": 1426,
+        "end": 1429
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "HypervisorsTestV288",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1432,
+        "end": 1570
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "api_version",
+      "kind": "field",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1433,
+        "end": 1433
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "DETAIL_HYPERS_DICTS",
+      "kind": "constant",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1435,
+        "end": 1435
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1446,
+        "end": 1450
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_detail_cpuinfo_empty_string",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1452,
+        "end": 1454
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_view_hypervisor_detail_cpuinfo_none",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1456,
+        "end": 1458
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_with_uptime_provided_by_compute_node",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1460,
+        "end": 1465
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_detail_list_uptime",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1467,
+        "end": 1473
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1475,
+        "end": 1479
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_old_version",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1481,
+        "end": 1486
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_noid",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1488,
+        "end": 1490
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_not_implemented",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1492,
+        "end": 1494
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_implemented",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1496,
+        "end": 1498
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_integer_id",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1500,
+        "end": 1502
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_host_not_found",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1504,
+        "end": 1506
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_hypervisor_down",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1508,
+        "end": 1510
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_hypervisor_not_mapped_service_get",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1512,
+        "end": 1514
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_uptime_hypervisor_not_mapped",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1516,
+        "end": 1518
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_with_uptime_notimplemented",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1520,
+        "end": 1533
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_with_uptime_hypervisor_down",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1535,
+        "end": 1550
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 13,
+      "ccn": 1
+    },
+    {
+      "name": "test_show_old_version",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1552,
+        "end": 1559
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_statistics",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1561,
+        "end": 1565
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_statistics_old_version",
+      "kind": "method",
+      "scope": "HypervisorsTestV288",
+      "lineRange": {
+        "start": 1567,
+        "end": 1570
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    }
+  ],
+  "referencedSymbols": [
+    {
+      "name": "dict",
+      "usage": "call",
+      "via": null,
+      "count": 33,
+      "lineRange": {
+        "start": 40,
+        "end": 40
+      }
+    },
+    {
+      "name": "netaddr.IPAddress",
+      "usage": "call",
+      "via": "netaddr",
+      "count": 5,
+      "lineRange": {
+        "start": 59,
+        "end": 59
+      }
+    },
+    {
+      "name": "objects.Service",
+      "usage": "call",
+      "via": "nova",
+      "count": 2,
+      "lineRange": {
+        "start": 84,
+        "end": 84
+      }
+    },
+    {
+      "name": "objects.ComputeNode",
+      "usage": "call",
+      "via": "nova",
+      "count": 9,
+      "lineRange": {
+        "start": 104,
+        "end": 104
+      }
+    },
+    {
+      "name": "exception.MarkerNotFound",
+      "usage": "call",
+      "via": "nova",
+      "count": 1,
+      "lineRange": {
+        "start": 118,
+        "end": 118
+      }
+    },
+    {
+      "name": "str",
+      "usage": "call",
+      "via": null,
+      "count": 5,
+      "lineRange": {
+        "start": 123,
+        "end": 123
+      }
+    },
+    {
+      "name": "int",
+      "usage": "call",
+      "via": null,
+      "count": 2,
+      "lineRange": {
+        "start": 126,
+        "end": 126
+      }
+    },
+    {
+      "name": "len",
+      "usage": "call",
+      "via": null,
+      "count": 12,
+      "lineRange": {
+        "start": 126,
+        "end": 126
+      }
+    },
+    {
+      "name": "isinstance",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 141,
+        "end": 141
+      }
+    },
+    {
+      "name": "exception.ComputeHostNotFound",
+      "usage": "call",
+      "via": "nova",
+      "count": 5,
+      "lineRange": {
+        "start": 145,
+        "end": 145
+      }
+    },
+    {
+      "name": "getattr",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 175,
+        "end": 175
+      }
+    },
+    {
+      "name": "fake_instance.fake_instance_obj",
+      "usage": "call",
+      "via": "nova.tests.unit",
+      "count": 1,
+      "lineRange": {
+        "start": 184,
+        "end": 184
+      }
+    },
+    {
+      "name": "test.NoDBTestCase",
+      "usage": "inherit",
+      "via": "nova",
+      "count": 1,
+      "lineRange": {
+        "start": 189,
+        "end": 189
+      }
+    },
+    {
+      "name": "copy.deepcopy",
+      "usage": "call",
+      "via": "copy",
+      "count": 20,
+      "lineRange": {
+        "start": 196,
+        "end": 196
+      }
+    },
+    {
+      "name": "fakes.HTTPRequest.blank",
+      "usage": "call",
+      "via": "nova.tests.unit.api.openstack",
+      "count": 1,
+      "lineRange": {
+        "start": 228,
+        "end": 228
+      }
+    },
+    {
+      "name": "super",
+      "usage": "call",
+      "via": null,
+      "count": 3,
+      "lineRange": {
+        "start": 243,
+        "end": 243
+      }
+    },
+    {
+      "name": "hypervisors_v21.HypervisorsController",
+      "usage": "call",
+      "via": "nova.api.openstack.compute",
+      "count": 1,
+      "lineRange": {
+        "start": 245,
+        "end": 245
+      }
+    },
+    {
+      "name": "mock.MagicMock",
+      "usage": "call",
+      "via": "unittest",
+      "count": 7,
+      "lineRange": {
+        "start": 246,
+        "end": 246
+      }
+    },
+    {
+      "name": "objects.ComputeNodeList",
+      "usage": "call",
+      "via": "nova",
+      "count": 6,
+      "lineRange": {
+        "start": 367,
+        "end": 367
+      }
+    },
+    {
+      "name": "exception.HostMappingNotFound",
+      "usage": "call",
+      "via": "nova",
+      "count": 9,
+      "lineRange": {
+        "start": 407,
+        "end": 407
+      }
+    },
+    {
+      "name": "set",
+      "usage": "call",
+      "via": null,
+      "count": 4,
+      "lineRange": {
+        "start": 468,
+        "end": 468
+      }
+    },
+    {
+      "name": "mock.patch.object",
+      "usage": "call",
+      "via": "unittest",
+      "count": 16,
+      "lineRange": {
+        "start": 544,
+        "end": 544
+      }
+    },
+    {
+      "name": "exception.HostNotFound",
+      "usage": "call",
+      "via": "nova",
+      "count": 1,
+      "lineRange": {
+        "start": 579,
+        "end": 579
+      }
+    },
+    {
+      "name": "exception.ComputeServiceUnavailable",
+      "usage": "call",
+      "via": "nova",
+      "count": 2,
+      "lineRange": {
+        "start": 594,
+        "end": 594
+      }
+    },
+    {
+      "name": "jsonutils.loads",
+      "usage": "call",
+      "via": "oslo_serialization",
+      "count": 2,
+      "lineRange": {
+        "start": 751,
+        "end": 751
+      }
+    },
+    {
+      "name": "enumerate",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 1005,
+        "end": 1005
+      }
+    },
+    {
+      "name": "mock.call",
+      "usage": "call",
+      "via": "unittest",
+      "count": 4,
+      "lineRange": {
+        "start": 1049,
+        "end": 1049
+      }
+    },
+    {
+      "name": "objects.Instance",
+      "usage": "call",
+      "via": "nova",
+      "count": 3,
+      "lineRange": {
+        "start": 1084,
+        "end": 1084
+      }
+    },
+    {
+      "name": "objects.InstanceList",
+      "usage": "call",
+      "via": "nova",
+      "count": 3,
+      "lineRange": {
+        "start": 1084,
+        "end": 1084
+      }
+    },
+    {
+      "name": "func",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 1396,
+        "end": 1396
+      }
+    },
+    {
+      "name": "NotImplementedError",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 1522,
+        "end": 1522
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "alias": null,
+      "module": "copy",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 16,
+        "end": 16
+      }
+    },
+    {
+      "alias": null,
+      "module": "unittest",
+      "names": [
+        {
+          "alias": null,
+          "name": "mock"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 17,
+        "end": 17
+      }
+    },
+    {
+      "alias": null,
+      "module": "netaddr",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 19,
+        "end": 19
+      }
+    },
+    {
+      "alias": null,
+      "module": "oslo_serialization",
+      "names": [
+        {
+          "alias": null,
+          "name": "jsonutils"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 20,
+        "end": 20
+      }
+    },
+    {
+      "alias": null,
+      "module": "oslo_utils.fixture",
+      "names": [
+        {
+          "alias": "uuids",
+          "name": "uuidsentinel"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 21,
+        "end": 21
+      }
+    },
+    {
+      "alias": null,
+      "module": "webob",
+      "names": [
+        {
+          "alias": null,
+          "name": "exc"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 22,
+        "end": 22
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.api.openstack.compute",
+      "names": [
+        {
+          "alias": "hypervisors_v21",
+          "name": "hypervisors"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 24,
+        "end": 24
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova",
+      "names": [
+        {
+          "alias": null,
+          "name": "exception"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 25,
+        "end": 25
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova",
+      "names": [
+        {
+          "alias": null,
+          "name": "objects"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 26,
+        "end": 26
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova",
+      "names": [
+        {
+          "alias": null,
+          "name": "test"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 27,
+        "end": 27
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.tests.unit.api.openstack",
+      "names": [
+        {
+          "alias": null,
+          "name": "fakes"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 28,
+        "end": 28
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.tests.unit",
+      "names": [
+        {
+          "alias": null,
+          "name": "fake_instance"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 29,
+        "end": 29
+      }
+    }
+  ],
+  "sideEffects": [],
+  "securitySurface": [],
+  "injection_flags": [],
+  "warnings": []
+}

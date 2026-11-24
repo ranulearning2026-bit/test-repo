@@ -1,0 +1,3552 @@
+{
+  "file": "src/nova/tests/functional/api_sample_tests/test_servers.py",
+  "hash": "48303138b02fa6b320e74f84ac9cdba9261d3ff3f71a40b2dcaea7b0c5a38256",
+  "language": "Python",
+  "component": "tests-functional",
+  "package": null,
+  "lines": {
+    "blank": 199,
+    "code": 939,
+    "comment": 77,
+    "total": 1215
+  },
+  "symbols": [
+    {
+      "name": "import base64",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 16,
+        "end": 16
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import time",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 17,
+        "end": 17
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from oslo_utils import fixture as utils_fixture",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 19,
+        "end": 19
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from oslo_utils import timeutils",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 20,
+        "end": 20
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.api.openstack import api_version_request as avr",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 22,
+        "end": 22
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "import nova.conf",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 23,
+        "end": 23
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.tests import fixtures as nova_fixtures",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 24,
+        "end": 24
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.tests.functional.api_sample_tests import api_sample_base",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 25,
+        "end": 25
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "from nova.tests.unit.api.openstack import fakes",
+      "kind": "import",
+      "scope": "",
+      "lineRange": {
+        "start": 26,
+        "end": 26
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "CONF",
+      "kind": "constant",
+      "scope": "",
+      "lineRange": {
+        "start": 28,
+        "end": 28
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersSampleBase",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 31,
+        "end": 101
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 32,
+        "end": 32
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "sample_dir",
+      "kind": "field",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 33,
+        "end": 33
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "user_data_contents",
+      "kind": "field",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 35,
+        "end": 35
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "user_data",
+      "kind": "field",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 36,
+        "end": 36
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "common_req_names",
+      "kind": "field",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 38,
+        "end": 42
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_get_request_name",
+      "kind": "method",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 44,
+        "end": 52
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "use_common"
+        },
+        {
+          "default": "None",
+          "name": "sample_name"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "sample_name or 'server-create-req'",
+          "line": 46
+        },
+        {
+          "expr": "name",
+          "line": 52
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 6
+    },
+    {
+      "name": "_post_server",
+      "kind": "method",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 54,
+        "end": 97
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "default": "True",
+          "name": "use_common_server_api_samples"
+        },
+        {
+          "default": "None",
+          "name": "name"
+        },
+        {
+          "default": "None",
+          "name": "extra_subs"
+        },
+        {
+          "default": "None",
+          "name": "sample_name"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "status",
+          "line": 95
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 30,
+      "ccn": 5
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "ServersSampleBase",
+      "lineRange": {
+        "start": 99,
+        "end": 101
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJsonTest",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 104,
+        "end": 166
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 107,
+        "end": 107
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "use_common_server_post",
+      "kind": "field",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 110,
+        "end": 110
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 111,
+        "end": 111
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "generalize_subs",
+      "kind": "method",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 113,
+        "end": 116
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "subs"
+        },
+        {
+          "name": "vanilla_regexes"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "subs",
+          "line": 116
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 118,
+        "end": 120
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._post_server( use_common_server_api_samples=self.use_common_server_post)",
+          "line": 119
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_get",
+      "kind": "method",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 122,
+        "end": 140
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_list",
+      "kind": "method",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 142,
+        "end": 146
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_details",
+      "kind": "method",
+      "scope": "ServersSampleJsonTest",
+      "lineRange": {
+        "start": 148,
+        "end": 166
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson23Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 169,
+        "end": 171
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson23Test",
+      "lineRange": {
+        "start": 170,
+        "end": 170
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson23Test",
+      "lineRange": {
+        "start": 171,
+        "end": 171
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersSampleJson29Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 174,
+        "end": 179
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson29Test",
+      "lineRange": {
+        "start": 175,
+        "end": 175
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson29Test",
+      "lineRange": {
+        "start": 179,
+        "end": 179
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersSampleJson216Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 182,
+        "end": 184
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson216Test",
+      "lineRange": {
+        "start": 183,
+        "end": 183
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson216Test",
+      "lineRange": {
+        "start": 184,
+        "end": 184
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersSampleJson219Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 187,
+        "end": 204
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson219Test",
+      "lineRange": {
+        "start": 188,
+        "end": 188
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson219Test",
+      "lineRange": {
+        "start": 189,
+        "end": 189
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJson219Test",
+      "lineRange": {
+        "start": 191,
+        "end": 192
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._post_server(False)",
+          "line": 192
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_put",
+      "kind": "method",
+      "scope": "ServersSampleJson219Test",
+      "lineRange": {
+        "start": 194,
+        "end": 204
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson232Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 207,
+        "end": 213
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson232Test",
+      "lineRange": {
+        "start": 208,
+        "end": 208
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "sample_dir",
+      "kind": "field",
+      "scope": "ServersSampleJson232Test",
+      "lineRange": {
+        "start": 209,
+        "end": 209
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson232Test",
+      "lineRange": {
+        "start": 210,
+        "end": 210
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJson232Test",
+      "lineRange": {
+        "start": 212,
+        "end": 213
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson237Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 216,
+        "end": 222
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson237Test",
+      "lineRange": {
+        "start": 217,
+        "end": 217
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "sample_dir",
+      "kind": "field",
+      "scope": "ServersSampleJson237Test",
+      "lineRange": {
+        "start": 218,
+        "end": 218
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson237Test",
+      "lineRange": {
+        "start": 219,
+        "end": 219
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJson237Test",
+      "lineRange": {
+        "start": 221,
+        "end": 222
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson242Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 225,
+        "end": 231
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson242Test",
+      "lineRange": {
+        "start": 226,
+        "end": 226
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "sample_dir",
+      "kind": "field",
+      "scope": "ServersSampleJson242Test",
+      "lineRange": {
+        "start": 227,
+        "end": 227
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson242Test",
+      "lineRange": {
+        "start": 228,
+        "end": 228
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJson242Test",
+      "lineRange": {
+        "start": 230,
+        "end": 231
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson247Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 234,
+        "end": 254
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson247Test",
+      "lineRange": {
+        "start": 235,
+        "end": 235
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson247Test",
+      "lineRange": {
+        "start": 236,
+        "end": 236
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "use_common_server_post",
+      "kind": "field",
+      "scope": "ServersSampleJson247Test",
+      "lineRange": {
+        "start": 237,
+        "end": 237
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersSampleJson247Test",
+      "lineRange": {
+        "start": 239,
+        "end": 254
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson252Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 257,
+        "end": 260
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson252Test",
+      "lineRange": {
+        "start": 258,
+        "end": 258
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson252Test",
+      "lineRange": {
+        "start": 259,
+        "end": 259
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "use_common_server_post",
+      "kind": "field",
+      "scope": "ServersSampleJson252Test",
+      "lineRange": {
+        "start": 260,
+        "end": 260
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersSampleJson263Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 263,
+        "end": 329
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 266,
+        "end": 266
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 267,
+        "end": 267
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 268,
+        "end": 268
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 270,
+        "end": 281
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 283,
+        "end": 284
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 286,
+        "end": 307
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 19,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_details",
+      "kind": "method",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 309,
+        "end": 314
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_get",
+      "kind": "method",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 316,
+        "end": 321
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_update",
+      "kind": "method",
+      "scope": "ServersSampleJson263Test",
+      "lineRange": {
+        "start": 323,
+        "end": 329
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson266Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 332,
+        "end": 372
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson266Test",
+      "lineRange": {
+        "start": 335,
+        "end": 335
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson266Test",
+      "lineRange": {
+        "start": 336,
+        "end": 336
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson266Test",
+      "lineRange": {
+        "start": 337,
+        "end": 337
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "ServersSampleJson266Test",
+      "lineRange": {
+        "start": 339,
+        "end": 350
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 1
+    },
+    {
+      "name": "test_get_servers_list_with_changes_before",
+      "kind": "method",
+      "scope": "ServersSampleJson266Test",
+      "lineRange": {
+        "start": 352,
+        "end": 361
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "test_get_servers_detail_with_changes_before",
+      "kind": "method",
+      "scope": "ServersSampleJson266Test",
+      "lineRange": {
+        "start": 363,
+        "end": 372
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson267Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 375,
+        "end": 384
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson267Test",
+      "lineRange": {
+        "start": 376,
+        "end": 376
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson267Test",
+      "lineRange": {
+        "start": 377,
+        "end": 377
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "ServersSampleJson267Test",
+      "lineRange": {
+        "start": 379,
+        "end": 381
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJson267Test",
+      "lineRange": {
+        "start": 383,
+        "end": 384
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._post_server(use_common_server_api_samples=False)",
+          "line": 384
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson269Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 387,
+        "end": 434
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson269Test",
+      "lineRange": {
+        "start": 390,
+        "end": 390
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson269Test",
+      "lineRange": {
+        "start": 391,
+        "end": 391
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson269Test",
+      "lineRange": {
+        "start": 392,
+        "end": 392
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "ServersSampleJson269Test",
+      "lineRange": {
+        "start": 394,
+        "end": 413
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "_fake_instancemapping_get_by_cell_and_project",
+      "kind": "function",
+      "scope": "ServersSampleJson269Test.setUp",
+      "lineRange": {
+        "start": 397,
+        "end": 409
+      },
+      "parameters": [
+        {
+          "name": "*args"
+        },
+        {
+          "name": "**kwargs"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[{ 'id': 1, 'updated_at': None, 'created_at': None, 'instance_uuid': utils_fixture.uuidsentinel.inst, 'cell_id': 1, 'project_id': \"6f70656e737461636b20342065766572\", 'cell_mapping': cell_fixture._fake",
+          "line": 400
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_list_from_down_cells",
+      "kind": "method",
+      "scope": "ServersSampleJson269Test",
+      "lineRange": {
+        "start": 415,
+        "end": 420
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_details_from_down_cells",
+      "kind": "method",
+      "scope": "ServersSampleJson269Test",
+      "lineRange": {
+        "start": 422,
+        "end": 427
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_get_from_down_cells",
+      "kind": "method",
+      "scope": "ServersSampleJson269Test",
+      "lineRange": {
+        "start": 429,
+        "end": 434
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson271Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 437,
+        "end": 528
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 440,
+        "end": 440
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 441,
+        "end": 441
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 442,
+        "end": 442
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "setUp",
+      "kind": "method",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 444,
+        "end": 462
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 17,
+      "ccn": 1
+    },
+    {
+      "name": "_test_servers_post",
+      "kind": "method",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 464,
+        "end": 467
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._post_server( use_common_server_api_samples=False, extra_subs={'sg_uuid': self.sg_uuid})",
+          "line": 465
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_get_with_server_group",
+      "kind": "method",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 469,
+        "end": 474
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_update_with_server_groups",
+      "kind": "method",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 476,
+        "end": 482
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_rebuild_with_server_groups",
+      "kind": "method",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 484,
+        "end": 502
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 19,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_get_from_down_cells",
+      "kind": "method",
+      "scope": "ServersSampleJson271Test",
+      "lineRange": {
+        "start": 504,
+        "end": 528
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 11,
+      "ccn": 1
+    },
+    {
+      "name": "_fake_instancemapping_get_by_cell_and_project",
+      "kind": "function",
+      "scope": "ServersSampleJson271Test.test_server_get_from_down_cells",
+      "lineRange": {
+        "start": 505,
+        "end": 517
+      },
+      "parameters": [
+        {
+          "name": "*args"
+        },
+        {
+          "name": "**kwargs"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "[{ 'id': 1, 'updated_at': None, 'created_at': None, 'instance_uuid': utils_fixture.uuidsentinel.inst, 'cell_id': 1, 'project_id': \"6f70656e737461636b20342065766572\", 'cell_mapping': cell_fixture._fake",
+          "line": 508
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson273Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 531,
+        "end": 583
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 534,
+        "end": 534
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 535,
+        "end": 535
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 536,
+        "end": 536
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_post_server_and_lock",
+      "kind": "method",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 538,
+        "end": 544
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "uuid",
+          "line": 544
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_details_with_locked_reason",
+      "kind": "method",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 546,
+        "end": 550
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_get_with_locked_reason",
+      "kind": "method",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 552,
+        "end": 556
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_rebuild_with_empty_locked_reason",
+      "kind": "method",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 558,
+        "end": 573
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 1
+    },
+    {
+      "name": "test_update_server_with_empty_locked_reason",
+      "kind": "method",
+      "scope": "ServersSampleJson273Test",
+      "lineRange": {
+        "start": 575,
+        "end": 583
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson274Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 586,
+        "end": 614
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 592,
+        "end": 592
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "SUPPORTS_CELLS",
+      "kind": "constant",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 593,
+        "end": 593
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 594,
+        "end": 594
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 595,
+        "end": 595
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "availability_zones",
+      "kind": "field",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 599,
+        "end": 599
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_setup_compute_service",
+      "kind": "method",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 601,
+        "end": 602
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self.start_service('compute', host='openstack-node-01')",
+          "line": 602
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_post_with_only_host",
+      "kind": "method",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 604,
+        "end": 606
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_post_with_only_node",
+      "kind": "method",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 608,
+        "end": 610
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "test_servers_post_with_host_and_node",
+      "kind": "method",
+      "scope": "ServersSampleJson274Test",
+      "lineRange": {
+        "start": 612,
+        "end": 614
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson290Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 617,
+        "end": 623
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson290Test",
+      "lineRange": {
+        "start": 618,
+        "end": 618
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson290Test",
+      "lineRange": {
+        "start": 619,
+        "end": 619
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "use_common_server_post",
+      "kind": "field",
+      "scope": "ServersSampleJson290Test",
+      "lineRange": {
+        "start": 620,
+        "end": 620
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson290Test",
+      "lineRange": {
+        "start": 623,
+        "end": 623
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersSampleJson294Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 626,
+        "end": 630
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson294Test",
+      "lineRange": {
+        "start": 627,
+        "end": 627
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson294Test",
+      "lineRange": {
+        "start": 628,
+        "end": 628
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "use_common_server_post",
+      "kind": "field",
+      "scope": "ServersSampleJson294Test",
+      "lineRange": {
+        "start": 629,
+        "end": 629
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson294Test",
+      "lineRange": {
+        "start": 630,
+        "end": 630
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersSampleJson296Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 633,
+        "end": 670
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson296Test",
+      "lineRange": {
+        "start": 634,
+        "end": 634
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson296Test",
+      "lineRange": {
+        "start": 635,
+        "end": 635
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson296Test",
+      "lineRange": {
+        "start": 636,
+        "end": 636
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersSampleJson296Test",
+      "lineRange": {
+        "start": 638,
+        "end": 659
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 21,
+      "ccn": 1
+    },
+    {
+      "name": "test_update_server",
+      "kind": "method",
+      "scope": "ServersSampleJson296Test",
+      "lineRange": {
+        "start": 661,
+        "end": 670
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "ServerSampleJson298Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 673,
+        "end": 710
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServerSampleJson298Test",
+      "lineRange": {
+        "start": 674,
+        "end": 674
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServerSampleJson298Test",
+      "lineRange": {
+        "start": 675,
+        "end": 675
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServerSampleJson298Test",
+      "lineRange": {
+        "start": 676,
+        "end": 676
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServerSampleJson298Test",
+      "lineRange": {
+        "start": 678,
+        "end": 699
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 21,
+      "ccn": 1
+    },
+    {
+      "name": "test_update_server",
+      "kind": "method",
+      "scope": "ServerSampleJson298Test",
+      "lineRange": {
+        "start": 701,
+        "end": 710
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleJson2100Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 713,
+        "end": 751
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersSampleJson2100Test",
+      "lineRange": {
+        "start": 714,
+        "end": 714
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersSampleJson2100Test",
+      "lineRange": {
+        "start": 715,
+        "end": 715
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersSampleJson2100Test",
+      "lineRange": {
+        "start": 716,
+        "end": 716
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "use_common_server_post",
+      "kind": "field",
+      "scope": "ServersSampleJson2100Test",
+      "lineRange": {
+        "start": 717,
+        "end": 717
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersSampleJson2100Test",
+      "lineRange": {
+        "start": 719,
+        "end": 740
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 21,
+      "ccn": 1
+    },
+    {
+      "name": "test_update_server",
+      "kind": "method",
+      "scope": "ServersSampleJson2100Test",
+      "lineRange": {
+        "start": 742,
+        "end": 751
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "ServersUpdateSampleJsonTest",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 754,
+        "end": 768
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersUpdateSampleJsonTest",
+      "lineRange": {
+        "start": 758,
+        "end": 758
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_update_server",
+      "kind": "method",
+      "scope": "ServersUpdateSampleJsonTest",
+      "lineRange": {
+        "start": 760,
+        "end": 768
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "ServersUpdateSampleJson247Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 771,
+        "end": 773
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson247Test",
+      "lineRange": {
+        "start": 772,
+        "end": 772
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson247Test",
+      "lineRange": {
+        "start": 773,
+        "end": 773
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ServersUpdateSampleJson275Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 776,
+        "end": 795
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson275Test",
+      "lineRange": {
+        "start": 777,
+        "end": 777
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson275Test",
+      "lineRange": {
+        "start": 778,
+        "end": 778
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersUpdateSampleJson275Test",
+      "lineRange": {
+        "start": 780,
+        "end": 795
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 1
+    },
+    {
+      "name": "ServersUpdateSampleJson290Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 798,
+        "end": 835
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson290Test",
+      "lineRange": {
+        "start": 799,
+        "end": 799
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson290Test",
+      "lineRange": {
+        "start": 800,
+        "end": 800
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersUpdateSampleJson290Test",
+      "lineRange": {
+        "start": 803,
+        "end": 803
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_update_server",
+      "kind": "method",
+      "scope": "ServersUpdateSampleJson290Test",
+      "lineRange": {
+        "start": 805,
+        "end": 814
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersUpdateSampleJson290Test",
+      "lineRange": {
+        "start": 816,
+        "end": 835
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 19,
+      "ccn": 1
+    },
+    {
+      "name": "ServersUpdateSampleJson294Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 838,
+        "end": 873
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson294Test",
+      "lineRange": {
+        "start": 839,
+        "end": 839
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson294Test",
+      "lineRange": {
+        "start": 840,
+        "end": 840
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersUpdateSampleJson294Test",
+      "lineRange": {
+        "start": 841,
+        "end": 841
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_update_server",
+      "kind": "method",
+      "scope": "ServersUpdateSampleJson294Test",
+      "lineRange": {
+        "start": 843,
+        "end": 852
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 10,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersUpdateSampleJson294Test",
+      "lineRange": {
+        "start": 854,
+        "end": 873
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 19,
+      "ccn": 1
+    },
+    {
+      "name": "ServersUpdateSampleJson2104Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 876,
+        "end": 889
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson2104Test",
+      "lineRange": {
+        "start": 877,
+        "end": 877
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersUpdateSampleJson2104Test",
+      "lineRange": {
+        "start": 878,
+        "end": 878
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersUpdateSampleJson2104Test",
+      "lineRange": {
+        "start": 879,
+        "end": 879
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_update_server",
+      "kind": "method",
+      "scope": "ServersUpdateSampleJson2104Test",
+      "lineRange": {
+        "start": 881,
+        "end": 889
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 9,
+      "ccn": 1
+    },
+    {
+      "name": "ServerSortKeysJsonTests",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 892,
+        "end": 899
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "sample_dir",
+      "kind": "field",
+      "scope": "ServerSortKeysJsonTests",
+      "lineRange": {
+        "start": 893,
+        "end": 893
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_servers_list",
+      "kind": "method",
+      "scope": "ServerSortKeysJsonTests",
+      "lineRange": {
+        "start": 895,
+        "end": 899
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "_ServersActionsJsonTestMixin",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 902,
+        "end": 916
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_test_server_action",
+      "kind": "method",
+      "scope": "_ServersActionsJsonTestMixin",
+      "lineRange": {
+        "start": 903,
+        "end": 916
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "uuid"
+        },
+        {
+          "name": "action"
+        },
+        {
+          "name": "req_tpl"
+        },
+        {
+          "default": "None",
+          "name": "subs"
+        },
+        {
+          "default": "None",
+          "name": "resp_tpl"
+        },
+        {
+          "default": "202",
+          "name": "code"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "response",
+          "line": 916
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 14,
+      "ccn": 3
+    },
+    {
+      "name": "ServersActionsJsonTest",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 919,
+        "end": 1043
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 922,
+        "end": 922
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "SUPPORTS_CELLS",
+      "kind": "constant",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 923,
+        "end": 923
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_reboot_hard",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 925,
+        "end": 929
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_reboot_soft",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 931,
+        "end": 935
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 937,
+        "end": 952
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 15,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_resize",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 954,
+        "end": 961
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "uuid",
+          "line": 961
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 8,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_revert_resize",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 963,
+        "end": 966
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_confirm_resize",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 968,
+        "end": 972
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "_wait_for_active_server",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 974,
+        "end": 990
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "uuid"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "server",
+          "line": 990
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 12,
+      "ccn": 4
+    },
+    {
+      "name": "test_server_add_floating_ip",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 992,
+        "end": 1020
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 23,
+      "ccn": 6
+    },
+    {
+      "name": "test_server_remove_floating_ip",
+      "kind": "method",
+      "scope": "ServersActionsJsonTest",
+      "lineRange": {
+        "start": 1022,
+        "end": 1043
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 19,
+      "ccn": 1
+    },
+    {
+      "name": "ServersActionsJson219Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1046,
+        "end": 1069
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersActionsJson219Test",
+      "lineRange": {
+        "start": 1049,
+        "end": 1049
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersActionsJson219Test",
+      "lineRange": {
+        "start": 1050,
+        "end": 1050
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersActionsJson219Test",
+      "lineRange": {
+        "start": 1051,
+        "end": 1051
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersActionsJson219Test",
+      "lineRange": {
+        "start": 1053,
+        "end": 1069
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 16,
+      "ccn": 1
+    },
+    {
+      "name": "ServersActionsJson226Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1072,
+        "end": 1103
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersActionsJson226Test",
+      "lineRange": {
+        "start": 1075,
+        "end": 1075
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersActionsJson226Test",
+      "lineRange": {
+        "start": 1076,
+        "end": 1076
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersActionsJson226Test",
+      "lineRange": {
+        "start": 1077,
+        "end": 1077
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersActionsJson226Test",
+      "lineRange": {
+        "start": 1079,
+        "end": 1103
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 20,
+      "ccn": 1
+    },
+    {
+      "name": "ServersActionsJson254Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1106,
+        "end": 1135
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "ADMIN_API",
+      "kind": "constant",
+      "scope": "ServersActionsJson254Test",
+      "lineRange": {
+        "start": 1109,
+        "end": 1109
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersActionsJson254Test",
+      "lineRange": {
+        "start": 1110,
+        "end": 1110
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "sample_dir",
+      "kind": "field",
+      "scope": "ServersActionsJson254Test",
+      "lineRange": {
+        "start": 1111,
+        "end": 1111
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersActionsJson254Test",
+      "lineRange": {
+        "start": 1112,
+        "end": 1112
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_create_server",
+      "kind": "method",
+      "scope": "ServersActionsJson254Test",
+      "lineRange": {
+        "start": 1114,
+        "end": 1115
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._post_server()",
+          "line": 1115
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_rebuild",
+      "kind": "method",
+      "scope": "ServersActionsJson254Test",
+      "lineRange": {
+        "start": 1117,
+        "end": 1135
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 18,
+      "ccn": 1
+    },
+    {
+      "name": "ServersActionsJson257Test",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1138,
+        "end": 1144
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersActionsJson257Test",
+      "lineRange": {
+        "start": 1140,
+        "end": 1140
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersActionsJson257Test",
+      "lineRange": {
+        "start": 1141,
+        "end": 1141
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_create_server",
+      "kind": "method",
+      "scope": "ServersActionsJson257Test",
+      "lineRange": {
+        "start": 1143,
+        "end": 1144
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [
+        {
+          "expr": "self._post_server(use_common_server_api_samples=False)",
+          "line": 1144
+        }
+      ],
+      "source": "aee-inventory",
+      "nloc": 2,
+      "ccn": 1
+    },
+    {
+      "name": "ServersCreateImageJsonTest",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1147,
+        "end": 1159
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_create_image",
+      "kind": "method",
+      "scope": "ServersCreateImageJsonTest",
+      "lineRange": {
+        "start": 1151,
+        "end": 1159
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    },
+    {
+      "name": "ServersCreateImageJsonTestv2_45",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1162,
+        "end": 1173
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServersCreateImageJsonTestv2_45",
+      "lineRange": {
+        "start": 1164,
+        "end": 1164
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServersCreateImageJsonTestv2_45",
+      "lineRange": {
+        "start": 1165,
+        "end": 1165
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_server_create_image",
+      "kind": "method",
+      "scope": "ServersCreateImageJsonTestv2_45",
+      "lineRange": {
+        "start": 1167,
+        "end": 1173
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "ServerStartStopJsonTest",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1176,
+        "end": 1192
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "_test_server_action",
+      "kind": "method",
+      "scope": "ServerStartStopJsonTest",
+      "lineRange": {
+        "start": 1178,
+        "end": 1183
+      },
+      "parameters": [
+        {
+          "name": "self"
+        },
+        {
+          "name": "uuid"
+        },
+        {
+          "name": "action"
+        },
+        {
+          "name": "req_tpl"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 6,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_start",
+      "kind": "method",
+      "scope": "ServerStartStopJsonTest",
+      "lineRange": {
+        "start": 1185,
+        "end": 1188
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 4,
+      "ccn": 1
+    },
+    {
+      "name": "test_server_stop",
+      "kind": "method",
+      "scope": "ServerStartStopJsonTest",
+      "lineRange": {
+        "start": 1190,
+        "end": 1192
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 3,
+      "ccn": 1
+    },
+    {
+      "name": "ServersSampleMultiStatusJsonTest",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1195,
+        "end": 1201
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_servers_list",
+      "kind": "method",
+      "scope": "ServersSampleMultiStatusJsonTest",
+      "lineRange": {
+        "start": 1197,
+        "end": 1201
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 5,
+      "ccn": 1
+    },
+    {
+      "name": "ServerTriggerCrashDumpJsonTest",
+      "kind": "class",
+      "scope": "",
+      "lineRange": {
+        "start": 1204,
+        "end": 1215
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "microversion",
+      "kind": "field",
+      "scope": "ServerTriggerCrashDumpJsonTest",
+      "lineRange": {
+        "start": 1205,
+        "end": 1205
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "scenarios",
+      "kind": "field",
+      "scope": "ServerTriggerCrashDumpJsonTest",
+      "lineRange": {
+        "start": 1206,
+        "end": 1206
+      },
+      "source": "aee-inventory"
+    },
+    {
+      "name": "test_trigger_crash_dump",
+      "kind": "method",
+      "scope": "ServerTriggerCrashDumpJsonTest",
+      "lineRange": {
+        "start": 1208,
+        "end": 1215
+      },
+      "parameters": [
+        {
+          "name": "self"
+        }
+      ],
+      "returnType": null,
+      "returns": [],
+      "source": "aee-inventory",
+      "nloc": 7,
+      "ccn": 1
+    }
+  ],
+  "referencedSymbols": [
+    {
+      "name": "api_sample_base.ApiSampleTestBaseV21",
+      "usage": "inherit",
+      "via": "nova.tests.functional.api_sample_tests",
+      "count": 1,
+      "lineRange": {
+        "start": 31,
+        "end": 31
+      }
+    },
+    {
+      "name": "base64.b64encode",
+      "usage": "call",
+      "via": "base64",
+      "count": 1,
+      "lineRange": {
+        "start": 36,
+        "end": 36
+      }
+    },
+    {
+      "name": "avr.APIVersionRequest",
+      "usage": "call",
+      "via": "nova.api.openstack",
+      "count": 3,
+      "lineRange": {
+        "start": 50,
+        "end": 50
+      }
+    },
+    {
+      "name": "super",
+      "usage": "call",
+      "via": null,
+      "count": 7,
+      "lineRange": {
+        "start": 100,
+        "end": 100
+      }
+    },
+    {
+      "name": "fakes.stub_out_key_pair_funcs",
+      "usage": "call",
+      "via": "nova.tests.unit.api.openstack",
+      "count": 3,
+      "lineRange": {
+        "start": 288,
+        "end": 288
+      }
+    },
+    {
+      "name": "timeutils.parse_isotime",
+      "usage": "call",
+      "via": "oslo_utils",
+      "count": 2,
+      "lineRange": {
+        "start": 354,
+        "end": 354
+      }
+    },
+    {
+      "name": "timeutils.utcnow",
+      "usage": "call",
+      "via": "oslo_utils",
+      "count": 2,
+      "lineRange": {
+        "start": 354,
+        "end": 354
+      }
+    },
+    {
+      "name": "timeutils.normalize_time",
+      "usage": "call",
+      "via": "oslo_utils",
+      "count": 2,
+      "lineRange": {
+        "start": 356,
+        "end": 356
+      }
+    },
+    {
+      "name": "nova_fixtures.CinderFixture",
+      "usage": "call",
+      "via": "nova.tests",
+      "count": 1,
+      "lineRange": {
+        "start": 381,
+        "end": 381
+      }
+    },
+    {
+      "name": "nova_fixtures.SingleCellSimple",
+      "usage": "call",
+      "via": "nova.tests",
+      "count": 2,
+      "lineRange": {
+        "start": 399,
+        "end": 399
+      }
+    },
+    {
+      "name": "nova_fixtures.DownCellFixture",
+      "usage": "call",
+      "via": "nova.tests",
+      "count": 4,
+      "lineRange": {
+        "start": 417,
+        "end": 417
+      }
+    },
+    {
+      "name": "object",
+      "usage": "inherit",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 902,
+        "end": 902
+      }
+    },
+    {
+      "name": "time.sleep",
+      "usage": "call",
+      "via": "time",
+      "count": 1,
+      "lineRange": {
+        "start": 984,
+        "end": 984
+      }
+    },
+    {
+      "name": "len",
+      "usage": "call",
+      "via": null,
+      "count": 1,
+      "lineRange": {
+        "start": 1159,
+        "end": 1159
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "alias": null,
+      "module": "base64",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 16,
+        "end": 16
+      }
+    },
+    {
+      "alias": null,
+      "module": "time",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 17,
+        "end": 17
+      }
+    },
+    {
+      "alias": null,
+      "module": "oslo_utils",
+      "names": [
+        {
+          "alias": "utils_fixture",
+          "name": "fixture"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 19,
+        "end": 19
+      }
+    },
+    {
+      "alias": null,
+      "module": "oslo_utils",
+      "names": [
+        {
+          "alias": null,
+          "name": "timeutils"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 20,
+        "end": 20
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.api.openstack",
+      "names": [
+        {
+          "alias": "avr",
+          "name": "api_version_request"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 22,
+        "end": 22
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.conf",
+      "names": [],
+      "relative": false,
+      "style": "import",
+      "lineRange": {
+        "start": 23,
+        "end": 23
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.tests",
+      "names": [
+        {
+          "alias": "nova_fixtures",
+          "name": "fixtures"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 24,
+        "end": 24
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.tests.functional.api_sample_tests",
+      "names": [
+        {
+          "alias": null,
+          "name": "api_sample_base"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 25,
+        "end": 25
+      }
+    },
+    {
+      "alias": null,
+      "module": "nova.tests.unit.api.openstack",
+      "names": [
+        {
+          "alias": null,
+          "name": "fakes"
+        }
+      ],
+      "relative": false,
+      "style": "from",
+      "lineRange": {
+        "start": 26,
+        "end": 26
+      }
+    }
+  ],
+  "sideEffects": [],
+  "securitySurface": [],
+  "injection_flags": [],
+  "warnings": []
+}
